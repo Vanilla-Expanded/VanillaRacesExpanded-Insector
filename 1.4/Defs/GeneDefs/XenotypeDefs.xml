@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<XenotypeDef>
+		<defName>VRE_Insector</defName>
+		<label>insector</label>
+		<description>todo.</description>
+		<descriptionShort>todo.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/VRE_Insector</iconPath>
+		<inheritable>true</inheritable>
+	
+		<genes>
+			<li Name="AlphaGenesSwap">VRE_BugBlood</li>
+			
+		</genes>
+	</XenotypeDef>
+</Defs>

@@ -1,0 +1,4 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaRacesExpanded-Fungoid\1.4\Assemblies\VanillaRacesExpanded-Fungoid.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaRacesExpanded-Fungoid\1.4\Source\VanillaRacesExpanded-Fungoid\VanillaRacesExpanded-Fungoid\obj\Debug\VanillaRacesExpanded-Fungoid.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaRacesExpanded-Fungoid\1.4\Source\VanillaRacesExpanded-Fungoid\VanillaRacesExpanded-Fungoid\obj\Debug\VanillaRacesExpanded-Fungoid.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaRacesExpanded-Fungoid\1.4\Source\VanillaRacesExpanded-Fungoid\VanillaRacesExpanded-Fungoid\obj\Debug\VanillaRacesExpanded-Fungoid.dll

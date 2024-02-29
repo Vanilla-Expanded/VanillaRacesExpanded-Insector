@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<GeneDef>
+		<defName>VRE_InsectFlesh</defName>
+		<label>insect flesh</label>
+		<description>Carriers of this gene have insect tissue for flesh. Consuming insect meat by them is classed as cannibalism. When butchered, they will yield insect meat instead of human meat.</description>
+		<iconPath>UI/Icons/Genes/Gene_InsectFlesh</iconPath>
+		<biostatCpx>2</biostatCpx>
+		<biostatMet>0</biostatMet>
+		<displayCategory>Healing</displayCategory>
+		<displayOrderInCategory>5000.2</displayOrderInCategory>
+		<exclusionTags>
+			<li>Flesh</li>
+			<li>Meat</li>
+			<li>AG_Meat</li>
+		</exclusionTags>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<customMeatThingDef>Meat_Megaspider</customMeatThingDef>
+			</li>
+		</modExtensions>
+	</GeneDef>
+</Defs>

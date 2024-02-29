@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<GeneDef>
+		<defName>VRE_BugBlood</defName>
+		<label>bugblood</label>
+		<displayCategory>Healing</displayCategory>
+		<description>Carriers of this gene have greenish blood color, just like insects.</description>
+		<iconPath>UI/Icons/Genes/Gene_Bugblood</iconPath>
+		<displayOrderInCategory>0.1</displayOrderInCategory>
+		
+		<exclusionTags>
+			<li>AG_BloodType</li>
+			<li>BloodType</li>
+			<li>Blood</li>
+		</exclusionTags>
+		<biostatCpx>1</biostatCpx>
+
+		<symbolPack>
+			<wholeNameSymbols>
+				<li>
+					<symbol>bugbleeder</symbol>
+				</li>
+
+			</wholeNameSymbols>
+			
+		</symbolPack>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+
+				<customBloodThingDef>VRE_Filth_BugBlood</customBloodThingDef>
+				<customBloodIcon>UI/Icons/Medical/VRE_BugBleeding</customBloodIcon>
+				<customBloodEffect>VRE_Damage_HitBugFlesh</customBloodEffect>
+				<customWoundsFromFleshtype>VRE_BugWoundsFlesh</customWoundsFromFleshtype>
+			</li>
+		</modExtensions>
+	</GeneDef>
+</Defs>

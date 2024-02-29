@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<GeneDef Name="VRE_BodyBaseInsect" Abstract="True">
+		<displayCategory>Cosmetic</displayCategory>
+		<exclusionTags>
+			<li>AG_Bodies</li>
+			<li>Bodies</li>
+			<li>Body</li>
+			<li>Fur</li>
+		</exclusionTags>
+		<iconColor>(0.75, 0.75, 0.75)</iconColor>
+		<graphicData>
+			<drawLoc>Tailbone</drawLoc>
+		</graphicData>
+	</GeneDef>
+	<GeneDef ParentName="VRE_BodyBaseInsect">
+		<defName>VRE_InsectSkin</defName>
+		<label>insectskin</label>
+			<labelShortAdj>insectskinned</labelShortAdj>
+		<description>Carriers of this gene have a slightly thicker carapace as their skin. Chitin plating is capable of deflecting sharp attacks, but is quite brittle and not as defensive against blunt trauma.</description>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-2</biostatMet>
+		
+		<!--<graphicData>
+			<fur>VRE_BarkSkin</fur>
+			<tattoosVisible>false</tattoosVisible>
+		</graphicData>-->
+		
+		<iconPath>UI/Icons/Genes/Gene_Insectskin</iconPath>
+		<!--<forcedHeadTypes>
+			<li>VRE_BarkAverage</li>
+			<li>VRE_BarkNarrow</li>
+			<li>VRE_BarkGaunt</li>
+			<li>VRE_BarkHeavy</li>
+			<li>VRE_BarkAverage_Female</li>
+			<li>VRE_BarkNarrow_Female</li>
+			<li>VRE_BarkGaunt_Female</li>
+			<li>VRE_BarkHeavy_Female</li>
+		</forcedHeadTypes>-->
+		<statOffsets>
+			<ArmorRating_Blunt>0.18</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.27</ArmorRating_Sharp>
+		</statOffsets>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<useSkinColorForFur>true</useSkinColorForFur>
+			</li>
+		</modExtensions>
+	</GeneDef>
+</Defs>
