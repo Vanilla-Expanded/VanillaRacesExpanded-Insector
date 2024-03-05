@@ -17,8 +17,10 @@ namespace VanillaRacesExpandedInsector
         }
 
         public static GeneDef VRE_InsectFlesh;
+        public static GeneDef VRE_InsectPheromones;
 
-        public static ThingDef Meat_Megaspider;       
+        public static ThingDef Meat_Megaspider;    
+        
 
         [MayRequireIdeology]
         public static PreceptDef Cannibalism_Acceptable;
