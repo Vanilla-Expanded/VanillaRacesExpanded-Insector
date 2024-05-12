@@ -20,7 +20,7 @@ namespace VanillaRacesExpandedInsector
             {
                 if (foodDef== InternalDefOf.Meat_Megaspider && IdeoNotCannibal(ingester))
                 {
-                    Thought_Memory thought_Memory = ThoughtMaker.MakeThought(ThoughtDefOf.AteHumanlikeMeatDirectCannibal, null);
+                    Thought_Memory thought_Memory = ThoughtMaker.MakeThought(InternalDefOf.AteHumanlikeMeatDirectCannibal, null);
                     ingester.needs.mood.thoughts.memories.TryGainMemory(thought_Memory);
 
                     ingester.mindState.lastHumanMeatIngestedTick = Find.TickManager.TicksGame;
