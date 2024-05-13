@@ -298,6 +298,8 @@
     <Compile Include="Harmony\AttackTargetFinder_ShouldIgnoreNoncombatant.cs" />
     <Compile Include="Harmony\FoodUtility_ThoughtsFromIngesting.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
+    <Compile Include="HediffGivers\HediffGiver_Heatshock.cs" />
+    <Compile Include="HediffGivers\HediffGiver_HypothermicSlowdown.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Utils.cs" />
   </ItemGroup>

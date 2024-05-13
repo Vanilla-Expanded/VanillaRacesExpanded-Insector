@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]</xpath>
+		<value>
+			<li Class="VanillaRacesExpandedInsector.HediffGiver_HypothermicSlowdown">
+				
+			</li>
+			<li Class="VanillaRacesExpandedInsector.HediffGiver_Heatshock">
+				
+			</li>
+		</value>
+	</Operation>
+</Patch>

@@ -18,11 +18,15 @@ namespace VanillaRacesExpandedInsector
 
         public static GeneDef VRE_InsectFlesh;
         public static GeneDef VRE_InsectPheromones;
+        public static GeneDef VRE_HypothermicSlowdown;
+        public static GeneDef VRE_Heatshock;
 
         public static ThingDef Meat_Megaspider;
 
         public static ThoughtDef AteHumanlikeMeatDirectCannibal;
 
+        public static HediffDef HypothermicSlowdown;
+        public static HediffDef VRE_HeatshockHediff;
 
         [MayRequireIdeology]
         public static PreceptDef Cannibalism_Acceptable;
