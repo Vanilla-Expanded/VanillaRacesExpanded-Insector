@@ -299,12 +299,16 @@
     <Compile Include="Harmony\FoodUtility_ThoughtsFromIngesting.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
     <Compile Include="HediffGivers\HediffGiver_Heatshock.cs" />
+    <Compile Include="HediffGivers\HediffGiver_Heatstress.cs" />
+    <Compile Include="HediffGivers\HediffGiver_HypothermicHibernation.cs" />
     <Compile Include="HediffGivers\HediffGiver_HypothermicSlowdown.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThoughtWorker\ThoughtWorker_HeatStress.cs" />
     <Compile Include="Utils\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

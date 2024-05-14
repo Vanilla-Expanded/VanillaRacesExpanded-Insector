@@ -20,6 +20,8 @@ namespace VanillaRacesExpandedInsector
         public static GeneDef VRE_InsectPheromones;
         public static GeneDef VRE_HypothermicSlowdown;
         public static GeneDef VRE_Heatshock;
+        public static GeneDef VRE_HypothermicHibernation;
+        public static GeneDef VRE_Heatstress;
 
         public static ThingDef Meat_Megaspider;
 
@@ -27,6 +29,8 @@ namespace VanillaRacesExpandedInsector
 
         public static HediffDef HypothermicSlowdown;
         public static HediffDef VRE_HeatshockHediff;
+        public static HediffDef VRE_HypothermicHibernationHediff;
+        public static HediffDef VRE_HeatstressHediff;
 
         [MayRequireIdeology]
         public static PreceptDef Cannibalism_Acceptable;

@@ -10,6 +10,12 @@
 			<li Class="VanillaRacesExpandedInsector.HediffGiver_Heatshock">
 				
 			</li>
+			<li Class="VanillaRacesExpandedInsector.HediffGiver_HypothermicHibernation">
+				
+			</li>
+			<li Class="VanillaRacesExpandedInsector.HediffGiver_Heatstress">
+				
+			</li>
 		</value>
 	</Operation>
 </Patch>

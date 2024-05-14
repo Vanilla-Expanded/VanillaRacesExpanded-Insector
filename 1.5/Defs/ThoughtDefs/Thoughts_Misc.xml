@@ -16,4 +16,17 @@
       
     </stages>
   </ThoughtDef>
+  
+  <ThoughtDef>
+    <defName>VRE_Heatstress</defName>
+    <workerClass>VanillaRacesExpandedInsector.ThoughtWorker_HeatStress</workerClass>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>afraid of fire</label>
+        <description>The flames make me so nervous. Such searing heat - I feel like it will leap at me at any moment!</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
 </Defs>

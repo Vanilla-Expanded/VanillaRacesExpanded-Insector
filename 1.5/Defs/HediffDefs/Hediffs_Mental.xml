@@ -4,7 +4,7 @@
 	<HediffDef>
 		<defName>VRE_Serotonin</defName>
 		<label>serotonin-buzz</label>
-		<description> Large amounts of serotonin cause great happiness at the cost of reduced consciousness.</description>
+		<description>Large amounts of serotonin cause great happiness at the cost of reduced consciousness.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
