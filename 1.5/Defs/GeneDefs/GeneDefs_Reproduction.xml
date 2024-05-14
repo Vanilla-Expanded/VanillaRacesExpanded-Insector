@@ -12,7 +12,7 @@
 		</exclusionTags>
 		
 		<displayOrderInCategory>115.3</displayOrderInCategory>
-		<biostatMet>1</biostatMet>
+		<biostatMet>2</biostatMet>
 		<biostatCpx>1</biostatCpx>
 		
 	</GeneDef>
