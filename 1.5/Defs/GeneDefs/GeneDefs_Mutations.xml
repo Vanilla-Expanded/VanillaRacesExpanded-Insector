@@ -24,6 +24,22 @@
 				<setMax>0.05</setMax>
 			</li>
 		</capMods>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<parentTagDef>Head</parentTagDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/OcelliEyes</texPath>
+				<visibleFacing>
+					<li>East</li>
+					<li>South</li>
+					<li>West</li>
+				</visibleFacing>
+				<narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset>
+				<baseLayer>55</baseLayer>
+			</li>
+		</renderNodeProperties>
 		<exclusionTags>
 			<li>InsectorEye</li>
 		</exclusionTags>

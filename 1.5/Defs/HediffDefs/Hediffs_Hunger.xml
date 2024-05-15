@@ -4,7 +4,7 @@
 	<HediffDef>
 		<defName>VRE_InefficientMidgut</defName>
 		<label>inefficient midgut</label>
-		<displayCategory>Healing</displayCategory>
+	
 		<description>This person has a very inefficient acid in their midgut, making it harder to absorb nutrients. They will become hungry significantly faster, but they will be able to consume more.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
@@ -20,7 +20,7 @@
 	<HediffDef>
 		<defName>VRE_Dormant</defName>
 		<label>dormant</label>
-		<displayCategory>Healing</displayCategory>
+	
 		<description>This person has reduced activity and aggression and spend most of their time in a dormant state. Metabolism of such an individual is also reduced, allowing them to consume less nutrition to keep themselves alive.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
