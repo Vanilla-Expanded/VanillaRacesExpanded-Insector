@@ -7,13 +7,13 @@
 		<damageEffecter>VRE_Damage_HitBugFlesh</damageEffecter>
         <genericWounds>
             <li>
-                <texture>Pawn/Wounds/VRE_BugWoundFleshA</texture>
+                <texture>Things/Pawn/Humanlike/Wounds/VRE_BugWoundFleshA</texture>
             </li>
             <li>
-                <texture>Pawn/Wounds/VRE_BugWoundFleshB</texture>
+                <texture>Things/Pawn/Humanlike/Wounds/VRE_BugWoundFleshB</texture>
             </li>
             <li>
-                <texture>Pawn/Wounds/VRE_BugWoundFleshC</texture>
+                <texture>Things/Pawn/Humanlike/Wounds/VRE_BugWoundFleshC</texture>
             </li>
         </genericWounds>
     </FleshTypeDef>

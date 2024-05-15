@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
 	<GeneCategoryDef>
 		<defName>VRE_EvolutionGene</defName>
 		<label>Insector evolutions</label>
 		<displayPriorityInXenotype>5012</displayPriorityInXenotype>
 	</GeneCategoryDef>
- 
 	<VanillaRacesExpandedInsector.GenelineGeneDef Name="VRE_EvolutionGene" Abstract="True">
 		<displayCategory>VRE_EvolutionGene</displayCategory>
 		<evolution>1</evolution>
 		<biostatCpx>0</biostatCpx>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>
-
 	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
 		<defName>VRE_Hiveglands</defName>
 		<label>hiveglands</label>
@@ -70,6 +67,22 @@
 				<offset>0.5</offset>
 			</li>
 		</capMods>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<parentTagDef>Head</parentTagDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/CompoundEyes</texPath>
+				<visibleFacing>
+					<li>East</li>
+					<li>South</li>
+					<li>West</li>
+				</visibleFacing>
+				<narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset>
+				<baseLayer>55</baseLayer>
+			</li>
+		</renderNodeProperties>
 		<statOffsets>
 			<ShootingAccuracyPawn>0.1</ShootingAccuracyPawn>
 		</statOffsets>
@@ -187,6 +200,33 @@
 		<description>Carriers of this gene grow large insect-like wings at the back of their torso, allowing them to move quicker, glide through difficult terrain with ease, and from time to time enable them to leap into the air.</description>
 		<iconPath>UI/Icons/Genes/Gene_InsectWings</iconPath>
 		<displayOrderInCategory>4</displayOrderInCategory>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/BodyAttachments/Insectwings</texPath>
+				<drawSize>1</drawSize>
+				<parentTagDef>Body</parentTagDef>
+				<colorType>Skin</colorType>
+				<useRottenColor>true</useRottenColor>
+				<useSkinShader>true</useSkinShader>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<drawData>
+					<defaultData>
+						<layer>-2</layer>
+					</defaultData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<dataNorth>
+						<layer>90</layer>
+					</dataNorth>
+					<dataEast>
+						<offset>(-0.2, 0, 0)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.2, 0, 0)</offset>
+					</dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
 		<capMods>
 			<li>
 				<capacity>Moving</capacity>
@@ -243,6 +283,28 @@
 		<exclusionTags>
 			<li>InsectorMouth</li>
 		</exclusionTags>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<parentTagDef>Head</parentTagDef>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/InsectMandibles</texPath>
+				<colorType>Skin</colorType>
+				<useRottenColor>true</useRottenColor>
+				<useSkinShader>true</useSkinShader>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<visibleFacing>
+					<li>East</li>
+					<li>South</li>
+					<li>West</li>
+				</visibleFacing>
+				<drawData>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
 		<symbolPack>
 			<prefixSymbols>
 				<li>
@@ -324,6 +386,26 @@
 		<exclusionTags>
 		
 		</exclusionTags>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/MegaspiderHorns</texPath>
+				<colorType>Skin</colorType>
+				<useRottenColor>true</useRottenColor>
+				<useSkinShader>true</useSkinShader>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
 		<symbolPack>
 			<prefixSymbols>
 				<li>
@@ -388,9 +470,8 @@
 			<li>Hypothermia</li>
 		</makeImmuneTo>
 		<hediffGiversCannotGive>
-      <li>Hypothermia</li>
-     
-    </hediffGiversCannotGive>
+			<li>Hypothermia</li>
+		</hediffGiversCannotGive>
 		<exclusionTags>
 			<li>InsectorHypothermia</li>
 		</exclusionTags>
@@ -407,24 +488,23 @@
 		<description>Carriers of this gene do not go through senescence in the normal way. They never get chronic age-related diseases like cancer, bad back, cataracts, or dementia, and age much slower.</description>
 		<iconPath>UI/Icons/Genes/Gene_SlowedLifeCycle</iconPath>
 		<displayOrderInCategory>11</displayOrderInCategory>
-		
-	<hediffGiversCannotGive>
-      <li>Carcinoma</li>
-      <li>HeartAttack</li>
-      <li>BadBack</li>
-      <li>Frail</li>
-      <li>Cataract</li>
-      <li>Dementia</li>
-      <li>Alzheimers</li>
-      <li>Asthma</li>
-      <li>HeartArteryBlockage</li>
-    </hediffGiversCannotGive>
-	 <biologicalAgeTickFactorFromAgeCurve>
-      <points>
-        <li>(13, 1)</li>
-        <li>(18.5, 0.5)</li>
-      </points>
-    </biologicalAgeTickFactorFromAgeCurve>
+		<hediffGiversCannotGive>
+			<li>Carcinoma</li>
+			<li>HeartAttack</li>
+			<li>BadBack</li>
+			<li>Frail</li>
+			<li>Cataract</li>
+			<li>Dementia</li>
+			<li>Alzheimers</li>
+			<li>Asthma</li>
+			<li>HeartArteryBlockage</li>
+		</hediffGiversCannotGive>
+		<biologicalAgeTickFactorFromAgeCurve>
+			<points>
+				<li>(13, 1)</li>
+				<li>(18.5, 0.5)</li>
+			</points>
+		</biologicalAgeTickFactorFromAgeCurve>
 		<exclusionTags>
 			<li>InsectorLifespan</li>
 		</exclusionTags>
@@ -435,7 +515,7 @@
 			</li>
 		</modExtensions>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>
-		<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
 		<defName>VRE_HardenedChitin</defName>
 		<label>hardened chitin</label>
 		<description>Carriers of this gene have their exoskeleton consisting of thick, hardened chitin, and are much more resistant to damage and stagger effects. This comes at the cost of slowing them down slightly due to the sheer weight of the carapace.</description>
@@ -448,9 +528,9 @@
 			</li>
 		</capMods>
 		<statFactors>
-      <IncomingDamageFactor>0.75</IncomingDamageFactor>
-	  <StaggerDurationFactor>0.5</StaggerDurationFactor>
-    </statFactors>
+			<IncomingDamageFactor>0.75</IncomingDamageFactor>
+			<StaggerDurationFactor>0.5</StaggerDurationFactor>
+		</statFactors>
 		<exclusionTags>
 			<li>InsectorArmor</li>
 		</exclusionTags>
@@ -470,9 +550,8 @@
 		<statOffsets>
 			<PsychicSensitivity>0.3</PsychicSensitivity>
 			<MeditationFocusGain>0.2</MeditationFocusGain>
-			 <PsychicEntropyRecoveryRate>0.2</PsychicEntropyRecoveryRate>
+			<PsychicEntropyRecoveryRate>0.2</PsychicEntropyRecoveryRate>
 		</statOffsets>
-		
 		<exclusionTags>
 		
 		</exclusionTags>
@@ -489,8 +568,7 @@
 		<description>Carriers of this gene produce large amounts of serotonin, keeping them in a continuous state of bliss while also affecting their consciousness. The presence of this neurotransmitter will also make them more aggressive.</description>
 		<iconPath>UI/Icons/Genes/Gene_Serotonin</iconPath>
 		<displayOrderInCategory>14</displayOrderInCategory>
-		 <socialFightChanceFactor>2</socialFightChanceFactor>
-		
+		<socialFightChanceFactor>2</socialFightChanceFactor>
 		<exclusionTags>
 		
 		</exclusionTags>
@@ -519,9 +597,8 @@
 			<li>Heatstroke</li>
 		</makeImmuneTo>
 		<hediffGiversCannotGive>
-      <li>Heatstroke</li>
-     
-    </hediffGiversCannotGive>
+			<li>Heatstroke</li>
+		</hediffGiversCannotGive>
 		<exclusionTags>
 			<li>InsectorHeatstroke</li>
 		</exclusionTags>
@@ -532,7 +609,6 @@
 			</li>
 		</modExtensions>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>
-	
 	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
 		<defName>VRE_JellySacks</defName>
 		<label>jelly sacks</label>
@@ -541,10 +617,9 @@
 		<displayOrderInCategory>16</displayOrderInCategory>
 		<customEffectDescriptions>
 			<li>Produces 6 units of insect jelly per day</li>
-			
 		</customEffectDescriptions>
 		<exclusionTags>
-		<li>Tail</li>
+			<li>Tail</li>
 		</exclusionTags>
 		<symbolPack>
 			<prefixSymbols>
@@ -555,8 +630,38 @@
 					<symbol>jelly</symbol>
 				</li>
 			</prefixSymbols>
-			
 		</symbolPack>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/BodyAttachments/JellySacks</texPath>
+				<colorType>Skin</colorType>
+				<overrideMeshSize>1.5</overrideMeshSize>
+				<parentTagDef>Body</parentTagDef>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData>
+						<layer>-3</layer>
+					</defaultData>
+					<dataNorth>
+						<offset>(0, 0, -0.15)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth>
+						<offset>(-0, 0, -0.15)</offset>
+					
+					</dataSouth>
+					<dataEast>
+						<offset>(-0.5, 0, -0.15)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.5, 0, -0.15)</offset>
+					</dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
@@ -565,5 +670,4 @@
 			</li>
 		</modExtensions>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>
-	
 </Defs>
