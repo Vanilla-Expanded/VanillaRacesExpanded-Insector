@@ -34,10 +34,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony, Version=2.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Lib.Harmony.2.2.2\lib\net472\0Harmony.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
@@ -305,6 +301,7 @@
     <Compile Include="Genelines\Window_ManageGenelines.cs" />
     <Compile Include="Harmony\AttackTargetFinder_ShouldIgnoreNoncombatant.cs" />
     <Compile Include="Harmony\FoodUtility_ThoughtsFromIngesting.cs" />
+    <Compile Include="Harmony\GeneUIUtility_DrawSection_Patch.cs" />
     <Compile Include="Harmony\GeneUtility_GenesInOrder_Patch.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
     <Compile Include="HediffGivers\HediffGiver_Heatshock.cs" />
@@ -316,8 +313,11 @@
     <Compile Include="Utils\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <PackageReference Include="Lib.Harmony">
+      <Version>2.3.3</Version>
+      <ExcludeAssets>runtime</ExcludeAssets>
+      <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,10 +13,10 @@
 	<VRE_EvolutionsDesc>Evolutions</VRE_EvolutionsDesc>
 	<VRE_Degrades>Degrades</VRE_Degrades>
 	<VRE_DegradesDesc>Degrades</VRE_DegradesDesc>
-	<VRE_Evolution>test</VRE_Evolution>
-	<VRE_EvolutionDesc>test2</VRE_EvolutionDesc>
-	<VRE_Mutation>test</VRE_Mutation>
-	<VRE_MutationDesc>test2</VRE_MutationDesc>
+	<VRE_Evolution>text.todo</VRE_Evolution>
+	<VRE_EvolutionDesc>text.todo</VRE_EvolutionDesc>
+	<VRE_Mutation>text.todo</VRE_Mutation>
+	<VRE_MutationDesc>text.todo</VRE_MutationDesc>
 	<VRE_SaveGeneline>Save geneline</VRE_SaveGeneline>
 	<VRE_NeedEqualAmount>Needs equal amount of evolutions and degrades.</VRE_NeedEqualAmount>
 	<VRE_ChangingGenelineExplanation>Changing the genes of a geneline will cause all insectors that are a part of that geneline to enter the metapod stage. The metapod stage will last 24 hours, during which the insectors will be unavailable.</VRE_ChangingGenelineExplanation>
@@ -27,4 +27,6 @@ Insector colonists that will be affected:
 
 {0}
 </VRE_DeleteGenelineConfirmation>
+	<VRE_Genelines>Genelines</VRE_Genelines>
+	<VRE_GenelinesDesc>text.todo</VRE_GenelinesDesc>
 </LanguageData>
