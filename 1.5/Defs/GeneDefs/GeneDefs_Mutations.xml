@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<GeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_OcelliEyes</defName>
 		<label>ocelli eyes</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene have an optical arrangement composed of a single lens and without an elaborate retina, making them almost blind.</description>
 		<iconPath>UI/Icons/Genes/Gene_OcelliEye</iconPath>
 		<displayOrderInCategory>1</displayOrderInCategory>
+		<mutation>1</mutation>
 		<capMods>
 			<li>
 				<capacity>Sight</capacity>
@@ -43,14 +44,15 @@
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_VocalChitters</defName>
 		<label>vocal chitters</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene have their vocal chords changed into little openings in the bones, resulting in them being unable to speak, unless someone understands the loud whistling that they can now produce.</description>
 		<iconPath>UI/Icons/Genes/Gene_VocalChitters</iconPath>
 		<displayOrderInCategory>2</displayOrderInCategory>
+		<mutation>1</mutation>
 		<capMods>
 			<li>
 				<capacity>Talking</capacity>
@@ -87,8 +89,8 @@
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_Immunodeficiency</defName>
 		<label>immunodeficiency</label>
 		<labelShortAdj>weak</labelShortAdj>
@@ -96,6 +98,7 @@
 		<description>Carriers of this gene regenerate their tissue half as fast as normal and are much more likely to die from infection due to low immunity.</description>
 		<iconPath>UI/Icons/Genes/Gene_Immunodeficiency</iconPath>
 		<displayOrderInCategory>3</displayOrderInCategory>
+		<mutation>1</mutation>
 		<statFactors>
 			<InjuryHealingFactor>0.5</InjuryHealingFactor>
 			<ImmunityGainSpeedFactor>0.9</ImmunityGainSpeedFactor>
@@ -117,14 +120,15 @@
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_InflexibleJoints</defName>
 		<label>inflexible joints</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene have hardened, less flexible joints, making it much harder to move and even harder to navigate difficult terrain.</description>
 		<iconPath>UI/Icons/Genes/Gene_InflexibleJoints</iconPath>
 		<displayOrderInCategory>4</displayOrderInCategory>
+		<mutation>1</mutation>
 		<capMods>
 			<li>
 				<capacity>Moving</capacity>
@@ -168,14 +172,15 @@
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_InefficientMidgut</defName>
 		<label>inefficient midgut</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene have a very inefficient acid in their midgut, making it harder to absorb nutrients. They will become hungry significantly faster, but they will be able to consume more.</description>
 		<iconPath>UI/Icons/Genes/Gene_InefficientMidgut</iconPath>
 		<displayOrderInCategory>5</displayOrderInCategory>
+		<mutation>1</mutation>
 		<statOffsets>
 			<VEF_FoodCapacityMultiplier>1</VEF_FoodCapacityMultiplier>
 		</statOffsets>
@@ -190,14 +195,15 @@
 				<hediffToWholeBody>VRE_InefficientMidgut</hediffToWholeBody>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_PorousSkin</defName>
 		<label>porous skin</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene have hollow pores in their skin, making them look extremely unappealing.</description>
 		<iconPath>UI/Icons/Genes/Gene_PorousSkin</iconPath>
 		<displayOrderInCategory>6</displayOrderInCategory>
+		<mutation>1</mutation>
 		<statOffsets>
 			<PawnBeauty>-2</PawnBeauty>
 		</statOffsets>
@@ -208,14 +214,15 @@
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_LowGreyMatter</defName>
 		<label>low grey matter</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene are unable to process new information and are incapable of evaluating their decisions and learning from them. They are incredibly slow at learning new skills and knowledge, and have greatly lowered psychic sensitivity.</description>
 		<iconPath>UI/Icons/Genes/Gene_LowGreyMatter</iconPath>
 		<displayOrderInCategory>7</displayOrderInCategory>
+		<mutation>1</mutation>
 		<statFactors>
 			<GlobalLearningFactor>0.25</GlobalLearningFactor>
 		</statFactors>
@@ -251,14 +258,15 @@
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_VestigialTubules</defName>
 		<label>vestigial tubules</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene lack any capability to filter out toxins as their tubules have become functionless. They are much more likely to die due to any sort of toxicity in their environment.</description>
 		<iconPath>UI/Icons/Genes/Gene_VestigialTubules</iconPath>
 		<displayOrderInCategory>8</displayOrderInCategory>
+		<mutation>1</mutation>
 		<statOffsets>
 			<ToxicResistance>-0.5</ToxicResistance>
 			<ToxicEnvironmentResistance>-0.5</ToxicEnvironmentResistance>
@@ -273,14 +281,15 @@
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_HypothermicHibernation</defName>
 		<label>hypothermic hibernation</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene enter a hibernation if their temperatures drop below a certain point for too long. They will rapidly lose their body functions and fall into a deep sleep, which prevents any sort of frostbite damages but also makes them unable to do anything.</description>
 		<iconPath>UI/Icons/Genes/Gene_HypothermicHibernation</iconPath>
 		<displayOrderInCategory>9</displayOrderInCategory>
+		<mutation>1</mutation>
 		<makeImmuneTo>
 			<li>Hypothermia</li>
 		</makeImmuneTo>
@@ -297,14 +306,15 @@
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_RapidLifeCycle</defName>
 		<label>rapid life cycle</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene have a short life cycle and will suffer age related illnesses sooner than others. The older they get, the more rapidly they will age.</description>
 		<iconPath>UI/Icons/Genes/Gene_RapidLifeCycle</iconPath>
 		<displayOrderInCategory>10</displayOrderInCategory>
+		<mutation>1</mutation>
 		<statFactors>
 			<LifespanFactor>0.325</LifespanFactor>
 		</statFactors>
@@ -324,14 +334,15 @@
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_WeakenedChitin</defName>
 		<label>weakened chitin</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene have their exoskeleton consisting of thin, porous and brittle chitin, and are prone to damage. The light weight of their carapace, however, allows for a slightly faster movement speed.</description>
 		<iconPath>UI/Icons/Genes/Gene_WeakenedChitin</iconPath>
 		<displayOrderInCategory>11</displayOrderInCategory>
+		<mutation>1</mutation>
 		<capMods>
 			<li>
 				<capacity>Moving</capacity>
@@ -351,14 +362,15 @@
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_Heatstress</defName>
 		<label>heatstress</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene experience heat stress when temperatures exceed their optimal range for physiological processes. This can lead to cellular damage, including denaturation of proteins, burn damage and a severe fear of fire. They will lose consciousness when exposed to extreme heat even for a short duration.</description>
 		<iconPath>UI/Icons/Genes/Gene_Heatstress</iconPath>
 		<displayOrderInCategory>12</displayOrderInCategory>
+		<mutation>1</mutation>
 		<damageFactors>
 			<Flame>4</Flame>
 		</damageFactors>
@@ -385,14 +397,15 @@
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_Dormant</defName>
 		<label>dormant</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene have reduced activity and aggression and spend most of their time in a dormant state. Metabolism of such an individual is also reduced, allowing them to consume less nutrition to keep themselves alive.</description>
 		<iconPath>UI/Icons/Genes/Gene_Dormant</iconPath>
 		<displayOrderInCategory>13</displayOrderInCategory>
+		<mutation>1</mutation>
 		<statFactors>
 			<RestFallRateFactor>1.8</RestFallRateFactor>
 		</statFactors>
@@ -409,5 +422,5 @@
 				<hediffToWholeBody>VRE_Dormant</hediffToWholeBody>
 			</li>
 		</modExtensions>
-	</GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
 </Defs>

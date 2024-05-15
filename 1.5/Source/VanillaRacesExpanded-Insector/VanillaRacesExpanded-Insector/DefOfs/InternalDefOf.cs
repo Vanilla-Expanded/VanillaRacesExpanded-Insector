@@ -8,6 +8,7 @@ using RimWorld;
 
 namespace VanillaRacesExpandedInsector
 {
+
     [DefOf]
     public static class InternalDefOf
     {

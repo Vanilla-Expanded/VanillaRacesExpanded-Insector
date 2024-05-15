@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<GeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_Hiveglands</defName>
 		<label>hiveglands</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene have special glands that allow them to create a special hive goop material, which can then be used to construct hive walls. These glands also greatly increase construction speed.</description>
 		<iconPath>UI/Icons/Genes/Gene_Hiveglands</iconPath>
 		<displayOrderInCategory>0</displayOrderInCategory>
+		<evolution>1</evolution>
 		<statOffsets>
 			<ConstructionSpeed>0.4</ConstructionSpeed>
 		</statOffsets>
@@ -46,14 +47,15 @@
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_CompoundEyes</defName>
 		<label>compound eyes</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene have numerous independent photoreception units allowing them to see in many directions, notice very fast movements and recognize details from afar. Their sight and effective shooting range is greatly increased.</description>
 		<iconPath>UI/Icons/Genes/Gene_CompoundEye</iconPath>
 		<displayOrderInCategory>1</displayOrderInCategory>
+		<evolution>1</evolution>
 		<capMods>
 			<li>
 				<capacity>Sight</capacity>
@@ -96,14 +98,15 @@
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_VocalGlands</defName>
 		<label>vocal glands</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene have a special vocal organ that can emulate human voice perfectly, and emit a melodic tone that for most people can be described as beautiful.</description>
 		<iconPath>UI/Icons/Genes/Gene_VocalGlands</iconPath>
 		<displayOrderInCategory>2</displayOrderInCategory>
+		<evolution>1</evolution>
 		<capMods>
 			<li>
 				<capacity>Talking</capacity>
@@ -145,8 +148,8 @@
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_AntimicrobialPeptides</defName>
 		<label>antimicrobial peptides</label>
 		<labelShortAdj>regenerating</labelShortAdj>
@@ -154,6 +157,7 @@
 		<description>Carriers of this gene regenerate their tissue at a much faster rate than normal, and are much more capable of fighting off any infections and illnesses.</description>
 		<iconPath>UI/Icons/Genes/Gene_AntimicrobialPeptides</iconPath>
 		<displayOrderInCategory>3</displayOrderInCategory>
+		<evolution>1</evolution>
 		<statFactors>
 			<InjuryHealingFactor>2</InjuryHealingFactor>
 			<ImmunityGainSpeedFactor>1.5</ImmunityGainSpeedFactor>
@@ -175,14 +179,15 @@
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_InsectWings</defName>
 		<label>insect wings</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene grow large insect-like wings at the back of their torso, allowing them to move quicker, glide through difficult terrain with ease, and from time to time enable them to leap into the air.</description>
 		<iconPath>UI/Icons/Genes/Gene_InsectWings</iconPath>
 		<displayOrderInCategory>4</displayOrderInCategory>
+		<evolution>1</evolution>
 		<capMods>
 			<li>
 				<capacity>Moving</capacity>
@@ -227,14 +232,15 @@
 				<hediffToWholeBody>VREInsector_Hover</hediffToWholeBody>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_InsectMandibles</defName>
 		<label>insect mandibles</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene have very strong, insect-like mandibles, allowing them to consume food significantly quicker. They will also be able to use these mandibles in combat if unarmed.</description>
 		<iconPath>UI/Icons/Genes/Gene_InsectMandibles</iconPath>
 		<displayOrderInCategory>5</displayOrderInCategory>
+		<evolution>1</evolution>
 		<statFactors>
 			<EatingSpeed>4</EatingSpeed>
 		</statFactors>
@@ -271,14 +277,15 @@
 				</hediffsToBodyParts>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_RobustMidgut</defName>
 		<label>robust midgut</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene grow a multi-fold midgut, allowing them to digest raw foods more efficiently than baseline humans. In general, they get the same nutrition from raw food as from if it is cooked. They also don't mind the taste of raw food at all. Prevents food poisoning.</description>
 		<iconPath>UI/Icons/Genes/Gene_RobustMidgut</iconPath>
 		<displayOrderInCategory>6</displayOrderInCategory>
+		<evolution>1</evolution>
 		<foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
 		<statFactors>
 			<RawNutritionFactor>1.8</RawNutritionFactor>
@@ -293,14 +300,15 @@
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_HighGreyMatter</defName>
 		<label>high grey matter</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene are capable of absorbing new information at an incredible rate, analyzing their experiences and learning from them with ease. They are incredibly good at learning new skills and knowledge.</description>
 		<iconPath>UI/Icons/Genes/Gene_HighGreyMatter</iconPath>
 		<displayOrderInCategory>7</displayOrderInCategory>
+		<evolution>1</evolution>
 		<statFactors>
 			<GlobalLearningFactor>1.5</GlobalLearningFactor>
 		</statFactors>
@@ -314,14 +322,15 @@
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_MegaspiderHorns</defName>
 		<label>megaspider horns</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene grow two strong horns from their forehead, similar to those found on bioengineered megaspiders. These horns can be used to maul enemies in combat if unarmed, but they also increase mining speed slightly.</description>
 		<iconPath>UI/Icons/Genes/Gene_MegaspiderHorns</iconPath>
 		<displayOrderInCategory>8</displayOrderInCategory>
+		<evolution>1</evolution>
 		<statOffsets>
 			<MiningSpeed>0.1</MiningSpeed>
 		</statOffsets>
@@ -358,14 +367,15 @@
 				</hediffsToBodyParts>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_DetoxifierTubules</defName>
 		<label>detoxifier tubules</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene have their Malpighian tubules set to overdrive and are capable of withstanding extreme amounts of toxicity without any ill effects.</description>
 		<iconPath>UI/Icons/Genes/Gene_DetoxifierTubules</iconPath>
 		<displayOrderInCategory>9</displayOrderInCategory>
+		<evolution>1</evolution>
 		<statOffsets>
 			<ToxicResistance>1</ToxicResistance>
 			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
@@ -384,14 +394,15 @@
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_HypothermicSlowdown</defName>
 		<label>hypothermic slowdown</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene do not suffer hypothermia. Instead, they enter hypothermic slowdown - a special biological state that allows them to survive extreme cold. Instead of trying to stay warm, the carrier’s body chemistry adapts to prevent internal freezing despite very low temperature. Bodily functions are slowed and capacities are reduced, but the cold does no permanent damage.</description>
 		<iconPath>UI/Icons/Genes/Gene_HypothermicSlowdown</iconPath>
 		<displayOrderInCategory>10</displayOrderInCategory>
+		<evolution>1</evolution>
 		<makeImmuneTo>
 			<li>Hypothermia</li>
 		</makeImmuneTo>
@@ -409,14 +420,15 @@
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_SlowedLifeCycle</defName>
 		<label>slowed life cycle</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene do not go through senescence in the normal way. They never get chronic age-related diseases like cancer, bad back, cataracts, or dementia, and age much slower.</description>
 		<iconPath>UI/Icons/Genes/Gene_SlowedLifeCycle</iconPath>
 		<displayOrderInCategory>11</displayOrderInCategory>
+		<evolution>1</evolution>
 		
 	<hediffGiversCannotGive>
       <li>Carcinoma</li>
@@ -445,14 +457,15 @@
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
 			</li>
 		</modExtensions>
-	</GeneDef>
-		<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+		<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_HardenedChitin</defName>
 		<label>hardened chitin</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene have their exoskeleton consisting of thick, hardened chitin, and are much more resistant to damage and stagger effects. This comes at the cost of slowing them down slightly due to the sheer weight of the carapace.</description>
 		<iconPath>UI/Icons/Genes/Gene_HardenedChitin</iconPath>
 		<displayOrderInCategory>12</displayOrderInCategory>
+		<evolution>1</evolution>
 		<capMods>
 			<li>
 				<capacity>Moving</capacity>
@@ -473,14 +486,15 @@
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_SensitiveBrainGoop</defName>
 		<label>sensitive brain goop</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene have a volatile substance surrounding their brain, greatly increasing their psychic sensitivity.</description>
 		<iconPath>UI/Icons/Genes/Gene_SensitiveBrainGoop</iconPath>
 		<displayOrderInCategory>13</displayOrderInCategory>
+		<evolution>1</evolution>
 		<statOffsets>
 			<PsychicSensitivity>0.3</PsychicSensitivity>
 			<MeditationFocusGain>0.2</MeditationFocusGain>
@@ -497,14 +511,15 @@
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_Serotonin</defName>
 		<label>serotonin</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene produce large amounts of serotonin, keeping them in a continuous state of bliss while also affecting their consciousness. The presence of this neurotransmitter will also make them more aggressive.</description>
 		<iconPath>UI/Icons/Genes/Gene_Serotonin</iconPath>
 		<displayOrderInCategory>14</displayOrderInCategory>
+		<evolution>1</evolution>
 		 <socialFightChanceFactor>2</socialFightChanceFactor>
 		
 		<exclusionTags>
@@ -525,14 +540,15 @@
 				</hediffsToBodyParts>
 			</li>
 		</modExtensions>
-	</GeneDef>
-	<GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_Heatshock</defName>
 		<label>heatshock</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene produce a special kind of heatshock proteins when hot, allowing them to survive even the most extreme temperatures, but causing them to consume a lot more nutrition.</description>
 		<iconPath>UI/Icons/Genes/Gene_Heatshock</iconPath>
 		<displayOrderInCategory>15</displayOrderInCategory>
+		<evolution>1</evolution>
 		<makeImmuneTo>
 			<li>Heatstroke</li>
 		</makeImmuneTo>
@@ -550,15 +566,16 @@
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
 			</li>
 		</modExtensions>
-	</GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
 	
-	<GeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef>
 		<defName>VRE_JellySacks</defName>
 		<label>jelly sacks</label>
 		<displayCategory>Healing</displayCategory>
 		<description>Carriers of this gene have large jelly sacks present on their lower abdomen, allowing them to periodically produce valuable insect jelly.</description>
 		<iconPath>UI/Icons/Genes/Gene_JellySacks</iconPath>
 		<displayOrderInCategory>16</displayOrderInCategory>
+		<evolution>1</evolution>
 		<customEffectDescriptions>
 			<li>Produces 6 units of insect jelly per day</li>
 			
@@ -585,6 +602,6 @@
 				<hediffToWholeBody>VRE_InsectJellyProduction</hediffToWholeBody>
 			</li>
 		</modExtensions>
-	</GeneDef>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
 	
 </Defs>

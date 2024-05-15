@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace VanillaRacesExpandedInsector
 {
+
     [HarmonyPatch(typeof(FoodUtility))]
     [HarmonyPatch("ThoughtsFromIngesting")]
     public static class VanillaRacesExpandedInsector_FoodUtility_ThoughtsFromIngesting_Patch
