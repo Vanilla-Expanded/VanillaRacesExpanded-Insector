@@ -29,4 +29,5 @@ Insector colonists that will be affected:
 </VRE_DeleteGenelineConfirmation>
 	<VRE_Genelines>Genelines</VRE_Genelines>
 	<VRE_GenelinesDesc>text.todo</VRE_GenelinesDesc>
+	<VRE_MetapodTimer>Time until {PAWN_nameDef} emerges: {1}</VRE_MetapodTimer>
 </LanguageData>

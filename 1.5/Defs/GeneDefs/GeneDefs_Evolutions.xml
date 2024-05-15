@@ -10,6 +10,7 @@
 	<VanillaRacesExpandedInsector.GenelineGeneDef Name="VRE_EvolutionGene" Abstract="True">
 		<displayCategory>VRE_EvolutionGene</displayCategory>
 		<evolution>1</evolution>
+		<biostatCpx>0</biostatCpx>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>
 
 	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
@@ -24,7 +25,6 @@
 		<exclusionTags>
 
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<symbolPack>
 			<prefixSymbols>
 				<li>
@@ -79,7 +79,6 @@
 		<exclusionTags>
 			<li>InsectorEye</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<symbolPack>
 			<prefixSymbols>
 				<li>
@@ -127,7 +126,6 @@
 		<exclusionTags>
 			<li>InsectorVocal</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<symbolPack>
 			<prefixSymbols>
 				<li>
@@ -169,7 +167,6 @@
 		<exclusionTags>
 			<li>InsectorImmunity</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<symbolPack>
 			<prefixSymbols>
 				<li>
@@ -199,7 +196,6 @@
 		<exclusionTags>
 			<li>InsectorMovement</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<symbolPack>
 			<prefixSymbols>
 				<li>
@@ -247,7 +243,6 @@
 		<exclusionTags>
 			<li>InsectorMouth</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<symbolPack>
 			<prefixSymbols>
 				<li>
@@ -291,7 +286,6 @@
 		<exclusionTags>
 			<li>InsectorStomach</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
@@ -311,7 +305,6 @@
 		<exclusionTags>
 			<li>InsectorBrain</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
@@ -331,7 +324,6 @@
 		<exclusionTags>
 		
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<symbolPack>
 			<prefixSymbols>
 				<li>
@@ -379,7 +371,6 @@
 		<exclusionTags>
 			<li>InsectorToxic</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
@@ -403,7 +394,6 @@
 		<exclusionTags>
 			<li>InsectorHypothermia</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
@@ -438,7 +428,6 @@
 		<exclusionTags>
 			<li>InsectorLifespan</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
@@ -465,7 +454,6 @@
 		<exclusionTags>
 			<li>InsectorArmor</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
@@ -488,7 +476,6 @@
 		<exclusionTags>
 		
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
@@ -507,7 +494,6 @@
 		<exclusionTags>
 		
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
@@ -539,7 +525,6 @@
 		<exclusionTags>
 			<li>InsectorHeatstroke</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
@@ -561,7 +546,6 @@
 		<exclusionTags>
 		<li>Tail</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<symbolPack>
 			<prefixSymbols>
 				<li>

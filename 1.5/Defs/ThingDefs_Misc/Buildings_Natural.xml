@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+METAPOD STAGE
+When player changes the geneline, or assigns a new geneline to an insector under player control, these insectors enter metapod stage.
+They become an unmovable 1x1 cocoon called Metapod. When clicked, the label should contain colonist name, for example ‘Metapod: Ophelia’.
+Metapods have 200 HP and are essentially a passable but not standable-on organic sculpture. They should have a progress bar on them.
+After 24 hours, when the progress completes, the Insector pawn emerges from the inside, this time following the brand new geneline that was assigned to them.
+If the Metapod is destroyed, the pawn inside also dies.
+When the pawn emerges, metapod should spawn insect blood and filth around. It should make a big mess. It should have similar animations to Insectoid cocoons.
+If a pawn is in a caravan when the geneline change is ordered, that pawn will enter metapod stage as soon as the pawn is spawned (for example when returning from the caravan).
+If a pawn is bed-bound, incapacitated or anything like that, and the geneline change is ordered, that pawn will turn into the metapod on the closest available cell to where they are.
+If a pawn is dead, they will not enter the metapod, however if they get resurrected, they get resurrected with no geneline selected (meaning player has to select a geneline for them again).
+
+
+
+These are not buildable by the player. They appear when insector pawns need to undergo metamorphosis.
+If destroyed, insector inside gets ejected and dies.
+When it’s first created, a timer appears on the inspect tab. This timer is visible to the player. The timer shows up on the Inspect panel of the Metapod and says:
+“Time until {1} emerges: X’
+{1} is the name of the pawn.
+The times is always 24 hours.
+
+
+  <ThingDef>
+    <defName>VRE_Metapod</defName>
+    <label>metapod</label>
+    <thingClass>VanillaRacesExpandedInsector.Metapod</thingClass>
+    <category>Building</category>
+    <description>A large cocoon formed by an insector undergoing a metamorphosis. If destroyed, the insector inside will die. After metamorphosis is complete, the insector will emerge from their metapod with a brand new genetic composition.</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <graphicData>
+      <texPath>Structure/InsectorMetapod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2, 2)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <fillPercent>0.5</fillPercent>
+    <selectable>true</selectable>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>VRE_MetapodHediff</defName>
+    <label>metapod</label>
+    <description>A large cocoon formed by an insector undergoing a metamorphosis. If destroyed, the insector inside will die. After metamorphosis is complete, the insector will emerge from their metapod with a brand new genetic composition.</description>
+    <hediffClass>VanillaRacesExpandedInsector.MetapodHediff</hediffClass>
+    <isBad>false</isBad>
+  </HediffDef>
+
+</Defs>

@@ -42,6 +42,7 @@ namespace VanillaRacesExpandedInsector
         [MayRequireIdeology]
         public static PreceptDef Cannibalism_RequiredRavenous;
 
-
+        public static ThingDef VRE_Metapod;
+        public static HediffDef VRE_MetapodHediff;
     }
 }

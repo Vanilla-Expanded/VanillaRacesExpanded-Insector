@@ -10,6 +10,7 @@
 	<VanillaRacesExpandedInsector.GenelineGeneDef Name="VRE_MutationGene" Abstract="True">
 		<displayCategory>VRE_MutationGene</displayCategory>
 		<mutation>1</mutation>
+		<biostatCpx>0</biostatCpx>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>
 
 	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
@@ -27,7 +28,6 @@
 		<exclusionTags>
 			<li>InsectorEye</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<symbolPack>
 			<prefixSymbols>
 				<li>
@@ -70,7 +70,6 @@
 		<exclusionTags>
 			<li>InsectorVocal</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<symbolPack>
 			<prefixSymbols>
 				<li>
@@ -112,7 +111,6 @@
 		<exclusionTags>
 			<li>InsectorImmunity</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<symbolPack>
 			<prefixSymbols>
 				<li>
@@ -142,7 +140,6 @@
 		<exclusionTags>
 			<li>InsectorMovement</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<symbolPack>
 			<prefixSymbols>
 				<li>
@@ -189,7 +186,6 @@
 		<exclusionTags>
 			<li>InsectorStomach</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
@@ -207,7 +203,6 @@
 		<statOffsets>
 			<PawnBeauty>-2</PawnBeauty>
 		</statOffsets>
-		<biostatCpx>1</biostatCpx>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
@@ -249,7 +244,6 @@
 		<exclusionTags>
 			<li>InsectorBrain</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
@@ -270,7 +264,6 @@
 		<exclusionTags>
 			<li>InsectorToxic</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
@@ -293,7 +286,6 @@
 		<exclusionTags>
 			<li>InsectorHypothermia</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
@@ -319,7 +311,6 @@
 		<exclusionTags>
 			<li>InsectorLifespan</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
@@ -345,7 +336,6 @@
 		<exclusionTags>
 			<li>InsectorArmor</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
@@ -378,7 +368,6 @@
 		<exclusionTags>
 			<li>InsectorHeatstroke</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
@@ -398,7 +387,6 @@
 		<exclusionTags>
 			<li>InsectorAggression</li>
 		</exclusionTags>
-		<biostatCpx>1</biostatCpx>
 		<socialFightChanceFactor>0</socialFightChanceFactor>
 		<aggroMentalBreakSelectionChanceFactor>0</aggroMentalBreakSelectionChanceFactor>
 		<modExtensions>

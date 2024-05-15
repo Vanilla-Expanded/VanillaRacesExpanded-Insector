@@ -26,7 +26,7 @@ namespace VanillaRacesExpandedInsector
                         {
                             options.Add(new FloatMenuOption(geneline != null ? "VRE_ChangeTo".Translate(allGeneline.name) : allGeneline.name, delegate
                             {
-                                allGeneline.AddPawn(pawn);
+                                allGeneline.AddPawnWithMetapod(pawn);
                             }));
                         }
                         options.Add(new FloatMenuOption("VRE_ManageGenelines".Translate() + "...", delegate
@@ -42,6 +42,12 @@ namespace VanillaRacesExpandedInsector
         public override void PostRemove()
         {
             base.PostRemove();
+            geneline?.RemovePawn(pawn);
+        }
+
+        public override void Notify_PawnDied(DamageInfo? dinfo, Hediff culprit = null)
+        {
+            base.Notify_PawnDied(dinfo, culprit);
             geneline?.RemovePawn(pawn);
         }
 

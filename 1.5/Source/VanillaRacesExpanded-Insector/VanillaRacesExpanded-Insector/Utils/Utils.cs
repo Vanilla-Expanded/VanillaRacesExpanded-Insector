@@ -35,5 +35,17 @@ namespace VanillaRacesExpandedInsector
             if (pawn.genes is null) return false;
             return pawn.genes.GetGene(geneDef)?.Active ?? false;
         }
+
+        public static Metapod MakeMetapod(this Pawn pawn)
+        {
+            var metapod = ThingMaker.MakeThing(InternalDefOf.VRE_Metapod) as Metapod;
+            if (pawn.Spawned)
+            {
+                pawn.DeSpawn();
+            }
+            metapod.SetFaction(pawn.Faction);
+            metapod.innerContainer.TryAddOrTransfer(pawn, false);
+            return metapod;
+        }
     }
 }
