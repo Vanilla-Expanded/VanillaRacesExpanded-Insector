@@ -295,8 +295,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DefOfs\GenelineGeneDef.cs" />
+    <Compile Include="Genelines\GenelineGeneDef.cs" />
     <Compile Include="DefOfs\InternalDefOf.cs" />
+    <Compile Include="Genelines\GameComponent_Genelines.cs" />
+    <Compile Include="Genelines\Geneline.cs" />
+    <Compile Include="Genelines\GenelineStatsTable.cs" />
+    <Compile Include="Genelines\Gene_GenelineEvolution.cs" />
+    <Compile Include="Genelines\Window_EditGeneline.cs" />
+    <Compile Include="Genelines\Window_ManageGenelines.cs" />
     <Compile Include="Harmony\AttackTargetFinder_ShouldIgnoreNoncombatant.cs" />
     <Compile Include="Harmony\FoodUtility_ThoughtsFromIngesting.cs" />
     <Compile Include="Harmony\GeneUtility_GenesInOrder_Patch.cs" />

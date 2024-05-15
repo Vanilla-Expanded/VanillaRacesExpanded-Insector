@@ -6,23 +6,28 @@ namespace VanillaRacesExpandedInsector
 {
     public static class Utils
     {
-        private static List<GeneDef> cachedGeneDefsInOrder = null;
+        private static List<GenelineGeneDef> cachedGeneDefsInOrder = null;
 
-        public static List<GeneDef> GenelineGenesInOrder
+        public static List<GenelineGeneDef> GenelineGenesInOrder
         {
             get
             {
                 if (cachedGeneDefsInOrder == null)
                 {
-                    cachedGeneDefsInOrder = new List<GeneDef>();
-                    foreach (GeneDef allDef in DefDatabase<GenelineGeneDef>.AllDefs)
+                    cachedGeneDefsInOrder = new List<GenelineGeneDef>();
+                    foreach (var allDef in DefDatabase<GenelineGeneDef>.AllDefs)
                     {
                         cachedGeneDefsInOrder.Add(allDef);
                     }
-                    cachedGeneDefsInOrder.SortBy((GeneDef x) => 0f - x.displayCategory.displayPriorityInXenotype, (GeneDef x) => x.displayCategory.label, (GeneDef x) => x.displayOrderInCategory);
+                    cachedGeneDefsInOrder.SortBy((GenelineGeneDef x) => 0f - x.displayCategory.displayPriorityInXenotype, (GenelineGeneDef x) => x.displayCategory.label, (GenelineGeneDef x) => x.displayOrderInCategory);
                 }
                 return cachedGeneDefsInOrder;
             }
+        }
+
+        public static void SortGeneDefs(this List<GenelineGeneDef> geneDefs)
+        {
+            geneDefs.SortBy((GenelineGeneDef x) => 0f - x.displayCategory.displayPriorityInXenotype, (GenelineGeneDef x) => x.displayOrderInCategory, (GenelineGeneDef y) => y.label);
         }
 
         public static bool HasActiveGene(this Pawn pawn, GeneDef geneDef)

@@ -4,6 +4,7 @@
 		<defName>VRE_GenelineEvolution</defName>
 		<label>geneline evolution</label>
 		<description>Carriers of this gene are capable of adapting their geneline at will. They may form different castes and obtain numerous new, geneline-exclusive evolutions and degrades.</description>
+		<geneClass>VanillaRacesExpandedInsector.Gene_GenelineEvolution</geneClass>
 		<iconPath>UI/Icons/Genes/Gene_GenelineEvolution</iconPath>
 		<biostatCpx>3</biostatCpx>
 		<biostatMet>-5</biostatMet>

@@ -15,7 +15,7 @@ namespace VanillaRacesExpandedInsector
             var window = Find.WindowStack.WindowOfType<GeneCreationDialogBase>();
             if (window != null)
             {
-                //if (window is Window_CreateAndroidBase)
+                //if (window is Window_CreateGenelineBase)
                 //{
                 //    __result = Utils.GenelineGenesInOrder;
                 //}
