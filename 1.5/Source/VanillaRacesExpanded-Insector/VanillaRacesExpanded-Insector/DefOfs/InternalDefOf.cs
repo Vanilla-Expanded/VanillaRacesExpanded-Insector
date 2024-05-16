@@ -33,6 +33,8 @@ namespace VanillaRacesExpandedInsector
         public static HediffDef VRE_HeatshockHediff;
         public static HediffDef VRE_HypothermicHibernationHediff;
         public static HediffDef VRE_HeatstressHediff;
+        public static HediffDef Hypothermia;
+        public static HediffDef Heatstroke;
 
         [MayRequireIdeology]
         public static PreceptDef Cannibalism_Acceptable;

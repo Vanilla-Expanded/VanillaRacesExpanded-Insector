@@ -27,6 +27,14 @@ namespace VanillaRacesExpandedInsector
             {
                 return;
             }
+
+            HediffDef hediffDefToRemove = InternalDefOf.Heatstroke;
+            Hediff firstHediffOfDefToRemove = pawn.health.hediffSet.GetFirstHediffOfDef(hediffDefToRemove);
+            if (firstHediffOfDefToRemove != null)
+            {
+                pawn.health.RemoveHediff(firstHediffOfDefToRemove);
+            }
+
             float ambientTemperature = pawn.AmbientTemperature;
             FloatRange floatRange = pawn.ComfortableTemperatureRange();
             FloatRange floatRange2 = pawn.SafeTemperatureRange();

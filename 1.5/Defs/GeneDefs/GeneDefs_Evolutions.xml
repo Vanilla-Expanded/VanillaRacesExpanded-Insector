@@ -466,9 +466,7 @@
 		<description>Carriers of this gene do not suffer hypothermia. Instead, they enter hypothermic slowdown - a special biological state that allows them to survive extreme cold. Instead of trying to stay warm, the carrier’s body chemistry adapts to prevent internal freezing despite very low temperature. Bodily functions are slowed and capacities are reduced, but the cold does no permanent damage.</description>
 		<iconPath>UI/Icons/Genes/Gene_HypothermicSlowdown</iconPath>
 		<displayOrderInCategory>10</displayOrderInCategory>
-		<makeImmuneTo>
-			<li>Hypothermia</li>
-		</makeImmuneTo>
+		
 		<hediffGiversCannotGive>
 			<li>Hypothermia</li>
 		</hediffGiversCannotGive>

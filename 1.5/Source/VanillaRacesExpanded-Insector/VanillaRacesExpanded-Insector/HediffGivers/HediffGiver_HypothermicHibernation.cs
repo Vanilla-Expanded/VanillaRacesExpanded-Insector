@@ -21,6 +21,15 @@ namespace VanillaRacesExpandedInsector
             FloatRange floatRange = pawn.ComfortableTemperatureRange();
             FloatRange floatRange2 = pawn.SafeTemperatureRange();
             HediffSet hediffSet = pawn.health.hediffSet;
+
+            HediffDef hediffDefToRemove = InternalDefOf.Hypothermia;
+            Hediff firstHediffOfDefToRemove = hediffSet.GetFirstHediffOfDef(hediffDefToRemove);
+            if (firstHediffOfDefToRemove != null)
+            {
+                pawn.health.RemoveHediff(firstHediffOfDefToRemove);
+            }
+
+
             HediffDef hediffDef = InternalDefOf.VRE_HypothermicHibernationHediff;
             Hediff firstHediffOfDef = hediffSet.GetFirstHediffOfDef(hediffDef);
             if (ambientTemperature < floatRange2.min)
