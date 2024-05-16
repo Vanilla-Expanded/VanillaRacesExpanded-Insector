@@ -23,6 +23,7 @@ namespace VanillaRacesExpandedInsector
         public static GeneDef VRE_Heatshock;
         public static GeneDef VRE_HypothermicHibernation;
         public static GeneDef VRE_Heatstress;
+        public static GeneDef VRE_InflexibleJoints;
 
         public static ThingDef Meat_Megaspider;
 
