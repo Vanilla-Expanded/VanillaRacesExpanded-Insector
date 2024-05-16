@@ -291,6 +291,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AI\JobDrivers\JobDriver_ChestburstImplantation.cs" />
+    <Compile Include="Alerts\Alert_ChestburstImplantationNeeded.cs" />
     <Compile Include="Genelines\GenelineGeneDef.cs" />
     <Compile Include="DefOfs\InternalDefOf.cs" />
     <Compile Include="Genelines\GameComponent_Genelines.cs" />
@@ -306,14 +308,22 @@
     <Compile Include="Harmony\GeneUIUtility_DrawSection_Patch.cs" />
     <Compile Include="Harmony\GeneUtility_GenesInOrder_Patch.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
+    <Compile Include="Harmony\Hediff_Pregnant_Tick.cs" />
     <Compile Include="Harmony\PathFinder_FindPath_Patch.cs" />
     <Compile Include="Harmony\Pawn_GeneTracker_CheckForOverrides_Patch.cs" />
     <Compile Include="Harmony\Pawn_PathFollower_CostToMoveIntoCell_Patch.cs" />
+    <Compile Include="Harmony\Recipe_ExtractOvum_CompletableEver.cs" />
+    <Compile Include="Harmony\Recipe_ImplantEmbryo_CompletableEver.cs" />
+    <Compile Include="HediffComps\HediffComp_ChestburstPregnancy.cs" />
+    <Compile Include="HediffComps\HediffComp_ChestburstPregnancyVictim.cs" />
+    <Compile Include="HediffComps\Properties\HediffCompProperties_ChestburstPregnancy.cs" />
+    <Compile Include="HediffComps\Properties\HediffCompProperties_ChestburstPregnancyVictim.cs" />
     <Compile Include="HediffGivers\HediffGiver_Heatshock.cs" />
     <Compile Include="HediffGivers\HediffGiver_Heatstress.cs" />
     <Compile Include="HediffGivers\HediffGiver_HypothermicHibernation.cs" />
     <Compile Include="HediffGivers\HediffGiver_HypothermicSlowdown.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaticCollections\StaticCollectionsClass.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_HeatStress.cs" />
     <Compile Include="Utils\Utils.cs" />
   </ItemGroup>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<ThoughtDef>
+		<defName>VRE_Implanted</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>10</durationDays>
+		<nullifyingTraits>
+			<li>Masochist</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>forcefully implanted by {0}</label>
+				<description>I was violated and stung.</description>
+				<baseMoodEffect>-15</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	<ThoughtDef>
+		<defName>VRE_Implanted_Social</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>60</durationDays>
+		<stackLimit>50</stackLimit>
+		<stackLimitForSameOtherPawn>10</stackLimitForSameOtherPawn>
+		<nullifyingTraits>
+			<li>Masochist</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>forcefully implanted</label>
+				<baseOpinionOffset>-40</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+</Defs>
