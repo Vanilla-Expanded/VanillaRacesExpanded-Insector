@@ -44,5 +44,6 @@ namespace VanillaRacesExpandedInsector
 
         public static ThingDef VRE_Metapod;
         public static HediffDef VRE_MetapodHediff;
+        public static EffecterDef CocoonWakingUp;
     }
 }

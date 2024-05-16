@@ -11,6 +11,7 @@ namespace VanillaRacesExpandedInsector
         public ThingOwner innerContainer;
         public Pawn Pawn => (Pawn)innerContainer.FirstOrDefault();
         protected Effecter progressBarEffecter;
+        private Effecter wakeUpEffect;
 
         public Metapod()
         {
@@ -33,6 +34,14 @@ namespace VanillaRacesExpandedInsector
                 if (Spawned)
                 {
                     var metapodHediff = pawn.health.hediffSet.GetFirstHediff<MetapodHediff>();
+                    if (Find.TickManager.TicksGame >= metapodHediff.ticksComplete - (5 * 60))
+                    {
+                        if (wakeUpEffect == null)
+                        {
+                            wakeUpEffect = InternalDefOf.CocoonWakingUp.SpawnAttached(this, this.Map);
+                        }
+                        wakeUpEffect.EffectTick(this, this);
+                    }
                     if (Find.TickManager.TicksGame >= metapodHediff.ticksComplete)
                     {
                         Complete(pawn, metapodHediff);
@@ -51,6 +60,7 @@ namespace VanillaRacesExpandedInsector
 
         private void Complete(Pawn pawn, MetapodHediff metapodHediff)
         {
+            wakeUpEffect?.Cleanup();
             metapodHediff.Complete();
             innerContainer.TryDrop(pawn, ThingPlaceMode.Direct, out _);
             SpawnInsectStuff(pawn, pawn.Position, pawn.Map);
@@ -67,12 +77,12 @@ namespace VanillaRacesExpandedInsector
             {
                 yield return new Command_Action
                 {
-                    defaultLabel = "DEV: Complete",
+                    defaultLabel = "DEV: Near Complete",
                     action = () =>
                     {
                         var pawn = Pawn;
                         var metapodHediff = pawn.health.hediffSet.GetFirstHediff<MetapodHediff>();
-                        Complete(pawn, metapodHediff);
+                        metapodHediff.ticksComplete = Find.TickManager.TicksGame + (6 * 60);
                     }
                 };
             }

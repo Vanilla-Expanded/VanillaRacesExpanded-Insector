@@ -22,6 +22,11 @@
     </statBases>
     <fillPercent>0.5</fillPercent>
     <selectable>true</selectable>
+	<comps>
+		<li Class="CompProperties_SpawnEffecterOnDestroy">
+			<effect>CocoonDestroyed</effect>
+		</li>
+	</comps>
   </ThingDef>
   
   <HediffDef>
