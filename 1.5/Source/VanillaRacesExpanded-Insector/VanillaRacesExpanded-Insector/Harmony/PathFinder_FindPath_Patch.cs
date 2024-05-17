@@ -37,7 +37,7 @@ namespace VanillaRacesExpandedInsector
 
         static public float ChangePathCostIfNeeded(Pawn pawn, int xCell, int zCell, float cost)
         {
-            if (pawn.HasActiveGene(InternalDefOf.VRE_InflexibleJoints))
+            if (pawn != null && pawn.HasActiveGene(InternalDefOf.VRE_InflexibleJoints))
             {
                 var cell = new IntVec3(xCell, 0, zCell);
                 var terrain = cell.GetTerrain(pawn.Map);
