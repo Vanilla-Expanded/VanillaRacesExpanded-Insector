@@ -8,10 +8,7 @@ namespace VanillaRacesExpandedInsector
     public class MetapodHediff : HediffWithComps
     {
         public int ticksComplete;
-        public Geneline genelineToRemove;
-        public Geneline genelineToAdd;
-        public List<GenelineGeneDef> oldGenes = new();
-        public List<GenelineGeneDef> newGenes = new();
+        public Geneline curGeneline;
         public override void Notify_Spawned()
         {
             base.Notify_Spawned();
@@ -31,10 +28,7 @@ namespace VanillaRacesExpandedInsector
             base.CopyFrom(other);
             var metapod = other as MetapodHediff;
             ticksComplete = metapod.ticksComplete;
-            genelineToRemove = metapod.genelineToRemove;
-            genelineToAdd = metapod.genelineToAdd;
-            oldGenes = metapod.oldGenes.ToList();
-            newGenes = metapod.newGenes.ToList();
+            curGeneline = metapod.curGeneline;
         }
 
         public override void PostAdd(DamageInfo? dinfo)
@@ -72,16 +66,42 @@ namespace VanillaRacesExpandedInsector
         public void Complete()
         {
             var genelineEvolution = pawn.genes.GetFirstGeneOfType<Gene_GenelineEvolution>();
-            if (genelineEvolution != null)
+            var allGenelineGenes = pawn.genes.GenesListForReading.Where(x => x.def is GenelineGeneDef).ToList();
+            if (genelineEvolution != null && curGeneline != null)
             {
-                genelineToAdd?.AddPawnDirectly(pawn, genelineEvolution);
-                genelineToRemove?.RemovePawnDirectly(pawn, genelineEvolution);
-                if (newGenes.Any())
-                {
-                    genelineEvolution.geneline.EditGenesDirectly(newGenes, oldGenes, pawn);
-                }
+                MatchGenelineGenes(allGenelineGenes);
+            }
+            else
+            {
+                RemoveGeneLineGenes(allGenelineGenes);
             }
             pawn.health.RemoveHediff(this);
+        }
+
+        private void MatchGenelineGenes(List<Gene> allGenelineGenes)
+        {
+            foreach (var gene in allGenelineGenes)
+            {
+                if (curGeneline.genes.Contains(gene.def) is false)
+                {
+                    pawn.genes.RemoveGene(gene);
+                }
+            }
+            foreach (var gene in curGeneline.genes)
+            {
+                if (pawn.genes.GetGene(gene) is null)
+                {
+                    pawn.genes.AddGene(gene, true);
+                }
+            }
+        }
+
+        private void RemoveGeneLineGenes(List<Gene> allGenelineGenes)
+        {
+            foreach (var gene in allGenelineGenes)
+            {
+                pawn.genes.RemoveGene(gene);
+            }
         }
 
         private void TryAddToMetapod()
@@ -97,15 +117,7 @@ namespace VanillaRacesExpandedInsector
         {
             base.ExposeData();
             Scribe_Values.Look(ref ticksComplete, "ticksComplete");
-            Scribe_References.Look(ref genelineToRemove, "genelineToRemove");
-            Scribe_References.Look(ref genelineToAdd, "genelineToAdd");
-            Scribe_Collections.Look(ref newGenes, "newGenes", LookMode.Def);
-            Scribe_Collections.Look(ref oldGenes, "oldGenes", LookMode.Def);
-            if (Scribe.mode == LoadSaveMode.PostLoadInit)
-            {
-                newGenes ??= new List<GenelineGeneDef>();
-                oldGenes ??= new List<GenelineGeneDef>();
-            }
+            Scribe_References.Look(ref curGeneline, "curGeneline");
         }
     }
 }

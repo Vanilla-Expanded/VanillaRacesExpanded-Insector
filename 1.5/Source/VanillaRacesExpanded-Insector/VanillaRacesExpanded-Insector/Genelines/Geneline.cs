@@ -42,8 +42,7 @@ namespace VanillaRacesExpandedInsector
             if (pawn.Dead is false)
             {
                 var metapodHediff = SetToMetapodStage(pawn);
-                metapodHediff.genelineToRemove = genelineEvolution.geneline;
-                metapodHediff.genelineToAdd = this;
+                metapodHediff.curGeneline = this;
             }
             else
             {
@@ -53,7 +52,10 @@ namespace VanillaRacesExpandedInsector
 
         public void AddPawnDirectly(Pawn pawn, Gene_GenelineEvolution genelineEvolution)
         {
-            genelineEvolution.geneline?.RemovePawn(pawn);
+            if (genelineEvolution.geneline != null)
+            {
+                genelineEvolution.geneline.RemovePawnDirectly(pawn, genelineEvolution);
+            }
             genelineEvolution.geneline = this;
             foreach (var gene in genes)
             {
@@ -71,7 +73,7 @@ namespace VanillaRacesExpandedInsector
             if (pawn.Dead is false)
             {
                 var metapodHediff = SetToMetapodStage(pawn);
-                metapodHediff.genelineToRemove = this;
+                metapodHediff.curGeneline = null;
             }
             else
             {
@@ -107,8 +109,7 @@ namespace VanillaRacesExpandedInsector
                 if (pawn.Dead is false)
                 {
                     var metapod = SetToMetapodStage(pawn);
-                    metapod.newGenes = genes;
-                    metapod.oldGenes = oldGenes;
+                    metapod.curGeneline = this;
                 }
                 else
                 {
