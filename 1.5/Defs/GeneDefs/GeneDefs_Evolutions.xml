@@ -179,6 +179,7 @@
 		</statFactors>
 		<exclusionTags>
 			<li>InsectorImmunity</li>
+			 <li>Immunity</li>
 		</exclusionTags>
 		<symbolPack>
 			<prefixSymbols>
