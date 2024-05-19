@@ -20,6 +20,13 @@
 		<fur>VRE_InsectSkin</fur>
 		<skinIsHairColor>false</skinIsHairColor>
 		<tattoosVisible>false</tattoosVisible>
+		<forcedHeadTypes>
+			<li>VRE_InsectHeadAverage</li>
+			<li>VRE_InsectHeadNarrow</li>
+			<li>VRE_InsectHeadGaunt</li>
+			<li>VRE_InsectHeadHeavy</li>
+			
+		</forcedHeadTypes>
 		<renderNodeProperties>
 			<li>
 				<nodeClass>PawnRenderNode_Fur</nodeClass>
