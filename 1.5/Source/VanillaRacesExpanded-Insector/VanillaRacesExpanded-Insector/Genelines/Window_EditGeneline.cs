@@ -290,8 +290,6 @@ namespace VanillaRacesExpandedInsector
             }
         }
 
-        protected Dictionary<GenelineGeneDef, List<GenelineGeneDef>> randomChosenGroups = new ();
-
         protected List<GeneLeftChosenGroup> leftChosenGroups = new List<GeneLeftChosenGroup>();
 
         private bool DrawGene(GenelineGeneDef geneDef, bool selectedSection, ref float curX, float curY, float packWidth, bool isMatch)
@@ -365,10 +363,6 @@ namespace VanillaRacesExpandedInsector
                 {
                     text = GroupInfo(leftChosenGroups.FirstOrDefault((GeneLeftChosenGroup x) => x.overriddenGenes.Contains(geneDef)));
                 }
-                else if (randomChosenGroups.ContainsKey(geneDef))
-                {
-                    text = ("GeneWillBeRandomChosen".Translate() + ":\n" + randomChosenGroups[geneDef].Select((GeneDef x) => x.label).ToLineList("  - ", capitalizeItems: true)).Colorize(ColoredText.TipSectionTitleColor);
-                }
             }
             if (selectedGenes.Contains(geneDef) && geneDef.prerequisite != null && !selectedGenes.Contains(geneDef.prerequisite))
             {
@@ -396,36 +390,13 @@ namespace VanillaRacesExpandedInsector
         public void OnGenesChanged()
         {
             selectedGenes.SortGeneDefs();
-            randomChosenGroups.Clear();
             leftChosenGroups.Clear();
             cachedOverriddenGenes.Clear();
-            for (int i = 0; i < selectedGenes.Count; i++)
-            {
-                if (!selectedGenes[i].RandomChosen)
-                {
-                    continue;
-                }
-                for (int j = i + 1; j < selectedGenes.Count; j++)
-                {
-                    if (selectedGenes[i].ConflictsWith(selectedGenes[j]))
-                    {
-                        if (!randomChosenGroups.ContainsKey(selectedGenes[i]))
-                        {
-                            randomChosenGroups.Add(selectedGenes[i], new List<GenelineGeneDef> { selectedGenes[i] });
-                        }
-                        randomChosenGroups[selectedGenes[i]].Add(selectedGenes[j]);
-                    }
-                }
-            }
             for (int k = 0; k < selectedGenes.Count; k++)
             {
-                if (selectedGenes[k].RandomChosen)
-                {
-                    continue;
-                }
                 for (int l = k + 1; l < selectedGenes.Count; l++)
                 {
-                    if (selectedGenes[l].RandomChosen || !selectedGenes[k].ConflictsWith(selectedGenes[l]))
+                    if (!selectedGenes[k].ConflictsWith(selectedGenes[l]))
                     {
                         continue;
                     }
