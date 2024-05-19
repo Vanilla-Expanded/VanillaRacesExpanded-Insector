@@ -2,4 +2,48 @@
 <LanguageData>
 	<VRE_ManageGenelines>Manage genelines</VRE_ManageGenelines>
 	<VRE_ManageGenelinesDesc>Change the currently selected geneline or create new genelines.</VRE_ManageGenelinesDesc>
+	<VRE_EditGeneline>Edit geneline</VRE_EditGeneline>
+	<VRE_GenelineName>Geneline {0}</VRE_GenelineName>
+	<VRE_DeleteThisGeneline>Delete this geneline. Removing it will result in all insectors with this geneline immediately entering the metapod stage and turning into baseline insectors.</VRE_DeleteThisGeneline>
+	<VRE_CreateGeneline>Create a new geneline</VRE_CreateGeneline>
+	<VRE_CreateGenelineExplanation>You can edit existing genelines or create a brand new geneline. Remember that changing a geneline will require your insectors to enter a metapod stage which will last 24 hours.</VRE_CreateGenelineExplanation>
+	<VRE_GenelineNameCannotBeEmpty>Geneline name cannot be empty.</VRE_GenelineNameCannotBeEmpty>
+	<VRE_MessageConflictingGenesPresent>Cannot save geneline with multiple conflicting genes.</VRE_MessageConflictingGenesPresent>
+	<VRE_Evolutions>Evolutions</VRE_Evolutions>
+	<VRE_EvolutionsDesc>Evolutions</VRE_EvolutionsDesc>
+	<VRE_Degrades>Degrades</VRE_Degrades>
+	<VRE_DegradesDesc>Degrades</VRE_DegradesDesc>
+	<VRE_Evolution>text.todo</VRE_Evolution>
+	<VRE_EvolutionDesc>text.todo</VRE_EvolutionDesc>
+	<VRE_Mutation>text.todo</VRE_Mutation>
+	<VRE_MutationDesc>text.todo</VRE_MutationDesc>
+	<VRE_SaveGeneline>Save geneline</VRE_SaveGeneline>
+	<VRE_NeedEqualAmount>Needs equal amount of evolutions and degrades.</VRE_NeedEqualAmount>
+	<VRE_ChangingGenelineExplanation>Changing the genes of a geneline will cause all insectors that are a part of that geneline to enter the metapod stage. The metapod stage will last 24 hours, during which the insectors will be unavailable.</VRE_ChangingGenelineExplanation>
+	<VRE_CannotSave>Cannot save: {0}</VRE_CannotSave>
+	<VRE_ChangeTo>Change to: {0}</VRE_ChangeTo>
+	<VRE_DeleteGenelineConfirmation>You are about to remove a geneline that’s used by some of your colonists. Removing it will result in these insectors immediately entering the metapod stage and turning into baseline insectors.
+Insector colonists that will be affected:
+
+{0}
+</VRE_DeleteGenelineConfirmation>
+	<VRE_Genelines>Genelines</VRE_Genelines>
+	<VRE_GenelinesDesc>text.todo</VRE_GenelinesDesc>
+	<VRE_MetapodTimer>Time until {PAWN_nameDef} emerges: {1}</VRE_MetapodTimer>
+	
+	
+	<VRE_ChestburstPregnancyReady>Chestburst pregnancy</VRE_ChestburstPregnancyReady>
+	<VRE_ChestburstPregnancyReadyDesc>When a colonist with chestburst pregnancy gene becomes pregnant, they need to designate another willing or unwilling individual to implant the fetus. Once the fetus matures, it will burst out of the ribcage of the victim, killing the host. If they don’t do it before the second trimester begins (6 days), the pregnancy will be terminated.</VRE_ChestburstPregnancyReadyDesc>
+	
+	<VRE_ChestburstImplantationNeeded>Chestburst implantation needed</VRE_ChestburstImplantationNeeded>
+	<VRE_ChestburstImplantationNeededDesc>When a colonist with chestburst pregnancy gene becomes pregnant, they need to designate another willing or unwilling individual to implant the fetus. Once the fetus matures, it will burst out of the ribcage of the victim, killing the host. If they don’t do it before the second trimester begins (6 days), the pregnancy will be terminated. These colonists need to implant a fetus:\n\n{0}</VRE_ChestburstImplantationNeededDesc>
+	
+	<VRE_InjectChestburstFetus>Inject chestburst fetus</VRE_InjectChestburstFetus>
+	<VRE_InjectChestburstFetusDesc> Inject the victim with the fetus, which will burst out of the victim’s chest when mature, killing the host.</VRE_InjectChestburstFetusDesc>
+	
+	<VRE_NeedsHumanoid>Needs to be injected on a humanoid target</VRE_NeedsHumanoid>
+	
+	<VRE_ChestburstBirthLabel>Chestburst birth</VRE_ChestburstBirthLabel>
+	<VRE_ChestburstBirth>A newborn, {0}, has hatched from a host, killing it in the process</VRE_ChestburstBirth>
+	
 </LanguageData>

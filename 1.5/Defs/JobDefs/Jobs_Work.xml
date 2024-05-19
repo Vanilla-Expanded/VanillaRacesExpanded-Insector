@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<JobDef>
+		<defName>VRE_ChestburstImplantationJob</defName>
+		<driverClass>VanillaRacesExpandedInsector.JobDriver_ChestburstImplantation</driverClass>
+		<reportString>injecting chestburst fetus.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+	
+
+	
+</Defs>

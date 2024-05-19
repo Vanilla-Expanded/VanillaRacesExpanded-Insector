@@ -31,6 +31,7 @@
 				<customBloodIcon>UI/Icons/Medical/VRE_BugBleeding</customBloodIcon>
 				<customBloodEffect>VRE_Damage_HitBugFlesh</customBloodEffect>
 				<customWoundsFromFleshtype>VRE_BugWoundsFlesh</customWoundsFromFleshtype>
+				<customBloodSmearThingDef>VRE_Filth_BugBlood_BloodSmear</customBloodSmearThingDef>
 			</li>
 		</modExtensions>
 	</GeneDef>

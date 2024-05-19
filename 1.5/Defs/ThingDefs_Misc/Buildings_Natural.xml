@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef>
+    <defName>VRE_Metapod</defName>
+    <label>metapod</label>
+    <thingClass>VanillaRacesExpandedInsector.Metapod</thingClass>
+    <category>Building</category>
+    <description>A large cocoon formed by an insector undergoing a metamorphosis. If destroyed, the insector inside will die. After metamorphosis is complete, the insector will emerge from their metapod with a brand new genetic composition.</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <graphicData>
+      <texPath>Structure/InsectorMetapod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2, 2)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <fillPercent>0.5</fillPercent>
+    <selectable>true</selectable>
+	<comps>
+		<li Class="CompProperties_SpawnEffecterOnDestroy">
+			<effect>CocoonDestroyed</effect>
+		</li>
+	</comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>VRE_MetapodHediff</defName>
+    <label>metapod</label>
+    <description>A large cocoon formed by an insector undergoing a metamorphosis. If destroyed, the insector inside will die. After metamorphosis is complete, the insector will emerge from their metapod with a brand new genetic composition.</description>
+    <hediffClass>VanillaRacesExpandedInsector.MetapodHediff</hediffClass>
+    <isBad>false</isBad>
+  </HediffDef>
+
+</Defs>

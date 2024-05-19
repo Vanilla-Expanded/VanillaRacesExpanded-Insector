@@ -15,29 +15,9 @@ namespace VanillaRacesExpandedInsector
             var window = Find.WindowStack.WindowOfType<GeneCreationDialogBase>();
             if (window != null)
             {
-                //if (window is Window_CreateAndroidBase)
-                //{
-                //    __result = Utils.GenelineGenesInOrder;
-                //}
-                //else
-                {
-                    __result = __result.Where(x => x is not GenelineGeneDef).ToList();
-                }
+                __result = __result.Where(x => x is not GenelineGeneDef).ToList();
             }
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 

@@ -34,10 +34,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony, Version=2.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Lib.Harmony.2.2.2\lib\net472\0Harmony.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
@@ -295,23 +291,48 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DefOfs\GenelineGeneDef.cs" />
+    <Compile Include="AI\JobDrivers\JobDriver_ChestburstImplantation.cs" />
+    <Compile Include="Alerts\Alert_ChestburstImplantationNeeded.cs" />
+    <Compile Include="Genelines\GenelineGeneDef.cs" />
     <Compile Include="DefOfs\InternalDefOf.cs" />
+    <Compile Include="Genelines\GameComponent_Genelines.cs" />
+    <Compile Include="Genelines\Geneline.cs" />
+    <Compile Include="Genelines\GenelineStatsTable.cs" />
+    <Compile Include="Genelines\Gene_GenelineEvolution.cs" />
+    <Compile Include="Genelines\Metapod.cs" />
+    <Compile Include="Genelines\MetapodHediff.cs" />
+    <Compile Include="Genelines\Window_EditGeneline.cs" />
+    <Compile Include="Genelines\Window_ManageGenelines.cs" />
     <Compile Include="Harmony\AttackTargetFinder_ShouldIgnoreNoncombatant.cs" />
     <Compile Include="Harmony\FoodUtility_ThoughtsFromIngesting.cs" />
+    <Compile Include="Harmony\GeneUIUtility_DrawSection_Patch.cs" />
     <Compile Include="Harmony\GeneUtility_GenesInOrder_Patch.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
+    <Compile Include="Harmony\Hediff_Pregnant_Tick.cs" />
+    <Compile Include="Harmony\PathFinder_FindPath_Patch.cs" />
+    <Compile Include="Harmony\Pawn_GeneTracker_CheckForOverrides_Patch.cs" />
+    <Compile Include="Harmony\Pawn_PathFollower_CostToMoveIntoCell_Patch.cs" />
+    <Compile Include="Harmony\Recipe_ExtractOvum_CompletableEver.cs" />
+    <Compile Include="Harmony\Recipe_ImplantEmbryo_CompletableEver.cs" />
+    <Compile Include="HediffComps\HediffComp_ChestburstPregnancy.cs" />
+    <Compile Include="HediffComps\HediffComp_ChestburstPregnancyVictim.cs" />
+    <Compile Include="HediffComps\Properties\HediffCompProperties_ChestburstPregnancy.cs" />
+    <Compile Include="HediffComps\Properties\HediffCompProperties_ChestburstPregnancyVictim.cs" />
     <Compile Include="HediffGivers\HediffGiver_Heatshock.cs" />
     <Compile Include="HediffGivers\HediffGiver_Heatstress.cs" />
     <Compile Include="HediffGivers\HediffGiver_HypothermicHibernation.cs" />
     <Compile Include="HediffGivers\HediffGiver_HypothermicSlowdown.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaticCollections\StaticCollectionsClass.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_HeatStress.cs" />
     <Compile Include="Utils\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <PackageReference Include="Lib.Harmony">
+      <Version>2.3.3</Version>
+      <ExcludeAssets>runtime</ExcludeAssets>
+      <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
