@@ -13,11 +13,11 @@
 	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
 		<defName>VRE_Hiveglands</defName>
 		<label>hiveglands</label>
-		<description>Carriers of this gene have special glands that allow them to create a special hive goop material, which can then be used to construct hive walls. These glands also greatly increase construction speed.</description>
+		<description>Carriers of this gene have special glands that allow them to greatly increase construction speed. They do however generate filth every time they construct anything.</description>
 		<iconPath>UI/Icons/Genes/Gene_Hiveglands</iconPath>
 		<displayOrderInCategory>0</displayOrderInCategory>
 		<statOffsets>
-			<ConstructionSpeed>0.4</ConstructionSpeed>
+			<ConstructionSpeed>0.5</ConstructionSpeed>
 		</statOffsets>
 		<exclusionTags>
 
