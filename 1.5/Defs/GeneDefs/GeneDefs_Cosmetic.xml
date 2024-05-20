@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<GeneDef>
+		<defName>VRE_InsectAntennae</defName>
+		<label>insect antennae</label>
+		<biostatCpx>1</biostatCpx>
+		<endogeneCategory>Headbone</endogeneCategory>
+		<displayCategory>Cosmetic</displayCategory>
+		<displayOrderInCategory>1000</displayOrderInCategory>
+		<exclusionTags>
+			<li>Antennas</li>
+			<li>Antenna</li>
+			<li>AG_Antennae</li>
+		</exclusionTags>
+		<randomChosen>true</randomChosen>
+		
+		<description>Carriers of this gene grow small antennas at the top of their head. These antennas do not serve any known function, and can be safely assumed to be cosmetic-only.</description>
+		<iconPath>UI/Icons/Genes/Gene_InsectAntennas</iconPath>
+		
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/InsectoidAntennas</texPath>
+				<useSkinShader>true</useSkinShader>
+				<useRottenColor>true</useRottenColor>
+				<colorType>Skin</colorType>
+			
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		
+	</GeneDef>
+</Defs>

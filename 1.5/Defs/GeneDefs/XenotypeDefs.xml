@@ -17,6 +17,7 @@
 			<li>VRE_GenelineEvolution</li>
 			<li>MoveSpeed_Slow</li>
 			<li>UVSensitivity_Mild</li>
+			<li>VRE_InsectAntennae</li>
 		</genes>
 	</XenotypeDef>
 </Defs>
