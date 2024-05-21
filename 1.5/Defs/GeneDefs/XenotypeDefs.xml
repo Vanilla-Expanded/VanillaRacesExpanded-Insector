@@ -3,8 +3,8 @@
 	<XenotypeDef>
 		<defName>VRE_Insector</defName>
 		<label>insector</label>
-		<description>todo.</description>
-		<descriptionShort>todo.</descriptionShort>
+		<description>Insectors were engineered as a military project to thrive on planets with harsh, insectoid environments. They can edit their genes to form various castes suited to different conditions, making them highly adaptable and self-sufficient. Living in symbiosis with insectoids, they reproduce by implanting a chestburster larva into a host.\n\nWith chitinous exoskeletons, multifaceted eyes, and segmented limbs, Insectors resemble a blend of humans and insects. Their isolationist nature and unsettling appearance often lead others to see them as cold and unapproachable. However, their society is complex and strategic, using fear and misunderstanding to their advantage in diplomacy and warfare, ensuring their survival in the harshest conditions.</description>
+		<descriptionShort>Engineered for harsh insectoid worlds, Insectors can adapt their genes to form specialized castes and reproduce through chestburster larvae. With chitinous exoskeletons and multifaceted eyes, they live in symbiosis with insectoids.</descriptionShort>
 		<iconPath>UI/Icons/Xenotypes/VRE_Insector</iconPath>
 		<inheritable>true</inheritable>
 	

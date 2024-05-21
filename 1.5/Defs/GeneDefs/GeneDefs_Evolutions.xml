@@ -208,6 +208,7 @@
 				<drawSize>1</drawSize>
 				<parentTagDef>Body</parentTagDef>
 				<colorType>Skin</colorType>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
 				<useRottenColor>true</useRottenColor>
 				<useSkinShader>true</useSkinShader>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
