@@ -42,45 +42,54 @@
 		</comps>
 		<stages>
 			<li>
-				<label>minor</label>
+				<label>egg</label>
 				<painOffset>0.05</painOffset>
-				 <hungerRateFactorOffset>0.1</hungerRateFactorOffset>
+				 <hungerRateFactor>1.15</hungerRateFactor>
 			</li>
 			<li>
-				<minSeverity>0.33</minSeverity>
-				<label>major</label>
-				<painOffset>0.5</painOffset>
-				 <hungerRateFactorOffset>0.3</hungerRateFactorOffset>
+				<minSeverity>0.4</minSeverity>
+				<label>larva</label>
+				<painOffset>0.1</painOffset>
+				 <hungerRateFactor>1.5</hungerRateFactor>
+				 <capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.05</offset>
+					</li>
+				</capMods>
 			</li>
 			<li>
-				<minSeverity>0.78</minSeverity>
-				<label>extreme</label>
-				<lifeThreatening>true</lifeThreatening>
-				<painOffset>0.6</painOffset>
+				<minSeverity>0.75</minSeverity>
+				<label>pupa</label>
+			
+				<painOffset>0.3</painOffset>
+				<hungerRateFactor>2</hungerRateFactor>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>-0.4</offset>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.2</offset>
 					</li>
 				</capMods>
-				 <hungerRateFactorOffset>0.5</hungerRateFactorOffset>
+				
 			</li>
 			<li>
-				<minSeverity>0.87</minSeverity>
-				<label>extreme</label>
+				<minSeverity>0.9</minSeverity>
+				<label>juvenile</label>
 				<lifeThreatening>true</lifeThreatening>
-				<painOffset>1</painOffset>
+				<painOffset>0.8</painOffset>
+				<hungerRateFactor>2</hungerRateFactor>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
 						<setMax>0.1</setMax>
 					</li>
-					<li>
-						<capacity>Breathing</capacity>
-						<offset>-0.4</offset>
-					</li>
+					
 				</capMods>
-				 <hungerRateFactorOffset>0.5</hungerRateFactorOffset>
+				
 			</li>
 		</stages>
 	</HediffDef>
