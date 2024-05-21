@@ -75,10 +75,7 @@ namespace VanillaRacesExpandedInsector
                         victimComp.genes = comp.genes;
                         victimComp.mother = comp.mother;
                         victimComp.father = comp.father;
-                        Log.Message(victimComp.mother.ToString());
-                        Log.Message(victimComp.father.ToString());
-                        Log.Message(victimComp.genes.GenesListForReading.ToStringSafeEnumerable());
-
+                        
                         pawn.health.RemoveHediff(pregnancy);
                     }
 
