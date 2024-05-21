@@ -16,7 +16,7 @@
 			<warmupTime>0.5</warmupTime>
 			<range>19.9</range>
 			<requireLineOfSight>true</requireLineOfSight>
-			<soundCast>Longjump_Jump</soundCast>
+			<soundCast>VRE_Insect_Jump</soundCast>
 			<soundLanding>Longjump_Land</soundLanding>
 			<flyWithCarriedThing>true</flyWithCarriedThing>
 			<targetParams>
