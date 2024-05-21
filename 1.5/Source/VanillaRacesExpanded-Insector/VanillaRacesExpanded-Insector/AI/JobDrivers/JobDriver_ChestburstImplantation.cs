@@ -48,7 +48,7 @@ namespace VanillaRacesExpandedInsector
                     HediffComp_ChestburstPregnancy comp = pregnancy.TryGetComp<HediffComp_ChestburstPregnancy>();
                     if (comp != null)
                     {
-                        HealthUtility.DamageUntilDowned(Targetpawn);
+                        Utils.DamageUntilDowned(Targetpawn);
                        
                         FleckMaker.AttachedOverlay(Targetpawn, FleckDefOf.FlashHollow, new Vector3(0f, 0f, 0.26f));
 

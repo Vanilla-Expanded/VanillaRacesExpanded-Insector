@@ -1,5 +1,8 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using UnityEngine;
 using Verse;
 
 namespace VanillaRacesExpandedInsector
@@ -47,5 +50,96 @@ namespace VanillaRacesExpandedInsector
             metapod.innerContainer.TryAddOrTransfer(pawn, false);
             return metapod;
         }
+
+
+
+        public static void DamageUntilDowned(Pawn p, bool allowBleedingWounds = true, DamageDef damage = null, ThingDef sourceDef = null, BodyPartGroupDef bodyGroupDef = null)
+        {
+            if (p.Downed)
+            {
+                return;
+            }
+            HediffSet hediffSet = p.health.hediffSet;
+            p.health.forceDowned = true;
+            IEnumerable<BodyPartRecord> source = from x in HittablePartsViolence(hediffSet)
+                                                 where !p.health.hediffSet.hediffs.Any((Hediff y) => y.Part == x && y.CurStage != null && y.CurStage.partEfficiencyOffset < 0f)
+                                                 select x;
+            int num = 0;
+            while (num < 300 && !p.Downed && source.Any())
+            {
+                num++;
+                BodyPartRecord bodyPartRecord = source.RandomElementByWeight((BodyPartRecord x) => x.coverageAbs);
+                int num2 = Mathf.RoundToInt(hediffSet.GetPartHealth(bodyPartRecord));
+                float statValue = p.GetStatValue(StatDefOf.IncomingDamageFactor);
+                if (statValue > 0f)
+                {
+                    num2 = (int)((float)num2 / statValue);
+                }
+                num2 -= 3;
+                if (num2 > 0 && (num2 >= 8 || num >= 250))
+                {
+                    if (num > 275)
+                    {
+                        num2 = Rand.Range(1, 8);
+                    }
+                    DamageDef damageDef = (damage != null) ? damage : ((bodyPartRecord.depth != BodyPartDepth.Outside) ? DamageDefOf.Blunt : ((allowBleedingWounds || !(bodyPartRecord.def.bleedRate > 0f)) ? RandomViolenceDamageType() : DamageDefOf.Blunt));
+                    int num3 = Rand.RangeInclusive(Mathf.RoundToInt((float)num2 * 0.65f), num2);
+                    HediffDef hediffDefFromDamage = HealthUtility.GetHediffDefFromDamage(damageDef, p, bodyPartRecord);
+                    if (!p.health.WouldDieAfterAddingHediff(hediffDefFromDamage, bodyPartRecord, (float)num3 * p.GetStatValue(StatDefOf.IncomingDamageFactor)))
+                    {
+                        DamageInfo dinfo = new DamageInfo(damageDef, num3, 999f, -1f, null, bodyPartRecord, null, DamageInfo.SourceCategory.ThingOrUnknown, null, instigatorGuilty: true, spawnFilth: true, QualityCategory.Normal, checkForJobOverride: false);
+                        dinfo.SetAllowDamagePropagation(val: false);
+                        foreach (Hediff hediff in p.TakeDamage(dinfo).hediffs)
+                        {
+                            if (sourceDef != null)
+                            {
+                                hediff.sourceDef = sourceDef;
+                            }
+                            if (bodyGroupDef != null)
+                            {
+                                hediff.sourceBodyPartGroup = bodyGroupDef;
+                            }
+                        }
+                    }
+                }
+            }
+            if (p.Dead && !p.kindDef.forceDeathOnDowned)
+            {
+                StringBuilder stringBuilder = new StringBuilder();
+                stringBuilder.AppendLine(p + " died during GiveInjuriesToForceDowned");
+                for (int i = 0; i < p.health.hediffSet.hediffs.Count; i++)
+                {
+                    stringBuilder.AppendLine("   -" + p.health.hediffSet.hediffs[i]);
+                }
+                Log.Error(stringBuilder.ToString());
+            }
+            p.health.forceDowned = false;
+        }
+
+        private static IEnumerable<BodyPartRecord> HittablePartsViolence(HediffSet bodyModel)
+        {
+            return from x in bodyModel.GetNotMissingParts()
+                   where x.depth == BodyPartDepth.Outside || (x.depth == BodyPartDepth.Inside && x.def.IsSolid(x, bodyModel.hediffs))
+                   select x;
+        }
+
+        public static DamageDef RandomViolenceDamageType()
+        {
+            switch (Rand.RangeInclusive(0, 3))
+            {
+                
+                case 0:
+                    return DamageDefOf.Blunt;
+                case 1:
+                    return DamageDefOf.Stab;
+                case 2:
+                    return DamageDefOf.Scratch;
+                case 3:
+                    return DamageDefOf.Cut;
+                default:
+                    return null;
+            }
+        }
+
     }
 }
