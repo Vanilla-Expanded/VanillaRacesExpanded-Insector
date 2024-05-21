@@ -12,7 +12,7 @@ namespace VanillaRacesExpandedInsector
     [HarmonyPatch("TryReplaceWithSolidThing")]
     public static class VanillaRacesExpandedInsector_Blueprint_TryReplaceWithSolidThing_Patch
     {
-
+        private static readonly IntRange BloodFilth = new IntRange(2, 4);
 
         [HarmonyPostfix]
         public static void CreateFilth(Pawn workerPawn, ref bool __result, ref Thing createdThing )
@@ -21,12 +21,19 @@ namespace VanillaRacesExpandedInsector
             {
                 if (createdThing?.Map != null && createdThing?.Position != null)
                 {
-                    IntVec3 randomCell;
-                    CellFinder.TryRandomClosewalkCellNear(createdThing.Position, createdThing.Map,1,out randomCell);
-                    if (randomCell.InBounds(createdThing.Map))
+                    for (int i = 0; i < BloodFilth.RandomInRange; i++)
                     {
-                        FilthMaker.TryMakeFilth(randomCell, createdThing.Map, ThingDefOf.Filth_BloodInsect);
+
+                        IntVec3 randomCell;
+                        CellFinder.TryRandomClosewalkCellNear(createdThing.Position, createdThing.Map, 1, out randomCell);
+                        if (randomCell.InBounds(createdThing.Map))
+                        {
+                            FilthMaker.TryMakeFilth(randomCell, createdThing.Map, InternalDefOf.VRE_Filth_BugFilth);
+                        }
+
                     }
+
+                    
                 }
             }
         }

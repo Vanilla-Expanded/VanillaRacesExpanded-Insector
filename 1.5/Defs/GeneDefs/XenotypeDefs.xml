@@ -18,6 +18,10 @@
 			<li>MoveSpeed_Slow</li>
 			<li>UVSensitivity_Mild</li>
 			<li>VRE_InsectAntennae</li>
+			<li>VRE_VatGrownInsectoidSkin</li>
+			<li>VRE_MegaspiderInsectoidSkin</li>
+			<li>VRE_MegascarabInsectoidSkin</li>
+			<li>VRE_SpelopedeInsectoidSkin</li>
 		</genes>
 	</XenotypeDef>
 </Defs>

@@ -28,6 +28,7 @@ namespace VanillaRacesExpandedInsector
         public static GeneDef VRE_Hiveglands;
 
         public static ThingDef Meat_Megaspider;
+        public static ThingDef VRE_Filth_BugFilth;
 
         public static ThoughtDef AteHumanlikeMeatDirectCannibal;
         public static ThoughtDef VRE_Implanted;
