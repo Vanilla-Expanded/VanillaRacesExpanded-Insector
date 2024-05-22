@@ -75,20 +75,24 @@ namespace VanillaRacesExpandedInsector
 
         public void TryChestburstImplantation(LocalTargetInfo target)
         {
+            if(target.Pawn != null) {
 
-            if(target.Pawn !=null && target.Pawn.RaceProps.Humanlike)
-            {
-                Job job = new Job(InternalDefOf.VRE_ChestburstImplantationJob, target.Pawn);
-                parent.pawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
+                if (target.Pawn.RaceProps.Humanlike || (target.Pawn.RaceProps.baseBodySize>1 && target.Pawn.DevelopmentalStage == DevelopmentalStage.Adult))
+                {
+                    Job job = new Job(InternalDefOf.VRE_ChestburstImplantationJob, target.Pawn);
+                    parent.pawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
+
+                }
+
+
+                else
+                {
+                    Messages.Message("VRE_NeedsHumanoidOrAnimal".Translate(), parent.pawn, MessageTypeDefOf.NegativeEvent, true);
+
+                }
 
             }
-
             
-            else
-            {
-                Messages.Message("VRE_NeedsHumanoid".Translate(), parent.pawn, MessageTypeDefOf.NegativeEvent, true);
-
-            }
 
         }
 

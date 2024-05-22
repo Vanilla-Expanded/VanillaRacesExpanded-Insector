@@ -41,7 +41,7 @@ Insector colonists that will be affected:
 	<VRE_InjectChestburstFetus>Inject chestburst fetus</VRE_InjectChestburstFetus>
 	<VRE_InjectChestburstFetusDesc> Inject the victim with the fetus, which will burst out of the victim’s chest when mature, killing the host.</VRE_InjectChestburstFetusDesc>
 	
-	<VRE_NeedsHumanoid>Needs to be injected on a humanoid target</VRE_NeedsHumanoid>
+	<VRE_NeedsHumanoid>Needs to be injected on a humanoid target or adult animal with body size higher than 1</VRE_NeedsHumanoid>
 	
 	<VRE_ChestburstBirthLabel>Chestburst birth</VRE_ChestburstBirthLabel>
 	<VRE_ChestburstBirth>A newborn, {0}, has hatched from a host, killing it in the process</VRE_ChestburstBirth>
