@@ -88,13 +88,13 @@ namespace VanillaRacesExpandedInsector
             }
         }
 
-        private static readonly IntRange MeatPieces = new IntRange(3, 4);
+       
 
         private static readonly IntRange BloodFilth = new IntRange(6, 9);
 
         public void SpawnInsectStuff(Pawn pawn, IntVec3 pos, Map map)
         {
-            int num = Mathf.Max(GenMath.RoundRandom(pawn.GetStatValue(StatDefOf.MeatAmount)), 3);
+         
             CellRect cellRect = new CellRect(pos.x, pos.z, 3, 3).ClipInsideMap(map);
             for (int i = 0; i < BloodFilth.RandomInRange; i++)
             {
@@ -102,20 +102,6 @@ namespace VanillaRacesExpandedInsector
                 if (randomCell.InBounds(map) && GenSight.LineOfSight(randomCell, pos, map))
                 {
                     FilthMaker.TryMakeFilth(randomCell, map, ThingDefOf.Filth_BloodInsect);
-                }
-            }
-            var meatDef = PawnKindDefOf.Spelopede.race.race.meatDef;
-            int stackLimit = meatDef.stackLimit;
-            int randomInRange = MeatPieces.RandomInRange;
-            for (int i = 0; i < randomInRange; i++)
-            {
-                if (CellFinder.TryRandomClosewalkCellNear(pos, map, 1, out var result))
-                {
-                    Thing thing = ThingMaker.MakeThing(meatDef);
-                    int maxInclusive = Mathf.Min(stackLimit, num - (randomInRange - i - 1));
-                    thing.stackCount = Rand.RangeInclusive(1, maxInclusive);
-                    num -= thing.stackCount;
-                    GenSpawn.Spawn(thing, result, map);
                 }
             }
         }
