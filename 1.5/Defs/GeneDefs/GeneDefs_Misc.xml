@@ -3,7 +3,7 @@
 	<GeneDef>
 		<defName>VRE_InsectPheromones</defName>
 		<label>insect pheromones</label>
-		<description>Carriers of this gene emit special pheromones, allowing them to co-exist with wild insectoids. They will not be attacked by insectoids. They can also control a small number of insectoids.</description>
+		<description>Carriers of this gene emit special pheromones, allowing them to co-exist with wild insectoids. They will not be attacked by insectoids unless they are provoked.</description>
 		<iconPath>UI/Icons/Genes/Gene_InsectPheromones</iconPath>
 		<biostatCpx>2</biostatCpx>
 		<biostatMet>-1</biostatMet>
