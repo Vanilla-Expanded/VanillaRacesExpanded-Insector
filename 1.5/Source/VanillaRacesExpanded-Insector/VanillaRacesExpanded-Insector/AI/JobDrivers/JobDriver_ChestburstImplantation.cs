@@ -75,7 +75,7 @@ namespace VanillaRacesExpandedInsector
                         victimComp.genes = comp.genes;
                         victimComp.mother = comp.mother;
                         victimComp.father = comp.father;
-                        
+                        comp.miscarriage = false;
                         pawn.health.RemoveHediff(pregnancy);
                     }
 
