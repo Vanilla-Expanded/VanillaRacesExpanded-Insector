@@ -386,7 +386,7 @@
 			<MiningSpeed>0.1</MiningSpeed>
 		</statOffsets>
 		<exclusionTags>
-		
+			<li>Headbone</li>
 		</exclusionTags>
 		<renderNodeProperties>
 			<li>
