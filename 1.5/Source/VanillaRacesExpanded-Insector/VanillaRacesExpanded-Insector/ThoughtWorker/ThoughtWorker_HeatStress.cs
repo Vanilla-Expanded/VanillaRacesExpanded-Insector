@@ -13,7 +13,7 @@ namespace VanillaRacesExpandedInsector
             {
                 return ThoughtState.Inactive;
             }
-            if (p.genes == null || !p.genes.HasGene(InternalDefOf.VRE_Heatstress) || !ThoughtWorker_Pyrophobia.NearFire(p))
+            if (p.genes == null || !p.HasActiveGene(InternalDefOf.VRE_Heatstress) || !ThoughtWorker_Pyrophobia.NearFire(p))
             {
                 return ThoughtState.Inactive;
             }

@@ -414,4 +414,55 @@
 			</li>
 		</modExtensions>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_LowOctopamine</defName>
+		<label>low octopamine</label>
+		<description>Carriers of this gene produce very little octopamine, causing decreased arousal and reducing their activity level. The lack of this neurotransmitter will also make them much more depressed.</description>
+		<iconPath>UI/Icons/Genes/Gene_LowOctopamine</iconPath>
+		<displayOrderInCategory>14</displayOrderInCategory>
+		<lovinMTBFactor>2</lovinMTBFactor>
+		<statFactors>
+			<Fertility>0.5</Fertility>
+		</statFactors>
+		<exclusionTags>
+			<li>InsectorAggression</li>
+			<li>Fertility</li>
+		</exclusionTags>
+		
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+				<hediffsToBodyParts>
+					<li>
+						<hediff>VRE_LowOctopamine</hediff>
+						<bodyparts>
+							<li>Brain</li>
+						</bodyparts>
+					</li>
+				</hediffsToBodyParts>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_PollutionDependency</defName>
+		<label>pollution dependency</label>
+		<description>Carriers of this gene need to be affected by pollution on a regular basis to survive. After 5 days without pollution, carriers will suffer from pollution deficiency. After 30 days, they will fall into a coma. After 60 days, they will die.</description>
+		<iconPath>UI/Icons/Genes/Gene_PollutionDependency</iconPath>
+		<displayOrderInCategory>15</displayOrderInCategory>
+		 <causesNeed>VRE_Pollution</causesNeed>
+		<exclusionTags>
+			<li>InsectorAggression</li>
+			
+		</exclusionTags>
+		
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+				
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
 </Defs>

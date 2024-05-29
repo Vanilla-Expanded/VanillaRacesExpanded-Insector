@@ -325,6 +325,7 @@
     <Compile Include="HediffGivers\HediffGiver_Heatstress.cs" />
     <Compile Include="HediffGivers\HediffGiver_HypothermicHibernation.cs" />
     <Compile Include="HediffGivers\HediffGiver_HypothermicSlowdown.cs" />
+    <Compile Include="Needs\Need_Pollution.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StaticCollections\StaticCollectionsClass.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_HeatStress.cs" />

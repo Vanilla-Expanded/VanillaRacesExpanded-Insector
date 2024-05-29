@@ -28,6 +28,8 @@ namespace VanillaRacesExpandedInsector
         public static GeneDef VRE_Hiveglands;
         public static GeneDef VRE_SpawningSack;
         public static GeneDef VRE_Parthenogenesis;
+        public static GeneDef VRE_LowOctopamine;
+        public static GeneDef VRE_PollutionDependency;
 
         public static ThingDef Meat_Megaspider;
         public static ThingDef VRE_Filth_BugFilth;

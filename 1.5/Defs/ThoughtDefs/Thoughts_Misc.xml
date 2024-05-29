@@ -18,6 +18,23 @@
   </ThoughtDef>
   
   <ThoughtDef>
+    <defName>VRE_LowOctopamine</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>VRE_LowOctopamine</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      
+      <li>
+        <label>octopamine-down</label>
+        <description>I just feel down, I think my octopamine may be low, but what do I know?</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+      
+    </stages>
+  </ThoughtDef>
+  
+  <ThoughtDef>
     <defName>VRE_Heatstress</defName>
     <workerClass>VanillaRacesExpandedInsector.ThoughtWorker_HeatStress</workerClass>
     <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
