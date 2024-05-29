@@ -46,4 +46,11 @@ Insector colonists that will be affected:
 	<VRE_ChestburstBirthLabel>Chestburst birth</VRE_ChestburstBirthLabel>
 	<VRE_ChestburstBirth>A newborn, {0}, has hatched from a host, killing it in the process</VRE_ChestburstBirth>
 	
+	<VRE_SelfImpregnate>Self-impregnate</VRE_SelfImpregnate>
+	<VRE_SelfImpregnateDesc>Female individual self-impregnates, creating a fetus that’s a perfect copy of the parent.</VRE_SelfImpregnateDesc>
+	<VRE_PawnIsMale>Only available for females</VRE_PawnIsMale>
+	<VRE_OnlyOnSelf>Parthenogenesis can only be targeted on self</VRE_OnlyOnSelf>
+	<VRE_AlreadyPregnant>Individual is already pregnant</VRE_AlreadyPregnant>
+	<VRE_GotPregnant>{0} has self-impregnated!</VRE_GotPregnant>
+	
 </LanguageData>

@@ -317,8 +317,10 @@
     <Compile Include="Harmony\Recipe_ImplantEmbryo_CompletableEver.cs" />
     <Compile Include="HediffComps\HediffComp_ChestburstPregnancy.cs" />
     <Compile Include="HediffComps\HediffComp_ChestburstPregnancyVictim.cs" />
+    <Compile Include="HediffComps\HediffComp_Parthenogenesis.cs" />
     <Compile Include="HediffComps\Properties\HediffCompProperties_ChestburstPregnancy.cs" />
     <Compile Include="HediffComps\Properties\HediffCompProperties_ChestburstPregnancyVictim.cs" />
+    <Compile Include="HediffComps\Properties\HediffCompProperties_Parthenogenesis.cs" />
     <Compile Include="HediffGivers\HediffGiver_Heatshock.cs" />
     <Compile Include="HediffGivers\HediffGiver_Heatstress.cs" />
     <Compile Include="HediffGivers\HediffGiver_HypothermicHibernation.cs" />

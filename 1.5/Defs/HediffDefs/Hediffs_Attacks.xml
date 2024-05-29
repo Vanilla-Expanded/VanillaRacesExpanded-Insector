@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	
 	<HediffDef>
 		<defName>VRE_InsectMandibles</defName>
 		<label>insect mandibles</label>
@@ -51,5 +50,34 @@
 				</tools>
 			</li>
 		</comps>
+	</HediffDef>
+	<HediffDef>
+		<defName>VRE_RipperBlades</defName>
+		<label>ripper-blade</label>
+		<description>A long and deadly ripper-blade that greatly lowers manipulation, while being able to be used in melee combat to rip even armored enemies in half.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>ripper-blade</label>
+						<capacities>
+							<li>Cut</li>
+						</capacities>
+						<power>18</power>
+						<cooldownTime>2</cooldownTime>
+						<armorPenetration>0.27</armorPenetration>
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<addedPartProps>
+			<betterThanNatural>true</betterThanNatural>
+			<partEfficiency>0.4</partEfficiency>
+		</addedPartProps>
 	</HediffDef>
 </Defs>

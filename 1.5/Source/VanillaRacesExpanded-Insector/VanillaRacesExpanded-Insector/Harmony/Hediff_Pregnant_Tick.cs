@@ -17,7 +17,7 @@ namespace VanillaRacesExpandedInsector
         [HarmonyPrefix]
         public static bool Prefix(Hediff_Pregnant __instance)
         {
-            if ((Find.TickManager.TicksAbs % 200 == 0) && (__instance?.pawn?.HasActiveGene(InternalDefOf.VRE_ChestburstPregnancy) ?? false))
+            if ((Find.TickManager.TicksAbs % 1200 == 0) && (__instance?.pawn?.HasActiveGene(InternalDefOf.VRE_ChestburstPregnancy) ?? false) && (__instance?.pawn?.HasActiveGene(InternalDefOf.VRE_SpawningSack) == false) && (__instance?.pawn?.HasActiveGene(InternalDefOf.VRE_Parthenogenesis) == false))
             {
                 try
                 {

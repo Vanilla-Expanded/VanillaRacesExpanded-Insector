@@ -179,7 +179,7 @@
 		</statFactors>
 		<exclusionTags>
 			<li>InsectorImmunity</li>
-			 <li>Immunity</li>
+			<li>Immunity</li>
 		</exclusionTags>
 		<symbolPack>
 			<prefixSymbols>
@@ -468,7 +468,6 @@
 		<description>Carriers of this gene do not suffer hypothermia. Instead, they enter hypothermic slowdown - a special biological state that allows them to survive extreme cold. Instead of trying to stay warm, the carrier’s body chemistry adapts to prevent internal freezing despite very low temperature. Bodily functions are slowed and capacities are reduced, but the cold does no permanent damage.</description>
 		<iconPath>UI/Icons/Genes/Gene_HypothermicSlowdown</iconPath>
 		<displayOrderInCategory>10</displayOrderInCategory>
-		
 		<hediffGiversCannotGive>
 			<li>Hypothermia</li>
 		</hediffGiversCannotGive>
@@ -651,7 +650,6 @@
 					</dataNorth>
 					<dataSouth>
 						<offset>(-0, 0, -0.15)</offset>
-					
 					</dataSouth>
 					<dataEast>
 						<offset>(-0.5, 0, -0.15)</offset>
@@ -667,6 +665,221 @@
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
 				<hediffToWholeBody>VRE_InsectJellyProduction</hediffToWholeBody>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_SpawningSack</defName>
+		<label>spawning sack</label>
+		<description>Carriers of this gene have large royal jelly sacks present on their lower abdomen. It increases their fertility and allows them to rapidly progress their pregnancy, and in case of chestburst pregnancies, it allows the carrier to carry their own spawn inside of them without the risk of death upon giving birth.</description>
+		<iconPath>UI/Icons/Genes/Gene_SpawningSacks</iconPath>
+		<displayOrderInCategory>17</displayOrderInCategory>
+		<customEffectDescriptions>
+			<li>Invalidates chestburst pregnancy.</li>
+			<li>25% pregnancy speed increase.</li>
+		</customEffectDescriptions>
+		<statFactors>
+			<Fertility>2</Fertility>
+		</statFactors>
+		<exclusionTags>
+			<li>Tail</li>
+			<li>Fertility</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>spawno</symbol>
+				</li>
+				<li>
+					<symbol>spawn</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/BodyAttachments/SpawningSack</texPath>
+				<colorType>Skin</colorType>
+				<overrideMeshSize>1.5</overrideMeshSize>
+				<parentTagDef>Body</parentTagDef>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData>
+						<layer>-3</layer>
+					</defaultData>
+					<dataNorth>
+						<offset>(0, 0, -0.35)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth>
+						<offset>(-0, 0, -0.15)</offset>
+					</dataSouth>
+					<dataEast>
+						<offset>(-0.5, 0, -0.15)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.5, 0, -0.15)</offset>
+					</dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+				<pregnancySpeedFactor>1.25</pregnancySpeedFactor>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_Parthenogenesis</defName>
+		<label>parthenogenesis</label>
+		<description>Carriers of this gene can self-impregnate, creating offspring without a second parent. Specialized reproductive organs generate a fetus internally, which is stored in an ovipositor-like structure until ready to be birthed. It enables carriers to rapidly propagate their species autonomously.</description>
+		<iconPath>UI/Icons/Genes/Gene_Perthenogenesis</iconPath>
+		<displayOrderInCategory>18</displayOrderInCategory>
+		<customEffectDescriptions>
+			<li>Invalidates chestburst pregnancy.</li>
+			<li>Can't get pregnant through intercourse.</li>
+		</customEffectDescriptions>
+		<statFactors>
+			<Fertility>0</Fertility>
+		</statFactors>
+		<exclusionTags>
+			<li>Fertility</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>impregno</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+				<hediffToWholeBody>VRE_Parthenogenesis</hediffToWholeBody>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_CuticleShell</defName>
+		<label>cuticle shell</label>
+		<labelShortAdj>immune</labelShortAdj>
+		<description>Carriers of this gene grow a thin cuticle exoskeleton shielding protecting them from any pathogens. This provides them with immunity to common illnesses such as malaria or flu. Does nothing to prevent the infection.</description>
+		<iconPath>UI/Icons/Genes/Gene_CuticleShell</iconPath>
+		<displayOrderInCategory>19</displayOrderInCategory>
+		<makeImmuneTo>
+			<li>Flu</li>
+			<li>Malaria</li>
+			<li>SleepingSickness</li>
+			<li>Plague</li>
+			<li>LungRot</li>
+		</makeImmuneTo>
+		<exclusionTags>
+			<li>Immunity</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>immuno</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_SpelopedeHorn</defName>
+		<label>spelopede horn</label>
+		<labelShortAdj>horned</labelShortAdj>
+		<description>Carriers of this gene grow a singular, thick horn in the middle of their headbone, similar to the ones found on bioengineered spelopedes. Unlike the megaspider horns, spelopede horn cannot be used in combat, but it does increase mining speed greatly.</description>
+		<iconPath>UI/Icons/Genes/Gene_SpelopedeHorn</iconPath>
+		<displayOrderInCategory>20</displayOrderInCategory>
+		<statOffsets>
+			<MiningSpeed>0.2</MiningSpeed>
+		</statOffsets>
+		<exclusionTags>
+			<li>Headbone</li>
+		</exclusionTags>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/SpelopedeHorn</texPath>
+				<colorType>Skin</colorType>
+				<useRottenColor>true</useRottenColor>
+				<useSkinShader>true</useSkinShader>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>81</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		<symbolPack>
+			
+			<prefixSymbols>
+				<li>
+					<symbol>insect</symbol>
+				</li>
+				<li>
+					<symbol>horn</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+				
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+		<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_RipperBlades</defName>
+		<label>ripper-blades</label>
+		<labelShortAdj>ripper-bladed</labelShortAdj>
+		<description>Carriers of this gene have long and deadly ripper-blades instead of hands. While the blades greatly lower manipulation, they can be used in melee combat and are capable of ripping even armored enemies in half.</description>
+		<iconPath>UI/Icons/Genes/Gene_RipperBlades</iconPath>
+		<displayOrderInCategory>21</displayOrderInCategory>
+		
+		<exclusionTags>
+			<li>Hands</li>
+		</exclusionTags>
+		
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>ripper</symbol>
+				</li>
+			</prefixSymbols>
+			
+		</symbolPack>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+				<hediffsToBodyParts>
+					<li>
+						<hediff>VRE_RipperBlades</hediff>
+						<bodyparts>
+							<li>Hand</li>
+							<li>Hand</li>
+						</bodyparts>
+					</li>
+				</hediffsToBodyParts>
 			</li>
 		</modExtensions>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>

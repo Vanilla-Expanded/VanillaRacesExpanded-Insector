@@ -94,4 +94,21 @@
 		</stages>
 	</HediffDef>
 	
+	<HediffDef>
+		<defName>VRE_Parthenogenesis</defName>
+		<label>parthenogenesis</label>
+		<description>This person can self-impregnate, creating offspring without a second parent. Specialized reproductive organs generate a fetus internally, which is stored in an ovipositor-like structure until ready to be birthed. It enables carriers to rapidly propagate their species autonomously.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<initialSeverity>1.0</initialSeverity>
+		<comps>
+			
+			<li Class="VanillaRacesExpandedInsector.HediffCompProperties_Parthenogenesis">
+
+			</li>
+		</comps>
+	</HediffDef>
+	
 </Defs>

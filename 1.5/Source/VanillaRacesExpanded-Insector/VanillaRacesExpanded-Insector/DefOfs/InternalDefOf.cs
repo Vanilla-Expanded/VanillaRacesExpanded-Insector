@@ -26,6 +26,8 @@ namespace VanillaRacesExpandedInsector
         public static GeneDef VRE_InflexibleJoints;
         public static GeneDef VRE_ChestburstPregnancy;
         public static GeneDef VRE_Hiveglands;
+        public static GeneDef VRE_SpawningSack;
+        public static GeneDef VRE_Parthenogenesis;
 
         public static ThingDef Meat_Megaspider;
         public static ThingDef VRE_Filth_BugFilth;
