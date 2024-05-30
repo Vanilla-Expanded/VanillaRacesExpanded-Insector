@@ -29,8 +29,8 @@ Insector colonists that will be affected:
 </VRE_DeleteGenelineConfirmation>
 	<VRE_Genelines>Genelines</VRE_Genelines>
 	<VRE_GenelinesDesc>text.todo</VRE_GenelinesDesc>
-	<VRE_MetapodTimer>Time until {PAWN_nameDef} emerges: {1}</VRE_MetapodTimer>
-	
+	<VRE_MetapodTimer>Time until {PAWN_nameDef} emerges: {1}\nInsert insect jelly into the metapod to speed up the process significantly.</VRE_MetapodTimer>
+	<VRE_MetapodSicknessCannotChangeGeneline>Cannot change genelines due to metapod sickness.</VRE_MetapodSicknessCannotChangeGeneline>
 	
 	<VRE_ChestburstPregnancyReady>Chestburst pregnancy</VRE_ChestburstPregnancyReady>
 	<VRE_ChestburstPregnancyReadyDesc>When a colonist with chestburst pregnancy gene becomes pregnant, they need to designate another willing or unwilling individual to implant the fetus. Once the fetus matures, it will burst out of the ribcage of the victim, killing the host. If they don’t do it before the second trimester begins (6 days), the pregnancy will be terminated.</VRE_ChestburstPregnancyReadyDesc>

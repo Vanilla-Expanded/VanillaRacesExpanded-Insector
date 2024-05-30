@@ -60,7 +60,7 @@ namespace VanillaRacesExpandedInsector
         public static PreceptDef Cannibalism_RequiredRavenous;
 
         public static ThingDef VRE_Metapod;
-        public static HediffDef VRE_MetapodHediff;
+        public static HediffDef VRE_MetapodHediff, VRE_MetapodSickness;
         public static EffecterDef CocoonWakingUp;
 
         public static JobDef VRE_ChestburstImplantationJob;

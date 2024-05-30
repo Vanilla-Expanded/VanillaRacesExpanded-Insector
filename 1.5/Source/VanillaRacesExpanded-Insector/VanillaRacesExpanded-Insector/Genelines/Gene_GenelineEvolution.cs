@@ -14,7 +14,7 @@ namespace VanillaRacesExpandedInsector
         {
             if (pawn.IsColonistPlayerControlled)
             {
-                yield return new Command_Action
+                var manageGenelines = new Command_Action
                 {
                     defaultLabel = geneline != null ? geneline.name : "VRE_ManageGenelines".Translate(),
                     defaultDesc = "VRE_ManageGenelinesDesc".Translate(),
@@ -36,6 +36,11 @@ namespace VanillaRacesExpandedInsector
                         Find.WindowStack.Add(new FloatMenu(options));
                     }
                 };
+                if (pawn.health.hediffSet.GetFirstHediffOfDef(InternalDefOf.VRE_MetapodSickness) != null)
+                {
+                    manageGenelines.Disable("VRE_MetapodSicknessCannotChangeGeneline".Translate());
+                }
+                yield return manageGenelines;
             }
         }
 

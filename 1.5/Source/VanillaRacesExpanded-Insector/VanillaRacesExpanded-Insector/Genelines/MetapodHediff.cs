@@ -1,5 +1,4 @@
 ﻿using RimWorld;
-using System.Collections.Generic;
 using System.Linq;
 using Verse;
 namespace VanillaRacesExpandedInsector
@@ -7,8 +6,26 @@ namespace VanillaRacesExpandedInsector
     [HotSwappable]
     public class MetapodHediff : HediffWithComps
     {
-        public int ticksComplete;
+        public float growthPercent;
+        public bool jellyFueled;
+        public int ticksSpent;
         public Geneline curGeneline;
+
+        public int TicksEmergesIn
+        {
+            get
+            {
+                var duration = FullEmergingDuration;
+                if (jellyFueled)
+                {
+                    duration /= 5f;
+                }
+
+                return (int)((1f - growthPercent) * duration);
+            }
+        }
+        public float FullEmergingDuration => GenDate.TicksPerDay * 5f;
+
         public override void Notify_Spawned()
         {
             base.Notify_Spawned();
@@ -19,15 +36,16 @@ namespace VanillaRacesExpandedInsector
 
         public float GetProgress()
         {
-            var diff = ticksComplete - Find.TickManager.TicksGame;
-            return 1f - (diff / (float)GenDate.TicksPerDay);
+            return growthPercent;
         }
 
         public override void CopyFrom(Hediff other)
         {
             base.CopyFrom(other);
             var metapod = other as MetapodHediff;
-            ticksComplete = metapod.ticksComplete;
+            growthPercent = metapod.growthPercent;
+            ticksSpent = metapod.ticksSpent;
+            jellyFueled = metapod.jellyFueled;
             curGeneline = metapod.curGeneline;
         }
 
@@ -53,7 +71,9 @@ namespace VanillaRacesExpandedInsector
         public override void Tick()
         {
             base.Tick();
-            if (Find.TickManager.TicksGame >= ticksComplete)
+            ticksSpent++;
+            DoGrowth();
+            if (growthPercent >= 1f)
             {
                 Complete();
             }
@@ -63,45 +83,41 @@ namespace VanillaRacesExpandedInsector
             }
         }
 
+        public void DoGrowth()
+        {
+            var growthThisTick = 1f / FullEmergingDuration;
+            if (jellyFueled)
+            {
+                growthThisTick *= 5f;
+            }
+            growthPercent += growthThisTick;
+        }
+
         public void Complete()
         {
             var genelineEvolution = pawn.genes.GetFirstGeneOfType<Gene_GenelineEvolution>();
-            var allGenelineGenes = pawn.genes.GenesListForReading.Where(x => x.def is GenelineGeneDef).ToList();
             if (genelineEvolution != null && curGeneline != null)
             {
-                MatchGenelineGenes(allGenelineGenes);
+                curGeneline.AddPawnDirectly(pawn, genelineEvolution);
             }
             else
             {
-                RemoveGeneLineGenes(allGenelineGenes);
-            }
-            pawn.health.RemoveHediff(this);
-        }
-
-        private void MatchGenelineGenes(List<Gene> allGenelineGenes)
-        {
-            foreach (var gene in allGenelineGenes)
-            {
-                if (curGeneline.genes.Contains(gene.def) is false)
+                var allGenelineGenes = pawn.genes.GenesListForReading.Where(x => x.def is GenelineGeneDef).ToList();
+                foreach (var gene in allGenelineGenes)
                 {
                     pawn.genes.RemoveGene(gene);
                 }
             }
-            foreach (var gene in curGeneline.genes)
-            {
-                if (pawn.genes.GetGene(gene) is null)
-                {
-                    pawn.genes.AddGene(gene, true);
-                }
-            }
+            genelineEvolution.geneline = curGeneline;
+            pawn.health.RemoveHediff(this);
         }
 
-        private void RemoveGeneLineGenes(List<Gene> allGenelineGenes)
+        public override void PostRemoved()
         {
-            foreach (var gene in allGenelineGenes)
-            {
-                pawn.genes.RemoveGene(gene);
-            }
+            base.PostRemoved();
+            var sickness = pawn.health.AddHediff(InternalDefOf.VRE_MetapodSickness);
+            var compDisappears = sickness.TryGetComp<HediffComp_Disappears>();
+            compDisappears.ticksToDisappear = compDisappears.Props.disappearsAfterTicks.Lerped(ticksSpent / FullEmergingDuration);
         }
 
         private void TryAddToMetapod()
@@ -116,7 +132,9 @@ namespace VanillaRacesExpandedInsector
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.Look(ref ticksComplete, "ticksComplete");
+            Scribe_Values.Look(ref growthPercent, "growthPercent");
+            Scribe_Values.Look(ref ticksSpent, "ticksSpent");
+            Scribe_Values.Look(ref jellyFueled, "jellyFueled");
             Scribe_References.Look(ref curGeneline, "curGeneline");
         }
     }

@@ -24,7 +24,21 @@ namespace VanillaRacesExpandedInsector
             }
         }
 
-        public MetapodHediff SetToMetapodStage(Pawn pawn)
+        public void TrySetToMetapodStage(Pawn pawn, Geneline geneline)
+        {
+            var metapodSickness = pawn.health.hediffSet.GetFirstHediff<MetapodSickness>();
+            if (metapodSickness != null)
+            {
+                metapodSickness.genelineToSwap = geneline;
+                metapodSickness.replaceGeneline = true;
+            }
+            else
+            {
+                SetToMetapodStage(pawn, geneline);
+            }
+        }
+
+        public void SetToMetapodStage(Pawn pawn, Geneline geneline)
         {
             var metapodHediff = pawn.health.hediffSet.GetFirstHediff<MetapodHediff>();
             if (metapodHediff is null)
@@ -32,8 +46,8 @@ namespace VanillaRacesExpandedInsector
                 metapodHediff = HediffMaker.MakeHediff(InternalDefOf.VRE_MetapodHediff, pawn) as MetapodHediff;
                 pawn.health.AddHediff(metapodHediff);
             }
-            metapodHediff.ticksComplete = Find.TickManager.TicksGame + GenDate.TicksPerDay;
-            return metapodHediff;
+            metapodHediff.curGeneline = geneline;
+            metapodHediff.growthPercent = 0;
         }
 
         public void AddPawnWithMetapod(Pawn pawn)
@@ -41,8 +55,7 @@ namespace VanillaRacesExpandedInsector
             var genelineEvolution = pawn.genes.GetFirstGeneOfType<Gene_GenelineEvolution>();
             if (pawn.Dead is false)
             {
-                var metapodHediff = SetToMetapodStage(pawn);
-                metapodHediff.curGeneline = this;
+                TrySetToMetapodStage(pawn, this);
             }
             else
             {
@@ -52,6 +65,14 @@ namespace VanillaRacesExpandedInsector
 
         public void AddPawnDirectly(Pawn pawn, Gene_GenelineEvolution genelineEvolution)
         {
+            var allGenelineGenes = pawn.genes.GenesListForReading.Where(x => x.def is GenelineGeneDef).ToList();
+            foreach (var gene in allGenelineGenes)
+            {
+                if (genes.Contains(gene.def) is false)
+                {
+                    pawn.genes.RemoveGene(gene);
+                }
+            }
             if (genelineEvolution.geneline != null)
             {
                 genelineEvolution.geneline.RemovePawnDirectly(pawn, genelineEvolution);
@@ -65,15 +86,17 @@ namespace VanillaRacesExpandedInsector
                     pawn.genes.AddGene(gene, true);
                 }
             }
-            pawns.Add(pawn);
+            if (pawns.Contains(pawn) is false)
+            {
+                pawns.Add(pawn);
+            }
         }
 
         public void RemovePawn(Pawn pawn)
         {
             if (pawn.Dead is false)
             {
-                var metapodHediff = SetToMetapodStage(pawn);
-                metapodHediff.curGeneline = null;
+                TrySetToMetapodStage(pawn, null);
             }
             else
             {
@@ -108,8 +131,7 @@ namespace VanillaRacesExpandedInsector
             {
                 if (pawn.Dead is false)
                 {
-                    var metapod = SetToMetapodStage(pawn);
-                    metapod.curGeneline = this;
+                    TrySetToMetapodStage(pawn, this);
                 }
                 else
                 {

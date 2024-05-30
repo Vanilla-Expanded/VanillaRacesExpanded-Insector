@@ -12,10 +12,17 @@ namespace VanillaRacesExpandedInsector
         public Pawn Pawn => (Pawn)innerContainer.FirstOrDefault();
         protected Effecter progressBarEffecter;
         private Effecter wakeUpEffect;
+        public CompRefuelable compRefuelable;
 
         public Metapod()
         {
             innerContainer = new ThingOwner<Thing>(this, oneStackOnly: false);
+        }
+
+        public override void SpawnSetup(Map map, bool respawningAfterLoad)
+        {
+            base.SpawnSetup(map, respawningAfterLoad);
+            compRefuelable = GetComp<CompRefuelable>();
         }
 
         public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
@@ -34,7 +41,8 @@ namespace VanillaRacesExpandedInsector
                 if (Spawned)
                 {
                     var metapodHediff = pawn.health.hediffSet.GetFirstHediff<MetapodHediff>();
-                    if (Find.TickManager.TicksGame >= metapodHediff.ticksComplete - (5 * 60))
+                    metapodHediff.jellyFueled = compRefuelable.HasFuel;
+                    if ((5 * 60) >= metapodHediff.TicksEmergesIn)
                     {
                         if (wakeUpEffect == null)
                         {
@@ -42,13 +50,11 @@ namespace VanillaRacesExpandedInsector
                         }
                         wakeUpEffect.EffectTick(this, this);
                     }
-                    if (Find.TickManager.TicksGame >= metapodHediff.ticksComplete)
+                    DoProgressBar(metapodHediff.GetProgress());
+                    metapodHediff.Tick();
+                    if (metapodHediff.growthPercent >= 1f)
                     {
-                        Complete(pawn, metapodHediff);
-                    }
-                    else
-                    {
-                        DoProgressBar(metapodHediff.GetProgress());
+                        Complete(pawn);
                     }
                 }
             }
@@ -58,10 +64,9 @@ namespace VanillaRacesExpandedInsector
             }
         }
 
-        private void Complete(Pawn pawn, MetapodHediff metapodHediff)
+        private void Complete(Pawn pawn)
         {
             wakeUpEffect?.Cleanup();
-            metapodHediff.Complete();
             innerContainer.TryDrop(pawn, ThingPlaceMode.Direct, out _);
             SpawnInsectStuff(pawn, pawn.Position, pawn.Map);
             Destroy();
@@ -82,19 +87,16 @@ namespace VanillaRacesExpandedInsector
                     {
                         var pawn = Pawn;
                         var metapodHediff = pawn.health.hediffSet.GetFirstHediff<MetapodHediff>();
-                        metapodHediff.ticksComplete = Find.TickManager.TicksGame + (6 * 60);
+                        metapodHediff.growthPercent = 0.99f;
                     }
                 };
             }
         }
 
-       
-
         private static readonly IntRange BloodFilth = new IntRange(6, 9);
 
         public void SpawnInsectStuff(Pawn pawn, IntVec3 pos, Map map)
         {
-         
             CellRect cellRect = new CellRect(pos.x, pos.z, 3, 3).ClipInsideMap(map);
             for (int i = 0; i < BloodFilth.RandomInRange; i++)
             {
@@ -161,7 +163,7 @@ namespace VanillaRacesExpandedInsector
             if (pawn != null)
             {
                 var hediff = pawn.health.hediffSet.GetFirstHediff<MetapodHediff>();
-                var period = (hediff.ticksComplete - Find.TickManager.TicksGame).ToStringTicksToPeriod();
+                var period = hediff.TicksEmergesIn.ToStringTicksToPeriod();
                 text += "VRE_MetapodTimer".Translate(pawn.Named("PAWN"), period);
             }
             return text;

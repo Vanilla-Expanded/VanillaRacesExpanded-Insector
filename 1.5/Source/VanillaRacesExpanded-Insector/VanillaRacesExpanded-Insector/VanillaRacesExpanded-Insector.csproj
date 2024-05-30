@@ -302,6 +302,7 @@
     <Compile Include="Genelines\Gene_GenelineEvolution.cs" />
     <Compile Include="Genelines\Metapod.cs" />
     <Compile Include="Genelines\MetapodHediff.cs" />
+    <Compile Include="Genelines\MetapodSickness.cs" />
     <Compile Include="Genelines\Window_EditGeneline.cs" />
     <Compile Include="Genelines\Window_ManageGenelines.cs" />
     <Compile Include="Harmony\AttackTargetFinder_ShouldIgnoreNoncombatant.cs" />
