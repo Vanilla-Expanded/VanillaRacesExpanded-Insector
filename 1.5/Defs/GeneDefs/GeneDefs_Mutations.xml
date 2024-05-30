@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
 	<GeneCategoryDef>
 		<defName>VRE_MutationGene</defName>
 		<label>Insector degrades</label>
 		<displayPriorityInXenotype>5011</displayPriorityInXenotype>
 	</GeneCategoryDef>
-  
 	<VanillaRacesExpandedInsector.GenelineGeneDef Name="VRE_MutationGene" Abstract="True">
 		<displayCategory>VRE_MutationGene</displayCategory>
 		<mutation>1</mutation>
 		<biostatCpx>0</biostatCpx>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>
-
 	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
 		<defName>VRE_OcelliEyes</defName>
 		<label>ocelli eyes</label>
@@ -414,7 +411,6 @@
 			</li>
 		</modExtensions>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>
-	
 	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
 		<defName>VRE_LowOctopamine</defName>
 		<label>low octopamine</label>
@@ -429,7 +425,6 @@
 			<li>InsectorAggression</li>
 			<li>Fertility</li>
 		</exclusionTags>
-		
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
@@ -451,17 +446,93 @@
 		<description>Carriers of this gene need to be affected by pollution on a regular basis to survive. After 5 days without pollution, carriers will suffer from pollution deficiency. After 30 days, they will fall into a coma. After 60 days, they will die.</description>
 		<iconPath>UI/Icons/Genes/Gene_PollutionDependency</iconPath>
 		<displayOrderInCategory>15</displayOrderInCategory>
-		 <causesNeed>VRE_Pollution</causesNeed>
+		<causesNeed>VRE_Pollution</causesNeed>
 		<exclusionTags>
 			<li>InsectorAggression</li>
-			
+		</exclusionTags>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_ProteinDenaturation</defName>
+		<label>protein denaturation</label>
+		<description>Carriers of this gene have disrupted cellular processes caused by denatured proteins that react dangerously to UV radiation. They are intensely sensitive to sunlight and have very dry chitin that’s susceptible to fire.</description>
+		<iconPath>UI/Icons/Genes/Gene_ProteinDenaturation</iconPath>
+		<displayOrderInCategory>16</displayOrderInCategory>
+		<conditionalStatAffecters>
+			<li Class="VanillaGenesExpanded.ConditionalStatAffecter_AnyLightSensitivity">
+				<statFactors>
+					<MoveSpeed>0.8</MoveSpeed>
+				</statFactors>
+			</li>
+		</conditionalStatAffecters>
+		<damageFactors>
+			<Flame>4</Flame>
+		</damageFactors>
+		<exclusionTags>
+			<li>UVSensitivity</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>dry</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_Stenothermic</defName>
+		<label>stenothermic</label>
+		<description>Carriers of this gene can only tolerate a very narrow range of temperatures.</description>
+		<iconPath>UI/Icons/Genes/Gene_Stenothermic</iconPath>
+		<displayOrderInCategory>17</displayOrderInCategory>
+		<statOffsets>
+			<ComfyTemperatureMin>4</ComfyTemperatureMin>
+			<ComfyTemperatureMax>-4</ComfyTemperatureMax>
+		</statOffsets>
+		<exclusionTags>
+			<li>MinTemperature</li>
+			<li>MaxTemperature</li>
+		</exclusionTags>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_AcidBlood</defName>
+		<label>acid blood</label>
+		<description>Carriers of this gene have a highly concentrated toxin in their blood. When bleeding, they emit large amounts of tox gas, and upon death, their gear will be destroyed by acid.</description>
+		<iconPath>UI/Icons/Genes/Gene_AcidBlood</iconPath>
+		<displayOrderInCategory>18</displayOrderInCategory>
+		<exclusionTags>
+			<li>AG_BloodType</li>
+			<li>BloodType</li>
+			<li>Blood</li>
 		</exclusionTags>
 		
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+				<hediffToWholeBody>VRE_AcidBlood</hediffToWholeBody>
 				
+				<customBloodThingDef>VRE_Filth_ToxBlood</customBloodThingDef>
+				<customBloodIcon>UI/Icons/Medical/VRE_AcidicBloodIcon</customBloodIcon>
+				<customBloodEffect>VRE_Damage_HitTox</customBloodEffect>
+				<customWoundsFromFleshtype>VRE_ToxWoundsFlesh</customWoundsFromFleshtype>
 			</li>
 		</modExtensions>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>

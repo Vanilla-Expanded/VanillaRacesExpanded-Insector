@@ -7,7 +7,7 @@
 		<description>Carriers of this gene need to be affected by pollution on a regular basis to survive. After 5 days without pollution, carriers will suffer from pollution deficiency. After 30 days, they will fall into a coma. After 60 days, they will die.</description>
 		<minIntelligence>Humanlike</minIntelligence>
 		<colonistAndPrisonersOnly>true</colonistAndPrisonersOnly>
-		<fallPerDay>12</fallPerDay>
+		<fallPerDay>0.033</fallPerDay>
 		<listPriority>80</listPriority>
 	</NeedDef>
 </Defs>

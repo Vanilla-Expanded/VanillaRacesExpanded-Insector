@@ -38,7 +38,7 @@ namespace VanillaRacesExpandedInsector
             if (!this.IsFrozen)
             {
                
-                    this.CurLevel -= this.PollutionFallPerTick * 150f;
+                this.CurLevel -= this.PollutionFallPerTick * 150f;
                
 
             }

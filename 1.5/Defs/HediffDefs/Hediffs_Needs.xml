@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef>
+		<defName>VRE_PollutionDependency</defName>
+		<label>pollution dependency</label>
+		<description>This person has a genetically-induced biochemical dependency on pollution. After 5 days without pollution, carriers will suffer from pollution deficiency. After 30 days, they will fall into a coma. After 60 days, they will die.</description>
+		<hediffClass>VanillaRacesExpandedInsector.Hediff_PollutionNeed</hediffClass>
+		<everCurableByItem>false</everCurableByItem>
+		<initialSeverity>0</initialSeverity>
+		<maxSeverity>60</maxSeverity>
+		<lethalSeverity>60</lethalSeverity>
+		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+			<li>
+				<minSeverity>0.001</minSeverity>
+				<becomeVisible>true</becomeVisible>
+			</li>
+			<li>
+				<label>deficiency</label>
+				<minSeverity>5</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.7</setMax>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<setMax>0.8</setMax>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<setMax>0.5</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<overrideLabel>deficiency coma</overrideLabel>
+				<minSeverity>30</minSeverity>
+				<lifeThreatening>true</lifeThreatening>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>1</severityPerDay>
+			</li>
+		</comps>
+	</HediffDef>
+</Defs>

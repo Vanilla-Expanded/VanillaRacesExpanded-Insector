@@ -17,5 +17,22 @@
             </li>
         </genericWounds>
     </FleshTypeDef>
+	
+	<FleshTypeDef>
+        <defName>VRE_ToxWoundsFlesh</defName>
+		<corpseCategory>CorpsesAnimal</corpseCategory>
+		<damageEffecter>VRE_Damage_HitTox</damageEffecter>
+        <genericWounds>
+            <li>
+                <texture>Things/Pawn/Humanlike/Wounds/VRE_WoundAcidA</texture>
+            </li>
+            <li>
+                <texture>Things/Pawn/Humanlike/Wounds/VRE_WoundAcidB</texture>
+            </li>
+            <li>
+                <texture>Things/Pawn/Humanlike/Wounds/VRE_WoundAcidC</texture>
+            </li>
+        </genericWounds>
+    </FleshTypeDef>
 
 </Defs>
