@@ -22,7 +22,7 @@ namespace VanillaRacesExpandedInsector
             {
                 if (pawn.HasActiveGene(InternalDefOf.VRE_InsectPheromones))
                 {
-                    __result = false;
+                    __result = true;
                 }
 
 
