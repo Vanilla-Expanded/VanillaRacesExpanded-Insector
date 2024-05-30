@@ -53,7 +53,7 @@
 	</ThingDef>
 	<ThingDef ParentName="BaseFilth">
 		<defName>VRE_Filth_ToxBlood</defName>
-		<thingClass>VanillaRacesExpandedFungoid.Filth_ToxEmitting</thingClass>
+		<thingClass>VanillaRacesExpandedInsector.Filth_ToxEmitting</thingClass>
 		<label>rotblood</label>
 		<statBases>
 			<Beauty>-30</Beauty>
