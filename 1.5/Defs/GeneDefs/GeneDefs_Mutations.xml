@@ -294,11 +294,16 @@
 		<makeImmuneTo>
 			<li>Hypothermia</li>
 		</makeImmuneTo>
+		<statOffsets>
+			<ComfyTemperatureMin>5</ComfyTemperatureMin>
+		</statOffsets>
+		
 		<hediffGiversCannotGive>
 			<li>Hypothermia</li>
 		</hediffGiversCannotGive>
 		<exclusionTags>
 			<li>InsectorHypothermia</li>
+			<li>MinTemperature</li>
 		</exclusionTags>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">

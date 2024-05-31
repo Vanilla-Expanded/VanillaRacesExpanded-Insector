@@ -83,6 +83,7 @@
 			<li>
 				<label>initial</label>
 				<minSeverity>0.04</minSeverity>
+				<restFallFactor>1.4</restFallFactor>
 				<capMods>
 					<li>
 						<capacity>Moving</capacity>
@@ -97,6 +98,7 @@
 			<li>
 				<label>drowsy</label>
 				<minSeverity>0.22</minSeverity>
+				<restFallFactor>1.8</restFallFactor>
 				<hungerRateFactorOffset>-0.3</hungerRateFactorOffset>
 				<capMods>
 					<li>
@@ -116,6 +118,7 @@
 			<li>
 				<label>sleep</label>
 				<minSeverity>0.3</minSeverity>
+				<restFallFactor>2</restFallFactor>
 				<hungerRateFactorOffset>-0.75</hungerRateFactorOffset>
 				<capMods>
 					<li>
@@ -127,6 +130,7 @@
 			<li>
 				<label>deep sleep</label>
 				<minSeverity>0.6</minSeverity>
+				<restFallFactor>2</restFallFactor>
 				<hungerRateFactorOffset>-0.98</hungerRateFactorOffset>
 				<capMods>
 					<li>
