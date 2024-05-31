@@ -305,7 +305,7 @@
     <Compile Include="Genelines\MetapodSickness.cs" />
     <Compile Include="Genelines\Window_EditGeneline.cs" />
     <Compile Include="Genelines\Window_ManageGenelines.cs" />
-    <Compile Include="Harmony\AttackTargetFinder_ShouldIgnoreNoncombatant.cs" />
+    <Compile Include="Harmony\AttackTargetFinder_BestAttackTarget_Validator_Patch.cs" />
     <Compile Include="Harmony\Blueprint_TryReplaceWithSolidThing.cs" />
     <Compile Include="Harmony\FoodUtility_ThoughtsFromIngesting.cs" />
     <Compile Include="Harmony\GeneUIUtility_DrawSection_Patch.cs" />
