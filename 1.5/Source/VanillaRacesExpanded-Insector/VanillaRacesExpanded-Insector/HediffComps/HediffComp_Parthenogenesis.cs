@@ -70,7 +70,8 @@ namespace VanillaRacesExpandedInsector
                 else
                 {
                     Hediff_Pregnant hediff_Pregnant = (Hediff_Pregnant)HediffMaker.MakeHediff(HediffDefOf.Pregnant, parent.pawn);
-                    hediff_Pregnant.SetParents(parent.pawn, parent.pawn, null);
+                    GeneSet inheritedGeneSet = PregnancyUtility.GetInheritedGeneSet(parent.pawn, parent.pawn);
+                    hediff_Pregnant.SetParents(parent.pawn, null, inheritedGeneSet);
                     parent.pawn.health.AddHediff(hediff_Pregnant);
                     Messages.Message("VRE_GotPregnant".Translate(parent.pawn), parent.pawn, MessageTypeDefOf.PositiveEvent, true);
                 }
