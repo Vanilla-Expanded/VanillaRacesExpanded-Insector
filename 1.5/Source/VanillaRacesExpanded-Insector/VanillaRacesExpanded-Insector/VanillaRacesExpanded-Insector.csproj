@@ -330,6 +330,7 @@
     <Compile Include="Hediffs\Hediff_PollutionNeed.cs" />
     <Compile Include="Needs\Need_Pollution.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScenParts\ScenPart_LowOrbitCrash.cs" />
     <Compile Include="StaticCollections\StaticCollectionsClass.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_HeatStress.cs" />
     <Compile Include="Utils\Utils.cs" />

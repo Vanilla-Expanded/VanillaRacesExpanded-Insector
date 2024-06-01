@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ScenPartDef>
+		<defName>VRE_PlayerPawnsArriveCrash</defName>
+		<label>arrival method</label>
+		<category>Fixed</category>
+		<scenPartClass>VanillaRacesExpandedInsector.ScenPart_LowOrbitCrash</scenPartClass>
+		<summaryPriority>470</summaryPriority>
+	</ScenPartDef>
+	<ScenarioDef>
+		<defName>VRE_InfestedCrash</defName>
+		<label>Infested ship crash</label>
+		<description>As the old, derelict ship entered the lower orbit, a sudden systems failure triggered a catastrophic malfunction. Not sure if it was due to the ship’s advanced age, a critical hardware failure, or a long-dormant virus in the AI-core, we quickly realized it didn’t matter. Our colony of insectors, long misunderstood and striving to survive, was in chaos. In our panic, we instinctively swarmed towards the escape pods, desperate to flee the impending disaster.\n\nIn our haste, we accidentally launched the pods, leaving the human crew behind in their cryptosleep chambers, unaware and doomed. The ship split into numerous chunks as it rapidly descended onto the surface. Amid the pandemonium, we could only hope that perhaps some things could still be recovered from the wreckage.\n\nNote: Since you start crash landing and with very little supplies, this is a difficult scenario.</description>
+		<scenario>
+			<summary>A hive of insectors, crashlanding in the wilderness. A classic VRE - Insector experience.</summary>
+			<playerFaction>
+				<def>PlayerFaction</def>
+				<factionDef>VRE_InsectorPlayerTribe</factionDef>
+			</playerFaction>
+			<parts>
+				<!-- Config pages -->
+				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
+					<def>ConfigurePawnsXenotypes</def>
+					<pawnChoiceCount>6</pawnChoiceCount>
+					<customSummary>Start with six insectors.</customSummary>
+					<overrideKinds>
+						<li>
+							<xenotype>VRE_Insector</xenotype>
+							<pawnKind>VRE_TribalInsector</pawnKind>
+						</li>
+					</overrideKinds>
+					<xenotypeCounts>
+						<li>
+							<xenotype>VRE_Insector</xenotype>
+							<count>6</count>
+							<description>adult insector</description>
+							<allowedDevelopmentalStages>Adult</allowedDevelopmentalStages>
+						</li>
+					</xenotypeCounts>
+				</li>
+				<!-- Player starting stuff spawn method-->
+				<li Class="VanillaRacesExpandedInsector.ScenPart_LowOrbitCrash">
+					<def>VRE_PlayerPawnsArriveCrash</def>
+					<visible>false</visible>
+				</li>
+				<!-- Player starting things -->
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>InsectJelly</thingDef>
+					<count>180</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>WoodLog</thingDef>
+					<count>30</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>MedicineHerbal</thingDef>
+					<count>10</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>ScatterThingsNearPlayerStart</def>
+					<thingDef>Steel</thingDef>
+					<count>100</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Pemmican</thingDef>
+					<count>120</count>
+				</li>
+				<!-- Game start dialog -->
+				<li Class="ScenPart_GameStartDialog">
+					<def>GameStartDialog</def>
+					<textKey>GameStartDialog</textKey>
+					<closeSound>GameStartSting</closeSound>
+				</li>
+			</parts>
+		</scenario>
+	</ScenarioDef>
+</Defs>

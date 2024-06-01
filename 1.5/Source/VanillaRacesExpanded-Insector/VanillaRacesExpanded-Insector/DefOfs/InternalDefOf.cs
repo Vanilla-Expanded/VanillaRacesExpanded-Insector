@@ -33,6 +33,8 @@ namespace VanillaRacesExpandedInsector
 
         public static ThingDef Meat_Megaspider;
         public static ThingDef VRE_Filth_BugFilth;
+        public static ThingDef VRE_InfestedShipPart;
+        public static ThingDef VRE_InfestedShipPart_Spawned;
 
         public static ThoughtDef AteHumanlikeMeatDirectCannibal;
         public static ThoughtDef VRE_Implanted;
