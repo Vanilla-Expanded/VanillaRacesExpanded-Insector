@@ -19,8 +19,8 @@ namespace VanillaRacesExpandedInsector
            
             this.DropThingGroupsNear(MapGenerator.PlayerStartSpot, map, CreateThingGroups());
 
-            /*for (int i = 0; i < 3; i++)
-            {*/
+            for (int i = 0; i < 3; i++)
+            {
                 TryFindShipChunkDropCell(InternalDefOf.VRE_InfestedShipPart, MapGenerator.PlayerStartSpot, map, out IntVec3 spawnPos);
                 Thing inner = ThingMaker.MakeThing(InternalDefOf.VRE_InfestedShipPart_Spawned);
                 inner.SetFactionDirect(Faction.OfPlayer);
@@ -28,7 +28,7 @@ namespace VanillaRacesExpandedInsector
 
                 SkyfallerMaker.SpawnSkyfaller(InternalDefOf.VRE_InfestedShipPart, inner, spawnPos, map);
 
-            /*}*/
+            }
         }
 
 
@@ -83,8 +83,11 @@ namespace VanillaRacesExpandedInsector
 
         private void MakeDropPodAt(IntVec3 c, Map map, ActiveDropPodInfo info)
         {
-            ActiveDropPod activeDropPod = (ActiveDropPod)ThingMaker.MakeThing(ThingDefOf.ActiveDropPod);
+            ActiveDropPod activeDropPod = (ActiveDropPod)ThingMaker.MakeThing(InternalDefOf.VRE_ActiveDropPod);
             activeDropPod.Contents = info;
+            Thing inner = ThingMaker.MakeThing(InternalDefOf.VRE_InfestedShipPart_Spawned);
+            activeDropPod.Contents.innerContainer.TryAdd(inner);
+           // activeDropPod.Graphic = inner.Graphic;
             SkyfallerMaker.SpawnSkyfaller(InternalDefOf.VRE_InfestedShipPart, activeDropPod, c, map);
             foreach (Thing thing in activeDropPod.Contents.innerContainer)
             {

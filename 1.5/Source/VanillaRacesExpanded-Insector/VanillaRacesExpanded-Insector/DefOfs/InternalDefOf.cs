@@ -35,6 +35,7 @@ namespace VanillaRacesExpandedInsector
         public static ThingDef VRE_Filth_BugFilth;
         public static ThingDef VRE_InfestedShipPart;
         public static ThingDef VRE_InfestedShipPart_Spawned;
+        public static ThingDef VRE_ActiveDropPod;
 
         public static ThoughtDef AteHumanlikeMeatDirectCannibal;
         public static ThoughtDef VRE_Implanted;
