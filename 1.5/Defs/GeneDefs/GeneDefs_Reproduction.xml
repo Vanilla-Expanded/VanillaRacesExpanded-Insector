@@ -3,7 +3,7 @@
 	<GeneDef>
 		<defName>VRE_ChestburstPregnancy</defName>
 		<label>chestburst pregnancy</label>
-		<description>Carriers of this gene do not carry their own fetus. Instead, fetus needs to be implanted in another willing or unwilling individual. Once the fetus matures, it will burst out of the ribcage of the victim, killing the host.</description>
+		<description>Carriers of this gene do not carry their own fetus. Instead, fetus needs to be implanted in another willing or unwilling individual or animal. Once the fetus matures, it will burst out of the ribcage of the victim, killing the host.</description>
 		<iconPath>UI/Icons/Genes/Gene_ChestburstPregnancy</iconPath>
 		<displayCategory>Reproduction</displayCategory>
 		<exclusionTags>
