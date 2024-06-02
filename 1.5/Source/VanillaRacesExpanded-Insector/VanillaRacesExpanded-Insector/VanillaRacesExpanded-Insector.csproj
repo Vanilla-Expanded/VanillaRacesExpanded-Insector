@@ -319,9 +319,11 @@
     <Compile Include="Harmony\Recipe_ImplantEmbryo_CompletableEver.cs" />
     <Compile Include="HediffComps\HediffComp_ChestburstPregnancy.cs" />
     <Compile Include="HediffComps\HediffComp_ChestburstPregnancyVictim.cs" />
+    <Compile Include="HediffComps\HediffComp_ChestburstPregnancyVictimHidden.cs" />
     <Compile Include="HediffComps\HediffComp_Parthenogenesis.cs" />
     <Compile Include="HediffComps\Properties\HediffCompProperties_ChestburstPregnancy.cs" />
     <Compile Include="HediffComps\Properties\HediffCompProperties_ChestburstPregnancyVictim.cs" />
+    <Compile Include="HediffComps\Properties\HediffCompProperties_ChestburstPregnancyVictimHidden.cs" />
     <Compile Include="HediffComps\Properties\HediffCompProperties_Parthenogenesis.cs" />
     <Compile Include="HediffGivers\HediffGiver_Heatshock.cs" />
     <Compile Include="HediffGivers\HediffGiver_Heatstress.cs" />
@@ -330,6 +332,7 @@
     <Compile Include="Hediffs\Hediff_PollutionNeed.cs" />
     <Compile Include="Needs\Need_Pollution.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestNodes\QuestNode_Root_ChestburstWandererJoin_WalkIn.cs" />
     <Compile Include="ScenParts\ScenPart_LowOrbitCrash.cs" />
     <Compile Include="Skyfallers\IncomingSmoker.cs" />
     <Compile Include="StaticCollections\StaticCollectionsClass.cs" />

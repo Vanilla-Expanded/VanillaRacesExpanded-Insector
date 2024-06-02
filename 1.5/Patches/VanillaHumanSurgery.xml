@@ -10,6 +10,13 @@
 					
 				</value>
 			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name="AnimalThingBase"]/recipes</xpath>
+				<value>
+					<li>VRE_RemoveChestburstPregnancy_Victim</li>
+					
+				</value>
+			</li>
 		</operations>
 	</Operation>
 </Patch>

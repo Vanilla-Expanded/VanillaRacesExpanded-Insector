@@ -55,7 +55,7 @@
 		<defName>VRE_RipperBlades</defName>
 		<label>ripper-blade</label>
 		<description>A long and deadly ripper-blade that greatly lowers manipulation, while being able to be used in melee combat to rip even armored enemies in half.</description>
-		<hediffClass>HediffWithComps</hediffClass>
+		<hediffClass>Hediff_AddedPart</hediffClass>
 		<countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
