@@ -28,7 +28,7 @@
 		</li>
       <li Class="CompProperties_Refuelable">
         <fuelConsumptionRate>15</fuelConsumptionRate>
-        <fuelCapacity>100</fuelCapacity>
+        <fuelCapacity>15</fuelCapacity>
         <fuelFilter>
           <thingDefs>
             <li>InsectJelly</li>
