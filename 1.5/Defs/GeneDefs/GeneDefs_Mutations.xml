@@ -8,6 +8,7 @@
 	<VanillaRacesExpandedInsector.GenelineGeneDef Name="VRE_MutationGene" Abstract="True">
 		<displayCategory>VRE_MutationGene</displayCategory>
 		<mutation>1</mutation>
+		<selectionWeight>0</selectionWeight>
 		<biostatCpx>0</biostatCpx>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>
 	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
@@ -452,9 +453,7 @@
 		<iconPath>UI/Icons/Genes/Gene_PollutionDependency</iconPath>
 		<displayOrderInCategory>15</displayOrderInCategory>
 		<causesNeed>VRE_Pollution</causesNeed>
-		<exclusionTags>
-			<li>InsectorAggression</li>
-		</exclusionTags>
+		
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>

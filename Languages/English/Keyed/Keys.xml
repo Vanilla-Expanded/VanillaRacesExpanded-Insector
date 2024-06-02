@@ -41,6 +41,8 @@ Insector colonists that will be affected:
 	
 	<VRE_ChestburstBirthLabel>Chestburst birth</VRE_ChestburstBirthLabel>
 	<VRE_ChestburstBirth>A newborn, {0}, has hatched from a host, killing it in the process</VRE_ChestburstBirth>
+	<VRE_ChestburstBirthHiddenLabel>Chestburst birth!</VRE_ChestburstBirthHiddenLabel>
+	<VRE_ChestburstBirthHidden>{0} was unknowingly carrying a chestburst pregnancy! A newborn Insector, {1}, has hatched from the host, killing it in the process!</VRE_ChestburstBirthHidden>
 	
 	<VRE_SelfImpregnate>Self-impregnate</VRE_SelfImpregnate>
 	<VRE_SelfImpregnateDesc>Female individual self-impregnates, creating a fetus that’s a perfect copy of the parent.</VRE_SelfImpregnateDesc>

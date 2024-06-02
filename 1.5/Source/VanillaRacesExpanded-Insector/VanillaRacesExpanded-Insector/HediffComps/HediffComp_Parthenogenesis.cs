@@ -33,18 +33,18 @@ namespace VanillaRacesExpandedInsector
         public override IEnumerable<Gizmo> CompGetGizmos()
         {
             base.CompGetGizmos();
-            yield return new Command_Target
+            yield return new Command_Action
             {
                 defaultLabel = "VRE_SelfImpregnate".Translate(),
                 defaultDesc = "VRE_SelfImpregnateDesc".Translate(),
                 icon = ContentFinder<Texture2D>.Get("UI/Abilities/Ability_SelfImpregnate", true),
-                targetingParams = new TargetingParameters { canTargetSelf = true },
+               
                 Disabled = this.parent.pawn.gender != Gender.Female,
                 disabledReason = "VRE_PawnIsMale".Translate(),
                 
-                action = delegate (LocalTargetInfo target)
+                action = delegate ()
                 {
-                    TryParthenogenesis(target);
+                    TryParthenogenesis();
                 }
             };
 
@@ -52,16 +52,9 @@ namespace VanillaRacesExpandedInsector
 
         }
 
-        public void TryParthenogenesis(LocalTargetInfo target)
+        public void TryParthenogenesis()
         {
-            if (target.Pawn != null)
-            {
-                if(target.Pawn != this.parent.pawn)
-                {
-                    Messages.Message("VRE_OnlyOnSelf".Translate(), parent.pawn, MessageTypeDefOf.NegativeEvent, true);
-
-                }
-                else if(target.Pawn?.health?.hediffSet?.HasHediff(HediffDefOf.Pregnant) == true){
+                if(Pawn?.health?.hediffSet?.HasHediff(HediffDefOf.Pregnant) == true){
 
                     Messages.Message("VRE_AlreadyPregnant".Translate(), parent.pawn, MessageTypeDefOf.NegativeEvent, true);
 
@@ -77,7 +70,7 @@ namespace VanillaRacesExpandedInsector
                 }
                 
 
-            }
+            
 
 
         }

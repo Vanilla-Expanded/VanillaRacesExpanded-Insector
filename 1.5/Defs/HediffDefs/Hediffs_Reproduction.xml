@@ -94,6 +94,82 @@
 		</stages>
 	</HediffDef>
 	
+	<HediffDef ParentName="InfectionBase">
+		<defName>VRE_ChestburstPregnancy_Victim_Hidden</defName>
+		<label>chestburst pregnancy</label>
+		<description>Affected by a chestburst pregnancy. If the implantation advances to severity 1, or if the creature dies when it is sufficiently advanced (more than 90%), the fetus will devour the victim from inside and hatch from its corpse. Gestation time is 15 days. This chestburst pregnancy is too advanced to remove surgically.</description>
+		<makesSickThought>true</makesSickThought>
+		<lethalSeverity>1</lethalSeverity>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		
+		<comps>
+			
+			<li Class="VanillaRacesExpandedInsector.HediffCompProperties_ChestburstPregnancyVictimHidden">
+				
+			</li>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>0.066</severityPerDay>
+			</li>
+			
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+				<label>egg</label>
+				<painOffset>0.05</painOffset>
+				 <hungerRateFactor>1.15</hungerRateFactor>
+			</li>
+			<li>
+				<becomeVisible>false</becomeVisible>
+				<minSeverity>0.4</minSeverity>
+				<label>larva</label>
+				<painOffset>0.1</painOffset>
+				 <hungerRateFactor>1.5</hungerRateFactor>
+				 <capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.05</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<becomeVisible>false</becomeVisible>
+				<minSeverity>0.75</minSeverity>
+				<label>pupa</label>
+			
+				<painOffset>0.3</painOffset>
+				<hungerRateFactor>2</hungerRateFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.2</offset>
+					</li>
+				</capMods>
+				
+			</li>
+			<li>
+				<becomeVisible>true</becomeVisible>
+				<minSeverity>0.9</minSeverity>
+				<label>juvenile</label>
+				<lifeThreatening>true</lifeThreatening>
+				<painOffset>0.8</painOffset>
+				<hungerRateFactor>2</hungerRateFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+					
+				</capMods>
+				
+			</li>
+		</stages>
+	</HediffDef>
+	
 	<HediffDef>
 		<defName>VRE_Parthenogenesis</defName>
 		<label>parthenogenesis</label>

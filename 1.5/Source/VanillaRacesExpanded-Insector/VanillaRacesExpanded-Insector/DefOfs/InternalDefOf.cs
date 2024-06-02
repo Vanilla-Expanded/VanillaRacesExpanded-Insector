@@ -50,6 +50,9 @@ namespace VanillaRacesExpandedInsector
         public static HediffDef VREInsector_TempSterile;
         public static HediffDef VRE_ChestburstPregnancyHediff;
         public static HediffDef VRE_ChestburstPregnancy_Victim;
+        public static HediffDef VRE_ChestburstPregnancy_Victim_Hidden;
+
+        public static XenotypeDef VRE_Insector;
 
         public static SoundDef Hive_Spawn;
 
