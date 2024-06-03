@@ -32,7 +32,12 @@
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
 	</loadAfter>
 	<packageId>vanillaracesexpanded.insector</packageId>
-	<description>Vanilla Races Expanded is a brand new series of mods to enhance Biotech features, add to the storytelling and the world-building of RimWorld, and to introduce new, cool types ofxenohumans, complete with their own unique genes, behaviors, mechanics and items.
+	<description>Vanilla Races Expanded is a brand new series of mods to enhance Biotech features, add to the storytelling and the world-building of RimWorld, and to introduce new, cool types of xenohumans, complete with their own unique genes, behaviors, mechanics and items.
 
-TODO</description>
+Insector is our final (for now) xenotype mod. It introduces a highly requested xenotype of insectoid-human hybrids with an ability to adapt to any conditions your colony is under. Through the power of geneline evolutions, you can create castes of insectors - a low caste of jelly producers, a caste of warriors with insect wings and ripper blades, a caste of queens that focus on reproduction etc.
+
+With a simple press of a button you can switch the caste of your insectors. You customize the castes, aka genelines, by selecting positive evolutions, and then countering them with negative degrades. For every evolution there needs to be a degrade, so the more powerful genelines also come with a lot of drawbacks.
+
+This mod should tie very nicely with Vanilla Factions Expanded - Insectoids 2, which is currently in development.
+</description>
 </ModMetaData>
