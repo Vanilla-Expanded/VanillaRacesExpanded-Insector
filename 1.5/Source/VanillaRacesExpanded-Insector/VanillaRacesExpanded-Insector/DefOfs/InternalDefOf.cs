@@ -30,6 +30,7 @@ namespace VanillaRacesExpandedInsector
         public static GeneDef VRE_Parthenogenesis;
         public static GeneDef VRE_LowOctopamine;
         public static GeneDef VRE_PollutionDependency;
+        public static GeneDef VRE_InsectJellyDependency;
 
         public static ThingDef Meat_Megaspider;
         public static ThingDef VRE_Filth_BugFilth;
@@ -51,10 +52,13 @@ namespace VanillaRacesExpandedInsector
         public static HediffDef VRE_ChestburstPregnancyHediff;
         public static HediffDef VRE_ChestburstPregnancy_Victim;
         public static HediffDef VRE_ChestburstPregnancy_Victim_Hidden;
+        public static HediffDef VRE_PollutionDependencyHediff;
+        public static HediffDef VRE_InsectJellyDependencyHediff;
 
         public static XenotypeDef VRE_Insector;
 
         public static SoundDef Hive_Spawn;
+        public static SoundDef Meal_Eat;
 
         [MayRequireIdeology]
         public static PreceptDef Cannibalism_Acceptable;
@@ -68,7 +72,9 @@ namespace VanillaRacesExpandedInsector
         public static ThingDef VRE_Metapod;
         public static HediffDef VRE_MetapodHediff, VRE_MetapodSickness;
         public static EffecterDef CocoonWakingUp;
+        public static EffecterDef EatVegetarian;
 
         public static JobDef VRE_ChestburstImplantationJob;
+        public static JobDef VRE_ConsumeInsectJelly;
     }
 }

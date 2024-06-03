@@ -39,9 +39,14 @@ namespace VanillaRacesExpandedInsector
             {
                
                 this.CurLevel -= this.PollutionFallPerTick * 150f;
-               
 
+                if (CurLevel <=0 && this.pawn?.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VRE_PollutionDependencyHediff)==null)
+                {
+                    this.pawn.health.AddHediff(InternalDefOf.VRE_PollutionDependencyHediff);
+                }
             }
+           
+
         }
 
         private float PollutionFallPerTick

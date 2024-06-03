@@ -292,6 +292,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AI\JobDrivers\JobDriver_ChestburstImplantation.cs" />
+    <Compile Include="AI\JobDrivers\JobDriver_ConsumeInsectJelly.cs" />
+    <Compile Include="AI\JobGivers\JobGiver_ConsumeInsectJelly.cs" />
     <Compile Include="Alerts\Alert_ChestburstImplantationNeeded.cs" />
     <Compile Include="Filths\Filth_ToxEmitting.cs" />
     <Compile Include="Genelines\GenelineGeneDef.cs" />
@@ -305,6 +307,8 @@
     <Compile Include="Genelines\MetapodSickness.cs" />
     <Compile Include="Genelines\Window_EditGeneline.cs" />
     <Compile Include="Genelines\Window_ManageGenelines.cs" />
+    <Compile Include="GeneResource\GeneGizmo_Resource_InsectJelly.cs" />
+    <Compile Include="GeneResource\Gene_Resource_InsectJelly.cs" />
     <Compile Include="Harmony\AttackTargetFinder_BestAttackTarget_Validator_Patch.cs" />
     <Compile Include="Harmony\Blueprint_TryReplaceWithSolidThing.cs" />
     <Compile Include="Harmony\FoodUtility_ThoughtsFromIngesting.cs" />
@@ -329,6 +333,7 @@
     <Compile Include="HediffGivers\HediffGiver_Heatstress.cs" />
     <Compile Include="HediffGivers\HediffGiver_HypothermicHibernation.cs" />
     <Compile Include="HediffGivers\HediffGiver_HypothermicSlowdown.cs" />
+    <Compile Include="Hediffs\Hediff_InsectJellyNeed.cs" />
     <Compile Include="Hediffs\Hediff_PollutionNeed.cs" />
     <Compile Include="Needs\Need_Pollution.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

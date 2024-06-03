@@ -8,6 +8,11 @@
 		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
 	</JobDef>
 	
-
+	<JobDef>
+		<defName>VRE_ConsumeInsectJelly</defName>
+		<driverClass>VanillaRacesExpandedInsector.JobDriver_ConsumeInsectJelly</driverClass>
+		<reportString>consuming TargetA.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
 	
 </Defs>
