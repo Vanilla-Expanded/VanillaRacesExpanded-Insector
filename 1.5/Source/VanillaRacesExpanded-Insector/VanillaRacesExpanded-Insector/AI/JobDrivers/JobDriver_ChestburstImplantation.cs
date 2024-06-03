@@ -65,8 +65,12 @@ namespace VanillaRacesExpandedInsector
                         }
                         if (Targetpawn.Faction != null && Targetpawn.Faction != Faction.OfPlayer)
                         {
-
-                            Targetpawn.Faction.SetRelationDirect(Faction.OfPlayer, FactionRelationKind.Hostile);
+                            if (Targetpawn.Faction.HasGoodwill)
+                            {
+                                Faction.OfPlayer.TryAffectGoodwillWith(Targetpawn.Faction, -500, canSendMessage: true, false, HistoryEventDefOf.AttackedMember, Targetpawn);
+                            }
+                            else { Targetpawn.Faction.SetRelationDirect(Faction.OfPlayer, FactionRelationKind.Hostile); }
+                            
                         }
                         Targetpawn.health.AddHediff(InternalDefOf.VRE_ChestburstPregnancy_Victim);
 
