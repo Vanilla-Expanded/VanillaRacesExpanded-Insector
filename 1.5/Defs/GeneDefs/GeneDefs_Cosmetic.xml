@@ -14,7 +14,7 @@
 		</exclusionTags>
 		<randomChosen>true</randomChosen>
 		
-		<description>Carriers of this gene grow small antennas at the top of their head. These antennas do not serve any known function, and can be safely assumed to be cosmetic-only.</description>
+		<description>Carriers of this gene grow small antennae at the top of their head. These antennae do not serve any known function, and can be safely assumed to be cosmetic-only.</description>
 		<iconPath>UI/Icons/Genes/Gene_InsectAntennas</iconPath>
 		
 		<renderNodeProperties>
