@@ -72,7 +72,7 @@
 	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
 		<defName>VRE_VocalChitters</defName>
 		<label>vocal chitters</label>
-		<description>Carriers of this gene have their vocal chords changed into little openings in the bones, resulting in them being unable to speak, unless someone understands the loud whistling that they can now produce.</description>
+		<description>Carriers of this gene have their vocal cords changed into little openings in the bones, resulting in them being unable to speak, unless someone understands the loud whistling that they can now produce.</description>
 		<iconPath>UI/Icons/Genes/Gene_VocalChitters</iconPath>
 		<displayOrderInCategory>2</displayOrderInCategory>
 		<capMods>
