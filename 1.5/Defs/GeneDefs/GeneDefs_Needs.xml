@@ -12,6 +12,9 @@
 		<geneClass>VanillaRacesExpandedInsector.Gene_Resource_InsectJelly</geneClass>
 		<resourceGizmoType>VanillaRacesExpandedInsector.GeneGizmo_Resource_InsectJelly</resourceGizmoType>
 		<resourceLabel>insect jelly</resourceLabel>
+		<customEffectDescriptions>
+			<li>Gives immunity to food poisoning chance from directly consuming insect jelly.</li>
+		</customEffectDescriptions>
 		<resourceGizmoThresholds>
 			<li>0.2</li>
 			<li>0.4</li>
