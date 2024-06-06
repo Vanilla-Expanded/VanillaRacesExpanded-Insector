@@ -120,7 +120,7 @@
 		<displayOrderInCategory>3</displayOrderInCategory>
 		<statFactors>
 			<InjuryHealingFactor>0.5</InjuryHealingFactor>
-			<ImmunityGainSpeedFactor>0.9</ImmunityGainSpeedFactor>
+			<ImmunityGainSpeed>0.9</ImmunityGainSpeed>
 		</statFactors>
 		<exclusionTags>
 			<li>InsectorImmunity</li>
