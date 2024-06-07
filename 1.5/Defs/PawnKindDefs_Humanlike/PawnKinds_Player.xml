@@ -3,7 +3,7 @@
 
 	<PawnKindDef ParentName="BasePlayerPawnKind">
 		<defName>VRE_TribalInsector</defName>
-		<label>Tribal isnector</label>
+		<label>Tribal insector</label>
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		<chemicalAddictionChance>0.06</chemicalAddictionChance>
 		<apparelTags>
