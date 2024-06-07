@@ -18,8 +18,8 @@ namespace VanillaRacesExpandedInsector
         }
         protected override IEnumerable<Toil> MakeNewToils()
         {
-            Log.Message("Job is entered");
-            Toil chew = ToilMaker.MakeToil("ConsumeWastepack");
+          
+            Toil chew = ToilMaker.MakeToil("ConsumeInsectJelly");
             chew.initAction = () =>
             {
 
@@ -108,68 +108,7 @@ namespace VanillaRacesExpandedInsector
             yield return finalize;
             yield break;
         }
-        public static Toil ConsumeWastepack(Pawn pawn, float durationMulti, TargetIndex ingestibleInd)
-        {
-
-            Toil chew = ToilMaker.MakeToil("ConsumeInsectJelly");
-            Thing ToConsume = chew.actor.CurJob.GetTarget(ingestibleInd).Thing;
-            chew.initAction = () =>
-            {
-                Thing toEat = ToConsume;
-                Pawn actor = chew.actor;
-                actor.jobs.curDriver.ticksLeftThisToil = Mathf.RoundToInt(baseConsumeTicks * durationMulti);
-                if (toEat.Spawned)
-                {
-                    toEat.Map.physicalInteractionReservationManager.Reserve(pawn, actor.CurJob, toEat);
-                }
-            };
-            chew.tickAction = () =>
-            {
-                Thing toEat = ToConsume;
-                if (pawn != chew.actor)
-                {
-                    chew.actor.rotationTracker.FaceCell(pawn.Position);
-                }
-                if (toEat.Spawned)
-                {
-                    chew.actor.rotationTracker.FaceCell(toEat.Position);
-                }
-                if (TargetIndex.B != TargetIndex.None && chew.actor.CurJob.GetTarget(TargetIndex.B).IsValid)
-                {
-                    chew.actor.rotationTracker.FaceCell(chew.actor.CurJob.GetTarget(TargetIndex.B).Cell);
-                }
-                chew.actor.GainComfortFromCellIfPossible();
-            };
-            chew.WithProgressBar(TargetIndex.A, () =>
-            {
-                Thing toEat = ToConsume;
-                if (toEat == null) { return 1f; }
-                return 1f - chew.actor.jobs.curDriver.ticksLeftThisToil / Mathf.Round(baseConsumeTicks * durationMulti);
-            });
-            chew.defaultCompleteMode = ToilCompleteMode.Delay;
-            chew.handlingFacing = true;
-            chew.FailOnDestroyedOrNull(TargetIndex.A);
-            chew.AddFinishAction(() =>
-            {
-                var actor = pawn;
-                if (actor.CurJob == null)
-                {
-                    return;
-                }
-                Thing toEat = ToConsume;
-                if (toEat == null)
-                {
-                    return;
-                }
-                if (actor.Map.physicalInteractionReservationManager.IsReservedBy(actor, toEat))
-                {
-                    actor.Map.physicalInteractionReservationManager.Release(actor, actor.CurJob, toEat);
-                }
-            });
-            chew.WithEffect(InternalDefOf.EatVegetarian, TargetIndex.A);
-            chew.PlaySustainerOrSound(InternalDefOf.Meal_Eat);
-            return chew;
-        }
+      
         public override bool ModifyCarriedThingDrawPos(ref Vector3 drawPos, ref bool behind)
         {
             var tableCell = job.GetTarget(TargetIndex.B).Cell;

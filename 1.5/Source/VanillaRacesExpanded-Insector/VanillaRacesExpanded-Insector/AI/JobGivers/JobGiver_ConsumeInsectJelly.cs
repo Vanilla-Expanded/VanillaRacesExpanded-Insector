@@ -40,7 +40,7 @@ namespace VanillaRacesExpandedInsector
 
             return GenClosest.ClosestThing_Global_Reachable(pawn.Position, pawn.Map, pawn.Map.listerThings.ThingsOfDef(ThingDefOf.InsectJelly), PathEndMode.Touch, TraverseParms.For(pawn), validator: (Thing t) =>
             {
-                return pawn.CanReserve(t) && !t.IsForbidden(pawn);
+                return pawn.CanReserve(t, ignoreOtherReservations: true) && !t.IsForbidden(pawn);
             });
         }
     }
