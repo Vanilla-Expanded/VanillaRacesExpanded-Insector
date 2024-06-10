@@ -70,11 +70,13 @@
 					<count>120</count>
 				</li>
 				<!-- Game start dialog -->
-				<li Class="ScenPart_GameStartDialog">
-					<def>GameStartDialog</def>
-					<textKey>GameStartDialog</textKey>
-					<closeSound>GameStartSting</closeSound>
-				</li>
+				
+				 <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>As the old, derelict ship entered the lower orbit, a sudden systems failure triggered a catastrophic malfunction. Not sure if it was due to the ship’s advanced age, a critical hardware failure, or a long-dormant virus in the AI-core, we quickly realized it didn’t matter. Our colony of insectors, long misunderstood and striving to survive, was in chaos. In our panic, we instinctively swarmed towards the escape pods, desperate to flee the impending disaster.\n\nIn our haste, we accidentally launched the pods, leaving the human crew behind in their cryptosleep chambers, unaware and doomed. The ship split into numerous chunks as it rapidly descended onto the surface. Amid the pandemonium, we could only hope that perhaps some things could still be recovered from the wreckage.</text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+				
 			</parts>
 		</scenario>
 	</ScenarioDef>
