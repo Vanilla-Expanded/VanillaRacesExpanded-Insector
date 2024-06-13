@@ -33,20 +33,25 @@ namespace VanillaRacesExpandedInsector
         public override IEnumerable<Gizmo> CompGetGizmos()
         {
             base.CompGetGizmos();
-            yield return new Command_Action
+
+            Command_Action command_Action = new Command_Action();
+            command_Action.defaultLabel = "VRE_SelfImpregnate".Translate();
+            command_Action.defaultDesc = "VRE_SelfImpregnateDesc".Translate();
+            command_Action.icon = ContentFinder<Texture2D>.Get("UI/Abilities/Ability_SelfImpregnate", true);
+            command_Action.action = delegate ()
             {
-                defaultLabel = "VRE_SelfImpregnate".Translate(),
-                defaultDesc = "VRE_SelfImpregnateDesc".Translate(),
-                icon = ContentFinder<Texture2D>.Get("UI/Abilities/Ability_SelfImpregnate", true),
-               
-                Disabled = this.parent.pawn.gender != Gender.Female,
-                disabledReason = "VRE_PawnIsMale".Translate(),
-                
-                action = delegate ()
-                {
-                    TryParthenogenesis();
-                }
+                TryParthenogenesis();
             };
+            if(this.parent.pawn.gender != Gender.Female)
+            {
+                command_Action.Disable("VRE_PawnIsMale".Translate());
+            }
+            if (this.parent.pawn.ageTracker.AgeBiologicalYears < 14) { 
+          
+                command_Action.Disable("VRE_PawnIsTooYoung".Translate(parent.pawn));
+            }
+
+            yield return command_Action;
 
 
 

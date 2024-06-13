@@ -10,7 +10,9 @@
 			<li>Egglaying</li>
 			<li>AG_Egglaying</li>
 		</exclusionTags>
-		
+		<customEffectDescriptions>
+			<li>Colonist needs to get pregnant in a conventional way before being able to proceed with the chestburst pregnancy.</li>
+		</customEffectDescriptions>
 		<displayOrderInCategory>115.3</displayOrderInCategory>
 		<biostatMet>2</biostatMet>
 		<biostatCpx>1</biostatCpx>
