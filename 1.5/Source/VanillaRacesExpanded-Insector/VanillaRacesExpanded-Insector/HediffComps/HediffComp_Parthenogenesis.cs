@@ -12,7 +12,7 @@ namespace VanillaRacesExpandedInsector
 {
     public class HediffComp_Parthenogenesis : HediffComp
     {
-     
+
 
         public HediffCompProperties_Parthenogenesis Props
         {
@@ -25,10 +25,10 @@ namespace VanillaRacesExpandedInsector
         public override void CompExposeData()
         {
             base.CompExposeData();
-           
+
         }
 
-      
+
 
         public override IEnumerable<Gizmo> CompGetGizmos()
         {
@@ -42,12 +42,13 @@ namespace VanillaRacesExpandedInsector
             {
                 TryParthenogenesis();
             };
-            if(this.parent.pawn.gender != Gender.Female)
+            if (this.parent.pawn.gender != Gender.Female)
             {
                 command_Action.Disable("VRE_PawnIsMale".Translate());
             }
-            if (this.parent.pawn.ageTracker.AgeBiologicalYears < 14) { 
-          
+            if (this.parent.pawn.ageTracker.AgeBiologicalYears < 14)
+            {
+
                 command_Action.Disable("VRE_PawnIsTooYoung".Translate(parent.pawn));
             }
 
@@ -59,23 +60,41 @@ namespace VanillaRacesExpandedInsector
 
         public void TryParthenogenesis()
         {
-                if(Pawn?.health?.hediffSet?.HasHediff(HediffDefOf.Pregnant) == true){
+            if (Pawn?.health?.hediffSet?.HasHediff(HediffDefOf.Pregnant) == true)
+            {
 
-                    Messages.Message("VRE_AlreadyPregnant".Translate(), parent.pawn, MessageTypeDefOf.NegativeEvent, true);
+                Messages.Message("VRE_AlreadyPregnant".Translate(), parent.pawn, MessageTypeDefOf.NegativeEvent, true);
 
 
+            }
+            else if (Pawn?.health?.hediffSet?.HasHediff(InternalDefOf.VREInsector_TempSterile) == true)
+            {
+
+                Messages.Message("VRE_TempSterile".Translate(parent.pawn), parent.pawn, MessageTypeDefOf.NegativeEvent, true);
+
+            }
+            else
+            {
+                Hediff_Pregnant hediff_Pregnant;
+                if (Pawn?.HasActiveGene(InternalDefOf.VRE_ChestburstPregnancy) == false)
+                {
+                    Messages.Message("VRE_GotPregnant".Translate(parent.pawn), parent.pawn, MessageTypeDefOf.PositiveEvent, true);
+                    hediff_Pregnant = (Hediff_Pregnant)HediffMaker.MakeHediff(HediffDefOf.Pregnant, parent.pawn);
                 }
                 else
                 {
-                    Hediff_Pregnant hediff_Pregnant = (Hediff_Pregnant)HediffMaker.MakeHediff(HediffDefOf.Pregnant, parent.pawn);
-                    GeneSet inheritedGeneSet = PregnancyUtility.GetInheritedGeneSet(parent.pawn, parent.pawn);
-                    hediff_Pregnant.SetParents(parent.pawn, null, inheritedGeneSet);
-                    parent.pawn.health.AddHediff(hediff_Pregnant);
-                    Messages.Message("VRE_GotPregnant".Translate(parent.pawn), parent.pawn, MessageTypeDefOf.PositiveEvent, true);
+                    hediff_Pregnant = (Hediff_Pregnant)HediffMaker.MakeHediff(HediffDefOf.PregnantHuman, parent.pawn);
                 }
                 
+                GeneSet inheritedGeneSet = PregnancyUtility.GetInheritedGeneSet(parent.pawn, parent.pawn);
+                hediff_Pregnant.SetParents(parent.pawn, null, inheritedGeneSet);
+                parent.pawn.health.AddHediff(hediff_Pregnant);
+                
 
-            
+            }
+
+
+
 
 
         }

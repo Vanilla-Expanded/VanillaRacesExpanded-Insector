@@ -741,7 +741,6 @@
 		<iconPath>UI/Icons/Genes/Gene_Perthenogenesis</iconPath>
 		<displayOrderInCategory>18</displayOrderInCategory>
 		<customEffectDescriptions>
-			<li>Invalidates chestburst pregnancy.</li>
 			<li>Can't get pregnant through intercourse.</li>
 		</customEffectDescriptions>
 		<statFactors>

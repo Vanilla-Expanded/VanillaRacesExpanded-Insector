@@ -17,11 +17,11 @@ namespace VanillaRacesExpandedInsector
         [HarmonyPrefix]
         public static bool Prefix(Hediff_Pregnant __instance)
         {
-            if ((Find.TickManager.TicksAbs % 1200 == 0) && (__instance?.pawn?.HasActiveGene(InternalDefOf.VRE_ChestburstPregnancy) ?? false) && (__instance?.pawn?.HasActiveGene(InternalDefOf.VRE_SpawningSack) == false) && (__instance?.pawn?.HasActiveGene(InternalDefOf.VRE_Parthenogenesis) == false))
+            if ((Find.TickManager.TicksAbs % 1200 == 0) && (__instance?.pawn?.HasActiveGene(InternalDefOf.VRE_ChestburstPregnancy) ?? false) && (__instance?.pawn?.HasActiveGene(InternalDefOf.VRE_SpawningSack) == false))
             {
                 try
                 {
-                    if(__instance.pawn!=null && __instance.Father !=null) {
+                    if(__instance.pawn!=null) {
                         Hediff hediff = HediffMaker.MakeHediff(InternalDefOf.VREInsector_TempSterile, __instance.pawn);
                         __instance.pawn.health.AddHediff(hediff);
 

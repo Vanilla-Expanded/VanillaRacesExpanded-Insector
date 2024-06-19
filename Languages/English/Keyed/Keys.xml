@@ -51,5 +51,6 @@ Insector colonists that will be affected:
 	<VRE_AlreadyPregnant>Individual is already pregnant</VRE_AlreadyPregnant>
 	<VRE_GotPregnant>{0} has self-impregnated!</VRE_GotPregnant>
 	<VRE_PawnIsTooYoung>{0} is too young!</VRE_PawnIsTooYoung>
+	<VRE_TempSterile>{0} is still suffering from implantation fatigue</VRE_TempSterile>
 	
 </LanguageData>

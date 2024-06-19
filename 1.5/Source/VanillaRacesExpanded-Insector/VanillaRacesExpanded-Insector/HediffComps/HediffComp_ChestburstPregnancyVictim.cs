@@ -88,7 +88,10 @@ namespace VanillaRacesExpandedInsector
                             if (pawn.RaceProps.IsFlesh)
                             {
                                 pawn.relations.AddDirectRelation(PawnRelationDefOf.Parent, mother);
-                                pawn.relations.AddDirectRelation(PawnRelationDefOf.Parent, father);
+                                if (father != null) {
+                                    pawn.relations.AddDirectRelation(PawnRelationDefOf.Parent, father);
+                                }
+                                
                             }
                             if (GeneUtility.SameHeritableXenotype(mother, father) && mother.genes.UniqueXenotype)
                             {
