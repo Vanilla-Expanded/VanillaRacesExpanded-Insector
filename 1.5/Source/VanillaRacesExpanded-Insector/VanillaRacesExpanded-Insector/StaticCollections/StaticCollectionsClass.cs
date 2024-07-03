@@ -15,7 +15,8 @@ namespace VanillaRacesExpandedInsector
         // A list of colonists needing chestburst implantation
         public static HashSet<Thing> chestburst_implantation_needed = new HashSet<Thing>();
 
-      
+     
+
         public static void AddColonistToChestburstImplantationAlert(Thing thing)
         {
 
@@ -33,6 +34,8 @@ namespace VanillaRacesExpandedInsector
             }
 
         }
+
+      
 
 
     }

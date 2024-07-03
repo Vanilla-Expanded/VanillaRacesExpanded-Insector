@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_Microsized</defName>
+		<label>microsized</label>
+		<description>todo.</description>
+		<iconPath>UI/Icons/Genes/Gene_Alpha</iconPath>
+		<displayOrderInCategory>1000</displayOrderInCategory>
+		<statOffsets>
+			<VEF_BodySize_Offset>-0.45</VEF_BodySize_Offset>
+		</statOffsets>
+		<statFactors>
+			<StaggerDurationFactor>2</StaggerDurationFactor>
+			<MeatAmount>0.5</MeatAmount>
+			<LeatherAmount>0.5</LeatherAmount>
+			<VEF_FoodCapacityMultiplier>0.75</VEF_FoodCapacityMultiplier>
+		</statFactors>
+		<exclusionTags>
+			<li>InsectorSize</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>small</symbol>
+				</li>
+				<li>
+					<symbol>tiny</symbol>
+				</li>
+				<li>
+					<symbol>mini</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+				<hediffToWholeBody>VRE_Microsized</hediffToWholeBody>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_Colossal</defName>
+		<label>colossal</label>
+		<description>todo.</description>
+		<iconPath>UI/Icons/Genes/Gene_Alpha</iconPath>
+		<displayOrderInCategory>1001</displayOrderInCategory>
+		<statOffsets>
+			<MoveSpeed>-1.6</MoveSpeed>
+			<VEF_BodySize_Offset>0.65</VEF_BodySize_Offset>
+		</statOffsets>
+		<statFactors>
+			<StaggerDurationFactor>0.2</StaggerDurationFactor>
+			<MeatAmount>2</MeatAmount>
+			<LeatherAmount>2</LeatherAmount>
+			<VEF_FoodCapacityMultiplier>2</VEF_FoodCapacityMultiplier>
+			<MeleeDodgeChance>0.25</MeleeDodgeChance>
+		</statFactors>
+		<exclusionTags>
+			<li>InsectorSize</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>large</symbol>
+				</li>
+				<li>
+					<symbol>big</symbol>
+				</li>
+				<li>
+					<symbol>magni</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+				<hediffToWholeBody>VRE_Colossal</hediffToWholeBody>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+</Defs>

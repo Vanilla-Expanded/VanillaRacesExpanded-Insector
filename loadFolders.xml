@@ -1,0 +1,11 @@
+<loadFolders>
+	
+	<v1.5>
+		<li>/</li>
+		<li>1.5</li>
+		
+		<li IfModActive="OskarPotocki.VFE.Insectoid2">1.5/Mods/VFEInsectoids</li>
+	</v1.5>
+</loadFolders>
+
+

@@ -291,11 +291,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abilities\CompAbilityEffect_RoyalJellyInjector.cs" />
+    <Compile Include="Abilities\Properties\CompProperties_RoyalJellyInjector.cs" />
     <Compile Include="AI\JobDrivers\JobDriver_ChestburstImplantation.cs" />
     <Compile Include="AI\JobDrivers\JobDriver_ConsumeInsectJelly.cs" />
+    <Compile Include="AI\JobDrivers\JobDriver_IngestPherocore.cs" />
     <Compile Include="AI\JobGivers\JobGiver_ConsumeInsectJelly.cs" />
     <Compile Include="Alerts\Alert_ChestburstImplantationNeeded.cs" />
+    <Compile Include="Comps\CompIngestPherocore.cs" />
     <Compile Include="Filths\Filth_ToxEmitting.cs" />
+    <Compile Include="GameComponents\GameComponent_SwarmSynapse.cs" />
     <Compile Include="Genelines\GenelineGeneDef.cs" />
     <Compile Include="DefOfs\InternalDefOf.cs" />
     <Compile Include="Genelines\GameComponent_Genelines.cs" />
@@ -342,6 +347,7 @@
     <Compile Include="ScenParts\ScenPart_LowOrbitCrash.cs" />
     <Compile Include="Skyfallers\IncomingSmoker.cs" />
     <Compile Include="StaticCollections\StaticCollectionsClass.cs" />
+    <Compile Include="StatParts\StatPart_PawnsHavingGene.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_HeatStress.cs" />
     <Compile Include="Utils\Utils.cs" />
   </ItemGroup>

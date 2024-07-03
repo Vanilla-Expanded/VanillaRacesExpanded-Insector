@@ -52,5 +52,8 @@ Insector colonists that will be affected:
 	<VRE_GotPregnant>{0} has self-impregnated!</VRE_GotPregnant>
 	<VRE_PawnIsTooYoung>{0} is too young!</VRE_PawnIsTooYoung>
 	<VRE_TempSterile>{0} is still suffering from implantation fatigue</VRE_TempSterile>
+	<VRE_SwarmSynapseOffset>Swarm synapse gene</VRE_SwarmSynapseOffset>
+	<VRE_IngestPherocore>Consume {0}</VRE_IngestPherocore>
+	<VRE_PherocoreConsumed>Consuming {0} has unlocked the {1} [evolution/degrade] for all carriers of the geneline evolution gene</VRE_PherocoreConsumed>
 	
 </LanguageData>

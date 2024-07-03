@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<AbilityDef ParentName="AbilityTouchBase">
+		<defName>VRE_RoyalJellyInjector</defName>
+		<label>inject royal jelly</label>
+		<description>Inject royal jelly into a willing subject using a specialized injector organ. If the gene carrier's royal jelly is currently regenerating, the injection will not be possible. Injection causes a tiny wound, but when injected, the royal jelly grants the target an immunity boost and a mood boost.</description>
+		<iconPath>UI/Icons/Genes/Gene_Alpha</iconPath>
+		<warmupStartSound>ReimplantXenogerm_Cast</warmupStartSound>
+		<warmupEffecter>Implant_Xenogerm</warmupEffecter>
+		<cooldownTicksRange>12000</cooldownTicksRange>
+		<hostile>false</hostile>
+		<verbProperties>
+			<verbClass>Verb_CastAbilityTouch</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<range>-1</range>
+			<warmupTime>1</warmupTime>
+			<targetParams>
+				<canTargetAnimals>false</canTargetAnimals>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetMechs>false</canTargetMechs>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="VanillaRacesExpandedInsector.CompProperties_RoyalJellyInjector"/>
+		</comps>
+	</AbilityDef>
+</Defs>
