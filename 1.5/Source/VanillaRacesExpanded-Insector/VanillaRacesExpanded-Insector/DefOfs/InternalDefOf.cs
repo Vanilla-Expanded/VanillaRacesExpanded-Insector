@@ -34,12 +34,20 @@ namespace VanillaRacesExpandedInsector
         public static GeneDef VRE_InsectJellyDependency;
         [MayRequire("OskarPotocki.VFE.Insectoid2")]
         public static GeneDef VRE_SwarmSynapse;
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static GeneDef VRE_RoyalJellyInjector;
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static GeneDef VRE_Microsized;
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static GeneDef VRE_Colossal;
 
         public static ThingDef Meat_Megaspider;
         public static ThingDef VRE_Filth_BugFilth;
         public static ThingDef VRE_InfestedShipPart;
         public static ThingDef VRE_InfestedShipPart_Spawned;
         public static ThingDef VRE_ActiveDropPod;
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static ThingDef VFEI2_PherocoreSorne;
 
         public static ThoughtDef AteHumanlikeMeatDirectCannibal;
         public static ThoughtDef VRE_Implanted;

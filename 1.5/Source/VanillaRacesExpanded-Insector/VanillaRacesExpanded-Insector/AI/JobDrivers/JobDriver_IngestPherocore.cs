@@ -1,5 +1,6 @@
 ﻿
 using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
 using Verse;
 using Verse.AI;
@@ -39,13 +40,47 @@ namespace VanillaRacesExpandedInsector
             use.initAction = delegate
             {
                 Pawn actor = use.actor;
-                Messages.Message("VRE_PherocoreConsumed".Translate(), pawn, MessageTypeDefOf.PositiveEvent, true);
-                TargetA.Thing.Destroy();
+                
+
+                ThingDef pherocore = job.targetA.Thing.def;
+
+                if(pherocore == InternalDefOf.VFEI2_PherocoreSorne)
+                {
+                    Dictionary<GeneDef, bool> sorneGenes = GameComponent_UnlockedGenes.Instance.sorne_pherocore_genes;
+
+                    if(sorneGenes.Values.Any(x => x== false))
+                    {
+                        GeneDef gene = sorneGenes.Keys.Where(x => sorneGenes[x] == false).RandomElement();
+                        sorneGenes[gene] = true;
+                        GenelineGeneDef genelinegene = gene as GenelineGeneDef;
+                        Messages.Message("VRE_PherocoreConsumed".Translate(pherocore.LabelCap,gene.LabelCap,IsEvolutionOrMutation(genelinegene)), pawn, MessageTypeDefOf.PositiveEvent, true);
+                        TargetA.Thing.Destroy();
+                        Utils.cachedGeneDefsInOrder = null;
+                        if (!sorneGenes.Values.Any(x => x == false))
+                        {
+                            GameComponent_UnlockedGenes.Instance.allSorneGenesUnlocked = true;
+                        }
+
+                    } else {
+                        Messages.Message("VRE_NoUnlockableGenes".Translate(pherocore.LabelCap), pawn, MessageTypeDefOf.NegativeEvent, true);
+
+
+                    }
+
+                }
+ 
+                
 
             };
             use.defaultCompleteMode = ToilCompleteMode.Instant;
             yield return use;
             yield break;
+
+        }
+
+        public static string IsEvolutionOrMutation(GenelineGeneDef gene)
+        {
+            if (gene.IsMutation) { return "mutation"; } else return "evolution";
 
         }
     }

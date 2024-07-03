@@ -7,6 +7,7 @@
 		<defName>VRE_SwarmSynapse</defName>
 		<label>swarm synapse</label>
 		<description>todo.</description>
+		<unlockable>true</unlockable>
 		<iconPath>UI/Icons/Genes/Gene_Alpha</iconPath>
 		<displayOrderInCategory>1000</displayOrderInCategory>
 		<customEffectDescriptions>
@@ -25,6 +26,7 @@
 		<defName>VRE_RoyalJellyInjector</defName>
 		<label>royal jelly injector</label>
 		<description>todo.</description>
+		<unlockable>true</unlockable>
 		<iconPath>UI/Icons/Genes/Gene_Alpha</iconPath>
 		<displayOrderInCategory>1001</displayOrderInCategory>
 		<abilities>

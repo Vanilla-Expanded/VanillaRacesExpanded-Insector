@@ -300,6 +300,7 @@
     <Compile Include="Alerts\Alert_ChestburstImplantationNeeded.cs" />
     <Compile Include="Comps\CompIngestPherocore.cs" />
     <Compile Include="Filths\Filth_ToxEmitting.cs" />
+    <Compile Include="GameComponents\GameComponent_UnlockedGenes.cs" />
     <Compile Include="GameComponents\GameComponent_SwarmSynapse.cs" />
     <Compile Include="Genelines\GenelineGeneDef.cs" />
     <Compile Include="DefOfs\InternalDefOf.cs" />

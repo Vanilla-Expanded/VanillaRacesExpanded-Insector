@@ -9,7 +9,7 @@ namespace VanillaRacesExpandedInsector
 {
     public static class Utils
     {
-        private static List<GenelineGeneDef> cachedGeneDefsInOrder = null;
+        public static List<GenelineGeneDef> cachedGeneDefsInOrder = null;
 
         public static List<GenelineGeneDef> GenelineGenesInOrder
         {
@@ -18,7 +18,13 @@ namespace VanillaRacesExpandedInsector
                 if (cachedGeneDefsInOrder == null)
                 {
                     cachedGeneDefsInOrder = new List<GenelineGeneDef>();
-                    foreach (var allDef in DefDatabase<GenelineGeneDef>.AllDefs)
+
+                    GameComponent_UnlockedGenes comp = GameComponent_UnlockedGenes.Instance;
+
+                    List<GenelineGeneDef> genelinegenes = DefDatabase<GenelineGeneDef>.AllDefs.Where(x => !x.unlockable || (x.unlockable && (comp.SorneGeneUnlocked(x)) ) ).ToList();
+
+
+                    foreach (var allDef in genelinegenes)
                     {
                         cachedGeneDefsInOrder.Add(allDef);
                     }

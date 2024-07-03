@@ -18,20 +18,27 @@ namespace VanillaRacesExpandedInsector
 
             if (selPawn != null && selPawn.genes?.HasActiveGene(InternalDefOf.VRE_GenelineEvolution)==true)
             {
-                yield return new FloatMenuOption("VRE_IngestPherocore".Translate(this.parent.LabelCap), () =>
+
+                if(this.parent.def == InternalDefOf.VFEI2_PherocoreSorne && !GameComponent_UnlockedGenes.Instance.allSorneGenesUnlocked)
                 {
-
-                    if (selPawn.CanReserveAndReach(this.parent, PathEndMode.OnCell, Danger.Deadly))
+                    yield return new FloatMenuOption("VRE_IngestPherocore".Translate(this.parent.LabelCap), () =>
                     {
-                        Job makeJob = JobMaker.MakeJob(InternalDefOf.VRE_IngestPherocore, this.parent);
-                        makeJob.haulMode = HaulMode.ToCellNonStorage;
-                        makeJob.count = 1;
-                        selPawn.jobs?.TryTakeOrderedJob(makeJob);
+
+                        if (selPawn.CanReserveAndReach(this.parent, PathEndMode.OnCell, Danger.Deadly))
+                        {
+                            Job makeJob = JobMaker.MakeJob(InternalDefOf.VRE_IngestPherocore, this.parent);
+                            makeJob.haulMode = HaulMode.ToCellNonStorage;
+                            makeJob.count = 1;
+                            selPawn.jobs?.TryTakeOrderedJob(makeJob);
 
 
-                    }
+                        }
 
-                });
+                    });
+
+                }
+
+                
             }
 
         }

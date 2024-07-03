@@ -53,7 +53,8 @@ Insector colonists that will be affected:
 	<VRE_PawnIsTooYoung>{0} is too young!</VRE_PawnIsTooYoung>
 	<VRE_TempSterile>{0} is still suffering from implantation fatigue</VRE_TempSterile>
 	<VRE_SwarmSynapseOffset>Swarm synapse gene</VRE_SwarmSynapseOffset>
-	<VRE_IngestPherocore>Consume {0}</VRE_IngestPherocore>
-	<VRE_PherocoreConsumed>Consuming {0} has unlocked the {1} [evolution/degrade] for all carriers of the geneline evolution gene</VRE_PherocoreConsumed>
+	<VRE_IngestPherocore>Consume {0} to unlock a new mutation / evolution</VRE_IngestPherocore>
+	<VRE_PherocoreConsumed>Consuming {0} has unlocked the {1} {2} for all carriers of the geneline evolution gene</VRE_PherocoreConsumed>
+	<VRE_NoUnlockableGenes>No more genes can be unlocked with the {0}</VRE_NoUnlockableGenes>
 	
 </LanguageData>

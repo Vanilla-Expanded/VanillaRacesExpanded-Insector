@@ -5,6 +5,7 @@
 		<label>microsized</label>
 		<description>todo.</description>
 		<iconPath>UI/Icons/Genes/Gene_Alpha</iconPath>
+		<unlockable>true</unlockable>
 		<displayOrderInCategory>1000</displayOrderInCategory>
 		<statOffsets>
 			<VEF_BodySize_Offset>-0.45</VEF_BodySize_Offset>
@@ -45,6 +46,7 @@
 		<label>colossal</label>
 		<description>todo.</description>
 		<iconPath>UI/Icons/Genes/Gene_Alpha</iconPath>
+		<unlockable>true</unlockable>
 		<displayOrderInCategory>1001</displayOrderInCategory>
 		<statOffsets>
 			<MoveSpeed>-1.6</MoveSpeed>

@@ -17,7 +17,7 @@ namespace VanillaRacesExpandedInsector
         [HarmonyPostfix]
         public static void AddPorkThought(Pawn ingester, Thing foodSource, ThingDef foodDef)
         {
-            if (ingester.Ideo != null && ingester.genes?.HasGene(InternalDefOf.VRE_InsectFlesh) == true)
+            if (ingester.Ideo != null && ingester.genes?.HasActiveGene(InternalDefOf.VRE_InsectFlesh) == true)
             {
                 if (foodDef== InternalDefOf.Meat_Megaspider && IdeoNotCannibal(ingester))
                 {
