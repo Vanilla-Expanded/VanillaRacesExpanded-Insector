@@ -8,7 +8,7 @@
 		<label>swarm synapse</label>
 		<description>todo.</description>
 		<unlockable>true</unlockable>
-		<iconPath>UI/Icons/Genes/Gene_Alpha</iconPath>
+		<iconPath>UI/Icons/Genes/Gene_SwarmSynapse</iconPath>
 		<displayOrderInCategory>1000</displayOrderInCategory>
 		<customEffectDescriptions>
 			<li>Provides a stacking Global Learning Speed boost for each pawn in the colony with Swarm Synapse gene.</li>
@@ -27,7 +27,7 @@
 		<label>royal jelly injector</label>
 		<description>todo.</description>
 		<unlockable>true</unlockable>
-		<iconPath>UI/Icons/Genes/Gene_Alpha</iconPath>
+		<iconPath>UI/Icons/Genes/Gene_RoyalJellyInjector</iconPath>
 		<displayOrderInCategory>1001</displayOrderInCategory>
 		<abilities>
 			<li>VRE_RoyalJellyInjector</li>

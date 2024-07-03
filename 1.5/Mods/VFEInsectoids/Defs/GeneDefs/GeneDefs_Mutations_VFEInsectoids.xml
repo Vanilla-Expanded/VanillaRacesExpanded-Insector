@@ -4,7 +4,7 @@
 		<defName>VRE_Microsized</defName>
 		<label>microsized</label>
 		<description>todo.</description>
-		<iconPath>UI/Icons/Genes/Gene_Alpha</iconPath>
+		<iconPath>UI/Icons/Genes/Gene_Microsized</iconPath>
 		<unlockable>true</unlockable>
 		<displayOrderInCategory>1000</displayOrderInCategory>
 		<statOffsets>
@@ -45,7 +45,7 @@
 		<defName>VRE_Colossal</defName>
 		<label>colossal</label>
 		<description>todo.</description>
-		<iconPath>UI/Icons/Genes/Gene_Alpha</iconPath>
+		<iconPath>UI/Icons/Genes/Gene_Colossal</iconPath>
 		<unlockable>true</unlockable>
 		<displayOrderInCategory>1001</displayOrderInCategory>
 		<statOffsets>
