@@ -327,6 +327,7 @@
     <Compile Include="Harmony\Pawn_GeneTracker_CheckForOverrides_Patch.cs" />
     <Compile Include="Harmony\Pawn_PathFollower_CostToMoveIntoCell_Patch.cs" />
     <Compile Include="Harmony\Recipe_ExtractOvum_CompletableEver.cs" />
+    <Compile Include="Harmony\JobGiver_RunRandom.cs" />
     <Compile Include="Harmony\Recipe_ImplantEmbryo_CompletableEver.cs" />
     <Compile Include="HediffComps\HediffComp_ChestburstPregnancy.cs" />
     <Compile Include="HediffComps\HediffComp_ChestburstPregnancyVictim.cs" />

@@ -32,6 +32,9 @@ namespace VanillaRacesExpandedInsector
         public static GeneDef VRE_LowOctopamine;
         public static GeneDef VRE_PollutionDependency;
         public static GeneDef VRE_InsectJellyDependency;
+
+        //Sorne Genes
+
         [MayRequire("OskarPotocki.VFE.Insectoid2")]
         public static GeneDef VRE_SwarmSynapse;
         [MayRequire("OskarPotocki.VFE.Insectoid2")]
@@ -40,6 +43,11 @@ namespace VanillaRacesExpandedInsector
         public static GeneDef VRE_Microsized;
         [MayRequire("OskarPotocki.VFE.Insectoid2")]
         public static GeneDef VRE_Colossal;
+
+        //Nuchadus Genes
+
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static GeneDef VRE_PyroResistantChitin;
 
         public static ThingDef Meat_Megaspider;
         public static ThingDef VRE_Filth_BugFilth;
