@@ -25,6 +25,15 @@ namespace VanillaRacesExpandedInsector
         List<GeneDef> chelisList;
         List<bool> chelisList2;
 
+        public Dictionary<GeneDef, bool> kemia_pherocore_genes = new Dictionary<GeneDef, bool>();
+        public bool allKemiaGenesUnlocked = false;
+        List<GeneDef> kemiaList;
+        List<bool> kemiaList2;
+
+        public Dictionary<GeneDef, bool> xanides_pherocore_genes = new Dictionary<GeneDef, bool>();
+        public bool allXanidesGenesUnlocked = false;
+        List<GeneDef> xanidesList;
+        List<bool> xanidesList2;
 
         public GameComponent_UnlockedGenes(Game game)
         {
@@ -55,6 +64,19 @@ namespace VanillaRacesExpandedInsector
                 { InternalDefOf.VRE_InsectRostrum, false },{ InternalDefOf.VRE_InsectVolatile, false },{ InternalDefOf.VRE_EcdysoneOverdrive, false }};
 
             }
+            if (kemia_pherocore_genes.NullOrEmpty() && InternalDefOf.VRE_AcidGlands != null)
+            {
+                kemia_pherocore_genes = new Dictionary<GeneDef, bool>() { { InternalDefOf.VRE_AcidGlands, false },
+                { InternalDefOf.VRE_InfraredSensors, false },{ InternalDefOf.VRE_AcidBurstSack, false },{ InternalDefOf.VRE_SolidGreyMatter, false }};
+
+            }
+
+            if (xanides_pherocore_genes.NullOrEmpty() && InternalDefOf.VRE_MineralRichInsectskin != null)
+            {
+                xanides_pherocore_genes = new Dictionary<GeneDef, bool>() { { InternalDefOf.VRE_MineralRichInsectskin, false },
+                { InternalDefOf.VRE_ChargerClaws, false },{ InternalDefOf.VRE_HardLockedJoints, false },{ InternalDefOf.VRE_PassiveInsect, false }};
+
+            }
 
         }
 
@@ -70,6 +92,12 @@ namespace VanillaRacesExpandedInsector
 
             Scribe_Collections.Look<GeneDef, bool>(ref chelis_pherocore_genes, "chelis_pherocore_genes", LookMode.Def, LookMode.Value, ref chelisList, ref chelisList2);
             Scribe_Values.Look<bool>(ref this.allChelisGenesUnlocked, "allChelisGenesUnlocked", false, true);
+
+            Scribe_Collections.Look<GeneDef, bool>(ref kemia_pherocore_genes, "kemia_pherocore_genes", LookMode.Def, LookMode.Value, ref kemiaList, ref kemiaList2);
+            Scribe_Values.Look<bool>(ref this.allKemiaGenesUnlocked, "allKemiaGenesUnlocked", false, true);
+
+            Scribe_Collections.Look<GeneDef, bool>(ref xanides_pherocore_genes, "xanides_pherocore_genes", LookMode.Def, LookMode.Value, ref xanidesList, ref xanidesList2);
+            Scribe_Values.Look<bool>(ref this.allXanidesGenesUnlocked, "allXanidesGenesUnlocked", false, true);
 
         }
 
@@ -88,6 +116,18 @@ namespace VanillaRacesExpandedInsector
         public bool ChelisGeneUnlocked(GeneDef gene)
         {
             if (chelis_pherocore_genes.ContainsKey(gene) && chelis_pherocore_genes[gene]) return true;
+            return false;
+        }
+
+        public bool KemiaGeneUnlocked(GeneDef gene)
+        {
+            if (kemia_pherocore_genes.ContainsKey(gene) && kemia_pherocore_genes[gene]) return true;
+            return false;
+        }
+
+        public bool XanidesGeneUnlocked(GeneDef gene)
+        {
+            if (xanides_pherocore_genes.ContainsKey(gene) && xanides_pherocore_genes[gene]) return true;
             return false;
         }
 

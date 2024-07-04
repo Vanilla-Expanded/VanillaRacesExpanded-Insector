@@ -21,7 +21,9 @@ namespace VanillaRacesExpandedInsector
 
                 if((this.parent.def == InternalDefOf.VFEI2_PherocoreSorne && !GameComponent_UnlockedGenes.Instance.allSorneGenesUnlocked)||
                     (this.parent.def == InternalDefOf.VFEI2_PherocoreNuchadus && !GameComponent_UnlockedGenes.Instance.allNuchadusGenesUnlocked)||
-                    (this.parent.def == InternalDefOf.VFEI2_PherocoreChelis && !GameComponent_UnlockedGenes.Instance.allChelisGenesUnlocked)
+                    (this.parent.def == InternalDefOf.VFEI2_PherocoreChelis && !GameComponent_UnlockedGenes.Instance.allChelisGenesUnlocked) ||
+                    (this.parent.def == InternalDefOf.VFEI2_PherocoreKemian && !GameComponent_UnlockedGenes.Instance.allKemiaGenesUnlocked) ||
+                    (this.parent.def == InternalDefOf.VFEI2_PherocoreXanides && !GameComponent_UnlockedGenes.Instance.allXanidesGenesUnlocked)
                     )
                 {
                     yield return new FloatMenuOption("VRE_IngestPherocore".Translate(this.parent.LabelCap), () =>

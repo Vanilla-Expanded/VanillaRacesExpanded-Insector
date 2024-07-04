@@ -57,5 +57,44 @@
 		</comps>
 	</HediffDef>
 	
+	<HediffDef>
+		<defName>VRE_MineralRichInsectskin</defName>
+		<label>mineral-rich insectskin</label>
+	
+		<description>todo.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			
+			<li Class="AnimalBehaviours.HediffCompProperties_StageByHealth">
+				<lowHealthStageIndex>0.1</lowHealthStageIndex>
+				<highHealthStageIndex>1</highHealthStageIndex>
+				<healthThreshold>0.8</healthThreshold>
+				
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0.1</minSeverity>
+				<statOffsets>
+					<ArmorRating_Blunt>0.26</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.48</ArmorRating_Sharp>
+					
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>1</minSeverity>
+				<statOffsets>
+					<ArmorRating_Blunt>0.52</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.9</ArmorRating_Sharp>
+					
+				</statOffsets>
+			</li>
+			
+		</stages>
+	</HediffDef>
+	
 	
 </Defs>

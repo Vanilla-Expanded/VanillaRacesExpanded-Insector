@@ -63,6 +63,7 @@ namespace VanillaRacesExpandedInsector
                         Messages.Message("VRE_NoUnlockableGenes".Translate(pherocore.LabelCap), pawn, MessageTypeDefOf.NegativeEvent, true);
                     }
                 }
+                else
                 if (pherocore == InternalDefOf.VFEI2_PherocoreNuchadus)
                 {
                     Dictionary<GeneDef, bool> nuchadusGenes = GameComponent_UnlockedGenes.Instance.nuchadus_pherocore_genes;
@@ -84,7 +85,7 @@ namespace VanillaRacesExpandedInsector
                         Messages.Message("VRE_NoUnlockableGenes".Translate(pherocore.LabelCap), pawn, MessageTypeDefOf.NegativeEvent, true);
                     }
                 }
-
+                else
                 if (pherocore == InternalDefOf.VFEI2_PherocoreChelis)
                 {
                     Dictionary<GeneDef, bool> chelisGenes = GameComponent_UnlockedGenes.Instance.chelis_pherocore_genes;
@@ -99,6 +100,50 @@ namespace VanillaRacesExpandedInsector
                         if (!chelisGenes.Values.Any(x => x == false))
                         {
                             GameComponent_UnlockedGenes.Instance.allChelisGenesUnlocked = true;
+                        }
+                    }
+                    else
+                    {
+                        Messages.Message("VRE_NoUnlockableGenes".Translate(pherocore.LabelCap), pawn, MessageTypeDefOf.NegativeEvent, true);
+                    }
+                }
+                else
+                if (pherocore == InternalDefOf.VFEI2_PherocoreKemian)
+                {
+                    Dictionary<GeneDef, bool> kemiaGenes = GameComponent_UnlockedGenes.Instance.kemia_pherocore_genes;
+                    if (kemiaGenes.Values.Any(x => x == false))
+                    {
+                        GeneDef gene = kemiaGenes.Keys.Where(x => kemiaGenes[x] == false).RandomElement();
+                        kemiaGenes[gene] = true;
+                        GenelineGeneDef genelinegene = gene as GenelineGeneDef;
+                        Messages.Message("VRE_PherocoreConsumed".Translate(pherocore.LabelCap, gene.LabelCap, IsEvolutionOrMutation(genelinegene)), pawn, MessageTypeDefOf.PositiveEvent, true);
+                        TargetA.Thing.Destroy();
+                        Utils.cachedGeneDefsInOrder = null;
+                        if (!kemiaGenes.Values.Any(x => x == false))
+                        {
+                            GameComponent_UnlockedGenes.Instance.allKemiaGenesUnlocked = true;
+                        }
+                    }
+                    else
+                    {
+                        Messages.Message("VRE_NoUnlockableGenes".Translate(pherocore.LabelCap), pawn, MessageTypeDefOf.NegativeEvent, true);
+                    }
+                }
+                else
+                if (pherocore == InternalDefOf.VFEI2_PherocoreXanides)
+                {
+                    Dictionary<GeneDef, bool> xanidesGenes = GameComponent_UnlockedGenes.Instance.xanides_pherocore_genes;
+                    if (xanidesGenes.Values.Any(x => x == false))
+                    {
+                        GeneDef gene = xanidesGenes.Keys.Where(x => xanidesGenes[x] == false).RandomElement();
+                        xanidesGenes[gene] = true;
+                        GenelineGeneDef genelinegene = gene as GenelineGeneDef;
+                        Messages.Message("VRE_PherocoreConsumed".Translate(pherocore.LabelCap, gene.LabelCap, IsEvolutionOrMutation(genelinegene)), pawn, MessageTypeDefOf.PositiveEvent, true);
+                        TargetA.Thing.Destroy();
+                        Utils.cachedGeneDefsInOrder = null;
+                        if (!xanidesGenes.Values.Any(x => x == false))
+                        {
+                            GameComponent_UnlockedGenes.Instance.allXanidesGenesUnlocked = true;
                         }
                     }
                     else

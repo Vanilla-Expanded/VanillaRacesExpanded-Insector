@@ -851,9 +851,12 @@
 		<defName>VRE_RipperBlades</defName>
 		<label>ripper-blades</label>
 		<labelShortAdj>ripper-bladed</labelShortAdj>
-		<description>Carriers of this gene have long and deadly ripper-blades instead of hands. While the blades greatly lower manipulation, they can be used in melee combat and are capable of ripping even armored enemies in half.</description>
+		<description>Carriers of this gene have long and deadly ripper-blades instead of hands. While the blades greatly lower work speed, they can be used in melee combat and are capable of ripping even armored enemies in half.</description>
 		<iconPath>UI/Icons/Genes/Gene_RipperBlades</iconPath>
 		<displayOrderInCategory>21</displayOrderInCategory>
+		<statOffsets>		
+			<WorkSpeedGlobal>-0.3</WorkSpeedGlobal>
+		</statOffsets>
 		
 		<exclusionTags>
 			<li>Hands</li>

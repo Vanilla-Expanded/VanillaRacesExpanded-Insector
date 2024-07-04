@@ -40,4 +40,35 @@
 			<minRange>5.9</minRange>
 		</verbProperties>
 	</AbilityDef>
+	
+	<AbilityDef>
+		<defName>VFEI2_BreacherCharge_Colonists</defName>
+		<label>breacher charge</label>
+		<aiCanUse>false</aiCanUse>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+		<casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+		<hostile>true</hostile>
+		<description>Insector charges towards the target, dealing significant damage to anything on the path. Will destroy any sort of defenses with ease.</description>
+		<iconPath>UI/Abilities/VFE_BreacherCharge</iconPath>
+		<cooldownTicksRange>28800</cooldownTicksRange>
+		<verbProperties>
+			<verbClass>VFEInsectoids.Verb_CastAbilityWideTunnels</verbClass>
+			<violent>true</violent>
+			<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+			<requireLineOfSight>false</requireLineOfSight>
+			<soundCast>VFEI2_Insect_Jump</soundCast>
+			<soundLanding>Longjump_Land</soundLanding>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+			</targetParams>
+			<label>breacher charge</label>
+			<warmupTime>0.1</warmupTime>
+			<range>12.9</range>
+			<minRange>0.9</minRange>
+		</verbProperties>
+		<jobDef>CastJump</jobDef>
+	</AbilityDef>
 </Defs>

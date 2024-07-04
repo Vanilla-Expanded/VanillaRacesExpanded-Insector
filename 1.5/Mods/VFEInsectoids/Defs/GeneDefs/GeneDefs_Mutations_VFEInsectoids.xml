@@ -285,4 +285,63 @@
 			</li>
 		</modExtensions>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_HardLockedJoints</defName>
+		<label>hard-locked joints</label>
+		<description>todo.</description>
+		<iconPath>UI/Icons/Genes/Gene_InflexibleJoints</iconPath>
+		<unlockable>true</unlockable>
+		<displayOrderInCategory>1008</displayOrderInCategory>
+		<statOffsets>
+			<MoveSpeed>-0.4</MoveSpeed>
+		</statOffsets>
+		<exclusionTags>
+			<li>InsectorMovement</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>slow</symbol>
+				</li>
+				<li>
+					<symbol>lock</symbol>
+				</li>
+				
+			</prefixSymbols>
+			
+		</symbolPack>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_PassiveInsect</defName>
+		<label>passive</label>
+		<description>todo.</description>
+		<iconPath>UI/Icons/Genes/Gene_Passive</iconPath>
+		<unlockable>true</unlockable>
+		<displayOrderInCategory>1009</displayOrderInCategory>
+		<disabledWorkTags>
+			<li>Violent</li>
+			<li>Hunting</li>
+		</disabledWorkTags>
+		<exclusionTags>
+			<li>InsectorAggression</li>
+			<li>MeleeDamage</li>
+			<li>ShootingAccuracy</li>
+			<li>Aggressive</li>
+			<li>KillThirst</li>
+		</exclusionTags>
+		
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
 </Defs>

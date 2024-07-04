@@ -66,6 +66,29 @@ namespace VanillaRacesExpandedInsector
         [MayRequire("OskarPotocki.VFE.Insectoid2")]
         public static GeneDef VRE_EcdysoneOverdrive;
 
+        //Kemia Genes
+
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static GeneDef VRE_AcidGlands;
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static GeneDef VRE_InfraredSensors;
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static GeneDef VRE_AcidBurstSack;
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static GeneDef VRE_SolidGreyMatter;
+
+        //Xanides Genes
+
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static GeneDef VRE_MineralRichInsectskin;
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static GeneDef VRE_ChargerClaws;
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static GeneDef VRE_HardLockedJoints;
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static GeneDef VRE_PassiveInsect;
+
+
         public static ThingDef Meat_Megaspider;
         public static ThingDef VRE_Filth_BugFilth;
         public static ThingDef VRE_InfestedShipPart;
@@ -77,6 +100,10 @@ namespace VanillaRacesExpandedInsector
         public static ThingDef VFEI2_PherocoreNuchadus;
         [MayRequire("OskarPotocki.VFE.Insectoid2")]
         public static ThingDef VFEI2_PherocoreChelis;
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static ThingDef VFEI2_PherocoreKemian;
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static ThingDef VFEI2_PherocoreXanides;
 
         public static ThoughtDef AteHumanlikeMeatDirectCannibal;
         public static ThoughtDef VRE_Implanted;
