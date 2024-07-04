@@ -16,7 +16,7 @@ namespace VanillaRacesExpandedInsector
     public static class VanillaRacesExpandedInsector_JobGiver_Wander_TryGiveJob
     {
         [HarmonyPostfix]
-        public static void Postfix(Pawn pawn, ref Job __result, JobGiver_Wander __instance )
+        public static void Postfix(Pawn pawn, ref Job __result, JobGiver_Wander __instance)
         {
             
             if(__instance.GetType() == typeof(JobGiver_RunRandom))
@@ -25,9 +25,26 @@ namespace VanillaRacesExpandedInsector
                 {
                     __result = null;
                 }
+               
             }
             
         
         }
+        [HarmonyPrefix]
+        public static void Prefix(Pawn pawn, JobGiver_Wander __instance, ref IntRange ___ticksBetweenWandersRange)
+        {
+
+            if (__instance.GetType() == typeof(JobGiver_RunRandom))
+            {
+                if (pawn.genes?.HasActiveGene(InternalDefOf.VRE_ChemfuelSacks) == true)
+                {
+                    ___ticksBetweenWandersRange =   new IntRange(10, 20);
+                }
+
+            }
+
+
+        }
+
     }
 }

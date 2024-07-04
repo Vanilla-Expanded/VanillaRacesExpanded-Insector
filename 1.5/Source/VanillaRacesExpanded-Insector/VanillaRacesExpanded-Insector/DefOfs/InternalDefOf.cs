@@ -48,6 +48,23 @@ namespace VanillaRacesExpandedInsector
 
         [MayRequire("OskarPotocki.VFE.Insectoid2")]
         public static GeneDef VRE_PyroResistantChitin;
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static GeneDef VRE_FlameGlands;
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static GeneDef VRE_ChemfuelSacks;
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static GeneDef VRE_Pyrophiliac;
+
+        //Chelis Genes
+
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static GeneDef VRE_LocustWings;
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static GeneDef VRE_InsectRostrum;
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static GeneDef VRE_InsectVolatile;
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static GeneDef VRE_EcdysoneOverdrive;
 
         public static ThingDef Meat_Megaspider;
         public static ThingDef VRE_Filth_BugFilth;
@@ -56,6 +73,10 @@ namespace VanillaRacesExpandedInsector
         public static ThingDef VRE_ActiveDropPod;
         [MayRequire("OskarPotocki.VFE.Insectoid2")]
         public static ThingDef VFEI2_PherocoreSorne;
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static ThingDef VFEI2_PherocoreNuchadus;
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static ThingDef VFEI2_PherocoreChelis;
 
         public static ThoughtDef AteHumanlikeMeatDirectCannibal;
         public static ThoughtDef VRE_Implanted;
@@ -111,6 +132,8 @@ namespace VanillaRacesExpandedInsector
         public static JobDef VRE_ConsumeInsectJelly;
         [MayRequire("OskarPotocki.VFE.Insectoid2")]
         public static JobDef VRE_IngestPherocore;
+        [MayRequire("OskarPotocki.VFE.Insectoid2")]
+        public static JobDef VRE_ArmedSocialFightInsectors;
 
     }
 }

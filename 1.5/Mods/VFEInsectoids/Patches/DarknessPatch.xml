@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+	<Operation Class="PatchOperationAdd"> 
+		<xpath>/Defs/ThoughtDef[defName="EnvironmentDark"]/nullifyingGenes</xpath>
+		<value>
+			
+			<li>VRE_InfraredSensors</li>
+		</value>
+	</Operation>
+
+
+
+
+</Patch>

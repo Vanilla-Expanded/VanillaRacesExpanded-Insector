@@ -40,7 +40,6 @@
 			</li>
 		</modExtensions>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>
-	
 	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
 		<defName>VRE_Colossal</defName>
 		<label>colossal</label>
@@ -80,6 +79,209 @@
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
 				<hediffToWholeBody>VRE_Colossal</hediffToWholeBody>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_ChemfuelSacks</defName>
+		<label>chemfuel sacks</label>
+		<description>todo.</description>
+		<iconPath>UI/Icons/Genes/Gene_ChemfuelSacks</iconPath>
+		<unlockable>true</unlockable>
+		<displayOrderInCategory>1002</displayOrderInCategory>
+		<damageFactors>
+			<Flame>2</Flame>
+		</damageFactors>
+		<customEffectDescriptions>
+			<li>Time running in panic when set on fire doubled.</li>
+			<li>Produces 30 chemfuel every 10 days.</li>
+			<li>If set on fire, and the fire is at least 35 in size, they explode in a fire explosion. Upon fire explosion, they will not explode again for 24 hours.</li>
+		</customEffectDescriptions>
+		<exclusionTags>
+			<li>Tail</li>
+			<li>InsectorFire</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>fuel</symbol>
+				</li>
+				<li>
+					<symbol>chem</symbol>
+				</li>
+				<li>
+					<symbol>petrol</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+				<hediffToWholeBody>VRE_ChemfuelSacks</hediffToWholeBody>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_Pyrophiliac</defName>
+		<label>pyrophiliac</label>
+		<description>todo.</description>
+		<iconPath>UI/Icons/Genes/Gene_Pyrophiliac</iconPath>
+		<unlockable>true</unlockable>
+		<displayOrderInCategory>1003</displayOrderInCategory>
+		<statOffsets>
+			<ComfyTemperatureMin>6</ComfyTemperatureMin>
+			<forcedTraits>
+				<li>
+					<def>Pyromaniac</def>
+				</li>
+			</forcedTraits>
+		</statOffsets>
+		<exclusionTags>
+			<li>MinTemperature</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>fire</symbol>
+				</li>
+				<li>
+					<symbol>flame</symbol>
+				</li>
+				<li>
+					<symbol>pyro</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_InsectVolatile</defName>
+		<label>volatile</label>
+		<description>todo.</description>
+		<iconPath>UI/Icons/Genes/Gene_Volatile</iconPath>
+		<unlockable>true</unlockable>
+		<displayOrderInCategory>1004</displayOrderInCategory>
+		<socialFightChanceFactor>2</socialFightChanceFactor>
+		<aggroMentalBreakSelectionChanceFactor>999</aggroMentalBreakSelectionChanceFactor>
+		<prisonBreakMTBFactor>0.3</prisonBreakMTBFactor>
+		<customEffectDescriptions>
+			<li>Will use weapons in social fights.</li>
+		</customEffectDescriptions>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>aggro</symbol>
+				</li>
+				<li>
+					<symbol>savage</symbol>
+				</li>
+				<li>
+					<symbol>vola</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_EcdysoneOverdrive</defName>
+		<label>ecdysone overdrive</label>
+		<description>todo.</description>
+		<iconPath>UI/Icons/Genes/Gene_EcdysoneOverdrive</iconPath>
+		<unlockable>true</unlockable>
+		<displayOrderInCategory>1005</displayOrderInCategory>
+		<causesNeed>KillThirst</causesNeed>
+		<exclusionTags>
+			<li>KillThirst</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>aggro</symbol>
+				</li>
+				<li>
+					<symbol>killer</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_AcidBurstSack</defName>
+		<label>acid burstsack</label>
+		<description>todo.</description>
+		<iconPath>UI/Icons/Genes/Gene_AcidBurstsack</iconPath>
+		<unlockable>true</unlockable>
+		<displayOrderInCategory>1006</displayOrderInCategory>
+		
+		<exclusionTags>
+			<li>Tail</li>
+		</exclusionTags>
+		
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+				<hediffToWholeBody>VRE_AcidBurstSack</hediffToWholeBody>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_SolidGreyMatter</defName>
+		<label>solid grey matter</label>
+		<description>todo.</description>
+		<iconPath>UI/Icons/Genes/Gene_SolidGreymatter</iconPath>
+		<unlockable>true</unlockable>
+		<displayOrderInCategory>1007</displayOrderInCategory>
+		<statFactors><GlobalLearningFactor>0</GlobalLearningFactor></statFactors>
+		<exclusionTags>
+			<li>InsectorBrain</li>
+		</exclusionTags>
+		<customEffectDescriptions>
+			<li>Global skill loss multiplier: x2.</li>
+			<li>Skill loss applies even below level 10.</li>
+		</customEffectDescriptions>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>thag</symbol>
+				</li>
+				<li>
+					<symbol>grunt</symbol>
+				</li>
+				<li>
+					<symbol>stupid</symbol>
+				</li>
+				<li>
+					<symbol>dull</symbol>
+				</li>
+				<li>
+					<symbol>dumb</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+				<globalSkillLossMultiplier>2</globalSkillLossMultiplier>
+				<skillDegradation>true</skillDegradation>
 			</li>
 		</modExtensions>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>

@@ -19,7 +19,10 @@ namespace VanillaRacesExpandedInsector
             if (selPawn != null && selPawn.genes?.HasActiveGene(InternalDefOf.VRE_GenelineEvolution)==true)
             {
 
-                if(this.parent.def == InternalDefOf.VFEI2_PherocoreSorne && !GameComponent_UnlockedGenes.Instance.allSorneGenesUnlocked)
+                if((this.parent.def == InternalDefOf.VFEI2_PherocoreSorne && !GameComponent_UnlockedGenes.Instance.allSorneGenesUnlocked)||
+                    (this.parent.def == InternalDefOf.VFEI2_PherocoreNuchadus && !GameComponent_UnlockedGenes.Instance.allNuchadusGenesUnlocked)||
+                    (this.parent.def == InternalDefOf.VFEI2_PherocoreChelis && !GameComponent_UnlockedGenes.Instance.allChelisGenesUnlocked)
+                    )
                 {
                     yield return new FloatMenuOption("VRE_IngestPherocore".Translate(this.parent.LabelCap), () =>
                     {

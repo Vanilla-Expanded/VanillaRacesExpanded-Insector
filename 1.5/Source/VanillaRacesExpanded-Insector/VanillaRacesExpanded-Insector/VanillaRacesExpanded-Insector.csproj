@@ -323,6 +323,7 @@
     <Compile Include="Harmony\GeneUtility_GenesInOrder_Patch.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
     <Compile Include="Harmony\Hediff_Pregnant_Tick.cs" />
+    <Compile Include="Harmony\JobGiver_SocialFighting_TryGiveJob.cs" />
     <Compile Include="Harmony\PathFinder_FindPath_Patch.cs" />
     <Compile Include="Harmony\Pawn_GeneTracker_CheckForOverrides_Patch.cs" />
     <Compile Include="Harmony\Pawn_PathFollower_CostToMoveIntoCell_Patch.cs" />

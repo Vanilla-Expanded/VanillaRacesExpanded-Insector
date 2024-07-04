@@ -25,4 +25,19 @@
 			<li Class="VanillaRacesExpandedInsector.CompProperties_RoyalJellyInjector"/>
 		</comps>
 	</AbilityDef>
+	
+	<AbilityDef ParentName="VFEI2_InsectGlide_Base">
+		<defName>VFEI2_InsectGlide_Far_Colonists</defName>
+		<label>locust farglide</label>
+		<description>Fly to a distant location that you can or cannot see using a set of gigantic locust wings. Allows the gene carrier to jump over the walls, provided the area they are jumping to is not roofed.</description>
+		<iconPath>UI/Abilities/Ability_LocustFarglide</iconPath>
+		<cooldownTicksRange>600</cooldownTicksRange>
+		<verbProperties>
+			<requireLineOfSight>false</requireLineOfSight>
+			<label>locust farglide</label>
+			<warmupTime>0.5</warmupTime>
+			<range>18.9</range>
+			<minRange>5.9</minRange>
+		</verbProperties>
+	</AbilityDef>
 </Defs>

@@ -47,6 +47,9 @@
 		<statFactors>
 			<Flammability>0.1</Flammability>
 		</statFactors>
+		<customEffectDescriptions>
+			<li>Won't run in panic when set on fire.</li>
+		</customEffectDescriptions>
 		<exclusionTags>
 			<li>Tail</li>
 			<li>InsectorFire</li>
@@ -64,6 +67,173 @@
 				</li>
 			</prefixSymbols>
 		</symbolPack>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_FlameGlands</defName>
+		<label>flame glands</label>
+		<description>todo.</description>
+		<unlockable>true</unlockable>
+		<iconPath>UI/Icons/Genes/Gene_FlameGlands</iconPath>
+		<displayOrderInCategory>1003</displayOrderInCategory>
+		<abilities>
+			<li>VFEI2_FlameSpew</li>
+		</abilities>
+		<exclusionTags>
+			<li>InsectorGlands</li>
+			<li>InsectorMouth</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>fire</symbol>
+				</li>
+				<li>
+					<symbol>flame</symbol>
+				</li>
+				<li>
+					<symbol>burn</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_LocustWings</defName>
+		<label>locust wings</label>
+		<description>todo.</description>
+		<unlockable>true</unlockable>
+		<iconPath>UI/Icons/Genes/Gene_LocustWings</iconPath>
+		<displayOrderInCategory>1004</displayOrderInCategory>
+		<abilities>
+			<li>VFEI2_InsectGlide_Far_Colonists</li>
+		</abilities>
+		<exclusionTags>
+			<li>InsectorMovement</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>fly</symbol>
+				</li>
+				<li>
+					<symbol>jump</symbol>
+				</li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li>
+					<symbol>runner</symbol>
+				</li>
+				<li>
+					<symbol>jumper</symbol>
+				</li>
+				<li>
+					<symbol>flier</symbol>
+				</li>
+				<li>
+					<symbol>fly</symbol>
+				</li>
+			</suffixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_InsectRostrum</defName>
+		<label>insect rostrum</label>
+		<labelShortAdj>mandibled</labelShortAdj>
+		<description>todo.</description>
+		<unlockable>true</unlockable>
+		<iconPath>UI/Icons/Genes/Gene_InsectRostrum</iconPath>
+		<displayOrderInCategory>1005</displayOrderInCategory>
+		<statFactors>
+			<EatingSpeed>4</EatingSpeed>
+		</statFactors>
+		<exclusionTags>
+			<li>InsectorMouth</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>insect</symbol>
+				</li>
+				<li>
+					<symbol>mandible</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+				<hediffsToBodyParts>
+					<li>
+						<hediff>VRE_InsectRostrum</hediff>
+						<bodyparts>
+							<li>Jaw</li>
+						</bodyparts>
+					</li>
+				</hediffsToBodyParts>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_AcidGlands</defName>
+		<label>acid glands</label>
+		<description>todo.</description>
+		<unlockable>true</unlockable>
+		<iconPath>UI/Icons/Genes/Gene_AcidGlands</iconPath>
+		<displayOrderInCategory>1006</displayOrderInCategory>
+		<abilities>
+			<li>VFEI2_InsectAcidSpew</li>
+		</abilities>
+		<exclusionTags>
+			<li>InsectorGlands</li>
+			<li>InsectorMouth</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>acid</symbol>
+				</li>
+				<li>
+					<symbol>veno</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_InfraredSensors</defName>
+		<label>infrared sensors</label>
+		<description>todo.</description>
+		<unlockable>true</unlockable>
+		<iconPath>UI/Icons/Genes/Gene_InfraredSensors</iconPath>
+		<displayOrderInCategory>1006</displayOrderInCategory>
+		<statFactors>
+			<ShootingAccuracyFactor_Medium>1.1</ShootingAccuracyFactor_Medium>
+			<ShootingAccuracyFactor_Long>1.05</ShootingAccuracyFactor_Long>
+		</statFactors>
+		<ignoreDarkness>true</ignoreDarkness>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
