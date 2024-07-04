@@ -16,10 +16,10 @@ namespace VanillaRacesExpandedInsector
     public static class VanillaRacesExpandedInsector_JobGiver_Wander_TryGiveJob
     {
         [HarmonyPostfix]
-        public static void Postfix(Pawn pawn, float ___wanderRadius, ref Job __result)
+        public static void Postfix(Pawn pawn, ref Job __result, JobGiver_Wander __instance )
         {
             
-            if(___wanderRadius == 7f)
+            if(__instance.GetType() == typeof(JobGiver_RunRandom))
             {
                 if (pawn.genes?.HasActiveGene(InternalDefOf.VRE_PyroResistantChitin) == true)
                 {
