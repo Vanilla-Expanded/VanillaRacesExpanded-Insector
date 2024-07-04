@@ -131,12 +131,13 @@
 		<displayOrderInCategory>1003</displayOrderInCategory>
 		<statOffsets>
 			<ComfyTemperatureMin>6</ComfyTemperatureMin>
-			<forcedTraits>
+			
+		</statOffsets>
+		<forcedTraits>
 				<li>
 					<def>Pyromaniac</def>
 				</li>
 			</forcedTraits>
-		</statOffsets>
 		<exclusionTags>
 			<li>MinTemperature</li>
 		</exclusionTags>

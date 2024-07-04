@@ -271,7 +271,7 @@
 		<unlockable>true</unlockable>
 		<description>todo.</description>
 		<iconPath>UI/Icons/Genes/Gene_ChargerClaws</iconPath>
-		<displayOrderInCategory>1009</displayOrderInCategory>
+		
 		<statOffsets>
 			<WorkSpeedGlobal>-0.4</WorkSpeedGlobal>
 		</statOffsets>
