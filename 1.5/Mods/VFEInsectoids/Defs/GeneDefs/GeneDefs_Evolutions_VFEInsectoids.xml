@@ -5,6 +5,7 @@
 		<label>swarm synapse</label>
 		<description>todo.</description>
 		<unlockable>true</unlockable>
+		<selectionWeight>0</selectionWeight>
 		<iconPath>UI/Icons/Genes/Gene_SwarmSynapse</iconPath>
 		<displayOrderInCategory>1000</displayOrderInCategory>
 		<customEffectDescriptions>
@@ -21,6 +22,7 @@
 		<defName>VRE_RoyalJellyInjector</defName>
 		<label>royal jelly injector</label>
 		<description>todo.</description>
+		<selectionWeight>0</selectionWeight>
 		<unlockable>true</unlockable>
 		<iconPath>UI/Icons/Genes/Gene_RoyalJellyInjector</iconPath>
 		<displayOrderInCategory>1001</displayOrderInCategory>
@@ -39,6 +41,7 @@
 		<label>pyro-resistant chitin</label>
 		<description>todo.</description>
 		<unlockable>true</unlockable>
+		<selectionWeight>0</selectionWeight>
 		<iconPath>UI/Icons/Genes/Gene_PyroresistantChitin</iconPath>
 		<displayOrderInCategory>1002</displayOrderInCategory>
 		<damageFactors>
@@ -80,6 +83,7 @@
 		<description>todo.</description>
 		<unlockable>true</unlockable>
 		<iconPath>UI/Icons/Genes/Gene_FlameGlands</iconPath>
+		<selectionWeight>0</selectionWeight>
 		<displayOrderInCategory>1003</displayOrderInCategory>
 		<abilities>
 			<li>VFEI2_FlameSpew</li>
@@ -115,6 +119,7 @@
 		<unlockable>true</unlockable>
 		<iconPath>UI/Icons/Genes/Gene_LocustWings</iconPath>
 		<displayOrderInCategory>1004</displayOrderInCategory>
+		<selectionWeight>0</selectionWeight>
 		<abilities>
 			<li>VFEI2_InsectGlide_Far_Colonists</li>
 		</abilities>
@@ -166,6 +171,7 @@
 		<exclusionTags>
 			<li>InsectorMouth</li>
 		</exclusionTags>
+		<selectionWeight>0</selectionWeight>
 		<symbolPack>
 			<prefixSymbols>
 				<li>
@@ -201,6 +207,7 @@
 		<abilities>
 			<li>VFEI2_InsectAcidSpew</li>
 		</abilities>
+		<selectionWeight>0</selectionWeight>
 		<exclusionTags>
 			<li>InsectorGlands</li>
 			<li>InsectorMouth</li>
@@ -226,6 +233,7 @@
 		<defName>VRE_InfraredSensors</defName>
 		<label>infrared sensors</label>
 		<description>todo.</description>
+		<selectionWeight>0</selectionWeight>
 		<unlockable>true</unlockable>
 		<iconPath>UI/Icons/Genes/Gene_InfraredSensors</iconPath>
 		<displayOrderInCategory>1007</displayOrderInCategory>
@@ -257,6 +265,7 @@
 			<li>Armour</li>
 			<li>Armor</li>
 		</exclusionTags>
+		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
@@ -270,8 +279,8 @@
 		<label>charger claws</label>
 		<unlockable>true</unlockable>
 		<description>todo.</description>
+		<selectionWeight>0</selectionWeight>
 		<iconPath>UI/Icons/Genes/Gene_ChargerClaws</iconPath>
-		
 		<statOffsets>
 			<WorkSpeedGlobal>-0.4</WorkSpeedGlobal>
 		</statOffsets>
