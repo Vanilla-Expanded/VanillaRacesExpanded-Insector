@@ -29,6 +29,8 @@ namespace VanillaRacesExpandedInsector
 
         public static readonly CachedTexture EvolutionTex = new CachedTexture("UI/Icons/Biostats/Biostat_GenelineEvolution");
         public static readonly CachedTexture MutationTex = new CachedTexture("UI/Icons/Biostats/Biostat_GenelineMutation");
+        public static readonly CachedTexture CosmeticTex = new CachedTexture("UI/Icons/Biostats/Biostat_GenelineCosmetic");
+
         private static readonly GenelineStatData[] GenelineStats = new GenelineStatData[2]
         {
             new GenelineStatData("VRE_Evolutions", "VRE_EvolutionsDesc", EvolutionTex.Texture),

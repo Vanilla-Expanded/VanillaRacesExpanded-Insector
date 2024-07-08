@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<GeneCategoryDef>
+		<defName>VRE_InsectorCosmeticGene</defName>
+		<label>Insector cosmetics</label>
+		<displayPriorityInXenotype>5010.69</displayPriorityInXenotype>
+	</GeneCategoryDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef Name="VRE_InsectorCosmeticGene" Abstract="True">
+		<displayCategory>VRE_InsectorCosmeticGene</displayCategory>
+		<selectionWeight>0</selectionWeight>
+		<cosmetic>1</cosmetic>
+		<biostatCpx>0</biostatCpx>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_InsectorCosmeticGene">
+		<defName>VRE_CompoundEyesCosmetic</defName>
+		<label>compound eyes, cosmetic</label>
+		<description>Carriers of this gene have numerous independent photoreception units allowing them to see in many directions, notice very fast movements and recognize details from afar. Their sight and effective shooting range is greatly increased.</description>
+		<iconPath>UI/Icons/Genes/Gene_CompoundEye</iconPath>
+		<displayOrderInCategory>1</displayOrderInCategory>
+		
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<parentTagDef>Head</parentTagDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/CompoundEyes</texPath>
+				<visibleFacing>
+					<li>East</li>
+					<li>South</li>
+					<li>West</li>
+				</visibleFacing>
+				<narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset>
+				<baseLayer>55</baseLayer>
+			</li>
+		</renderNodeProperties>
+		
+		<exclusionTags>
+			<li>InsectorEye</li>
+		</exclusionTags>
+		
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_CosmeticBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_CosmeticBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	
+</Defs>

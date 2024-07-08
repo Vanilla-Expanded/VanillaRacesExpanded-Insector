@@ -3,7 +3,7 @@
 	<GeneCategoryDef>
 		<defName>VRE_EvolutionGene</defName>
 		<label>Insector evolutions</label>
-		<displayPriorityInXenotype>5012</displayPriorityInXenotype>
+		<displayPriorityInXenotype>5012.69</displayPriorityInXenotype>
 	</GeneCategoryDef>
 	<VanillaRacesExpandedInsector.GenelineGeneDef Name="VRE_EvolutionGene" Abstract="True">
 		<displayCategory>VRE_EvolutionGene</displayCategory>

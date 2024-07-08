@@ -57,6 +57,7 @@ namespace VanillaRacesExpandedInsector
 
         public int TotalMutation => selectedGenes.Sum(x => x.mutation);
         public int TotalEvolution => selectedGenes.Sum(x => x.evolution);
+     
 
         public override void DoWindowContents(Rect rect)
         {
@@ -67,7 +68,7 @@ namespace VanillaRacesExpandedInsector
             Text.Anchor = TextAnchor.UpperLeft;
             Widgets.Label(rect3, "VRE_EditGeneline".Translate());
             Text.Font = GameFont.Small;
-            float num3 = Text.LineHeight * 2f;
+            float num3 = Text.LineHeight * 3f;
             rect2.y += 10;
             Rect geneRect = new Rect(rect2.x, rect2.y, rect2.width, rect2.height - num3 - 8f - 50);
             DrawGenes(geneRect);
@@ -300,7 +301,7 @@ namespace VanillaRacesExpandedInsector
             bool overridden = leftChosenGroups.Any((GeneLeftChosenGroup x) => x.overriddenGenes.Contains(geneDef));
             Widgets.DrawOptionBackground(rect, selected);
             curX += 4f;
-            DrawBiostats(geneDef.evolution, geneDef.mutation, ref curX, curY, 4f);
+            DrawBiostats(geneDef.evolution, geneDef.mutation, geneDef.cosmetic, ref curX, curY, 4f);
             Rect rect2 = new Rect(curX, curY + 4f, GeneSize.x, GeneSize.y);
             if (isMatch)
             {
@@ -333,7 +334,7 @@ namespace VanillaRacesExpandedInsector
             Text.Anchor = TextAnchor.UpperLeft;
         }
 
-        public static void DrawBiostats(int evolution, int mutation, ref float curX, float curY, float margin = 6f)
+        public static void DrawBiostats(int evolution, int mutation, int cosmetic, ref float curX, float curY, float margin = 6f)
         {
             float num2 = 0f;
             float num3 = Text.LineHeightOf(GameFont.Small);
@@ -342,9 +343,13 @@ namespace VanillaRacesExpandedInsector
             {
                 DrawStat(iconRect, GenelineStatsTable.EvolutionTex, evolution.ToString(), num3);
             }
-            else
+            else if(mutation > 0)
             {
                 DrawStat(iconRect, GenelineStatsTable.MutationTex, mutation.ToString(), num3);
+            }
+            else if (cosmetic > 0)
+            {
+                DrawStat(iconRect, GenelineStatsTable.CosmeticTex, cosmetic.ToString(), num3);
             }
             curX += 34f;
         }

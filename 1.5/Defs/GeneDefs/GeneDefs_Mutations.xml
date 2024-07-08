@@ -3,7 +3,7 @@
 	<GeneCategoryDef>
 		<defName>VRE_MutationGene</defName>
 		<label>Insector degrades</label>
-		<displayPriorityInXenotype>5011</displayPriorityInXenotype>
+		<displayPriorityInXenotype>5011.69</displayPriorityInXenotype>
 	</GeneCategoryDef>
 	<VanillaRacesExpandedInsector.GenelineGeneDef Name="VRE_MutationGene" Abstract="True">
 		<displayCategory>VRE_MutationGene</displayCategory>
