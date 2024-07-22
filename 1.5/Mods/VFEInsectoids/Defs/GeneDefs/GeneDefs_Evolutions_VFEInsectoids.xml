@@ -29,6 +29,32 @@
 		<abilities>
 			<li>VRE_RoyalJellyInjector</li>
 		</abilities>
+		<exclusionTags>
+			<li>InsectorMouth</li>
+		</exclusionTags>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<parentTagDef>Head</parentTagDef>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/InsectInjector</texPath>
+				<colorType>Skin</colorType>
+				<useRottenColor>true</useRottenColor>
+				<useSkinShader>true</useSkinShader>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<visibleFacing>
+					<li>East</li>
+					<li>South</li>
+					<li>West</li>
+				</visibleFacing>
+				<drawData>
+					<defaultData>
+						<layer>69</layer>
+					</defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
@@ -88,6 +114,28 @@
 		<abilities>
 			<li>VFEI2_FlameSpew</li>
 		</abilities>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<parentTagDef>Head</parentTagDef>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/InsectFlameGlands</texPath>
+				<colorType>Skin</colorType>
+				<useRottenColor>true</useRottenColor>
+				<useSkinShader>true</useSkinShader>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<visibleFacing>
+					<li>East</li>
+					<li>South</li>
+					<li>West</li>
+				</visibleFacing>
+				<drawData>
+					<defaultData>
+						<layer>69</layer>
+					</defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
 		<exclusionTags>
 			<li>InsectorGlands</li>
 			<li>InsectorMouth</li>
@@ -126,6 +174,34 @@
 		<exclusionTags>
 			<li>InsectorMovement</li>
 		</exclusionTags>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/BodyAttachments/Locustwings</texPath>
+				<drawSize>1</drawSize>
+				<parentTagDef>Body</parentTagDef>
+				<colorType>Skin</colorType>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<useRottenColor>true</useRottenColor>
+				<useSkinShader>true</useSkinShader>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<drawData>
+					<defaultData>
+						<layer>-2</layer>
+					</defaultData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<dataNorth>
+						<layer>90</layer>
+					</dataNorth>
+					<dataEast>
+						<offset>(-0.2, 0, 0)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.2, 0, 0)</offset>
+					</dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
 		<symbolPack>
 			<prefixSymbols>
 				<li>
@@ -171,6 +247,28 @@
 		<exclusionTags>
 			<li>InsectorMouth</li>
 		</exclusionTags>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<parentTagDef>Head</parentTagDef>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/InsectRostrum</texPath>
+				<colorType>Skin</colorType>
+				<useRottenColor>true</useRottenColor>
+				<useSkinShader>true</useSkinShader>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<visibleFacing>
+					<li>East</li>
+					<li>South</li>
+					<li>West</li>
+				</visibleFacing>
+				<drawData>
+					<defaultData>
+						<layer>69</layer>
+					</defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
 		<selectionWeight>0</selectionWeight>
 		<symbolPack>
 			<prefixSymbols>
@@ -265,6 +363,22 @@
 			<li>Armour</li>
 			<li>Armor</li>
 		</exclusionTags>
+		
+		<fur>VRE_MineralRichInsectskin</fur>
+		<skinIsHairColor>false</skinIsHairColor>
+		<tattoosVisible>false</tattoosVisible>
+		
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_Fur</nodeClass>
+				<workerClass>PawnRenderNodeWorker_Fur</workerClass>
+				<baseLayer>5</baseLayer>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Skin</colorType>
+				<parentTagDef>Body</parentTagDef>
+			</li>
+		</renderNodeProperties>
+		
 		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">

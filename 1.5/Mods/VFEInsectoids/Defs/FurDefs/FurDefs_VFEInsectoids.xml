@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FurDef>
+    <defName>VRE_MineralRichInsectskin</defName>
+    <noGraphic>true</noGraphic>
+    <bodyTypeGraphicPaths>
+      <Male>Things/Pawn/Humanlike/Bodies/InsectskinMineralized_Male</Male>
+      <Female>Things/Pawn/Humanlike/Bodies/InsectskinMineralized_Female</Female>
+      <Hulk>Things/Pawn/Humanlike/Bodies/InsectskinMineralized_Hulk</Hulk>
+      <Fat>Things/Pawn/Humanlike/Bodies/InsectskinMineralized_Fat</Fat>
+      <Thin>Things/Pawn/Humanlike/Bodies/InsectskinMineralized_Thin</Thin>
+      <Child>Things/Pawn/Humanlike/Bodies/InsectskinMineralized_Thin</Child>
+      <Baby>Things/Pawn/Humanlike/Bodies/Naked_FurChild</Baby>
+    </bodyTypeGraphicPaths>
+  </FurDef>
+  
+  
+
+</Defs>
