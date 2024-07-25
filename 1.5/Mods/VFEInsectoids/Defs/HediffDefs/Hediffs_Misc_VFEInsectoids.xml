@@ -60,8 +60,7 @@
 	<HediffDef>
 		<defName>VRE_MineralRichInsectskin</defName>
 		<label>mineral-rich insectskin</label>
-	
-		<description>todo.</description>
+		<description>Mineral-rich insectskin forming thick, protective plating. This natural armor provides significant protection until enough damage is sustained to break it.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>

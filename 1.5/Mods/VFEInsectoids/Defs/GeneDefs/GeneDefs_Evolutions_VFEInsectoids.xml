@@ -3,7 +3,7 @@
 	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
 		<defName>VRE_SwarmSynapse</defName>
 		<label>swarm synapse</label>
-		<description>todo.</description>
+		<description>Carriers of this gene form a synaptic swarm, allowing their minds to link and accelerate learning when together. Like a hive of insects, their collective intelligence and speed of knowledge absorption increase with each additional member.</description>
 		<unlockable>true</unlockable>
 		<selectionWeight>0</selectionWeight>
 		<iconPath>UI/Icons/Genes/Gene_SwarmSynapse</iconPath>
@@ -21,7 +21,7 @@
 	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
 		<defName>VRE_RoyalJellyInjector</defName>
 		<label>royal jelly injector</label>
-		<description>todo.</description>
+		<description>Carriers of this gene develop a specialized injector mouth, enabling them to administer royal jelly to others. This injection provides the recipient with an immunity boost and improved mood, though it leaves a tiny wound and can only be performed every six hours.</description>
 		<selectionWeight>0</selectionWeight>
 		<unlockable>true</unlockable>
 		<iconPath>UI/Icons/Genes/Gene_RoyalJellyInjector</iconPath>
@@ -65,7 +65,7 @@
 	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
 		<defName>VRE_PyroResistantChitin</defName>
 		<label>pyro-resistant chitin</label>
-		<description>todo.</description>
+		<description>Carriers of this gene develop pyro-resistant chitin, drastically reducing their flammability and flame damage taken. They remain composed in fiery situations, never succumbing to panic when on fire.</description>
 		<unlockable>true</unlockable>
 		<selectionWeight>0</selectionWeight>
 		<iconPath>UI/Icons/Genes/Gene_PyroresistantChitin</iconPath>
@@ -106,7 +106,7 @@
 	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
 		<defName>VRE_FlameGlands</defName>
 		<label>flame glands</label>
-		<description>todo.</description>
+		<description>Carriers of this gene possess flame glands, granting them the ability to spew combustible fluid from their mouths. This fluid ignites on contact, setting targets or surfaces ablaze, thanks to a special gland and sac that produce and store the fiery substance.</description>
 		<unlockable>true</unlockable>
 		<iconPath>UI/Icons/Genes/Gene_FlameGlands</iconPath>
 		<selectionWeight>0</selectionWeight>
@@ -163,7 +163,7 @@
 	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
 		<defName>VRE_LocustWings</defName>
 		<label>locust wings</label>
-		<description>todo.</description>
+		<description>Carriers of this gene develop locust wings, granting them the special ability to perform a locust leap. This allows them to fly short distances, emulating the powerful and agile leaps of a locust.</description>
 		<unlockable>true</unlockable>
 		<iconPath>UI/Icons/Genes/Gene_LocustWings</iconPath>
 		<displayOrderInCategory>1004</displayOrderInCategory>
@@ -237,7 +237,7 @@
 		<defName>VRE_InsectRostrum</defName>
 		<label>insect rostrum</label>
 		<labelShortAdj>mandibled</labelShortAdj>
-		<description>todo.</description>
+		<description>Carriers of this gene possess an insect rostrum, a large, sharp beak-like structure akin to that of bees. This adaptation quadruples their eating speed and grants them a powerful melee bite attack, dealing significant stab damage with a quick cooldown.</description>
 		<unlockable>true</unlockable>
 		<iconPath>UI/Icons/Genes/Gene_InsectRostrum</iconPath>
 		<displayOrderInCategory>1005</displayOrderInCategory>
@@ -298,7 +298,7 @@
 	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
 		<defName>VRE_AcidGlands</defName>
 		<label>acid glands</label>
-		<description>todo.</description>
+		<description>Carriers of this gene develop acid glands, enabling them to spew acid from their neck, damaging buildings, people and items in a targeted area.</description>
 		<unlockable>true</unlockable>
 		<iconPath>UI/Icons/Genes/Gene_AcidGlands</iconPath>
 		<displayOrderInCategory>1006</displayOrderInCategory>
@@ -330,7 +330,7 @@
 	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
 		<defName>VRE_InfraredSensors</defName>
 		<label>infrared sensors</label>
-		<description>todo.</description>
+		<description>Carriers of this gene possess infrared sensors, allowing them to see clearly in the dark. They suffer no penalties to work speed or movement in darkness, and gain improved accuracy over long range.</description>
 		<selectionWeight>0</selectionWeight>
 		<unlockable>true</unlockable>
 		<iconPath>UI/Icons/Genes/Gene_InfraredSensors</iconPath>
@@ -350,7 +350,7 @@
 	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
 		<defName>VRE_MineralRichInsectskin</defName>
 		<label>mineral-rich insectskin</label>
-		<description>todo.</description>
+		<description>Carriers of this gene develop mineral-rich insectskin, forming thick, protective plating on their skin. This natural armor provides significant protection until enough damage is sustained to break it.</description>
 		<unlockable>true</unlockable>
 		<iconPath>UI/Icons/Genes/Gene_MineralrichInsectskin</iconPath>
 		<displayOrderInCategory>1008</displayOrderInCategory>
@@ -392,7 +392,7 @@
 		<defName>VRE_ChargerClaws</defName>
 		<label>charger claws</label>
 		<unlockable>true</unlockable>
-		<description>todo.</description>
+		<description>Carriers of this gene develop large charger claws, granting them the ability to perform a charge towards a target, dealing significant damage to anything in their path and easily destroying defenses, with the ability to perform this action periodically and over a considerable distance.</description>
 		<selectionWeight>0</selectionWeight>
 		<iconPath>UI/Icons/Genes/Gene_ChargerClaws</iconPath>
 		<statOffsets>

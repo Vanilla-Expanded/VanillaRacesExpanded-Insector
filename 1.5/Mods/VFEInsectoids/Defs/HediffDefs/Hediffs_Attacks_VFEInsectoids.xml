@@ -5,7 +5,7 @@
 		<defName>VRE_InsectRostrum</defName>
 		<label>insect rostrum</label>
 		<hediffClass>HediffWithComps</hediffClass>
-		<description>todo.</description>
+		<description>A large, sharp beak-like structure akin to that of bees that grants a powerful melee bite attack, dealing significant stab damage with a quick cooldown.</description>
 		<isBad>false</isBad>
 		<countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
 		<addedPartProps>
