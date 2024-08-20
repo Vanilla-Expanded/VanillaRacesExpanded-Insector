@@ -29,7 +29,7 @@ namespace VanillaRacesExpandedInsector
             }
 
             HediffDef hediffDefToRemove = InternalDefOf.Heatstroke;
-            Hediff firstHediffOfDefToRemove = pawn.health.hediffSet.GetFirstHediffOfDef(hediffDefToRemove);
+            Hediff firstHediffOfDefToRemove = pawn.health?.hediffSet?.GetFirstHediffOfDef(hediffDefToRemove);
             if (firstHediffOfDefToRemove != null)
             {
                 pawn.health.RemoveHediff(firstHediffOfDefToRemove);
@@ -40,6 +40,7 @@ namespace VanillaRacesExpandedInsector
             FloatRange floatRange2 = pawn.SafeTemperatureRange();
             HediffDef hediffForHeatshock = InternalDefOf.VRE_HeatstressHediff;
             Hediff firstHediffOfDef = pawn.health.hediffSet.GetFirstHediffOfDef(hediffForHeatshock);
+
             if (ambientTemperature > floatRange2.max)
             {
                 float x = ambientTemperature - floatRange2.max;
@@ -48,7 +49,7 @@ namespace VanillaRacesExpandedInsector
                 a = Mathf.Max(a, 0.000375f);
                 HealthUtility.AdjustSeverity(pawn, hediffForHeatshock, a);
 
-                if (firstHediffOfDef.Severity > 0.37f)
+                if (firstHediffOfDef?.Severity > 0.37f)
                 {
                     float num = 0.025f * firstHediffOfDef.Severity;
                     if (Rand.Value < num && pawn.RaceProps.body.AllPartsVulnerableToFrostbite.Where((BodyPartRecord y) => !pawn.health.hediffSet.PartIsMissing(y)).TryRandomElementByWeight((BodyPartRecord y) => y.def.frostbiteVulnerability, out BodyPartRecord result))

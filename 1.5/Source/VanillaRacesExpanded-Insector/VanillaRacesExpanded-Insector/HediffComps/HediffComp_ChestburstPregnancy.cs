@@ -77,7 +77,13 @@ namespace VanillaRacesExpandedInsector
         {
             if(target.Pawn != null) {
 
-                if (target.Pawn.RaceProps.Humanlike || (target.Pawn.RaceProps.baseBodySize>1 && target.Pawn.DevelopmentalStage == DevelopmentalStage.Adult))
+
+                if (target.Pawn.IsGhoul)
+                {
+                    Messages.Message("VRE_CantImplantOnGhoul".Translate(), parent.pawn, MessageTypeDefOf.NegativeEvent, true);
+                }
+
+                else if (target.Pawn.RaceProps.Humanlike || (target.Pawn.RaceProps.baseBodySize>1 && target.Pawn.DevelopmentalStage == DevelopmentalStage.Adult))
                 {
                     Job job = new Job(InternalDefOf.VRE_ChestburstImplantationJob, target.Pawn);
                     parent.pawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);

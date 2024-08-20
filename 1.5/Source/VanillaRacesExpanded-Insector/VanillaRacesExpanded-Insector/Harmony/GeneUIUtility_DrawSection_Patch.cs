@@ -16,9 +16,13 @@ namespace VanillaRacesExpandedInsector
         {
             if (xeno)
             {
-                insectGenes = ___xenogenes.Where(x => x.def is GenelineGeneDef).ToList();
-                ___xenogenes.RemoveAll(x => x.def is GenelineGeneDef);
-                count = ___xenogenes.Count;
+                insectGenes = ___xenogenes.Where(x => x.def is GenelineGeneDef).ToList();               
+                
+                if (insectGenes.Any()) {
+                    ___xenogenes.RemoveAll(x => x.def is GenelineGeneDef);
+                    count = ___xenogenes.Count; 
+                }
+                
             }
         }
 

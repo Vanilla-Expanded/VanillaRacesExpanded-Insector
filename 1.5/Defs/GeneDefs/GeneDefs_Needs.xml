@@ -9,6 +9,7 @@
 		<displayOrderInCategory>5000</displayOrderInCategory>
 		<biostatCpx>1</biostatCpx>
 		<biostatMet>3</biostatMet>
+		<foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
 		<geneClass>VanillaRacesExpandedInsector.Gene_Resource_InsectJelly</geneClass>
 		<resourceGizmoType>VanillaRacesExpandedInsector.GeneGizmo_Resource_InsectJelly</resourceGizmoType>
 		<resourceLabel>insect jelly</resourceLabel>

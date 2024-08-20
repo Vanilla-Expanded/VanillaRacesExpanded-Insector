@@ -53,7 +53,7 @@ namespace VanillaRacesExpandedInsector
                         sorneGenes[gene] = true;
                         GenelineGeneDef genelinegene = gene as GenelineGeneDef;
                         Messages.Message("VRE_PherocoreConsumed".Translate(pherocore.LabelCap,gene.LabelCap,IsEvolutionOrMutation(genelinegene)), pawn, MessageTypeDefOf.PositiveEvent, true);
-                        TargetA.Thing.Destroy();
+                        DecreaseOrDestroy(TargetA.Thing);
                         Utils.cachedGeneDefsInOrder = null;
                         if (!sorneGenes.Values.Any(x => x == false))
                         {
@@ -73,7 +73,7 @@ namespace VanillaRacesExpandedInsector
                         nuchadusGenes[gene] = true;
                         GenelineGeneDef genelinegene = gene as GenelineGeneDef;
                         Messages.Message("VRE_PherocoreConsumed".Translate(pherocore.LabelCap, gene.LabelCap, IsEvolutionOrMutation(genelinegene)), pawn, MessageTypeDefOf.PositiveEvent, true);
-                        TargetA.Thing.Destroy();
+                        DecreaseOrDestroy(TargetA.Thing);
                         Utils.cachedGeneDefsInOrder = null;
                         if (!nuchadusGenes.Values.Any(x => x == false))
                         {
@@ -95,7 +95,7 @@ namespace VanillaRacesExpandedInsector
                         chelisGenes[gene] = true;
                         GenelineGeneDef genelinegene = gene as GenelineGeneDef;
                         Messages.Message("VRE_PherocoreConsumed".Translate(pherocore.LabelCap, gene.LabelCap, IsEvolutionOrMutation(genelinegene)), pawn, MessageTypeDefOf.PositiveEvent, true);
-                        TargetA.Thing.Destroy();
+                        DecreaseOrDestroy(TargetA.Thing);
                         Utils.cachedGeneDefsInOrder = null;
                         if (!chelisGenes.Values.Any(x => x == false))
                         {
@@ -117,7 +117,7 @@ namespace VanillaRacesExpandedInsector
                         kemiaGenes[gene] = true;
                         GenelineGeneDef genelinegene = gene as GenelineGeneDef;
                         Messages.Message("VRE_PherocoreConsumed".Translate(pherocore.LabelCap, gene.LabelCap, IsEvolutionOrMutation(genelinegene)), pawn, MessageTypeDefOf.PositiveEvent, true);
-                        TargetA.Thing.Destroy();
+                        DecreaseOrDestroy(TargetA.Thing);
                         Utils.cachedGeneDefsInOrder = null;
                         if (!kemiaGenes.Values.Any(x => x == false))
                         {
@@ -139,7 +139,7 @@ namespace VanillaRacesExpandedInsector
                         xanidesGenes[gene] = true;
                         GenelineGeneDef genelinegene = gene as GenelineGeneDef;
                         Messages.Message("VRE_PherocoreConsumed".Translate(pherocore.LabelCap, gene.LabelCap, IsEvolutionOrMutation(genelinegene)), pawn, MessageTypeDefOf.PositiveEvent, true);
-                        TargetA.Thing.Destroy();
+                        DecreaseOrDestroy(TargetA.Thing);
                         Utils.cachedGeneDefsInOrder = null;
                         if (!xanidesGenes.Values.Any(x => x == false))
                         {
@@ -165,6 +165,12 @@ namespace VanillaRacesExpandedInsector
         {
             if (gene.IsMutation) { return "mutation"; } else return "evolution";
 
+        }
+
+        public void DecreaseOrDestroy(Thing thing)
+        {
+            thing.stackCount--;
+            if(thing.stackCount == 0) { thing.Destroy(); }
         }
     }
 }

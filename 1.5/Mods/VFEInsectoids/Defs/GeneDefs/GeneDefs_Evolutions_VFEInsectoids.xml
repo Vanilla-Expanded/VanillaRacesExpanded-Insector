@@ -9,7 +9,8 @@
 		<iconPath>UI/Icons/Genes/Gene_SwarmSynapse</iconPath>
 		<displayOrderInCategory>1000</displayOrderInCategory>
 		<customEffectDescriptions>
-			<li>Provides a stacking Global Learning Speed boost for each pawn in the colony with Swarm Synapse gene.</li>
+			<li>Provides a stacking +5% Global Work Speed boost for each pawn in the colony with Swarm Synapse gene.</li>
+			<li>The amount of pawns having the gene refreshes every 10000 ticks (4 ingame hours) to avoid lag.</li>
 		</customEffectDescriptions>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
