@@ -91,5 +91,18 @@ namespace VanillaRacesExpandedInsector
             base.ExposeData();
             Scribe_Values.Look(ref lastConsumed, "lastConsumed");
         }
+
+        public override bool Active
+        {
+            get
+            {
+                if (base.Active && pawn != null)
+                {
+                    return !pawn.IsGhoul;
+                }
+                return false;
+            }
+        }
+
     }
 }
