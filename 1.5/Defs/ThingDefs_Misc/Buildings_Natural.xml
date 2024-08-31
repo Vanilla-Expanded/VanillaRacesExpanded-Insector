@@ -8,9 +8,10 @@
     <category>Building</category>
     <description>A large cocoon formed by an insector undergoing a metamorphosis. If destroyed, the insector inside will die. After metamorphosis is complete, the insector will emerge from their metapod with a brand new genetic composition.</description>
     <drawerType>MapMeshAndRealTime</drawerType>
-    <altitudeLayer>Building</altitudeLayer>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
     <tickerType>Normal</tickerType>
     <passability>PassThroughOnly</passability>
+	<clearBuildingArea>false</clearBuildingArea>
     <graphicData>
       <texPath>Structure/InsectorMetapod</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -22,6 +23,7 @@
     </statBases>
     <fillPercent>0.5</fillPercent>
     <selectable>true</selectable>
+	<building> <isEdifice>false</isEdifice></building>
 	<comps>
 		<li Class="CompProperties_SpawnEffecterOnDestroy">
 			<effect>CocoonDestroyed</effect>

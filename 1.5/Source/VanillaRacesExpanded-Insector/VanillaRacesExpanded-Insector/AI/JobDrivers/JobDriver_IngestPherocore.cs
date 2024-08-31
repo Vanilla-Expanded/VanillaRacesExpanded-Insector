@@ -151,6 +151,28 @@ namespace VanillaRacesExpandedInsector
                         Messages.Message("VRE_NoUnlockableGenes".Translate(pherocore.LabelCap), pawn, MessageTypeDefOf.NegativeEvent, true);
                     }
                 }
+                else 
+                if(pherocore == DefDatabase<ThingDef>.GetNamedSilentFail("VFEI2_PherocoreBlack"))
+                {
+                    Dictionary<GeneDef, bool> blackHiveGenes = GameComponent_UnlockedGenes.Instance.black_pherocore_genes;
+                    if (blackHiveGenes.Values.Any(x => x == false))
+                    {
+                        GeneDef gene = blackHiveGenes.Keys.Where(x => blackHiveGenes[x] == false).RandomElement();
+                        blackHiveGenes[gene] = true;
+                        GenelineGeneDef genelinegene = gene as GenelineGeneDef;
+                        Messages.Message("VRE_PherocoreConsumed".Translate(pherocore.LabelCap, gene.LabelCap, IsEvolutionOrMutation(genelinegene)), pawn, MessageTypeDefOf.PositiveEvent, true);
+                        DecreaseOrDestroy(TargetA.Thing);
+                        Utils.cachedGeneDefsInOrder = null;
+                        if (!blackHiveGenes.Values.Any(x => x == false))
+                        {
+                            GameComponent_UnlockedGenes.Instance.allBlackGenesUnlocked = true;
+                        }
+                    }
+                    else
+                    {
+                        Messages.Message("VRE_NoUnlockableGenes".Translate(pherocore.LabelCap), pawn, MessageTypeDefOf.NegativeEvent, true);
+                    }
+                }
 
 
 

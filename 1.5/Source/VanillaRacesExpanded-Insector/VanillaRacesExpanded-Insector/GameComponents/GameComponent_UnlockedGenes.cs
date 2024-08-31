@@ -35,6 +35,11 @@ namespace VanillaRacesExpandedInsector
         List<GeneDef> xanidesList;
         List<bool> xanidesList2;
 
+        public Dictionary<GeneDef, bool> black_pherocore_genes = new Dictionary<GeneDef, bool>();
+        public bool allBlackGenesUnlocked = false;
+        List<GeneDef> blackGenesList;
+        List<bool> blackGenesList2;
+
         public GameComponent_UnlockedGenes(Game game)
         {
             Instance = this;
@@ -77,7 +82,14 @@ namespace VanillaRacesExpandedInsector
                 { InternalDefOf.VRE_ChargerClaws, false },{ InternalDefOf.VRE_HardLockedJoints, false },{ InternalDefOf.VRE_PassiveInsect, false }};
 
             }
+            if (black_pherocore_genes.NullOrEmpty() && DefDatabase<GeneDef>.GetNamedSilentFail("AA_Gene_GreaterVileSpit") != null)
+            {
+                black_pherocore_genes = new Dictionary<GeneDef, bool>() { { DefDatabase<GeneDef>.GetNamedSilentFail("AA_Gene_GreaterVileSpit"), false },
+                { DefDatabase<GeneDef>.GetNamedSilentFail("AA_Gene_MechanoidRendingClaws"), false },
+                    { DefDatabase<GeneDef>.GetNamedSilentFail("AA_Gene_EcholocativeFeedbackLoop"), false },
+                    { DefDatabase<GeneDef>.GetNamedSilentFail("AA_Gene_PhotosensitiveExoskeleton"), false }};
 
+            }
         }
 
         public override void ExposeData()
@@ -98,6 +110,9 @@ namespace VanillaRacesExpandedInsector
 
             Scribe_Collections.Look<GeneDef, bool>(ref xanides_pherocore_genes, "xanides_pherocore_genes", LookMode.Def, LookMode.Value, ref xanidesList, ref xanidesList2);
             Scribe_Values.Look<bool>(ref this.allXanidesGenesUnlocked, "allXanidesGenesUnlocked", false, true);
+
+            Scribe_Collections.Look<GeneDef, bool>(ref black_pherocore_genes, "black_pherocore_genes", LookMode.Def, LookMode.Value, ref blackGenesList, ref blackGenesList2);
+            Scribe_Values.Look<bool>(ref this.allBlackGenesUnlocked, "allBlackGenesUnlocked", false, true);
 
         }
 
@@ -128,6 +143,12 @@ namespace VanillaRacesExpandedInsector
         public bool XanidesGeneUnlocked(GeneDef gene)
         {
             if (xanides_pherocore_genes.ContainsKey(gene) && xanides_pherocore_genes[gene]) return true;
+            return false;
+        }
+
+        public bool BlackGeneUnlocked(GeneDef gene)
+        {
+            if (black_pherocore_genes.ContainsKey(gene) && black_pherocore_genes[gene]) return true;
             return false;
         }
 
