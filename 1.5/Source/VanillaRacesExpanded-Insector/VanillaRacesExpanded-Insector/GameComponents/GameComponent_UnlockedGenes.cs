@@ -148,7 +148,7 @@ namespace VanillaRacesExpandedInsector
 
         public bool BlackGeneUnlocked(GeneDef gene)
         {
-            if (black_pherocore_genes.ContainsKey(gene) && black_pherocore_genes[gene]) return true;
+            if (!black_pherocore_genes.NullOrEmpty() && black_pherocore_genes.ContainsKey(gene) && black_pherocore_genes[gene]) return true;
             return false;
         }
 
