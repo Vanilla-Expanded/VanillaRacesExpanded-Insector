@@ -10,7 +10,7 @@
 		<displayOrderInCategory>1000</displayOrderInCategory>
 		<customEffectDescriptions>
 			<li>Provides a stacking +5% Global Work Speed boost for each pawn in the colony with Swarm Synapse gene.</li>
-			<li>The amount of pawns having the gene refreshes every 10000 ticks (4 ingame hours) to avoid lag.</li>
+			<li>The amount of colonists having the gene refreshes every 4 ingame hours.</li>
 		</customEffectDescriptions>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
