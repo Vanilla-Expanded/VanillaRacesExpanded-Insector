@@ -27,24 +27,19 @@ Insector colonists that will be affected:
 	<VRE_GenelinesDesc>text.todo</VRE_GenelinesDesc>
 	<VRE_MetapodTimer>Time until {PAWN_nameDef} emerges: {1}\nInsert insect jelly into the metapod to speed up the process significantly.</VRE_MetapodTimer>
 	<VRE_MetapodSicknessCannotChangeGeneline>Cannot change genelines due to metapod sickness.</VRE_MetapodSicknessCannotChangeGeneline>
-	
 	<VRE_ChestburstPregnancyReady>Chestburst pregnancy</VRE_ChestburstPregnancyReady>
 	<VRE_ChestburstPregnancyReadyDesc>When a colonist with chestburst pregnancy gene becomes pregnant, they need to designate another willing or unwilling individual to implant the fetus. Once the fetus matures, it will burst out of the ribcage of the victim, killing the host. If they don’t do it before the second trimester begins (6 days), the pregnancy will be terminated.</VRE_ChestburstPregnancyReadyDesc>
-	
 	<VRE_ChestburstImplantationNeeded>Chestburst implantation needed</VRE_ChestburstImplantationNeeded>
 	<VRE_ChestburstImplantationNeededDesc>When a colonist with chestburst pregnancy gene becomes pregnant, they need to designate another willing or unwilling individual to implant the fetus. Once the fetus matures, it will burst out of the ribcage of the victim, killing the host. If they don’t do it before the second trimester begins (6 days), the pregnancy will be terminated. These colonists need to implant a fetus:\n\n{0}</VRE_ChestburstImplantationNeededDesc>
-	
 	<VRE_InjectChestburstFetus>Inject chestburst fetus</VRE_InjectChestburstFetus>
 	<VRE_InjectChestburstFetusDesc> Inject the victim with the fetus, which will burst out of the victim’s chest when mature, killing the host.</VRE_InjectChestburstFetusDesc>
-	
 	<VRE_NeedsHumanoidOrAnimal>Needs to be injected on a humanoid target or adult animal with body size higher than 1</VRE_NeedsHumanoidOrAnimal>
 	<VRE_CantImplantOnGhoul>Can't be injected on ghouls</VRE_CantImplantOnGhoul>
-	
+	<VRE_CantImplantOnShambler>Can't be injected on shamblers</VRE_CantImplantOnShambler>
 	<VRE_ChestburstBirthLabel>Chestburst birth</VRE_ChestburstBirthLabel>
 	<VRE_ChestburstBirth>A newborn, {0}, has hatched from a host, killing it in the process</VRE_ChestburstBirth>
 	<VRE_ChestburstBirthHiddenLabel>Chestburst birth!</VRE_ChestburstBirthHiddenLabel>
 	<VRE_ChestburstBirthHidden>{0} was unknowingly carrying a chestburst pregnancy! A newborn Insector, {1}, has hatched from the host, killing it in the process!</VRE_ChestburstBirthHidden>
-	
 	<VRE_SelfImpregnate>Self-impregnate</VRE_SelfImpregnate>
 	<VRE_SelfImpregnateDesc>Female individual self-impregnates, creating a fetus that’s a perfect copy of the parent.</VRE_SelfImpregnateDesc>
 	<VRE_PawnIsMale>Only available for females</VRE_PawnIsMale>
@@ -57,5 +52,4 @@ Insector colonists that will be affected:
 	<VRE_IngestPherocore>Consume {0} to unlock a new mutation / evolution</VRE_IngestPherocore>
 	<VRE_PherocoreConsumed>Consuming {0} has unlocked the {1} {2} for all carriers of the geneline evolution gene</VRE_PherocoreConsumed>
 	<VRE_NoUnlockableGenes>No more genes can be unlocked with the {0}</VRE_NoUnlockableGenes>
-	
 </LanguageData>

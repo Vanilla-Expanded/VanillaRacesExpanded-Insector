@@ -29,7 +29,12 @@
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
-		
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				
+			</li>
+		</stages>
 	</HediffDef>
 	
 </Defs>

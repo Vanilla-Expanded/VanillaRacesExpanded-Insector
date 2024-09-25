@@ -81,6 +81,9 @@ namespace VanillaRacesExpandedInsector
                 if (target.Pawn.IsGhoul)
                 {
                     Messages.Message("VRE_CantImplantOnGhoul".Translate(), parent.pawn, MessageTypeDefOf.NegativeEvent, true);
+                } else if(target.Pawn.IsShambler)
+                {
+                    Messages.Message("VRE_CantImplantOnShambler".Translate(), parent.pawn, MessageTypeDefOf.NegativeEvent, true);
                 }
 
                 else if (target.Pawn.RaceProps.Humanlike || (target.Pawn.RaceProps.baseBodySize>1 && target.Pawn.DevelopmentalStage == DevelopmentalStage.Adult))
