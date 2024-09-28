@@ -131,7 +131,7 @@ namespace VanillaRacesExpandedInsector
             {
                 if (pawn?.genes?.GetFirstGeneOfType<Gene_GenelineEvolution>() == null)
                 {
-					RemovePawnDirectly(pawn, null);
+                    pawns.Remove(pawn);
                     continue;
                 }
                 if (pawn.Dead is false)
