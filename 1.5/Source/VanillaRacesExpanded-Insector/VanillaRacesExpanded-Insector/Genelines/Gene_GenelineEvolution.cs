@@ -47,13 +47,13 @@ namespace VanillaRacesExpandedInsector
         public override void PostRemove()
         {
             base.PostRemove();
-            geneline?.RemovePawn(pawn);
+            geneline?.RemovePawnDirectly(pawn, this);
         }
 
         public override void Notify_PawnDied(DamageInfo? dinfo, Hediff culprit = null)
         {
             base.Notify_PawnDied(dinfo, culprit);
-            geneline?.RemovePawn(pawn);
+            geneline?.RemovePawnDirectly(pawn, this);
         }
 
         public override void ExposeData()

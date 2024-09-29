@@ -99,6 +99,7 @@ namespace VanillaRacesExpandedInsector
             if (genelineEvolution != null && curGeneline != null)
             {
                 curGeneline.AddPawnDirectly(pawn, genelineEvolution);
+                genelineEvolution.geneline = curGeneline;
             }
             else
             {
@@ -108,7 +109,6 @@ namespace VanillaRacesExpandedInsector
                     pawn.genes.RemoveGene(gene);
                 }
             }
-            genelineEvolution.geneline = curGeneline;
             pawn.health.RemoveHediff(this);
         }
 

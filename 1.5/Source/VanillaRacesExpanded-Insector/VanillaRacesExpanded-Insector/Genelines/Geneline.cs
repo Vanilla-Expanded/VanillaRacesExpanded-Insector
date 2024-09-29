@@ -127,8 +127,13 @@ namespace VanillaRacesExpandedInsector
             this.name = genelineName;
             var oldGenes = genes.ToList();
             this.genes = genes.ToList();
-            foreach (var pawn in pawns)
+            foreach (var pawn in pawns.ToList())
             {
+                if (pawn?.genes?.GetFirstGeneOfType<Gene_GenelineEvolution>() == null)
+                {
+                    pawns.Remove(pawn);
+                    continue;
+                }
                 if (pawn.Dead is false)
                 {
                     TrySetToMetapodStage(pawn, this);
