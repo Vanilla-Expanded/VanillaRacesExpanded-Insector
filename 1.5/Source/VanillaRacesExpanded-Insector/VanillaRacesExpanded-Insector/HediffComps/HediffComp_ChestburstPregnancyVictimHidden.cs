@@ -11,92 +11,66 @@ namespace VanillaRacesExpandedInsector
     public class HediffComp_ChestburstPregnancyVictimHidden : HediffComp
     {
 
-        private static List<string> tmpLastNames = new List<string>(3);
+        public static List<string> tmpLastNames = new(3);
 
+        private HediffCompProperties_ChestburstPregnancyVictimHidden Props => (HediffCompProperties_ChestburstPregnancyVictimHidden)this.props;
 
-        public HediffCompProperties_ChestburstPregnancyVictimHidden Props
+        private bool spawned = false;
+
+        public override void CompPostTick(ref float severityAdjustment)
         {
-            get
+            if (parent.CauseDeathNow())
             {
-                return (HediffCompProperties_ChestburstPregnancyVictimHidden)this.props;
+                SpawnNewBorn(Pawn.Map, Pawn.Position, Pawn, Props.severityToTurn);
+            }
+            if (spawned)
+            {
+                Pawn.health.RemoveHediff(parent);
             }
         }
-
-   
 
         public override void Notify_PawnDied(DamageInfo? dinfo, Hediff culprit = null)
         {
-
-            float severityToTurn = Props.severityToTurn;
-
-            Map map = this.parent.pawn.Corpse.Map;
-            if (map != null && this.parent.Severity > severityToTurn)
-            {
-
-                Hatch();
-
-                for (int i = 0; i < 20; i++)
-                {
-                    IntVec3 c;
-                    CellFinder.TryFindRandomReachableCellNearPosition(this.parent.pawn.Corpse.Position, this.parent.pawn.Corpse.Position, map, 2, TraverseParms.For(TraverseMode.NoPassClosedDoors, Danger.Deadly, false), null, null, out c);
-
-                    FilthMaker.TryMakeFilth(c, this.parent.pawn.Corpse.Map, ThingDefOf.Filth_Blood);
-
-                }
-
-
-                InternalDefOf.Hive_Spawn.PlayOneShot(new TargetInfo(this.parent.pawn.Corpse.Position, map, false));
-
-
-            }
-
+            SpawnNewBorn(this.parent.pawn.Corpse.Map, this.parent.pawn.Corpse.Position, this.parent.pawn.Corpse, Props.severityToTurn);
+            Pawn.health.RemoveHediff(parent);
         }
 
-        public void Hatch()
+        public virtual void SpawnNewBorn(Map map, IntVec3 position, Thing motherOrEgg, float severityToTurn)
         {
-            //try            {
-            PawnGenerationRequest request;
-
-            //request = new PawnGenerationRequest(mother.kindDef, mother.Faction, PawnGenerationContext.NonPlayer, -1, forceGenerateNewPawn: false, allowDead: false, allowDowned: true, canGeneratePawnRelations: true, mustBeCapableOfViolence: false, 1f, forceAddFreeWarmLayerIfNeeded: false, allowGay: true, allowPregnant: false, allowFood: true, allowAddictions: true, inhabitant: false, certainlyBeenInCryptosleep: false, forceRedressWorldPawnIfFormerColonist: false, worldPawnFactionDoesntMatter: false,  0f, 0f, null, 1f, null, null, null, null, null, null, null, null, null, null, null, null, forceNoIdeo: false, forceNoBackstory: false, forbidAnyTitle: false, forceDead: false, null, null, null, null, null, 0f, DevelopmentalStage.Newborn);
-            request = new PawnGenerationRequest(this.parent.pawn.kindDef, Faction.OfPlayerSilentFail, PawnGenerationContext.NonPlayer, -1, forceGenerateNewPawn: false, allowDead: false, allowDowned: true, canGeneratePawnRelations: true, mustBeCapableOfViolence: false, 1f, forceAddFreeWarmLayerIfNeeded: false, allowGay: true, allowPregnant: false, allowFood: true, allowAddictions: true, inhabitant: false, certainlyBeenInCryptosleep: false, forceRedressWorldPawnIfFormerColonist: false, worldPawnFactionDoesntMatter: false, 0f, 0f, null, 1f, null, null, null, null, null, null, null, null, RandomLastName(this.parent.pawn, null), null, null, null, forceNoIdeo: true, forceNoBackstory: false, forbidAnyTitle: false, false, null, forcedXenotype: InternalDefOf.VRE_Insector, forcedCustomXenotype: null, allowedXenotypes: null, forceBaselinerChance: 0f, developmentalStages: DevelopmentalStage.Newborn);
-
-            Pawn pawn = PawnGenerator.GeneratePawn(request);
-
-            if (PawnUtility.TrySpawnHatchedOrBornPawn(pawn, this.parent.pawn.Corpse))
+            if (spawned)
             {
-
-                if (pawn != null)
+                Pawn.health.RemoveHediff(parent);
+                return;
+            }
+            if (map != null && this.parent.Severity > severityToTurn)
+            {
+                Hatch(motherOrEgg);
+                for (int i = 0; i < 20; i++)
                 {
-                    if (this.parent.pawn.Corpse != null)
-                    {
-                        if (pawn.playerSettings != null && this.parent.pawn.playerSettings != null)
-                        {
-                            pawn.playerSettings.AreaRestrictionInPawnCurrentMap = this.parent.pawn.playerSettings.AreaRestrictionInPawnCurrentMap;
-                        }
-                       
-                       
-                    }
-
+                    CellFinder.TryFindRandomReachableCellNearPosition(position, position, map, 2, TraverseParms.For(TraverseMode.NoPassClosedDoors, Danger.Deadly, false), null, null, out IntVec3 c);
+                    FilthMaker.TryMakeFilth(c, map, ThingDefOf.Filth_Blood);
                 }
+                InternalDefOf.Hive_Spawn.PlayOneShot(new TargetInfo(position, map, false));
+            }
+        }
 
-
+        public virtual void Hatch(Thing motherOrEgg)
+        {
+            PawnGenerationRequest request = new(this.parent.pawn.kindDef, Faction.OfPlayerSilentFail, PawnGenerationContext.NonPlayer, -1, forceGenerateNewPawn: false, allowDead: false, allowDowned: true, canGeneratePawnRelations: true, mustBeCapableOfViolence: false, 1f, forceAddFreeWarmLayerIfNeeded: false, allowGay: true, allowPregnant: false, allowFood: true, allowAddictions: true, inhabitant: false, certainlyBeenInCryptosleep: false, forceRedressWorldPawnIfFormerColonist: false, worldPawnFactionDoesntMatter: false, 0f, 0f, null, 1f, null, null, null, null, null, null, null, null, RandomLastName(this.parent.pawn, null), null, null, null, forceNoIdeo: true, forceNoBackstory: false, forbidAnyTitle: false, false, null, forcedXenotype: InternalDefOf.VRE_Insector, forcedCustomXenotype: null, allowedXenotypes: null, forceBaselinerChance: 0f, developmentalStages: DevelopmentalStage.Newborn);
+            Pawn pawn = PawnGenerator.GeneratePawn(request);
+            if (PawnUtility.TrySpawnHatchedOrBornPawn(pawn, motherOrEgg))
+            {
+                if (pawn != null && motherOrEgg != null && pawn.playerSettings != null && this.parent.pawn.playerSettings != null)
+                {
+                    pawn.playerSettings.AreaRestrictionInPawnCurrentMap = this.parent.pawn.playerSettings.AreaRestrictionInPawnCurrentMap;
+                }
+                spawned = true;
                 Find.LetterStack.ReceiveLetter("VRE_ChestburstBirthHiddenLabel".Translate(pawn.NameShortColored), "VRE_ChestburstBirthHidden".Translate(this.parent.pawn.NameShortColored,pawn.NameShortColored), LetterDefOf.PositiveEvent, (TargetInfo)pawn);
-
-
             }
             else
             {
                 Find.WorldPawns.PassToWorld(pawn, PawnDiscardDecideMode.Discard);
             }
-
-
-
-
-            // }
-            //catch (Exception) { Log.Message("something failed on the try catch"); }
-
-
-
         }
 
         private static string RandomLastName(Pawn geneticMother, Pawn father)
@@ -139,9 +113,15 @@ namespace VanillaRacesExpandedInsector
 
             };
 
-
-
         }
+
+
+        public override void CompExposeData()
+        {
+            base.CompExposeData();
+            Scribe_Values.Look(ref spawned, "newBornSpawned");
+        }
+
     }
 }
 

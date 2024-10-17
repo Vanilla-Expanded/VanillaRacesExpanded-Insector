@@ -8,21 +8,15 @@ using RimWorld.Planet;
 
 namespace VanillaRacesExpandedInsector
 {
-    public class HediffComp_ChestburstPregnancyVictim : HediffComp
+    public class HediffComp_ChestburstPregnancyVictim : HediffComp_ChestburstPregnancyVictimHidden
     {
         public GeneSet genes;
         public Pawn mother;
         public Pawn father;
-        private static List<string> tmpLastNames = new List<string>(3);
+        //private static List<string> tmpLastNames = new List<string>(3);
 
 
-        public HediffCompProperties_ChestburstPregnancyVictim Props
-        {
-            get
-            {
-                return (HediffCompProperties_ChestburstPregnancyVictim)this.props;
-            }
-        }
+        private HediffCompProperties_ChestburstPregnancyVictim Props => (HediffCompProperties_ChestburstPregnancyVictim)this.props;
 
         public override void CompExposeData()
         {
@@ -30,105 +24,55 @@ namespace VanillaRacesExpandedInsector
             Scribe_References.Look(ref father, "father", saveDestroyedThings: true);
             Scribe_References.Look(ref mother, "mother", saveDestroyedThings: true);
             Scribe_Deep.Look(ref genes, "genes");
-
-
-
         }
-
 
         public override void Notify_PawnDied(DamageInfo? dinfo, Hediff culprit = null)
         {
-
-            float severityToTurn = Props.severityToTurn;
-
-            Map map = this.parent.pawn.Corpse.Map;
-            if (map != null && this.parent.Severity > severityToTurn)
-            {
-
-                Hatch();
-
-                for (int i = 0; i < 20; i++)
-                {
-                    IntVec3 c;
-                    CellFinder.TryFindRandomReachableCellNearPosition(this.parent.pawn.Corpse.Position, this.parent.pawn.Corpse.Position, map, 2, TraverseParms.For(TraverseMode.NoPassClosedDoors, Danger.Deadly, false), null, null, out c);
-
-                    FilthMaker.TryMakeFilth(c, this.parent.pawn.Corpse.Map, ThingDefOf.Filth_Blood);
-
-                }
-
-
-                InternalDefOf.Hive_Spawn.PlayOneShot(new TargetInfo(this.parent.pawn.Corpse.Position, map, false));
-               
-
-            }
-
+            SpawnNewBorn(this.parent.pawn.Corpse.Map, this.parent.pawn.Corpse.Position, this.parent.pawn.Corpse, Props.severityToTurn);
+            Pawn.health.RemoveHediff(parent);
         }
 
-        public void Hatch()
+        public override void Hatch(Thing motherOrEgg)
         {
-            //try            {
-                PawnGenerationRequest request;
-           
-            //request = new PawnGenerationRequest(mother.kindDef, mother.Faction, PawnGenerationContext.NonPlayer, -1, forceGenerateNewPawn: false, allowDead: false, allowDowned: true, canGeneratePawnRelations: true, mustBeCapableOfViolence: false, 1f, forceAddFreeWarmLayerIfNeeded: false, allowGay: true, allowPregnant: false, allowFood: true, allowAddictions: true, inhabitant: false, certainlyBeenInCryptosleep: false, forceRedressWorldPawnIfFormerColonist: false, worldPawnFactionDoesntMatter: false,  0f, 0f, null, 1f, null, null, null, null, null, null, null, null, null, null, null, null, forceNoIdeo: false, forceNoBackstory: false, forbidAnyTitle: false, forceDead: false, null, null, null, null, null, 0f, DevelopmentalStage.Newborn);
-            request = new PawnGenerationRequest(mother.kindDef, mother.Faction, PawnGenerationContext.NonPlayer, -1, forceGenerateNewPawn: false, allowDead: false, allowDowned: true, canGeneratePawnRelations: true, mustBeCapableOfViolence: false, 1f, forceAddFreeWarmLayerIfNeeded: false, allowGay: true, allowPregnant: false, allowFood: true, allowAddictions: true, inhabitant: false, certainlyBeenInCryptosleep: false, forceRedressWorldPawnIfFormerColonist: false, worldPawnFactionDoesntMatter: false, 0f, 0f, null, 1f, null, null, null, null, null, null, null, null, RandomLastName(mother, father), null, null, null, forceNoIdeo: true, forceNoBackstory: false, forbidAnyTitle: false, false, null, forcedXenotype: XenotypeDefOf.Baseliner, forcedEndogenes: (genes != null) ? genes.GenesListForReading : PregnancyUtility.GetInheritedGenes(father, mother), forcedCustomXenotype: null, allowedXenotypes: null, forceBaselinerChance: 0f, developmentalStages: DevelopmentalStage.Newborn);
-
-                Pawn pawn = PawnGenerator.GeneratePawn(request);
-              
-                if (PawnUtility.TrySpawnHatchedOrBornPawn(pawn, this.parent.pawn.Corpse))
+            PawnGenerationRequest request = new(mother.kindDef, mother.Faction, PawnGenerationContext.NonPlayer, -1, forceGenerateNewPawn: false, allowDead: false, allowDowned: true, canGeneratePawnRelations: true, mustBeCapableOfViolence: false, 1f, forceAddFreeWarmLayerIfNeeded: false, allowGay: true, allowPregnant: false, allowFood: true, allowAddictions: true, inhabitant: false, certainlyBeenInCryptosleep: false, forceRedressWorldPawnIfFormerColonist: false, worldPawnFactionDoesntMatter: false, 0f, 0f, null, 1f, null, null, null, null, null, null, null, null, RandomLastName(mother, father), null, null, null, forceNoIdeo: true, forceNoBackstory: false, forbidAnyTitle: false, false, null, forcedXenotype: XenotypeDefOf.Baseliner, forcedEndogenes: (genes != null) ? genes.GenesListForReading : PregnancyUtility.GetInheritedGenes(father, mother), forcedCustomXenotype: null, allowedXenotypes: null, forceBaselinerChance: 0f, developmentalStages: DevelopmentalStage.Newborn);
+            Pawn pawn = PawnGenerator.GeneratePawn(request);
+            if (PawnUtility.TrySpawnHatchedOrBornPawn(pawn, motherOrEgg))
+            {
+                if (pawn != null && mother != null)
                 {
-                   
-                    if (pawn != null)
+                    if (pawn.playerSettings != null && mother.playerSettings != null)
                     {
-                        if (mother != null)
-                        {
-                            if (pawn.playerSettings != null && mother.playerSettings != null)
-                            {
-                                pawn.playerSettings.AreaRestrictionInPawnCurrentMap = mother.playerSettings.AreaRestrictionInPawnCurrentMap;
-                            }
-                            if (pawn.RaceProps.IsFlesh)
-                            {
-                                pawn.relations.AddDirectRelation(PawnRelationDefOf.Parent, mother);
-                                if (father != null) {
-                                    pawn.relations.AddDirectRelation(PawnRelationDefOf.Parent, father);
-                                }
-                                
-                            }
-                            if (GeneUtility.SameHeritableXenotype(mother, father) && mother.genes.UniqueXenotype)
-                            {
-                                pawn.genes.xenotypeName = mother.genes.xenotypeName;
-                                pawn.genes.iconDef = mother.genes.iconDef;
-                            }
-                            if (TryGetInheritedXenotype(mother, father, out var xenotype))
-                            {
-                                pawn.genes?.SetXenotypeDirect(xenotype);
-                            }
-                            else if (ShouldByHybrid(mother, father))
-                            {
-                                pawn.genes.hybrid = true;
-                                pawn.genes.xenotypeName = "Hybrid".Translate();
-                            }
-                        }
-
+                        pawn.playerSettings.AreaRestrictionInPawnCurrentMap = mother.playerSettings.AreaRestrictionInPawnCurrentMap;
                     }
-
-
-                    Find.LetterStack.ReceiveLetter("VRE_ChestburstBirthLabel".Translate(pawn.NameShortColored), "VRE_ChestburstBirth".Translate(pawn.NameShortColored), LetterDefOf.PositiveEvent, (TargetInfo)pawn);
-
-                   
+                    if (pawn.RaceProps.IsFlesh)
+                    {
+                        pawn.relations.AddDirectRelation(PawnRelationDefOf.Parent, mother);
+                        if (father != null)
+                        {
+                            pawn.relations.AddDirectRelation(PawnRelationDefOf.Parent, father);
+                        }
+                    }
+                    if (GeneUtility.SameHeritableXenotype(mother, father) && mother.genes.UniqueXenotype)
+                    {
+                        pawn.genes.xenotypeName = mother.genes.xenotypeName;
+                        pawn.genes.iconDef = mother.genes.iconDef;
+                    }
+                    if (TryGetInheritedXenotype(mother, father, out var xenotype))
+                    {
+                        pawn.genes?.SetXenotypeDirect(xenotype);
+                    }
+                    else if (ShouldByHybrid(mother, father))
+                    {
+                        pawn.genes.hybrid = true;
+                        pawn.genes.xenotypeName = "Hybrid".Translate();
+                    }
                 }
-                else
-                {
-                    Find.WorldPawns.PassToWorld(pawn, PawnDiscardDecideMode.Discard);
-                }
-
-
-
-
-           // }
-            //catch (Exception) { Log.Message("something failed on the try catch"); }
-
-
-
+                Find.LetterStack.ReceiveLetter("VRE_ChestburstBirthLabel".Translate(pawn.NameShortColored), "VRE_ChestburstBirth".Translate(pawn.NameShortColored), LetterDefOf.PositiveEvent, (TargetInfo)pawn);
+            }
+            else
+            {
+                Find.WorldPawns.PassToWorld(pawn, PawnDiscardDecideMode.Discard);
+            }
         }
 
         private static string RandomLastName(Pawn geneticMother,  Pawn father)
@@ -208,7 +152,6 @@ namespace VanillaRacesExpandedInsector
             {
                 yield break;
             }
-
             yield return new Command_Action
             {
                 defaultLabel = "DEV: Advance severity",
@@ -217,11 +160,7 @@ namespace VanillaRacesExpandedInsector
                 {
                     this.parent.Severity += 0.1f;
                 }
-
             };
-
-
-
         }
     }
 }
