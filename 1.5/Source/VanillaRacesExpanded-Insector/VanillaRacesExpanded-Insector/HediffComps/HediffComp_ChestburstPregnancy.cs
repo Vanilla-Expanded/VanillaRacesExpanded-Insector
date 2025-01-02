@@ -85,24 +85,16 @@ namespace VanillaRacesExpandedInsector
                 {
                     Messages.Message("VRE_CantImplantOnShambler".Translate(), parent.pawn, MessageTypeDefOf.NegativeEvent, true);
                 }
-
                 else if (target.Pawn.RaceProps.Humanlike || (target.Pawn.RaceProps.baseBodySize>1 && target.Pawn.DevelopmentalStage == DevelopmentalStage.Adult))
                 {
-                    Job job = new Job(InternalDefOf.VRE_ChestburstImplantationJob, target.Pawn);
+                    Job job = new(InternalDefOf.VRE_ChestburstImplantationJob, target.Pawn);
                     parent.pawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
-
                 }
-
-
                 else
                 {
                     Messages.Message("VRE_NeedsHumanoidOrAnimal".Translate(), parent.pawn, MessageTypeDefOf.NegativeEvent, true);
-
                 }
-
             }
-            
-
         }
 
 
