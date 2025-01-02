@@ -10,8 +10,8 @@
       <Hulk>Things/Pawn/Humanlike/Bodies/Insectskin_Hulk</Hulk>
       <Fat>Things/Pawn/Humanlike/Bodies/Insectskin_Fat</Fat>
       <Thin>Things/Pawn/Humanlike/Bodies/Insectskin_Thin</Thin>
-      <Child>Things/Pawn/Humanlike/Bodies/Insectskin_Thin</Child>
-      <Baby>Things/Pawn/Humanlike/Bodies/Naked_FurChild</Baby>
+      <Child>Things/Pawn/Humanlike/Bodies/Naked_Child</Child>
+      <Baby>Things/Pawn/Humanlike/Bodies/Naked_Child</Baby>
     </bodyTypeGraphicPaths>
   </FurDef>
   
