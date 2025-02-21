@@ -317,7 +317,6 @@
     <Compile Include="GeneResource\Gene_Resource_InsectJelly.cs" />
     <Compile Include="Harmony\AttackTargetFinder_BestAttackTarget_Validator_Patch.cs" />
     <Compile Include="Harmony\Blueprint_TryReplaceWithSolidThing.cs" />
-    <Compile Include="Harmony\FoodUtility_ThoughtsFromIngesting.cs" />
     <Compile Include="Harmony\GeneUIUtility_DrawSection_Patch.cs" />
     <Compile Include="Harmony\GeneUtility_GenesInOrder_Patch.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
