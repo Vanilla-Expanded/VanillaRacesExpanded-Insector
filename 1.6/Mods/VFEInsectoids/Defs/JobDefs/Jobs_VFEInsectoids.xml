@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<JobDef>
+		<defName>VRE_IngestPherocore</defName>
+		<driverClass>VanillaRacesExpandedInsector.JobDriver_IngestPherocore</driverClass>
+		<reportString>ingesting pherocore.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+	<JobDef>
+		<defName>VRE_ArmedSocialFightInsectors</defName>
+		<driverClass>JobDriver_AttackMelee</driverClass>
+		<reportString>fighting with TargetA.</reportString>
+		<alwaysShowWeapon>true</alwaysShowWeapon>
+		<casualInterruptible>false</casualInterruptible>
+		<collideWithPawns>true</collideWithPawns>
+	</JobDef>
+</Defs>

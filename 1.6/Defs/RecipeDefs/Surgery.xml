@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<RecipeDef ParentName="SurgeryRemoveImplantBase">
+		<defName>VRE_RemoveChestburstPregnancy_Victim</defName>
+		<label>remove chestburst pregnancy</label>
+		 <workerClass>Recipe_RemoveHediff</workerClass>
+		<description>Remove chestburst pregnancy from this victim, killing the fetus.</description>
+		<targetsBodyPart>false</targetsBodyPart>
+		<descriptionHyperlinks>
+		
+			<HediffDef>VRE_ChestburstPregnancy_Victim</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Removing chestburst pregnancy.</jobString>
+		<removesHediff>VRE_ChestburstPregnancy_Victim</removesHediff>
+	</RecipeDef>
+</Defs>

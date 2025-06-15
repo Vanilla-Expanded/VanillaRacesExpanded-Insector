@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <FleshTypeDef>
+        <defName>VRE_BugWoundsFlesh</defName>
+		<corpseCategory>CorpsesAnimal</corpseCategory>
+		<damageEffecter>VRE_Damage_HitBugFlesh</damageEffecter>
+        <genericWounds>
+            <li>
+                <texture>Things/Pawn/Humanlike/Wounds/VRE_BugWoundFleshA</texture>
+            </li>
+            <li>
+                <texture>Things/Pawn/Humanlike/Wounds/VRE_BugWoundFleshB</texture>
+            </li>
+            <li>
+                <texture>Things/Pawn/Humanlike/Wounds/VRE_BugWoundFleshC</texture>
+            </li>
+        </genericWounds>
+    </FleshTypeDef>
+	
+	<FleshTypeDef>
+        <defName>VRE_ToxWoundsFlesh</defName>
+		<corpseCategory>CorpsesAnimal</corpseCategory>
+		<damageEffecter>VRE_Damage_HitTox</damageEffecter>
+        <genericWounds>
+            <li>
+                <texture>Things/Pawn/Humanlike/Wounds/VRE_WoundAcidA</texture>
+            </li>
+            <li>
+                <texture>Things/Pawn/Humanlike/Wounds/VRE_WoundAcidB</texture>
+            </li>
+            <li>
+                <texture>Things/Pawn/Humanlike/Wounds/VRE_WoundAcidC</texture>
+            </li>
+        </genericWounds>
+    </FleshTypeDef>
+
+</Defs>

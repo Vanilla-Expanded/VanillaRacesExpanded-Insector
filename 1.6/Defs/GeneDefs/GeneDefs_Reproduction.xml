@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<GeneDef>
+		<defName>VRE_ChestburstPregnancy</defName>
+		<label>chestburst pregnancy</label>
+		<description>Carriers of this gene do not carry their own fetus. Instead, fetus needs to be implanted in another willing or unwilling individual or animal. Once the fetus matures, it will burst out of the ribcage of the victim, killing the host.</description>
+		<iconPath>UI/Icons/Genes/Gene_ChestburstPregnancy</iconPath>
+		<displayCategory>Reproduction</displayCategory>
+		<exclusionTags>
+			<li>Egglaying</li>
+			<li>AG_Egglaying</li>
+		</exclusionTags>
+		<customEffectDescriptions>
+			<li>Colonist needs to get pregnant in a conventional way before being able to proceed with the chestburst pregnancy.</li>
+		</customEffectDescriptions>
+		<displayOrderInCategory>115.3</displayOrderInCategory>
+		<biostatMet>2</biostatMet>
+		<biostatCpx>1</biostatCpx>
+		
+	</GeneDef>
+</Defs>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<GeneDef ParentName="GeneSkinColorOverride">
+		<defName>VRE_VatGrownInsectoidSkin</defName>
+		<displayCategory>Cosmetic_Skin</displayCategory>
+		<label>vat-grown insectoid skin</label>
+		<labelShortAdj>insect</labelShortAdj>
+		<description>Carriers of this gene produce a pigment similar to that of vat-grown insectoids.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(150, 144, 126)</skinColorOverride>
+	
+		<displayOrderInCategory>3333</displayOrderInCategory>
+		
+	</GeneDef>
+	<GeneDef ParentName="GeneSkinColorOverride">
+		<defName>VRE_MegaspiderInsectoidSkin</defName>
+		<displayCategory>Cosmetic_Skin</displayCategory>
+		<label>megaspider insectoid skin</label>
+		<labelShortAdj>insect</labelShortAdj>
+		<description>Carriers of this gene produce a pigment similar to that of megaspiders.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(154,125,94)</skinColorOverride>
+	
+		<displayOrderInCategory>3334</displayOrderInCategory>
+		
+	</GeneDef>
+	<GeneDef ParentName="GeneSkinColorOverride">
+		<defName>VRE_MegascarabInsectoidSkin</defName>
+		<displayCategory>Cosmetic_Skin</displayCategory>
+		<label>megascarab insectoid skin</label>
+		<labelShortAdj>insect</labelShortAdj>
+		<description>Carriers of this gene produce a pigment similar to that of megascarabs.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(114,107,84)</skinColorOverride>
+	
+		<displayOrderInCategory>3335</displayOrderInCategory>
+		
+	</GeneDef>
+	<GeneDef ParentName="GeneSkinColorOverride">
+		<defName>VRE_SpelopedeInsectoidSkin</defName>
+		<displayCategory>Cosmetic_Skin</displayCategory>
+		<label>spelopede insectoid skin</label>
+		<labelShortAdj>insect</labelShortAdj>
+		<description>Carriers of this gene produce a pigment similar to that of spelopedes.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(156,148,125)</skinColorOverride>
+	
+		<displayOrderInCategory>3336</displayOrderInCategory>
+		
+	</GeneDef>
+</Defs>

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_Microsized</defName>
+		<label>microsized</label>
+		<description>Carriers of this gene exhibit a microsized stature, significantly smaller than their counterparts. Their reduced size results in increased stagger duration, lower meat and leather yield, and a smaller yet more efficient hunger requirement.</description>
+		<iconPath>UI/Icons/Genes/Gene_Microsized</iconPath>
+		<unlockable>true</unlockable>
+		<selectionWeight>0</selectionWeight>
+		<displayOrderInCategory>1000</displayOrderInCategory>
+		<statOffsets>
+			<VEF_BodySize_Offset>-0.45</VEF_BodySize_Offset>
+		</statOffsets>
+		<statFactors>
+			<StaggerDurationFactor>2</StaggerDurationFactor>
+			<MeatAmount>0.5</MeatAmount>
+			<LeatherAmount>0.5</LeatherAmount>
+			<VEF_FoodCapacityMultiplier>0.75</VEF_FoodCapacityMultiplier>
+		</statFactors>
+		<exclusionTags>
+			<li>InsectorSize</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>small</symbol>
+				</li>
+				<li>
+					<symbol>tiny</symbol>
+				</li>
+				<li>
+					<symbol>mini</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+				<hediffToWholeBody>VRE_Microsized</hediffToWholeBody>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_Colossal</defName>
+		<label>colossal</label>
+		<description>Carriers of this gene grow to colossal proportions, towering over their peers. Their immense size increases meat and leather yield and hunger needs, while reducing movement speed and melee dodge chance. If equipped with the right enhancements, they can carry the heaviest of weapons and warcasket armaments.</description>
+		<selectionWeight>0</selectionWeight>
+		<iconPath>UI/Icons/Genes/Gene_Colossal</iconPath>
+		<unlockable>true</unlockable>
+		<displayOrderInCategory>1001</displayOrderInCategory>
+		<statOffsets>
+			<MoveSpeed>-1.6</MoveSpeed>
+			<VEF_BodySize_Offset>0.65</VEF_BodySize_Offset>
+		</statOffsets>
+		<statFactors>
+			<StaggerDurationFactor>0.2</StaggerDurationFactor>
+			<MeatAmount>2</MeatAmount>
+			<LeatherAmount>2</LeatherAmount>
+			<VEF_FoodCapacityMultiplier>2</VEF_FoodCapacityMultiplier>
+			<MeleeDodgeChance>0.25</MeleeDodgeChance>
+		</statFactors>
+		<exclusionTags>
+			<li>InsectorSize</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>large</symbol>
+				</li>
+				<li>
+					<symbol>big</symbol>
+				</li>
+				<li>
+					<symbol>magni</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+				<hediffToWholeBody>VRE_Colossal</hediffToWholeBody>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_ChemfuelSacks</defName>
+		<label>chemfuel sacks</label>
+		<description>Carriers of this gene develop chemfuel sacks resembling a tail, drastically increasing their susceptibility to flame damage. If engulfed in large enough flames or upon death, they erupt in a fiery explosion. Additionally, they can be "milked" periodically to yield chemfuel.</description>
+		<iconPath>UI/Icons/Genes/Gene_ChemfuelSacks</iconPath>
+		<unlockable>true</unlockable>
+		<selectionWeight>0</selectionWeight>
+		<displayOrderInCategory>1002</displayOrderInCategory>
+		<damageFactors>
+			<Flame>2</Flame>
+		</damageFactors>
+		<customEffectDescriptions>
+			<li>Time running in panic when set on fire doubled.</li>
+			<li>Produces 30 chemfuel every 10 days.</li>
+			<li>If set on fire, and the fire is at least 35 in size, they explode in a fire explosion. Upon fire explosion, they will not explode again for 24 hours.</li>
+		</customEffectDescriptions>
+		<exclusionTags>
+			<li>Tail</li>
+			<li>InsectorFire</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>fuel</symbol>
+				</li>
+				<li>
+					<symbol>chem</symbol>
+				</li>
+				<li>
+					<symbol>petrol</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+				<hediffToWholeBody>VRE_ChemfuelSacks</hediffToWholeBody>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_Pyrophiliac</defName>
+		<label>pyrophilic</label>
+		<description>Carriers of this gene possess a pyrophilic nature, exhibiting a fascination and love for fire. They are drawn to flames and find comfort and joy in their presence.</description>
+		<iconPath>UI/Icons/Genes/Gene_Pyrophiliac</iconPath>
+		<unlockable>true</unlockable>
+		<selectionWeight>0</selectionWeight>
+		<displayOrderInCategory>1003</displayOrderInCategory>
+		<statOffsets>
+			<ComfyTemperatureMin>6</ComfyTemperatureMin>
+		</statOffsets>
+		<forcedTraits>
+			<li>
+				<def>Pyromaniac</def>
+			</li>
+		</forcedTraits>
+		<exclusionTags>
+			<li>MinTemperature</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>fire</symbol>
+				</li>
+				<li>
+					<symbol>flame</symbol>
+				</li>
+				<li>
+					<symbol>pyro</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_InsectVolatile</defName>
+		<label>volatile</label>
+		<selectionWeight>0</selectionWeight>
+		<description>Carriers of this gene exhibit volatile behavior, drastically increasing their likelihood of initiating social fights and ensuring their mental breaks are always violent when possible. They have a heightened tendency to attempt prison breaks and will use weapons in social confrontations.</description>
+		<iconPath>UI/Icons/Genes/Gene_Volatile</iconPath>
+		<unlockable>true</unlockable>
+		<displayOrderInCategory>1004</displayOrderInCategory>
+		<socialFightChanceFactor>2</socialFightChanceFactor>
+		<aggroMentalBreakSelectionChanceFactor>999</aggroMentalBreakSelectionChanceFactor>
+		<prisonBreakMTBFactor>0.3</prisonBreakMTBFactor>
+		<customEffectDescriptions>
+			<li>Will use weapons in social fights.</li>
+		</customEffectDescriptions>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>aggro</symbol>
+				</li>
+				<li>
+					<symbol>savage</symbol>
+				</li>
+				<li>
+					<symbol>vola</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_EcdysoneOverdrive</defName>
+		<label>ecdysone overdrive</label>
+		<description>Carriers of this gene experience an ecdysone overdrive, creating a constant need for kill satiety. Prolonged periods without melee kills inflict increasing mood penalties, driving them towards violent confrontations to maintain their mental balance.</description>
+		<iconPath>UI/Icons/Genes/Gene_EcdysoneOverdrive</iconPath>
+		<unlockable>true</unlockable>
+		<displayOrderInCategory>1005</displayOrderInCategory>
+		<causesNeed>KillThirst</causesNeed>
+		<selectionWeight>0</selectionWeight>
+		<exclusionTags>
+			<li>KillThirst</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>aggro</symbol>
+				</li>
+				<li>
+					<symbol>killer</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_AcidBurstSack</defName>
+		<label>acid burstsack</label>
+		<description>Carriers of this gene possess an acid burstsack, which triggers an explosive release of corrosive acid when they take a severe hit. This explosion affects everything within a wide radius, causing ongoing damage to those caught in the blast.</description>
+		<iconPath>UI/Icons/Genes/Gene_AcidBurstsack</iconPath>
+		<unlockable>true</unlockable>
+		<displayOrderInCategory>1006</displayOrderInCategory>
+		<selectionWeight>0</selectionWeight>
+		<exclusionTags>
+			<li>Tail</li>
+		</exclusionTags>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+				<hediffToWholeBody>VRE_AcidBurstSack</hediffToWholeBody>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_SolidGreyMatter</defName>
+		<label>solid grey matter</label>
+		<description>Carriers of this gene have solidified grey matter, resulting in a complete inability to learn new skills. They experience accelerated skill loss, which affects them even at lower skill levels.</description>
+		<iconPath>UI/Icons/Genes/Gene_SolidGreymatter</iconPath>
+		<unlockable>true</unlockable>
+		<selectionWeight>0</selectionWeight>
+		<displayOrderInCategory>1007</displayOrderInCategory>
+		<statFactors>
+			<GlobalLearningFactor>0</GlobalLearningFactor>
+		</statFactors>
+		<exclusionTags>
+			<li>InsectorBrain</li>
+		</exclusionTags>
+		<customEffectDescriptions>
+			<li>Global skill loss multiplier: x2.</li>
+			<li>Skill loss applies even below level 10.</li>
+		</customEffectDescriptions>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>thag</symbol>
+				</li>
+				<li>
+					<symbol>grunt</symbol>
+				</li>
+				<li>
+					<symbol>stupid</symbol>
+				</li>
+				<li>
+					<symbol>dull</symbol>
+				</li>
+				<li>
+					<symbol>dumb</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+				<globalSkillLossMultiplier>2</globalSkillLossMultiplier>
+				<skillDegradation>true</skillDegradation>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_HardLockedJoints</defName>
+		<label>hard-locked joints</label>
+		<description>Carriers of this gene have hardlocked joints, significantly slowing their movements. Their inflexible joints make bending and swift actions extremely difficult.</description>
+		<selectionWeight>0</selectionWeight>
+		<iconPath>UI/Icons/Genes/Gene_InflexibleJoints</iconPath>
+		<unlockable>true</unlockable>
+		<displayOrderInCategory>1008</displayOrderInCategory>
+		<statOffsets>
+			<MoveSpeed>-0.4</MoveSpeed>
+		</statOffsets>
+		<exclusionTags>
+			<li>InsectorMovement</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>slow</symbol>
+				</li>
+				<li>
+					<symbol>lock</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_PassiveInsect</defName>
+		<label>passive</label>
+		<description>Carriers of this gene are inherently passive, showing no interest in and being unable to participate in combat. Their nature compels them to avoid violent confrontations entirely.</description>
+		<iconPath>UI/Icons/Genes/Gene_Passive</iconPath>
+		<unlockable>true</unlockable>
+		<selectionWeight>0</selectionWeight>
+		<displayOrderInCategory>1009</displayOrderInCategory>
+		<disabledWorkTags>
+			<li>Violent</li>
+			<li>Hunting</li>
+		</disabledWorkTags>
+		<exclusionTags>
+			<li>InsectorAggression</li>
+			<li>MeleeDamage</li>
+			<li>ShootingAccuracy</li>
+			<li>Aggressive</li>
+			<li>KillThirst</li>
+		</exclusionTags>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+</Defs>

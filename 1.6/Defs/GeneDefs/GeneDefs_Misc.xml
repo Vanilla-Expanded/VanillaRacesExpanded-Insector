@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<GeneDef>
+		<defName>VRE_InsectPheromones</defName>
+		<label>insect pheromones</label>
+		<description>Carriers of this gene emit special pheromones, allowing them to co-exist with wild insectoids. They will not be attacked by insectoids unless they are provoked.</description>
+		<iconPath>UI/Icons/Genes/Gene_InsectPheromones</iconPath>
+		<biostatCpx>2</biostatCpx>
+		<biostatMet>-1</biostatMet>
+		<displayCategory>Healing</displayCategory>
+		<displayOrderInCategory>5000.3</displayOrderInCategory>
+		
+		
+	</GeneDef>
+</Defs>

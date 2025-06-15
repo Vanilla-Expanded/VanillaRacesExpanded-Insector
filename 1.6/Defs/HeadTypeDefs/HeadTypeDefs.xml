@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- Average -->
+
+	<HeadTypeDef ParentName="AverageBase">
+		<defName>VRE_InsectHeadAverage</defName>
+		<graphicPath>Things/Pawn/Humanlike/Heads/Insectskin_Average_Normal</graphicPath>
+		<randomChosen>false</randomChosen>
+		<gender>None</gender>
+		<requiredGenes>
+			<li>VRE_InsectSkin</li>
+		</requiredGenes>
+	</HeadTypeDef>
+	
+
+	<!-- Narrow -->
+
+	<HeadTypeDef ParentName="AverageBase">
+		<defName>VRE_InsectHeadNarrow</defName>
+		<graphicPath>Things/Pawn/Humanlike/Heads/Insectskin_Narrow_Normal</graphicPath>
+		<randomChosen>false</randomChosen>
+		<gender>None</gender>
+		<requiredGenes>
+			<li>VRE_InsectSkin</li>
+		</requiredGenes>
+	</HeadTypeDef>
+	
+
+	<!-- Gaunt -->
+	<HeadTypeDef ParentName="AverageBase">
+		<defName>VRE_InsectHeadGaunt</defName>
+		<graphicPath>Things/Pawn/Humanlike/Heads/Insectskin_Gaunt_Normal</graphicPath>
+		<randomChosen>false</randomChosen>
+		<gender>None</gender>
+		<selectionWeight>99999</selectionWeight>
+		<requiredGenes>
+			<li>VRE_InsectSkin</li>
+			<li>Head_Gaunt</li>
+		</requiredGenes>
+	</HeadTypeDef>
+
+
+	<!-- Heavy -->
+
+	<HeadTypeDef ParentName="HeavyJawBase">
+		<defName>VRE_InsectHeadHeavy</defName>
+		<graphicPath>Things/Pawn/Humanlike/Heads/Insectskin_Wide_Normal</graphicPath>
+		<randomChosen>false</randomChosen>
+		<gender>None</gender>
+		<selectionWeight>99999</selectionWeight>
+		<requiredGenes>
+			<li>VRE_InsectSkin</li>
+			<li>Jaw_Heavy</li>
+		</requiredGenes>
+	</HeadTypeDef>
+	
+
+	
+
+</Defs>

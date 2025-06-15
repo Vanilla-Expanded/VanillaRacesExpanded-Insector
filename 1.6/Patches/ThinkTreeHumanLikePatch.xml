@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	
+	<!--Colonist-->
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>/Defs/ThinkTreeDef[defName = "MainColonistBehaviorCore"]/thinkRoot/subNodes/li/subNodes</xpath>
+		<value>
+			<li Class="VanillaRacesExpandedInsector.JobGiver_ConsumeInsectJelly" MayRequire="Ludeon.RimWorld.Biotech" />
+		</value>
+	</Operation>
+	
+</Patch>

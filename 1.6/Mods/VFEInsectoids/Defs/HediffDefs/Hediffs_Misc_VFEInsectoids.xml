@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<HediffDef>
+		<defName>VRE_ChemfuelSacks</defName>
+		<label>chemfuel sacks</label>
+	
+		<description>Chemfuel sacks make this person very volatile. If set on fire, and the fire is at least 35 in size, they explode in a fire explosion. Upon fire explosion, they will not explode again for 24 hours.\n\nWill produce 30 chemfuel every 10 days.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="VEF.AnimalBehaviours.HediffCompProperties_Exploder">
+				<explosionForce>4.9</explosionForce>
+				<damageDef>Flame</damageDef>
+			</li>
+			<li Class="VEF.AnimalBehaviours.HediffCompProperties_Spawner">
+				<thingToSpawn>Chemfuel</thingToSpawn>
+				<spawnCount>30</spawnCount>
+				<spawnIntervalRange>600000~600000</spawnIntervalRange>
+				<spawnMaxAdjacent>30</spawnMaxAdjacent>
+				<spawnForbidden>false</spawnForbidden>
+				<showMessageIfOwned>false</showMessageIfOwned>
+				
+			</li>
+			<li Class="VEF.AnimalBehaviours.HediffCompProperties_ExplodeOnFire">
+				<minFireToExplode>35</minFireToExplode>
+				<damageType>Flame</damageType>
+				<damageAmount>20</damageAmount>
+				<radius>4.9</radius>
+				<ticksToRecheck>60000</ticksToRecheck>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>VRE_AcidBurstSack</defName>
+		<label>acid burstsack</label>
+	
+		<description>Upon taking large amounts of damage in a single instance, this person will undergo an acid explosion, covering everything and everyone in 4.9 tile radius in corrosive acid, damaging them over time.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			
+			<li Class="VEF.AnimalBehaviours.HediffCompProperties_ExplodeOnDamage">
+				<minDamageToExplode>16</minDamageToExplode>
+				<damageType>VFEI2_AcidSpit</damageType>
+				<damageAmount>10</damageAmount>
+				<radius>4.9</radius>
+				<sound>VFEI2_AcidSpray_Resolve</sound>
+				<spawnThingDef>Filth_SpentAcid</spawnThingDef>
+				<spawnThingChance>0.5</spawnThingChance>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>VRE_MineralRichInsectskin</defName>
+		<label>mineral-rich insectskin</label>
+		<description>Mineral-rich insectskin forming thick, protective plating. This natural armor provides significant protection until enough damage is sustained to break it.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			
+			<li Class="VEF.AnimalBehaviours.HediffCompProperties_StageByHealth">
+				<lowHealthStageIndex>0.1</lowHealthStageIndex>
+				<highHealthStageIndex>1</highHealthStageIndex>
+				<healthThreshold>0.8</healthThreshold>
+				
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0.1</minSeverity>
+				<statOffsets>
+					<ArmorRating_Blunt>0.26</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.48</ArmorRating_Sharp>
+					
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>1</minSeverity>
+				<statOffsets>
+					<ArmorRating_Blunt>0.52</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.9</ArmorRating_Sharp>
+					
+				</statOffsets>
+			</li>
+			
+		</stages>
+	</HediffDef>
+	
+	
+</Defs>

@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<GeneCategoryDef>
+		<defName>VRE_EvolutionGene</defName>
+		<label>Insector evolutions</label>
+		<displayPriorityInXenotype>5012.69</displayPriorityInXenotype>
+	</GeneCategoryDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef Name="VRE_EvolutionGene" Abstract="True">
+		<displayCategory>VRE_EvolutionGene</displayCategory>
+		<selectionWeight>0</selectionWeight>
+		<evolution>1</evolution>
+		<biostatCpx>0</biostatCpx>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_Hiveglands</defName>
+		<label>hiveglands</label>
+		<description>Carriers of this gene have special glands that allow them to greatly increase construction speed. They do however generate filth every time they construct anything.</description>
+		<iconPath>UI/Icons/Genes/Gene_Hiveglands</iconPath>
+		<displayOrderInCategory>0</displayOrderInCategory>
+		<statOffsets>
+			<ConstructionSpeed>0.5</ConstructionSpeed>
+		</statOffsets>
+		<exclusionTags>
+
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>constructo</symbol>
+				</li>
+				<li>
+					<symbol>architecto</symbol>
+				</li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li>
+					<symbol>tect</symbol>
+				</li>
+				<li>
+					<symbol>build</symbol>
+				</li>
+			</suffixSymbols>
+			<wholeNameSymbols>
+				<li>
+					<symbol>architect</symbol>
+				</li>
+				<li>
+					<symbol>constructoid</symbol>
+				</li>
+			</wholeNameSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_CompoundEyes</defName>
+		<label>compound eyes</label>
+		<description>Carriers of this gene have numerous independent photoreception units allowing them to see in many directions, notice very fast movements and recognize details from afar. Their sight and effective shooting range is greatly increased.</description>
+		<iconPath>UI/Icons/Genes/Gene_CompoundEye</iconPath>
+		<displayOrderInCategory>1</displayOrderInCategory>
+		<capMods>
+			<li>
+				<capacity>Sight</capacity>
+				<offset>0.5</offset>
+			</li>
+		</capMods>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<parentTagDef>Head</parentTagDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/CompoundEyes</texPath>
+				<visibleFacing>
+					<li>East</li>
+					<li>South</li>
+					<li>West</li>
+				</visibleFacing>
+				<narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset>
+				<baseLayer>55</baseLayer>
+			</li>
+		</renderNodeProperties>
+		<statOffsets>
+			<ShootingAccuracyPawn>0.1</ShootingAccuracyPawn>
+		</statOffsets>
+		<statFactors>
+			<VEF_VerbRangeFactor>1.1</VEF_VerbRangeFactor>
+		</statFactors>
+		<exclusionTags>
+			<li>InsectorEye</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>compound</symbol>
+				</li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li>
+					<symbol>watcher</symbol>
+				</li>
+				<li>
+					<symbol>looker</symbol>
+				</li>
+			</suffixSymbols>
+			<wholeNameSymbols>
+				<li>
+					<symbol>multi-eyed</symbol>
+				</li>
+			</wholeNameSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_VocalGlands</defName>
+		<label>vocal glands</label>
+		<description>Carriers of this gene have a special vocal organ that can emulate human voice perfectly, and emit a melodic tone that for most people can be described as beautiful.</description>
+		<iconPath>UI/Icons/Genes/Gene_VocalGlands</iconPath>
+		<displayOrderInCategory>2</displayOrderInCategory>
+		<capMods>
+			<li>
+				<capacity>Talking</capacity>
+				<offset>0.25</offset>
+			</li>
+		</capMods>
+		<statOffsets>
+			<SocialImpact>0.25</SocialImpact>
+			<TradePriceImprovement>0.1</TradePriceImprovement>
+			<NegotiationAbility>0.4</NegotiationAbility>
+		</statOffsets>
+		<exclusionTags>
+			<li>InsectorVocal</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>vocal</symbol>
+				</li>
+				<li>
+					<symbol>talk</symbol>
+				</li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li>
+					<symbol>speaker</symbol>
+				</li>
+			</suffixSymbols>
+			<wholeNameSymbols>
+				<li>
+					<symbol>vocal</symbol>
+				</li>
+			</wholeNameSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_AntimicrobialPeptides</defName>
+		<label>antimicrobial peptides</label>
+		<labelShortAdj>regenerating</labelShortAdj>
+		<description>Carriers of this gene regenerate their tissue at a much faster rate than normal, and are much more capable of fighting off any infections and illnesses.</description>
+		<iconPath>UI/Icons/Genes/Gene_AntimicrobialPeptides</iconPath>
+		<displayOrderInCategory>3</displayOrderInCategory>
+		<statFactors>
+			<InjuryHealingFactor>2</InjuryHealingFactor>
+			<ImmunityGainSpeed>1.5</ImmunityGainSpeed>
+		</statFactors>
+		<exclusionTags>
+			<li>InsectorImmunity</li>
+			<li>Immunity</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>regen</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_InsectWings</defName>
+		<label>insect wings</label>
+		<description>Carriers of this gene grow large insect-like wings at the back of their torso, allowing them to move quicker, glide through difficult terrain with ease, and from time to time enable them to leap into the air.</description>
+		<iconPath>UI/Icons/Genes/Gene_InsectWings</iconPath>
+		<displayOrderInCategory>4</displayOrderInCategory>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/BodyAttachments/Insectwings</texPath>
+				<drawSize>1</drawSize>
+				<parentTagDef>Body</parentTagDef>
+				<colorType>Skin</colorType>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<useRottenColor>true</useRottenColor>
+				<useSkinShader>true</useSkinShader>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<drawData>
+					<defaultData>
+						<layer>-2</layer>
+					</defaultData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<dataNorth>
+						<layer>90</layer>
+					</dataNorth>
+					<dataEast>
+						<offset>(-0.2, 0, 0)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.2, 0, 0)</offset>
+					</dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		<capMods>
+			<li>
+				<capacity>Moving</capacity>
+				<offset>0.25</offset>
+			</li>
+		</capMods>
+		<exclusionTags>
+			<li>InsectorMovement</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>fly</symbol>
+				</li>
+				<li>
+					<symbol>jump</symbol>
+				</li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li>
+					<symbol>runner</symbol>
+				</li>
+				<li>
+					<symbol>jumper</symbol>
+				</li>
+				<li>
+					<symbol>flier</symbol>
+				</li>
+				<li>
+					<symbol>fly</symbol>
+				</li>
+			</suffixSymbols>
+		</symbolPack>
+		<abilities>
+			<li>VREInsector_WingPoweredJump</li>
+		</abilities>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+				<hediffToWholeBody>VREInsector_Hover</hediffToWholeBody>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_InsectMandibles</defName>
+		<label>insect mandibles</label>
+		<description>Carriers of this gene have very strong, insect-like mandibles, allowing them to consume food significantly quicker. They will also be able to use these mandibles in combat if unarmed.</description>
+		<iconPath>UI/Icons/Genes/Gene_InsectMandibles</iconPath>
+		<displayOrderInCategory>5</displayOrderInCategory>
+		<statFactors>
+			<EatingSpeed>4</EatingSpeed>
+		</statFactors>
+		<exclusionTags>
+			<li>InsectorMouth</li>
+		</exclusionTags>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<parentTagDef>Head</parentTagDef>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/InsectMandibles</texPath>
+				<colorType>Skin</colorType>
+				<useRottenColor>true</useRottenColor>
+				<useSkinShader>true</useSkinShader>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<visibleFacing>
+					<li>East</li>
+					<li>South</li>
+					<li>West</li>
+				</visibleFacing>
+				<drawData>
+					<defaultData>
+						<layer>69</layer>
+					</defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>mandibled</symbol>
+				</li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li>
+					<symbol>insect</symbol>
+				</li>
+				<li>
+					<symbol>mandible</symbol>
+				</li>
+			</suffixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+				<hediffsToBodyParts>
+					<li>
+						<hediff>VRE_InsectMandibles</hediff>
+						<bodyparts>
+							<li>Jaw</li>
+						</bodyparts>
+					</li>
+				</hediffsToBodyParts>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_RobustMidgut</defName>
+		<label>robust midgut</label>
+		<description>Carriers of this gene grow a multi-fold midgut, allowing them to digest raw foods more efficiently than baseline humans. In general, they get the same nutrition from raw food as from if it is cooked. They also don't mind the taste of raw food at all. Prevents food poisoning.</description>
+		<iconPath>UI/Icons/Genes/Gene_RobustMidgut</iconPath>
+		<displayOrderInCategory>6</displayOrderInCategory>
+		<foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+		<statFactors>
+			<RawNutritionFactor>1.8</RawNutritionFactor>
+		</statFactors>
+		<exclusionTags>
+			<li>InsectorStomach</li>
+		</exclusionTags>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_HighGreyMatter</defName>
+		<label>high grey matter</label>
+		<description>Carriers of this gene are capable of absorbing new information at an incredible rate, analyzing their experiences and learning from them with ease. They are incredibly good at learning new skills and knowledge.</description>
+		<iconPath>UI/Icons/Genes/Gene_HighGreyMatter</iconPath>
+		<displayOrderInCategory>7</displayOrderInCategory>
+		<statFactors>
+			<GlobalLearningFactor>1.5</GlobalLearningFactor>
+		</statFactors>
+		<exclusionTags>
+			<li>InsectorBrain</li>
+		</exclusionTags>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_MegaspiderHorns</defName>
+		<label>megaspider horns</label>
+		<description>Carriers of this gene grow two strong horns from their forehead, similar to those found on bioengineered megaspiders. These horns can be used to maul enemies in combat if unarmed, but they also increase mining speed slightly.</description>
+		<iconPath>UI/Icons/Genes/Gene_MegaspiderHorns</iconPath>
+		<displayOrderInCategory>8</displayOrderInCategory>
+		<statOffsets>
+			<MiningSpeed>0.1</MiningSpeed>
+		</statOffsets>
+		<exclusionTags>
+			<li>Headbone</li>
+		</exclusionTags>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/MegaspiderHorns</texPath>
+				<colorType>Skin</colorType>
+				<useRottenColor>true</useRottenColor>
+				<useSkinShader>true</useSkinShader>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>81</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>horned</symbol>
+				</li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li>
+					<symbol>insect</symbol>
+				</li>
+				<li>
+					<symbol>horn</symbol>
+				</li>
+			</suffixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+				<hediffsToBodyParts>
+					<li>
+						<hediff>VRE_HornAttack</hediff>
+						<bodyparts>
+							<li>Head</li>
+						</bodyparts>
+					</li>
+				</hediffsToBodyParts>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_DetoxifierTubules</defName>
+		<label>detoxifier tubules</label>
+		<description>Carriers of this gene have their Malpighian tubules set to overdrive and are capable of withstanding extreme amounts of toxicity without any ill effects.</description>
+		<iconPath>UI/Icons/Genes/Gene_DetoxifierTubules</iconPath>
+		<displayOrderInCategory>9</displayOrderInCategory>
+		<statOffsets>
+			<ToxicResistance>1</ToxicResistance>
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+		</statOffsets>
+		<immuneToToxGasExposure>true</immuneToToxGasExposure>
+		<customEffectDescriptions>
+			<li>Tox gas immunity</li>
+		</customEffectDescriptions>
+		<exclusionTags>
+			<li>InsectorToxic</li>
+		</exclusionTags>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_HypothermicSlowdown</defName>
+		<label>hypothermic slowdown</label>
+		<description>Carriers of this gene do not suffer hypothermia. Instead, they enter hypothermic slowdown - a special biological state that allows them to survive extreme cold. Instead of trying to stay warm, the carrier’s body chemistry adapts to prevent internal freezing despite very low temperature. Bodily functions are slowed and capacities are reduced, but the cold does no permanent damage.</description>
+		<iconPath>UI/Icons/Genes/Gene_HypothermicSlowdown</iconPath>
+		<displayOrderInCategory>10</displayOrderInCategory>
+		<hediffGiversCannotGive>
+			<li>Hypothermia</li>
+		</hediffGiversCannotGive>
+		<exclusionTags>
+			<li>InsectorHypothermia</li>
+		</exclusionTags>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_SlowedLifeCycle</defName>
+		<label>slowed life cycle</label>
+		<description>Carriers of this gene do not go through senescence in the normal way. They never get chronic age-related diseases like cancer, bad back, cataracts, or dementia, and age much slower.</description>
+		<iconPath>UI/Icons/Genes/Gene_SlowedLifeCycle</iconPath>
+		<displayOrderInCategory>11</displayOrderInCategory>
+		<hediffGiversCannotGive>
+			<li>Carcinoma</li>
+			<li>HeartAttack</li>
+			<li>BadBack</li>
+			<li>Frail</li>
+			<li>Cataract</li>
+			<li>Dementia</li>
+			<li>Alzheimers</li>
+			<li>Asthma</li>
+			<li>HeartArteryBlockage</li>
+		</hediffGiversCannotGive>
+		<biologicalAgeTickFactorFromAgeCurve>
+			<points>
+				<li>(13, 1)</li>
+				<li>(18.5, 0.5)</li>
+			</points>
+		</biologicalAgeTickFactorFromAgeCurve>
+		<exclusionTags>
+			<li>InsectorLifespan</li>
+		</exclusionTags>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_HardenedChitin</defName>
+		<label>hardened chitin</label>
+		<description>Carriers of this gene have their exoskeleton consisting of thick, hardened chitin, and are much more resistant to damage and stagger effects. This comes at the cost of slowing them down slightly due to the sheer weight of the carapace.</description>
+		<iconPath>UI/Icons/Genes/Gene_HardenedChitin</iconPath>
+		<displayOrderInCategory>12</displayOrderInCategory>
+		<capMods>
+			<li>
+				<capacity>Moving</capacity>
+				<offset>-0.15</offset>
+			</li>
+		</capMods>
+		<statFactors>
+			<IncomingDamageFactor>0.75</IncomingDamageFactor>
+			<StaggerDurationFactor>0.5</StaggerDurationFactor>
+		</statFactors>
+		<exclusionTags>
+			<li>InsectorArmor</li>
+		</exclusionTags>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_SensitiveBrainGoop</defName>
+		<label>sensitive brain goop</label>
+		<description>Carriers of this gene have a volatile substance surrounding their brain, greatly increasing their psychic sensitivity.</description>
+		<iconPath>UI/Icons/Genes/Gene_SensitiveBrainGoop</iconPath>
+		<displayOrderInCategory>13</displayOrderInCategory>
+		<statOffsets>
+			<PsychicSensitivity>0.3</PsychicSensitivity>
+			<MeditationFocusGain>0.2</MeditationFocusGain>
+			<PsychicEntropyRecoveryRate>0.2</PsychicEntropyRecoveryRate>
+		</statOffsets>
+		<exclusionTags>
+		
+		</exclusionTags>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_Serotonin</defName>
+		<label>serotonin</label>
+		<description>Carriers of this gene produce large amounts of serotonin, keeping them in a continuous state of bliss while also affecting their consciousness. The presence of this neurotransmitter will also make them more aggressive.</description>
+		<iconPath>UI/Icons/Genes/Gene_Serotonin</iconPath>
+		<displayOrderInCategory>14</displayOrderInCategory>
+		<socialFightChanceFactor>2</socialFightChanceFactor>
+		<exclusionTags>
+		
+		</exclusionTags>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+				<hediffsToBodyParts>
+					<li>
+						<hediff>VRE_Serotonin</hediff>
+						<bodyparts>
+							<li>Brain</li>
+						</bodyparts>
+					</li>
+				</hediffsToBodyParts>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_Heatshock</defName>
+		<label>heatshock</label>
+		<description>Carriers of this gene produce a special kind of heatshock proteins when hot, allowing them to survive even the most extreme temperatures, but causing them to consume a lot more nutrition.</description>
+		<iconPath>UI/Icons/Genes/Gene_Heatshock</iconPath>
+		<displayOrderInCategory>15</displayOrderInCategory>
+		<makeImmuneTo>
+			<li>Heatstroke</li>
+		</makeImmuneTo>
+		<hediffGiversCannotGive>
+			<li>Heatstroke</li>
+		</hediffGiversCannotGive>
+		<exclusionTags>
+			<li>InsectorHeatstroke</li>
+		</exclusionTags>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_JellySacks</defName>
+		<label>jelly sacks</label>
+		<description>Carriers of this gene have large jelly sacks present on their lower abdomen, allowing them to periodically produce valuable insect jelly.</description>
+		<iconPath>UI/Icons/Genes/Gene_JellySacks</iconPath>
+		<displayOrderInCategory>16</displayOrderInCategory>
+		<customEffectDescriptions>
+			<li>Produces 6 units of insect jelly per day</li>
+		</customEffectDescriptions>
+		<exclusionTags>
+			<li>Tail</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>jello</symbol>
+				</li>
+				<li>
+					<symbol>jelly</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/BodyAttachments/JellySacks</texPath>
+				<colorType>Skin</colorType>
+				<overrideMeshSize>1.5</overrideMeshSize>
+				<parentTagDef>Body</parentTagDef>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData>
+						<layer>-3</layer>
+					</defaultData>
+					<dataNorth>
+						<offset>(0, 0, -0.35)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth>
+						<offset>(-0, 0, -0.15)</offset>
+					</dataSouth>
+					<dataEast>
+						<offset>(-0.5, 0, -0.15)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.5, 0, -0.15)</offset>
+					</dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+				<hediffToWholeBody>VRE_InsectJellyProduction</hediffToWholeBody>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_SpawningSack</defName>
+		<label>spawning sack</label>
+		<description>Carriers of this gene have large royal jelly sacks present on their lower abdomen. It increases their fertility and allows them to rapidly progress their pregnancy, and in case of chestburst pregnancies, it allows the carrier to carry their own spawn inside of them without the risk of death upon giving birth.</description>
+		<iconPath>UI/Icons/Genes/Gene_SpawningSacks</iconPath>
+		<displayOrderInCategory>17</displayOrderInCategory>
+		<customEffectDescriptions>
+			<li>Invalidates chestburst pregnancy.</li>
+			<li>25% pregnancy speed increase.</li>
+		</customEffectDescriptions>
+		<statFactors>
+			<Fertility>2</Fertility>
+		</statFactors>
+		<exclusionTags>
+			<li>Tail</li>
+			<li>Fertility</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>spawno</symbol>
+				</li>
+				<li>
+					<symbol>spawn</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/BodyAttachments/SpawningSack</texPath>
+				<colorType>Skin</colorType>
+				<overrideMeshSize>1.5</overrideMeshSize>
+				<parentTagDef>Body</parentTagDef>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData>
+						<layer>-3</layer>
+					</defaultData>
+					<dataNorth>
+						<offset>(0, 0, -0.35)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth>
+						<offset>(-0, 0, -0.15)</offset>
+					</dataSouth>
+					<dataEast>
+						<offset>(-0.5, 0, -0.15)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.5, 0, -0.15)</offset>
+					</dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+				<pregnancySpeedFactor>1.25</pregnancySpeedFactor>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_Parthenogenesis</defName>
+		<label>parthenogenesis</label>
+		<description>Carriers of this gene can self-impregnate, creating offspring without a second parent. Specialized reproductive organs generate a fetus internally, which is stored in an ovipositor-like structure until ready to be birthed. It enables carriers to rapidly propagate their species autonomously.</description>
+		<iconPath>UI/Icons/Genes/Gene_Perthenogenesis</iconPath>
+		<displayOrderInCategory>18</displayOrderInCategory>
+		<customEffectDescriptions>
+			<li>Can't get pregnant through intercourse.</li>
+		</customEffectDescriptions>
+		<statFactors>
+			<Fertility>0</Fertility>
+		</statFactors>
+		<exclusionTags>
+			<li>Fertility</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>impregno</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+				<hediffToWholeBody>VRE_Parthenogenesis</hediffToWholeBody>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_CuticleShell</defName>
+		<label>cuticle shell</label>
+		<labelShortAdj>immune</labelShortAdj>
+		<description>Carriers of this gene grow a thin cuticle exoskeleton shielding protecting them from any pathogens. This provides them with immunity to common illnesses such as malaria or flu. Does nothing to prevent the infection.</description>
+		<iconPath>UI/Icons/Genes/Gene_CuticleShell</iconPath>
+		<displayOrderInCategory>19</displayOrderInCategory>
+		<makeImmuneTo>
+			<li>Flu</li>
+			<li>Malaria</li>
+			<li>SleepingSickness</li>
+			<li>Plague</li>
+			<li>LungRot</li>
+		</makeImmuneTo>
+		<exclusionTags>
+			<li>Immunity</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>immuno</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_SpelopedeHorn</defName>
+		<label>spelopede horn</label>
+		<labelShortAdj>horned</labelShortAdj>
+		<description>Carriers of this gene grow a singular, thick horn in the middle of their headbone, similar to the ones found on bioengineered spelopedes. Unlike the megaspider horns, spelopede horn cannot be used in combat, but it does increase mining speed greatly.</description>
+		<iconPath>UI/Icons/Genes/Gene_SpelopedeHorn</iconPath>
+		<displayOrderInCategory>20</displayOrderInCategory>
+		<statOffsets>
+			<MiningSpeed>0.2</MiningSpeed>
+		</statOffsets>
+		<exclusionTags>
+			<li>Headbone</li>
+		</exclusionTags>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/SpelopedeHorn</texPath>
+				<colorType>Skin</colorType>
+				<useRottenColor>true</useRottenColor>
+				<useSkinShader>true</useSkinShader>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>81</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		<symbolPack>
+			
+			<prefixSymbols>
+				<li>
+					<symbol>insect</symbol>
+				</li>
+				<li>
+					<symbol>horn</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+				
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+		<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_RipperBlades</defName>
+		<label>ripper-blades</label>
+		<labelShortAdj>ripper-bladed</labelShortAdj>
+		<description>Carriers of this gene have long and deadly ripper-blades instead of hands. While the blades greatly lower work speed, they can be used in melee combat and are capable of ripping even armored enemies in half.</description>
+		<iconPath>UI/Icons/Genes/Gene_RipperBlades</iconPath>
+		<displayOrderInCategory>21</displayOrderInCategory>
+		<statOffsets>		
+			<WorkSpeedGlobal>-0.3</WorkSpeedGlobal>
+		</statOffsets>
+		
+		<exclusionTags>
+			<li>Hands</li>
+		</exclusionTags>
+		
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>ripper</symbol>
+				</li>
+			</prefixSymbols>
+			
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+				<hediffsToBodyParts>
+					<li>
+						<hediff>VRE_RipperBlades</hediff>
+						<bodyparts>
+							<li>Hand</li>
+							<li>Hand</li>
+						</bodyparts>
+					</li>
+				</hediffsToBodyParts>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+</Defs>

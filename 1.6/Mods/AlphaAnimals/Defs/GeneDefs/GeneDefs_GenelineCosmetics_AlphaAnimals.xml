@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_InsectorCosmeticGene">
+		<defName>VRE_BlackHiveInsectoidSkin_Cosmetic</defName>
+		<iconPath>UI/Icons/Genes/Gene_SkinColorOverride</iconPath>
+		<exclusionTags>
+			<li>SkinColorOverride</li>
+		</exclusionTags>
+		<label>black hive skin</label>
+		<labelShortAdj>insect</labelShortAdj>
+		<description>Carriers of this gene produce a pigment similar to that of insectoids of the Black Hive.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(66,57,60)</skinColorOverride>
+		<displayOrderInCategory>3341</displayOrderInCategory>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	
+</Defs>

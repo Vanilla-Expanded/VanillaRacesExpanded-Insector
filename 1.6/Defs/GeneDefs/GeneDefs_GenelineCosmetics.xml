@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<GeneCategoryDef>
+		<defName>VRE_InsectorCosmeticGene</defName>
+		<label>geneline cosmetics</label>
+		<displayPriorityInXenotype>5010.69</displayPriorityInXenotype>
+	</GeneCategoryDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef Name="VRE_InsectorCosmeticGene" Abstract="True">
+		<displayCategory>VRE_InsectorCosmeticGene</displayCategory>
+		<selectionWeight>0</selectionWeight>
+		<cosmetic>1</cosmetic>
+		<biostatCpx>0</biostatCpx>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_CosmeticBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_CosmeticBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_InsectorCosmeticGene">
+		<defName>VRE_CompoundEyes_Cosmetic</defName>
+		<label>compound eyes, cosmetic</label>
+		<description>Carriers of this gene have numerous independent photoreception units allowing them to see in many directions, notice very fast movements and recognize details from afar.</description>
+		<iconPath>UI/Icons/Genes/Gene_CompoundEye</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<parentTagDef>Head</parentTagDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/CompoundEyes</texPath>
+				<visibleFacing>
+					<li>East</li>
+					<li>South</li>
+					<li>West</li>
+				</visibleFacing>
+				<narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset>
+				<baseLayer>55</baseLayer>
+			</li>
+		</renderNodeProperties>
+		<exclusionTags>
+			<li>InsectorEye</li>
+		</exclusionTags>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_InsectorCosmeticGene">
+		<defName>VRE_OcelliEyes_Cosmetic</defName>
+		<label>ocelli eyes, cosmetic</label>
+		<description>Carriers of this gene have an optical arrangement composed of a single lens and without an elaborate retina.</description>
+		<iconPath>UI/Icons/Genes/Gene_OcelliEye</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<parentTagDef>Head</parentTagDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/OcelliEyes</texPath>
+				<visibleFacing>
+					<li>East</li>
+					<li>South</li>
+					<li>West</li>
+				</visibleFacing>
+				<narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset>
+				<baseLayer>55</baseLayer>
+			</li>
+		</renderNodeProperties>
+		<exclusionTags>
+			<li>InsectorEye</li>
+		</exclusionTags>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_InsectorCosmeticGene">
+		<defName>VRE_InsectAntennae_Cosmetic</defName>
+		<label>insect antennae, cosmetic</label>
+		<exclusionTags>
+			<li>Antennas</li>
+			<li>Antenna</li>
+			<li>AG_Antennae</li>
+		</exclusionTags>
+		<randomChosen>true</randomChosen>
+		<description>Carriers of this gene grow small antennae at the top of their head. These antennae do not serve any known function, and can be safely assumed to be cosmetic-only.</description>
+		<iconPath>UI/Icons/Genes/Gene_InsectAntennas</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/InsectoidAntennas</texPath>
+				<useSkinShader>true</useSkinShader>
+				<useRottenColor>true</useRottenColor>
+				<colorType>Skin</colorType>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_InsectorCosmeticGene">
+		<defName>VRE_VatGrownInsectoidSkin_Cosmetic</defName>
+		<iconPath>UI/Icons/Genes/Gene_SkinColorOverride</iconPath>
+		<exclusionTags>
+			<li>SkinColorOverride</li>
+		</exclusionTags>
+		<label>vat-grown insectoid skin</label>
+		<labelShortAdj>insect</labelShortAdj>
+		<description>Carriers of this gene produce a pigment similar to that of vat-grown insectoids.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(150, 144, 126)</skinColorOverride>
+		<displayOrderInCategory>3333</displayOrderInCategory>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_InsectorCosmeticGene">
+		<defName>VRE_MegaspiderInsectoidSkin_Cosmetic</defName>
+		<iconPath>UI/Icons/Genes/Gene_SkinColorOverride</iconPath>
+		<exclusionTags>
+			<li>SkinColorOverride</li>
+		</exclusionTags>
+		<label>megaspider insectoid skin</label>
+		<labelShortAdj>insect</labelShortAdj>
+		<description>Carriers of this gene produce a pigment similar to that of megaspiders.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(154,125,94)</skinColorOverride>
+		<displayOrderInCategory>3334</displayOrderInCategory>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_InsectorCosmeticGene">
+		<defName>VRE_MegascarabInsectoidSkin_Cosmetic</defName>
+		<iconPath>UI/Icons/Genes/Gene_SkinColorOverride</iconPath>
+		<exclusionTags>
+			<li>SkinColorOverride</li>
+		</exclusionTags>
+		<label>megascarab insectoid skin</label>
+		<labelShortAdj>insect</labelShortAdj>
+		<description>Carriers of this gene produce a pigment similar to that of megascarabs.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(114,107,84)</skinColorOverride>
+		<displayOrderInCategory>3335</displayOrderInCategory>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_InsectorCosmeticGene">
+		<defName>VRE_SpelopedeInsectoidSkin_Cosmetic</defName>
+		<iconPath>UI/Icons/Genes/Gene_SkinColorOverride</iconPath>
+		<exclusionTags>
+			<li>SkinColorOverride</li>
+		</exclusionTags>
+		<label>spelopede insectoid skin</label>
+		<labelShortAdj>insect</labelShortAdj>
+		<description>Carriers of this gene produce a pigment similar to that of spelopedes.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(156,148,125)</skinColorOverride>
+		<displayOrderInCategory>3336</displayOrderInCategory>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_InsectorCosmeticGene">
+		<defName>VRE_NuchadusInsectoidSkin_Cosmetic</defName>
+		<iconPath>UI/Icons/Genes/Gene_SkinColorOverride</iconPath>
+		<exclusionTags>
+			<li>SkinColorOverride</li>
+		</exclusionTags>
+		<label>nuchadus geneline skin</label>
+		<labelShortAdj>insect</labelShortAdj>
+		<description>Carriers of this gene produce a pigment similar to that of insectoids of the Nuchadus geneline.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(128, 107, 104)</skinColorOverride>
+		<displayOrderInCategory>3337</displayOrderInCategory>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_InsectorCosmeticGene">
+		<defName>VRE_ChelisInsectoidSkin_Cosmetic</defName>
+		<iconPath>UI/Icons/Genes/Gene_SkinColorOverride</iconPath>
+		<exclusionTags>
+			<li>SkinColorOverride</li>
+		</exclusionTags>
+		<label>chelis geneline skin</label>
+		<labelShortAdj>insect</labelShortAdj>
+		<description>Carriers of this gene produce a pigment similar to that of insectoids of the Chelis geneline.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(150, 133, 122)</skinColorOverride>
+		<displayOrderInCategory>3338</displayOrderInCategory>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_InsectorCosmeticGene">
+		<defName>VRE_KemiaInsectoidSkin_Cosmetic</defName>
+		<iconPath>UI/Icons/Genes/Gene_SkinColorOverride</iconPath>
+		<exclusionTags>
+			<li>SkinColorOverride</li>
+		</exclusionTags>
+		<label>kemia geneline skin</label>
+		<labelShortAdj>insect</labelShortAdj>
+		<description>Carriers of this gene produce a pigment similar to that of insectoids of the Kemia geneline.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(99, 107, 79)</skinColorOverride>
+		<displayOrderInCategory>3339</displayOrderInCategory>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_InsectorCosmeticGene">
+		<defName>VRE_XanidesInsectoidSkin_Cosmetic</defName>
+		<iconPath>UI/Icons/Genes/Gene_SkinColorOverride</iconPath>
+		<exclusionTags>
+			<li>SkinColorOverride</li>
+		</exclusionTags>
+		<label>xanides geneline skin</label>
+		<labelShortAdj>insect</labelShortAdj>
+		<description>Carriers of this gene produce a pigment similar to that of insectoids of the Xanides geneline.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(137, 139, 163)</skinColorOverride>
+		<displayOrderInCategory>3340</displayOrderInCategory>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_InsectorCosmeticGene">
+		<defName>VRE_InsectWings_Cosmetic</defName>
+		<label>insect wings, cosmetic</label>
+		<exclusionTags>
+			<li>InsectorMovement</li>
+		</exclusionTags>
+		<description>Carriers of this gene grow large insect-like wings at the back of their torso.</description>
+		<iconPath>UI/Icons/Genes/Gene_InsectWings</iconPath>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/BodyAttachments/Insectwings</texPath>
+				<drawSize>1</drawSize>
+				<parentTagDef>Body</parentTagDef>
+				<colorType>Skin</colorType>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<useRottenColor>true</useRottenColor>
+				<useSkinShader>true</useSkinShader>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<drawData>
+					<defaultData>
+						<layer>-2</layer>
+					</defaultData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<dataNorth>
+						<layer>90</layer>
+					</dataNorth>
+					<dataEast>
+						<offset>(-0.2, 0, 0)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.2, 0, 0)</offset>
+					</dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_InsectorCosmeticGene">
+		<defName>VRE_InsectMandibles_Cosmetic</defName>
+		<label>insect mandibles, cosmetic</label>
+		<exclusionTags>
+			<li>InsectorMouth</li>
+		</exclusionTags>
+		<description>Carriers of this gene have very strong, insect-like mandibles.</description>
+		<iconPath>UI/Icons/Genes/Gene_InsectMandibles</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<parentTagDef>Head</parentTagDef>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/InsectMandibles</texPath>
+				<colorType>Skin</colorType>
+				<useRottenColor>true</useRottenColor>
+				<useSkinShader>true</useSkinShader>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<visibleFacing>
+					<li>East</li>
+					<li>South</li>
+					<li>West</li>
+				</visibleFacing>
+				<drawData>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_InsectorCosmeticGene">
+		<defName>VRE_MegaspiderHorns_Cosmetic</defName>
+		<label>megaspider horns, cosmetic</label>
+		<exclusionTags>
+			<li>Headbone</li>
+		</exclusionTags>
+		<description>Carriers of this gene grow two strong horns from their forehead, similar to those found on bioengineered megaspiders.</description>
+		<iconPath>UI/Icons/Genes/Gene_MegaspiderHorns</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/MegaspiderHorns</texPath>
+				<colorType>Skin</colorType>
+				<useRottenColor>true</useRottenColor>
+				<useSkinShader>true</useSkinShader>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>81</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_InsectorCosmeticGene">
+		<defName>VRE_JellySacks_Cosmetic</defName>
+		<label>jelly sacks, cosmetic</label>
+		<exclusionTags>
+			<li>Tail</li>
+		</exclusionTags>
+		<description>Carriers of this gene have large jelly sacks present on their lower abdomen.</description>
+		<iconPath>UI/Icons/Genes/Gene_JellySacks</iconPath>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/BodyAttachments/JellySacks</texPath>
+				<colorType>Skin</colorType>
+				<overrideMeshSize>1.5</overrideMeshSize>
+				<parentTagDef>Body</parentTagDef>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData>
+						<layer>-3</layer>
+					</defaultData>
+					<dataNorth>
+						<offset>(0, 0, -0.35)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth>
+						<offset>(-0, 0, -0.15)</offset>
+					</dataSouth>
+					<dataEast>
+						<offset>(-0.5, 0, -0.15)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.5, 0, -0.15)</offset>
+					</dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_InsectorCosmeticGene">
+		<defName>VRE_SpawningSack_Cosmetic</defName>
+		<label>spawning sack, cosmetic</label>
+		<exclusionTags>
+			<li>Tail</li>
+		</exclusionTags>
+		<description>Carriers of this gene have large royal jelly sacks present on their lower abdomen.</description>
+		<iconPath>UI/Icons/Genes/Gene_SpawningSacks</iconPath>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/BodyAttachments/SpawningSack</texPath>
+				<colorType>Skin</colorType>
+				<overrideMeshSize>1.5</overrideMeshSize>
+				<parentTagDef>Body</parentTagDef>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData>
+						<layer>-3</layer>
+					</defaultData>
+					<dataNorth>
+						<offset>(0, 0, -0.35)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth>
+						<offset>(-0, 0, -0.15)</offset>
+					</dataSouth>
+					<dataEast>
+						<offset>(-0.5, 0, -0.15)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.5, 0, -0.15)</offset>
+					</dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_InsectorCosmeticGene">
+		<defName>VRE_SpelopedeHorn_Cosmetic</defName>
+		<label>spelopede horn, cosmetic</label>
+		<exclusionTags>
+			<li>Headbone</li>
+		</exclusionTags>
+		<description>Carriers of this gene grow a singular, thick horn in the middle of their headbone, similar to the ones found on bioengineered spelopedes.</description>
+		<iconPath>UI/Icons/Genes/Gene_SpelopedeHorn</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/SpelopedeHorn</texPath>
+				<colorType>Skin</colorType>
+				<useRottenColor>true</useRottenColor>
+				<useSkinShader>true</useSkinShader>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>81</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_InsectorCosmeticGene">
+		<defName>VRE_Eyes_Red_Cosmetic</defName>
+		<label>red eyes, cosmetic</label>
+		<description>Carriers of this gene have deeply red-pigmented eyes.</description>
+		<iconPath>UI/Icons/Genes/Gene_RedEyes</iconPath>
+		<renderNodeProperties>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/RedEyes/Male/RedEyes_Male</texPath>
+				<texPathFemale>Things/Pawn/Humanlike/HeadAttachments/RedEyes/Female/RedEyes_Female</texPathFemale>
+				<anchorTag>RightEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
+				<drawData>
+					<defaultData>
+						<layer>54</layer>
+						<offset>(0, 0, -0.25)</offset>
+					</defaultData>
+				</drawData>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/RedEyes/Male/RedEyes_Male</texPath>
+				<texPathFemale>Things/Pawn/Humanlike/HeadAttachments/RedEyes/Female/RedEyes_Female</texPathFemale>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+					<defaultData>
+						<layer>54</layer>
+						<offset>(0, 0, -0.25)</offset>
+						<flip>true</flip>
+					</defaultData>
+					<dataWest>
+						<flip>false</flip>
+					</dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		<exclusionTags>
+			<li>InsectorEye</li>
+			<li>EyeColor</li>
+		</exclusionTags>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_InsectorCosmeticGene">
+		<defName>VRE_Eyes_Gray_Cosmetic</defName>
+		<label>gray eyes, cosmetic</label>
+		<description>Carriers of this gene have pale white-gray eyes.</description>
+		<iconPath>UI/Icons/Genes/Gene_GrayEyes</iconPath>
+		<renderNodeProperties>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/RedEyes/Male/RedEyes_Male</texPath>
+				<texPathFemale>Things/Pawn/Humanlike/HeadAttachments/RedEyes/Female/RedEyes_Female</texPathFemale>
+				<anchorTag>RightEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
+				<drawData>
+					<defaultData>
+						<layer>54</layer>
+						<offset>(0, 0, -0.25)</offset>
+					</defaultData>
+				</drawData>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/RedEyes/Male/RedEyes_Male</texPath>
+				<texPathFemale>Things/Pawn/Humanlike/HeadAttachments/RedEyes/Female/RedEyes_Female</texPathFemale>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+					<defaultData>
+						<layer>54</layer>
+						<offset>(0, 0, -0.25)</offset>
+						<flip>true</flip>
+					</defaultData>
+					<dataWest>
+						<flip>false</flip>
+					</dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		<exclusionTags>
+			<li>InsectorEye</li>
+			<li>EyeColor</li>
+		</exclusionTags>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_InsectorCosmeticGene">
+		<defName>VRE_Headbone_MiniHorns_Cosmetic</defName>
+		<label>mini horns, cosmetic</label>
+		<exclusionTags>
+			<li>Headbone</li>
+		</exclusionTags>
+		<description>Carriers of this gene grow two small horns protruding from the forehead.</description>
+		<iconPath>UI/Icons/Genes/Gene_HeadboneMinihorns</iconPath>
+		 <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns</texPath>
+        <color>(255, 255, 255)</color>
+        <parentTagDef>Head</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>80</layer>
+          </defaultData>
+          <dataNorth>
+            <layer>10</layer>
+          </dataNorth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_InsectorCosmeticGene">
+		<defName>VRE_Headbone_CenterHorn_Cosmetic</defName>
+		<label>center horn, cosmetic</label>
+		<exclusionTags>
+			<li>Headbone</li>
+		</exclusionTags>
+		<description>Carriers of this gene grow a single horn protruding from the center of the forehead.</description>
+		<iconPath>UI/Icons/Genes/Gene_HeadboneCenterhorn</iconPath>
+		  <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/CenterHorn/CenterHorn</texPath>
+        <color>(255, 255, 255)</color>
+        <parentTagDef>Head</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>80</layer>
+          </defaultData>
+          <dataNorth>
+            <layer>10</layer>
+          </dataNorth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+</Defs>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThoughtDef>
+    <defName>VRE_Serotonin</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>VRE_Serotonin</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      
+      <li>
+        <label>serotonin-buzz</label>
+        <description>I am incredibly happy and it seems that nothing will be able to bring me down.</description>
+        <baseMoodEffect>30</baseMoodEffect>
+      </li>
+      
+    </stages>
+  </ThoughtDef>
+  
+  <ThoughtDef>
+    <defName>VRE_LowOctopamine</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>VRE_LowOctopamine</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      
+      <li>
+        <label>octopamine-down</label>
+        <description>I just feel down, I think my octopamine may be low, but what do I know?</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+      
+    </stages>
+  </ThoughtDef>
+  
+  <ThoughtDef>
+    <defName>VRE_Heatstress</defName>
+    <workerClass>VanillaRacesExpandedInsector.ThoughtWorker_HeatStress</workerClass>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>afraid of fire</label>
+        <description>The flames make me so nervous. Such searing heat - I feel like it will leap at me at any moment!</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

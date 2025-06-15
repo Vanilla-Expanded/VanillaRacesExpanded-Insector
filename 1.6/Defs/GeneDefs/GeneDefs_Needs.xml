@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<GeneDef>
+		<defName>VRE_InsectJellyDependency</defName>
+		<label>insect jelly dependency</label>
+		<description>Carriers of this gene need to ingest insect jelly on a regular basis to survive. After 5 days without insect jelly, carriers will suffer from insect jelly deficiency. After 30 days, they will fall into a coma. After 60 days, they will die.</description>
+		<iconPath>UI/Icons/Genes/Gene_InsectJellyDependency</iconPath>
+		<displayCategory>Drugs</displayCategory>
+		<displayOrderInCategory>5000</displayOrderInCategory>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>3</biostatMet>
+		<foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+		<geneClass>VanillaRacesExpandedInsector.Gene_Resource_InsectJelly</geneClass>
+		<resourceGizmoType>VanillaRacesExpandedInsector.GeneGizmo_Resource_InsectJelly</resourceGizmoType>
+		<resourceLabel>insect jelly</resourceLabel>
+		<customEffectDescriptions>
+			<li>Gives immunity to food poisoning chance from directly consuming insect jelly.</li>
+		</customEffectDescriptions>
+		<resourceGizmoThresholds>
+			<li>0.2</li>
+			<li>0.4</li>
+			<li>0.6</li>
+		</resourceGizmoThresholds>
+		<showGizmoOnWorldView>true</showGizmoOnWorldView>
+		<resourceDescription>A need by {PAWN_nameDef} to consume insect jelly</resourceDescription>
+		<resourceLossPerDay>0.2</resourceLossPerDay>
+		<minAgeActive>3</minAgeActive>
+	</GeneDef>
+</Defs>

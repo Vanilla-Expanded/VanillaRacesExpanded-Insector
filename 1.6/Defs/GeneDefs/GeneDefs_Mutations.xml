@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<GeneCategoryDef>
+		<defName>VRE_MutationGene</defName>
+		<label>Insector degrades</label>
+		<displayPriorityInXenotype>5011.69</displayPriorityInXenotype>
+	</GeneCategoryDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef Name="VRE_MutationGene" Abstract="True">
+		<displayCategory>VRE_MutationGene</displayCategory>
+		<mutation>1</mutation>
+		<selectionWeight>0</selectionWeight>
+		<biostatCpx>0</biostatCpx>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_OcelliEyes</defName>
+		<label>ocelli eyes</label>
+		<description>Carriers of this gene have an optical arrangement composed of a single lens and without an elaborate retina, making them almost blind.</description>
+		<iconPath>UI/Icons/Genes/Gene_OcelliEye</iconPath>
+		<displayOrderInCategory>1</displayOrderInCategory>
+		<capMods>
+			<li>
+				<capacity>Sight</capacity>
+				<setMax>0.05</setMax>
+			</li>
+		</capMods>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<parentTagDef>Head</parentTagDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/OcelliEyes</texPath>
+				<visibleFacing>
+					<li>East</li>
+					<li>South</li>
+					<li>West</li>
+				</visibleFacing>
+				<narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset>
+				<baseLayer>55</baseLayer>
+			</li>
+		</renderNodeProperties>
+		<exclusionTags>
+			<li>InsectorEye</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>blind</symbol>
+				</li>
+				<li>
+					<symbol>ocelli</symbol>
+				</li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li>
+					<symbol>blind</symbol>
+				</li>
+			</suffixSymbols>
+			<wholeNameSymbols>
+				<li>
+					<symbol>blind</symbol>
+				</li>
+			</wholeNameSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_VocalChitters</defName>
+		<label>vocal chitters</label>
+		<description>Carriers of this gene have their vocal cords changed into little openings in the bones, resulting in them being unable to speak, unless someone understands the loud whistling that they can now produce.</description>
+		<iconPath>UI/Icons/Genes/Gene_VocalChitters</iconPath>
+		<displayOrderInCategory>2</displayOrderInCategory>
+		<capMods>
+			<li>
+				<capacity>Talking</capacity>
+				<setMax>0</setMax>
+			</li>
+		</capMods>
+		<exclusionTags>
+			<li>InsectorVocal</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>quiet</symbol>
+				</li>
+				<li>
+					<symbol>mute</symbol>
+				</li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li>
+					<symbol>mute</symbol>
+				</li>
+			</suffixSymbols>
+			<wholeNameSymbols>
+				<li>
+					<symbol>chitter</symbol>
+				</li>
+			</wholeNameSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_Immunodeficiency</defName>
+		<label>immunodeficiency</label>
+		<labelShortAdj>weak</labelShortAdj>
+		<description>Carriers of this gene regenerate their tissue half as fast as normal and are much more likely to die from infection due to low immunity.</description>
+		<iconPath>UI/Icons/Genes/Gene_Immunodeficiency</iconPath>
+		<displayOrderInCategory>3</displayOrderInCategory>
+		<statFactors>
+			<InjuryHealingFactor>0.5</InjuryHealingFactor>
+			<ImmunityGainSpeed>0.9</ImmunityGainSpeed>
+		</statFactors>
+		<exclusionTags>
+			<li>InsectorImmunity</li>
+			<li>Immunity</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>brittle</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_InflexibleJoints</defName>
+		<label>inflexible joints</label>
+		<description>Carriers of this gene have hardened, less flexible joints, making it much harder to move and even harder to navigate difficult terrain.</description>
+		<iconPath>UI/Icons/Genes/Gene_InflexibleJoints</iconPath>
+		<displayOrderInCategory>4</displayOrderInCategory>
+		<capMods>
+			<li>
+				<capacity>Moving</capacity>
+				<offset>-0.25</offset>
+			</li>
+		</capMods>
+		<exclusionTags>
+			<li>InsectorMovement</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>slow</symbol>
+				</li>
+				<li>
+					<symbol>slug</symbol>
+				</li>
+				<li>
+					<symbol>letho</symbol>
+				</li>
+				<li>
+					<symbol>inflexi</symbol>
+				</li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li>
+					<symbol>plodder</symbol>
+				</li>
+				<li>
+					<symbol>slugger</symbol>
+				</li>
+				<li>
+					<symbol>slimer</symbol>
+				</li>
+			</suffixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_InefficientMidgut</defName>
+		<label>inefficient midgut</label>
+		<description>Carriers of this gene have a very inefficient acid in their midgut, making it harder to absorb nutrients. They will become hungry significantly faster, but they will be able to consume more.</description>
+		<iconPath>UI/Icons/Genes/Gene_InefficientMidgut</iconPath>
+		<displayOrderInCategory>5</displayOrderInCategory>
+		<statOffsets>
+			<VEF_FoodCapacityMultiplier>1</VEF_FoodCapacityMultiplier>
+		</statOffsets>
+		<exclusionTags>
+			<li>InsectorStomach</li>
+		</exclusionTags>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+				<hediffToWholeBody>VRE_InefficientMidgut</hediffToWholeBody>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_PorousSkin</defName>
+		<label>porous skin</label>
+		<description>Carriers of this gene have hollow pores in their skin, making them look extremely unappealing.</description>
+		<iconPath>UI/Icons/Genes/Gene_PorousSkin</iconPath>
+		<displayOrderInCategory>6</displayOrderInCategory>
+		<statOffsets>
+			<PawnBeauty>-2</PawnBeauty>
+		</statOffsets>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_LowGreyMatter</defName>
+		<label>low grey matter</label>
+		<description>Carriers of this gene are unable to process new information and are incapable of evaluating their decisions and learning from them. They are incredibly slow at learning new skills and knowledge, and have greatly lowered psychic sensitivity.</description>
+		<iconPath>UI/Icons/Genes/Gene_LowGreyMatter</iconPath>
+		<displayOrderInCategory>7</displayOrderInCategory>
+		<statFactors>
+			<GlobalLearningFactor>0.25</GlobalLearningFactor>
+		</statFactors>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>thag</symbol>
+				</li>
+				<li>
+					<symbol>grunt</symbol>
+				</li>
+				<li>
+					<symbol>stupid</symbol>
+				</li>
+				<li>
+					<symbol>dull</symbol>
+				</li>
+				<li>
+					<symbol>dumb</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<statOffsets>
+			<PsychicSensitivity>-0.5</PsychicSensitivity>
+		</statOffsets>
+		<exclusionTags>
+			<li>InsectorBrain</li>
+		</exclusionTags>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_VestigialTubules</defName>
+		<label>vestigial tubules</label>
+		<description>Carriers of this gene lack any capability to filter out toxins as their tubules have become functionless. They are much more likely to die due to any sort of toxicity in their environment.</description>
+		<iconPath>UI/Icons/Genes/Gene_VestigialTubules</iconPath>
+		<displayOrderInCategory>8</displayOrderInCategory>
+		<statOffsets>
+			<ToxicResistance>-0.5</ToxicResistance>
+			<ToxicEnvironmentResistance>-0.5</ToxicEnvironmentResistance>
+		</statOffsets>
+		<exclusionTags>
+			<li>InsectorToxic</li>
+		</exclusionTags>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_HypothermicHibernation</defName>
+		<label>hypothermic hibernation</label>
+		<description>Carriers of this gene enter a hibernation if their temperatures drop below a certain point for too long. They will rapidly lose their body functions and fall into a deep sleep, which prevents any sort of frostbite damages but also makes them unable to do anything.</description>
+		<iconPath>UI/Icons/Genes/Gene_HypothermicHibernation</iconPath>
+		<displayOrderInCategory>9</displayOrderInCategory>
+		<makeImmuneTo>
+			<li>Hypothermia</li>
+		</makeImmuneTo>
+		<statOffsets>
+			<ComfyTemperatureMin>5</ComfyTemperatureMin>
+		</statOffsets>
+		
+		<hediffGiversCannotGive>
+			<li>Hypothermia</li>
+		</hediffGiversCannotGive>
+		<exclusionTags>
+			<li>InsectorHypothermia</li>
+			<li>MinTemperature</li>
+		</exclusionTags>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_RapidLifeCycle</defName>
+		<label>rapid life cycle</label>
+		<description>Carriers of this gene have a short life cycle and will suffer age related illnesses sooner than others. The older they get, the more rapidly they will age.</description>
+		<iconPath>UI/Icons/Genes/Gene_RapidLifeCycle</iconPath>
+		<displayOrderInCategory>10</displayOrderInCategory>
+		<statFactors>
+			<LifespanFactor>0.325</LifespanFactor>
+		</statFactors>
+		<biologicalAgeTickFactorFromAgeCurve>
+			<points>
+				<li>(13, 2)</li>
+				<li>(18, 4)</li>
+			</points>
+		</biologicalAgeTickFactorFromAgeCurve>
+		<exclusionTags>
+			<li>InsectorLifespan</li>
+		</exclusionTags>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_WeakenedChitin</defName>
+		<label>weakened chitin</label>
+		<description>Carriers of this gene have their exoskeleton consisting of thin, porous and brittle chitin, and are prone to damage. The light weight of their carapace, however, allows for a slightly faster movement speed.</description>
+		<iconPath>UI/Icons/Genes/Gene_WeakenedChitin</iconPath>
+		<displayOrderInCategory>11</displayOrderInCategory>
+		<capMods>
+			<li>
+				<capacity>Moving</capacity>
+				<offset>0.15</offset>
+			</li>
+		</capMods>
+		<statFactors>
+			<IncomingDamageFactor>1.5</IncomingDamageFactor>
+		</statFactors>
+		<exclusionTags>
+			<li>InsectorArmor</li>
+		</exclusionTags>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_Heatstress</defName>
+		<label>heatstress</label>
+		<description>Carriers of this gene experience heat stress when temperatures exceed their optimal range for physiological processes. This can lead to cellular damage, including denaturation of proteins, burn damage and a severe fear of fire. They will lose consciousness when exposed to extreme heat even for a short duration.</description>
+		<iconPath>UI/Icons/Genes/Gene_Heatstress</iconPath>
+		<displayOrderInCategory>12</displayOrderInCategory>
+		<damageFactors>
+			<Flame>4</Flame>
+		</damageFactors>
+		<mentalBreakMtbDays>0.1</mentalBreakMtbDays>
+		<mentalBreakDef>FireTerror</mentalBreakDef>
+		<suppressedTraits>
+			<li>
+				<def>Pyromaniac</def>
+			</li>
+		</suppressedTraits>
+		<makeImmuneTo>
+			<li>Heatstroke</li>
+		</makeImmuneTo>
+		<hediffGiversCannotGive>
+			<li>Heatstroke</li>
+		</hediffGiversCannotGive>
+		<exclusionTags>
+			<li>InsectorHeatstroke</li>
+		</exclusionTags>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_Dormant</defName>
+		<label>dormant</label>
+		<description>Carriers of this gene have reduced activity and aggression and spend most of their time in a dormant state. Metabolism of such an individual is also reduced, allowing them to consume less nutrition to keep themselves alive.</description>
+		<iconPath>UI/Icons/Genes/Gene_Dormant</iconPath>
+		<displayOrderInCategory>13</displayOrderInCategory>
+		<statFactors>
+			<RestFallRateFactor>1.8</RestFallRateFactor>
+		</statFactors>
+		<exclusionTags>
+			<li>InsectorAggression</li>
+		</exclusionTags>
+		<socialFightChanceFactor>0</socialFightChanceFactor>
+		<aggroMentalBreakSelectionChanceFactor>0</aggroMentalBreakSelectionChanceFactor>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+				<hediffToWholeBody>VRE_Dormant</hediffToWholeBody>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_LowOctopamine</defName>
+		<label>low octopamine</label>
+		<description>Carriers of this gene produce very little octopamine, causing decreased arousal and reducing their activity level. The lack of this neurotransmitter will also make them much more depressed.</description>
+		<iconPath>UI/Icons/Genes/Gene_LowOctopamine</iconPath>
+		<displayOrderInCategory>14</displayOrderInCategory>
+		<lovinMTBFactor>2</lovinMTBFactor>
+		<statFactors>
+			<Fertility>0.5</Fertility>
+		</statFactors>
+		<exclusionTags>
+			<li>InsectorAggression</li>
+			<li>Fertility</li>
+		</exclusionTags>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+				<hediffsToBodyParts>
+					<li>
+						<hediff>VRE_LowOctopamine</hediff>
+						<bodyparts>
+							<li>Brain</li>
+						</bodyparts>
+					</li>
+				</hediffsToBodyParts>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_PollutionDependency</defName>
+		<label>pollution dependency</label>
+		<description>Carriers of this gene need to be affected by pollution on a regular basis to survive. After 5 days without pollution, carriers will suffer from pollution deficiency. After 30 days, they will fall into a coma. After 60 days, they will die.</description>
+		<iconPath>UI/Icons/Genes/Gene_PollutionDependency</iconPath>
+		<displayOrderInCategory>15</displayOrderInCategory>
+		<causesNeed>VRE_Pollution</causesNeed>
+		
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_ProteinDenaturation</defName>
+		<label>protein denaturation</label>
+		<description>Carriers of this gene have disrupted cellular processes caused by denatured proteins that react dangerously to UV radiation. They are intensely sensitive to sunlight and have very dry chitin that’s susceptible to fire.</description>
+		<iconPath>UI/Icons/Genes/Gene_ProteinDenaturation</iconPath>
+		<displayOrderInCategory>16</displayOrderInCategory>
+		<conditionalStatAffecters>
+			<li Class="VEF.Genes.ConditionalStatAffecter_AnyLightSensitivity">
+				<statFactors>
+					<MoveSpeed>0.8</MoveSpeed>
+				</statFactors>
+			</li>
+		</conditionalStatAffecters>
+		<damageFactors>
+			<Flame>4</Flame>
+		</damageFactors>
+		<exclusionTags>
+			<li>UVSensitivity</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>dry</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_Stenothermic</defName>
+		<label>stenothermic</label>
+		<description>Carriers of this gene can only tolerate a very narrow range of temperatures.</description>
+		<iconPath>UI/Icons/Genes/Gene_Stenothermic</iconPath>
+		<displayOrderInCategory>17</displayOrderInCategory>
+		<statOffsets>
+			<ComfyTemperatureMin>4</ComfyTemperatureMin>
+			<ComfyTemperatureMax>-4</ComfyTemperatureMax>
+		</statOffsets>
+		<exclusionTags>
+			<li>MinTemperature</li>
+			<li>MaxTemperature</li>
+		</exclusionTags>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_MutationGene">
+		<defName>VRE_AcidBlood</defName>
+		<label>acid blood</label>
+		<description>Carriers of this gene have a highly concentrated toxin in their blood. When bleeding, they emit large amounts of tox gas, and upon death, their gear will be destroyed by acid.</description>
+		<iconPath>UI/Icons/Genes/Gene_AcidBlood</iconPath>
+		<displayOrderInCategory>18</displayOrderInCategory>
+		<exclusionTags>
+			<li>AG_BloodType</li>
+			<li>BloodType</li>
+			<li>Blood</li>
+		</exclusionTags>
+		
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+				<hediffToWholeBody>VRE_AcidBlood</hediffToWholeBody>
+				
+				<customBloodThingDef>VRE_Filth_ToxBlood</customBloodThingDef>
+				<customBloodIcon>UI/Icons/Medical/VRE_AcidicBloodIcon</customBloodIcon>
+				<customBloodEffect>VRE_Damage_HitTox</customBloodEffect>
+				<customWoundsFromFleshtype>VRE_ToxWoundsFlesh</customWoundsFromFleshtype>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+</Defs>

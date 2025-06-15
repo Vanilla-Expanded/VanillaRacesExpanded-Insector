@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<AbilityDef ParentName="AbilityTouchBase">
+		<defName>VRE_RoyalJellyInjector</defName>
+		<label>inject royal jelly</label>
+		<description>Inject royal jelly into a willing subject using a specialized injector organ. If the gene carrier's royal jelly is currently regenerating, the injection will not be possible. Injection causes a tiny wound, but when injected, the royal jelly grants the target an immunity boost and a mood boost.</description>
+		<iconPath>UI/Icons/Genes/Gene_RoyalJellyInjector</iconPath>
+		<warmupStartSound>ReimplantXenogerm_Cast</warmupStartSound>
+		<warmupEffecter>Implant_Xenogerm</warmupEffecter>
+		<cooldownTicksRange>12000</cooldownTicksRange>
+		<hostile>false</hostile>
+		<verbProperties>
+			<verbClass>Verb_CastAbilityTouch</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<range>-1</range>
+			<warmupTime>1</warmupTime>
+			<targetParams>
+				<canTargetAnimals>false</canTargetAnimals>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetMechs>false</canTargetMechs>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="VanillaRacesExpandedInsector.CompProperties_RoyalJellyInjector"/>
+		</comps>
+	</AbilityDef>
+	
+	<AbilityDef ParentName="VFEI2_InsectGlide_Base">
+		<defName>VFEI2_InsectGlide_Far_Colonists</defName>
+		<label>locust farglide</label>
+		<description>Fly to a distant location that you can or cannot see using a set of gigantic locust wings. Allows the gene carrier to jump over the walls, provided the area they are jumping to is not roofed.</description>
+		<iconPath>UI/Abilities/Ability_LocustFarglide</iconPath>
+		<cooldownTicksRange>600</cooldownTicksRange>
+		<verbProperties>
+			<requireLineOfSight>false</requireLineOfSight>
+			<label>locust farglide</label>
+			<warmupTime>0.5</warmupTime>
+			<range>18.9</range>
+			<minRange>5.9</minRange>
+		</verbProperties>
+	</AbilityDef>
+	
+	<AbilityDef>
+		<defName>VFEI2_BreacherCharge_Colonists</defName>
+		<label>breacher charge</label>
+		<aiCanUse>false</aiCanUse>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+		<casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+		<hostile>true</hostile>
+		<description>Insector charges towards the target, dealing significant damage to anything on the path. Will destroy any sort of defenses with ease.</description>
+		<iconPath>UI/Abilities/VFE_BreacherCharge</iconPath>
+		<cooldownTicksRange>28800</cooldownTicksRange>
+		<verbProperties>
+			<verbClass>VFEInsectoids.Verb_CastAbilityWideTunnels</verbClass>
+			<violent>true</violent>
+			<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+			<requireLineOfSight>false</requireLineOfSight>
+			<soundCast>VFEI2_Insect_Jump</soundCast>
+			<soundLanding>Longjump_Land</soundLanding>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+			</targetParams>
+			<label>breacher charge</label>
+			<warmupTime>0.1</warmupTime>
+			<range>12.9</range>
+			<minRange>0.9</minRange>
+		</verbProperties>
+		<jobDef>CastJump</jobDef>
+	</AbilityDef>
+</Defs>

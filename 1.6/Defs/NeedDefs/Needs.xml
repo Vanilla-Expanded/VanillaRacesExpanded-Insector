@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<NeedDef>
+		<defName>VRE_Pollution</defName>
+		<needClass>VanillaRacesExpandedInsector.Need_Pollution</needClass>
+		<label>pollution</label>
+		<description>Carriers of this gene need to be affected by pollution on a regular basis to survive. After 5 days without pollution, carriers will suffer from pollution deficiency. After 30 days, they will fall into a coma. After 60 days, they will die.</description>
+		<minIntelligence>Humanlike</minIntelligence>
+		<colonistAndPrisonersOnly>true</colonistAndPrisonersOnly>
+		<fallPerDay>0.033</fallPerDay>
+		<listPriority>80</listPriority>
+	</NeedDef>
+</Defs>

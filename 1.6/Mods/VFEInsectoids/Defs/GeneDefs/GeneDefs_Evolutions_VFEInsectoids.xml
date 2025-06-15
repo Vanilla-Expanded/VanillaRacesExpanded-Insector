@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_SwarmSynapse</defName>
+		<label>swarm synapse</label>
+		<description>Carriers of this gene form a synaptic swarm, allowing their minds to link and accelerate learning when together. Like a hive of insects, their collective intelligence and speed of knowledge absorption increase with each additional member.</description>
+		<unlockable>true</unlockable>
+		<selectionWeight>0</selectionWeight>
+		<iconPath>UI/Icons/Genes/Gene_SwarmSynapse</iconPath>
+		<displayOrderInCategory>1000</displayOrderInCategory>
+		<customEffectDescriptions>
+			<li>Provides a stacking +5% Global Work Speed boost for each pawn in the colony with Swarm Synapse gene.</li>
+			<li>The amount of colonists having the gene refreshes every 4 ingame hours.</li>
+		</customEffectDescriptions>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_RoyalJellyInjector</defName>
+		<label>royal jelly injector</label>
+		<description>Carriers of this gene develop a specialized injector mouth, enabling them to administer royal jelly to others. This injection provides the recipient with an immunity boost and improved mood, though it leaves a tiny wound and can only be performed every six hours.</description>
+		<selectionWeight>0</selectionWeight>
+		<unlockable>true</unlockable>
+		<iconPath>UI/Icons/Genes/Gene_RoyalJellyInjector</iconPath>
+		<displayOrderInCategory>1001</displayOrderInCategory>
+		<abilities>
+			<li>VRE_RoyalJellyInjector</li>
+		</abilities>
+		<exclusionTags>
+			<li>InsectorMouth</li>
+		</exclusionTags>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<parentTagDef>Head</parentTagDef>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/InsectInjector</texPath>
+				<colorType>Skin</colorType>
+				<useRottenColor>true</useRottenColor>
+				<useSkinShader>true</useSkinShader>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<visibleFacing>
+					<li>East</li>
+					<li>South</li>
+					<li>West</li>
+				</visibleFacing>
+				<drawData>
+					<defaultData>
+						<layer>69</layer>
+					</defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_PyroResistantChitin</defName>
+		<label>pyro-resistant chitin</label>
+		<description>Carriers of this gene develop pyro-resistant chitin, drastically reducing their flammability and flame damage taken. They remain composed in fiery situations, never succumbing to panic when on fire.</description>
+		<unlockable>true</unlockable>
+		<selectionWeight>0</selectionWeight>
+		<iconPath>UI/Icons/Genes/Gene_PyroresistantChitin</iconPath>
+		<displayOrderInCategory>1002</displayOrderInCategory>
+		<damageFactors>
+			<Flame>0.25</Flame>
+		</damageFactors>
+		<statFactors>
+			<Flammability>0.1</Flammability>
+		</statFactors>
+		<customEffectDescriptions>
+			<li>Won't run in panic when set on fire.</li>
+		</customEffectDescriptions>
+		<exclusionTags>
+			<li>Tail</li>
+			<li>InsectorFire</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>fuel</symbol>
+				</li>
+				<li>
+					<symbol>chem</symbol>
+				</li>
+				<li>
+					<symbol>petrol</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_FlameGlands</defName>
+		<label>flame glands</label>
+		<description>Carriers of this gene possess flame glands, granting them the ability to spew combustible fluid from their mouths. This fluid ignites on contact, setting targets or surfaces ablaze, thanks to a special gland and sac that produce and store the fiery substance.</description>
+		<unlockable>true</unlockable>
+		<iconPath>UI/Icons/Genes/Gene_FlameGlands</iconPath>
+		<selectionWeight>0</selectionWeight>
+		<displayOrderInCategory>1003</displayOrderInCategory>
+		<abilities>
+			<li>VFEI2_FlameSpew</li>
+		</abilities>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<parentTagDef>Head</parentTagDef>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/InsectFlameGlands</texPath>
+				<colorType>Skin</colorType>
+				<useRottenColor>true</useRottenColor>
+				<useSkinShader>true</useSkinShader>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<visibleFacing>
+					<li>East</li>
+					<li>South</li>
+					<li>West</li>
+				</visibleFacing>
+				<drawData>
+					<defaultData>
+						<layer>69</layer>
+					</defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		<exclusionTags>
+			<li>InsectorGlands</li>
+			<li>InsectorMouth</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>fire</symbol>
+				</li>
+				<li>
+					<symbol>flame</symbol>
+				</li>
+				<li>
+					<symbol>burn</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_LocustWings</defName>
+		<label>locust wings</label>
+		<description>Carriers of this gene develop locust wings, granting them the special ability to perform a locust leap. This allows them to fly short distances, emulating the powerful and agile leaps of a locust.</description>
+		<unlockable>true</unlockable>
+		<iconPath>UI/Icons/Genes/Gene_LocustWings</iconPath>
+		<displayOrderInCategory>1004</displayOrderInCategory>
+		<selectionWeight>0</selectionWeight>
+		<abilities>
+			<li>VFEI2_InsectGlide_Far_Colonists</li>
+		</abilities>
+		<exclusionTags>
+			<li>InsectorMovement</li>
+		</exclusionTags>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/BodyAttachments/Locustwings</texPath>
+				<drawSize>1</drawSize>
+				<parentTagDef>Body</parentTagDef>
+				<colorType>Skin</colorType>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<useRottenColor>true</useRottenColor>
+				<useSkinShader>true</useSkinShader>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<drawData>
+					<defaultData>
+						<layer>-2</layer>
+					</defaultData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<dataNorth>
+						<layer>90</layer>
+					</dataNorth>
+					<dataEast>
+						<offset>(-0.2, 0, 0)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.2, 0, 0)</offset>
+					</dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>fly</symbol>
+				</li>
+				<li>
+					<symbol>jump</symbol>
+				</li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li>
+					<symbol>runner</symbol>
+				</li>
+				<li>
+					<symbol>jumper</symbol>
+				</li>
+				<li>
+					<symbol>flier</symbol>
+				</li>
+				<li>
+					<symbol>fly</symbol>
+				</li>
+			</suffixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_InsectRostrum</defName>
+		<label>insect rostrum</label>
+		<labelShortAdj>mandibled</labelShortAdj>
+		<description>Carriers of this gene possess an insect rostrum, a large, sharp beak-like structure akin to that of bees. This adaptation quadruples their eating speed and grants them a powerful melee bite attack, dealing significant stab damage with a quick cooldown.</description>
+		<unlockable>true</unlockable>
+		<iconPath>UI/Icons/Genes/Gene_InsectRostrum</iconPath>
+		<displayOrderInCategory>1005</displayOrderInCategory>
+		<statFactors>
+			<EatingSpeed>4</EatingSpeed>
+		</statFactors>
+		<exclusionTags>
+			<li>InsectorMouth</li>
+		</exclusionTags>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<parentTagDef>Head</parentTagDef>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/InsectRostrum</texPath>
+				<colorType>Skin</colorType>
+				<useRottenColor>true</useRottenColor>
+				<useSkinShader>true</useSkinShader>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<visibleFacing>
+					<li>East</li>
+					<li>South</li>
+					<li>West</li>
+				</visibleFacing>
+				<drawData>
+					<defaultData>
+						<layer>69</layer>
+					</defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		<selectionWeight>0</selectionWeight>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>insect</symbol>
+				</li>
+				<li>
+					<symbol>mandible</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+				<hediffsToBodyParts>
+					<li>
+						<hediff>VRE_InsectRostrum</hediff>
+						<bodyparts>
+							<li>Jaw</li>
+						</bodyparts>
+					</li>
+				</hediffsToBodyParts>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_AcidGlands</defName>
+		<label>acid glands</label>
+		<description>Carriers of this gene develop acid glands, enabling them to spew acid from their neck, damaging buildings, people and items in a targeted area.</description>
+		<unlockable>true</unlockable>
+		<iconPath>UI/Icons/Genes/Gene_AcidGlands</iconPath>
+		<displayOrderInCategory>1006</displayOrderInCategory>
+		<abilities>
+			<li>VFEI2_InsectAcidSpew</li>
+		</abilities>
+		<selectionWeight>0</selectionWeight>
+		<exclusionTags>
+			<li>InsectorGlands</li>
+			<li>InsectorMouth</li>
+		</exclusionTags>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>acid</symbol>
+				</li>
+				<li>
+					<symbol>veno</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_InfraredSensors</defName>
+		<label>infrared sensors</label>
+		<description>Carriers of this gene possess infrared sensors, allowing them to see clearly in the dark. They suffer no penalties to work speed or movement in darkness, and gain improved accuracy over long range.</description>
+		<selectionWeight>0</selectionWeight>
+		<unlockable>true</unlockable>
+		<iconPath>UI/Icons/Genes/Gene_InfraredSensors</iconPath>
+		<displayOrderInCategory>1007</displayOrderInCategory>
+		<statFactors>
+			<ShootingAccuracyFactor_Medium>1.1</ShootingAccuracyFactor_Medium>
+			<ShootingAccuracyFactor_Long>1.05</ShootingAccuracyFactor_Long>
+		</statFactors>
+		<ignoreDarkness>true</ignoreDarkness>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_MineralRichInsectskin</defName>
+		<label>mineral-rich insectskin</label>
+		<description>Carriers of this gene develop mineral-rich insectskin, forming thick, protective plating on their skin. This natural armor provides significant protection until enough damage is sustained to break it.</description>
+		<unlockable>true</unlockable>
+		<iconPath>UI/Icons/Genes/Gene_MineralrichInsectskin</iconPath>
+		<displayOrderInCategory>1008</displayOrderInCategory>
+		<exclusionTags>
+			<li>AG_Bodies</li>
+			<li>Bodies</li>
+			<li>Body</li>
+			<li>Fur</li>
+			<li>AG_Armour</li>
+			<li>Armour</li>
+			<li>Armor</li>
+		</exclusionTags>
+		
+		<fur>VRE_MineralRichInsectskin</fur>
+		<skinIsHairColor>false</skinIsHairColor>
+		<tattoosVisible>false</tattoosVisible>
+		
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_Fur</nodeClass>
+				<workerClass>PawnRenderNodeWorker_Fur</workerClass>
+				<baseLayer>5</baseLayer>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Skin</colorType>
+				<parentTagDef>Body</parentTagDef>
+			</li>
+		</renderNodeProperties>
+		
+		<selectionWeight>0</selectionWeight>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+				<hediffToWholeBody>VRE_MineralRichInsectskin</hediffToWholeBody>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_EvolutionGene">
+		<defName>VRE_ChargerClaws</defName>
+		<label>charger claws</label>
+		<unlockable>true</unlockable>
+		<description>Carriers of this gene develop large charger claws, granting them the ability to perform a charge towards a target, dealing significant damage to anything in their path and easily destroying defenses, with the ability to perform this action periodically and over a considerable distance.</description>
+		<selectionWeight>0</selectionWeight>
+		<iconPath>UI/Icons/Genes/Gene_ChargerClaws</iconPath>
+		<statOffsets>
+			<WorkSpeedGlobal>-0.4</WorkSpeedGlobal>
+		</statOffsets>
+		<displayOrderInCategory>1009</displayOrderInCategory>
+		<exclusionTags>
+			<li>Hands</li>
+		</exclusionTags>
+		<abilities>
+			<li>VFEI2_BreacherCharge_Colonists</li>
+		</abilities>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/VRE_EvolutionBG</backgroundPathXenogenes>
+			</li>
+		</modExtensions>
+	</VanillaRacesExpandedInsector.GenelineGeneDef>
+</Defs>
