@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Verse;
-using Verse.Noise;
+using RimWorld.Planet;
+
 namespace VanillaRacesExpandedInsector
 {
-    public class GameComponent_UnlockedGenes : GameComponent
+    public class WorldComponent_UnlockedGenes : WorldComponent
     {
-        public static GameComponent_UnlockedGenes Instance;
+        public static WorldComponent_UnlockedGenes Instance;
 
         public Dictionary<GeneDef, bool> sorne_pherocore_genes = new Dictionary<GeneDef, bool>();
         public bool allSorneGenesUnlocked = false;
@@ -40,14 +41,14 @@ namespace VanillaRacesExpandedInsector
         List<GeneDef> blackGenesList;
         List<bool> blackGenesList2;
 
-        public GameComponent_UnlockedGenes(Game game)
+        public WorldComponent_UnlockedGenes(World world) : base(world)
         {
             Instance = this;
         }
 
-        public override void FinalizeInit()
+        public override void FinalizeInit(bool fromLoad)
         {
-            base.FinalizeInit();
+            base.FinalizeInit(fromLoad);
 
             if (sorne_pherocore_genes.NullOrEmpty() && InternalDefOf.VRE_SwarmSynapse != null)
             {

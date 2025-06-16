@@ -46,7 +46,7 @@ namespace VanillaRacesExpandedInsector
 
                 if(pherocore == InternalDefOf.VFEI2_PherocoreSorne)
                 {
-                    Dictionary<GeneDef, bool> sorneGenes = GameComponent_UnlockedGenes.Instance.sorne_pherocore_genes;
+                    Dictionary<GeneDef, bool> sorneGenes = WorldComponent_UnlockedGenes.Instance.sorne_pherocore_genes;
                     if(sorneGenes.Values.Any(x => x== false))
                     {
                         GeneDef gene = sorneGenes.Keys.Where(x => sorneGenes[x] == false).RandomElement();
@@ -57,7 +57,7 @@ namespace VanillaRacesExpandedInsector
                         Utils.cachedGeneDefsInOrder = null;
                         if (!sorneGenes.Values.Any(x => x == false))
                         {
-                            GameComponent_UnlockedGenes.Instance.allSorneGenesUnlocked = true;
+                            WorldComponent_UnlockedGenes.Instance.allSorneGenesUnlocked = true;
                         }
                     } else {
                         Messages.Message("VRE_NoUnlockableGenes".Translate(pherocore.LabelCap), pawn, MessageTypeDefOf.NegativeEvent, true);
@@ -66,7 +66,7 @@ namespace VanillaRacesExpandedInsector
                 else
                 if (pherocore == InternalDefOf.VFEI2_PherocoreNuchadus)
                 {
-                    Dictionary<GeneDef, bool> nuchadusGenes = GameComponent_UnlockedGenes.Instance.nuchadus_pherocore_genes;
+                    Dictionary<GeneDef, bool> nuchadusGenes = WorldComponent_UnlockedGenes.Instance.nuchadus_pherocore_genes;
                     if (nuchadusGenes.Values.Any(x => x == false))
                     {
                         GeneDef gene = nuchadusGenes.Keys.Where(x => nuchadusGenes[x] == false).RandomElement();
@@ -77,7 +77,7 @@ namespace VanillaRacesExpandedInsector
                         Utils.cachedGeneDefsInOrder = null;
                         if (!nuchadusGenes.Values.Any(x => x == false))
                         {
-                            GameComponent_UnlockedGenes.Instance.allNuchadusGenesUnlocked = true;
+                            WorldComponent_UnlockedGenes.Instance.allNuchadusGenesUnlocked = true;
                         }
                     }
                     else
@@ -88,7 +88,7 @@ namespace VanillaRacesExpandedInsector
                 else
                 if (pherocore == InternalDefOf.VFEI2_PherocoreChelis)
                 {
-                    Dictionary<GeneDef, bool> chelisGenes = GameComponent_UnlockedGenes.Instance.chelis_pherocore_genes;
+                    Dictionary<GeneDef, bool> chelisGenes = WorldComponent_UnlockedGenes.Instance.chelis_pherocore_genes;
                     if (chelisGenes.Values.Any(x => x == false))
                     {
                         GeneDef gene = chelisGenes.Keys.Where(x => chelisGenes[x] == false).RandomElement();
@@ -99,7 +99,7 @@ namespace VanillaRacesExpandedInsector
                         Utils.cachedGeneDefsInOrder = null;
                         if (!chelisGenes.Values.Any(x => x == false))
                         {
-                            GameComponent_UnlockedGenes.Instance.allChelisGenesUnlocked = true;
+                            WorldComponent_UnlockedGenes.Instance.allChelisGenesUnlocked = true;
                         }
                     }
                     else
@@ -110,7 +110,7 @@ namespace VanillaRacesExpandedInsector
                 else
                 if (pherocore == InternalDefOf.VFEI2_PherocoreKemian)
                 {
-                    Dictionary<GeneDef, bool> kemiaGenes = GameComponent_UnlockedGenes.Instance.kemia_pherocore_genes;
+                    Dictionary<GeneDef, bool> kemiaGenes = WorldComponent_UnlockedGenes.Instance.kemia_pherocore_genes;
                     if (kemiaGenes.Values.Any(x => x == false))
                     {
                         GeneDef gene = kemiaGenes.Keys.Where(x => kemiaGenes[x] == false).RandomElement();
@@ -121,7 +121,7 @@ namespace VanillaRacesExpandedInsector
                         Utils.cachedGeneDefsInOrder = null;
                         if (!kemiaGenes.Values.Any(x => x == false))
                         {
-                            GameComponent_UnlockedGenes.Instance.allKemiaGenesUnlocked = true;
+                            WorldComponent_UnlockedGenes.Instance.allKemiaGenesUnlocked = true;
                         }
                     }
                     else
@@ -132,7 +132,7 @@ namespace VanillaRacesExpandedInsector
                 else
                 if (pherocore == InternalDefOf.VFEI2_PherocoreXanides)
                 {
-                    Dictionary<GeneDef, bool> xanidesGenes = GameComponent_UnlockedGenes.Instance.xanides_pherocore_genes;
+                    Dictionary<GeneDef, bool> xanidesGenes = WorldComponent_UnlockedGenes.Instance.xanides_pherocore_genes;
                     if (xanidesGenes.Values.Any(x => x == false))
                     {
                         GeneDef gene = xanidesGenes.Keys.Where(x => xanidesGenes[x] == false).RandomElement();
@@ -143,7 +143,7 @@ namespace VanillaRacesExpandedInsector
                         Utils.cachedGeneDefsInOrder = null;
                         if (!xanidesGenes.Values.Any(x => x == false))
                         {
-                            GameComponent_UnlockedGenes.Instance.allXanidesGenesUnlocked = true;
+                            WorldComponent_UnlockedGenes.Instance.allXanidesGenesUnlocked = true;
                         }
                     }
                     else
@@ -154,7 +154,7 @@ namespace VanillaRacesExpandedInsector
                 else 
                 if(pherocore == DefDatabase<ThingDef>.GetNamedSilentFail("VFEI2_PherocoreBlack"))
                 {
-                    Dictionary<GeneDef, bool> blackHiveGenes = GameComponent_UnlockedGenes.Instance.black_pherocore_genes;
+                    Dictionary<GeneDef, bool> blackHiveGenes = WorldComponent_UnlockedGenes.Instance.black_pherocore_genes;
                     if (blackHiveGenes.Values.Any(x => x == false))
                     {
                         GeneDef gene = blackHiveGenes.Keys.Where(x => blackHiveGenes[x] == false).RandomElement();
@@ -165,7 +165,7 @@ namespace VanillaRacesExpandedInsector
                         Utils.cachedGeneDefsInOrder = null;
                         if (!blackHiveGenes.Values.Any(x => x == false))
                         {
-                            GameComponent_UnlockedGenes.Instance.allBlackGenesUnlocked = true;
+                            WorldComponent_UnlockedGenes.Instance.allBlackGenesUnlocked = true;
                         }
                     }
                     else

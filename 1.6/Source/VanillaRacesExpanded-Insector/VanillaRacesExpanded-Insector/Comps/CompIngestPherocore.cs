@@ -19,12 +19,12 @@ namespace VanillaRacesExpandedInsector
             if (selPawn != null && selPawn.genes?.HasActiveGene(InternalDefOf.VRE_GenelineEvolution)==true)
             {
 
-                if((this.parent.def == InternalDefOf.VFEI2_PherocoreSorne && !GameComponent_UnlockedGenes.Instance.allSorneGenesUnlocked)||
-                    (this.parent.def == InternalDefOf.VFEI2_PherocoreNuchadus && !GameComponent_UnlockedGenes.Instance.allNuchadusGenesUnlocked)||
-                    (this.parent.def == InternalDefOf.VFEI2_PherocoreChelis && !GameComponent_UnlockedGenes.Instance.allChelisGenesUnlocked) ||
-                    (this.parent.def == InternalDefOf.VFEI2_PherocoreKemian && !GameComponent_UnlockedGenes.Instance.allKemiaGenesUnlocked) ||
-                    (this.parent.def == InternalDefOf.VFEI2_PherocoreXanides && !GameComponent_UnlockedGenes.Instance.allXanidesGenesUnlocked) ||
-                    (this.parent.def == DefDatabase<ThingDef>.GetNamedSilentFail("VFEI2_PherocoreBlack") && !GameComponent_UnlockedGenes.Instance.allBlackGenesUnlocked)
+                if((this.parent.def == InternalDefOf.VFEI2_PherocoreSorne && !WorldComponent_UnlockedGenes.Instance.allSorneGenesUnlocked)||
+                    (this.parent.def == InternalDefOf.VFEI2_PherocoreNuchadus && !WorldComponent_UnlockedGenes.Instance.allNuchadusGenesUnlocked)||
+                    (this.parent.def == InternalDefOf.VFEI2_PherocoreChelis && !WorldComponent_UnlockedGenes.Instance.allChelisGenesUnlocked) ||
+                    (this.parent.def == InternalDefOf.VFEI2_PherocoreKemian && !WorldComponent_UnlockedGenes.Instance.allKemiaGenesUnlocked) ||
+                    (this.parent.def == InternalDefOf.VFEI2_PherocoreXanides && !WorldComponent_UnlockedGenes.Instance.allXanidesGenesUnlocked) ||
+                    (this.parent.def == DefDatabase<ThingDef>.GetNamedSilentFail("VFEI2_PherocoreBlack") && !WorldComponent_UnlockedGenes.Instance.allBlackGenesUnlocked)
                     )
                 {
                     yield return new FloatMenuOption("VRE_IngestPherocore".Translate(this.parent.LabelCap), () =>

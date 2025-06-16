@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using Verse;
-using Verse.Noise;
+using RimWorld.Planet;
+
 namespace VanillaRacesExpandedInsector
 {
-    public class GameComponent_SwarmSynapse : GameComponent
+    public class WorldComponent_SwarmSynapse : WorldComponent
     {
-        public static GameComponent_SwarmSynapse Instance;
+        public static WorldComponent_SwarmSynapse Instance;
       
-        public GameComponent_SwarmSynapse(Game game)
+        public WorldComponent_SwarmSynapse(World world) : base(world)
         {
+          
             Instance = this;
         }
 
@@ -28,7 +30,7 @@ namespace VanillaRacesExpandedInsector
         }
 
 
-        public override void GameComponentTick()
+        public override void WorldComponentTick()
         {
 
 
@@ -36,7 +38,7 @@ namespace VanillaRacesExpandedInsector
             if ((tickCounter > tickInterval))
             {
                 pawnsWithSwarmSynapse = 0;
-                List<Pawn> colonists = PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_FreeColonists;
+                List<Pawn> colonists = PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive_FreeColonists;
                 foreach (Pawn pawn in colonists)
                 {
                     if (pawn.genes?.HasActiveGene(InternalDefOf.VRE_SwarmSynapse) == true)
