@@ -3,7 +3,7 @@
 	<GeneDef>
 		<defName>VRE_InsectFlesh</defName>
 		<label>insect flesh</label>
-		<description>Carriers of this gene have insect tissue for flesh. Consuming insect meat by them is classed as cannibalism. When butchered, they will yield insect meat instead of human meat.</description>
+		<description>Carriers of this gene have insect tissue for flesh. Consuming insect meat by them is classed as cannibalism. When butchered, they will yield insect meat instead of human meat.\n\nIf VFE - Insectoids 2 is present, this gene will negate the movement penalty on Creep.</description>
 		<iconPath>UI/Icons/Genes/Gene_InsectFlesh</iconPath>
 		<biostatCpx>2</biostatCpx>
 		<biostatMet>0</biostatMet>
