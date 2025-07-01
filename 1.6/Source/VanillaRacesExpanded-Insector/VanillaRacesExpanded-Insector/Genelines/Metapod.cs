@@ -6,13 +6,15 @@ using Verse;
 namespace VanillaRacesExpandedInsector
 {
     [HotSwappable]
-    public class Metapod : Building, IThingHolder
+    public class Metapod : Building, IThingHolderTickable
     {
         public ThingOwner innerContainer;
         public Pawn Pawn => (Pawn)innerContainer.FirstOrDefault();
         protected Effecter progressBarEffecter;
         private Effecter wakeUpEffect;
         public CompRefuelable compRefuelable;
+
+        public bool ShouldTickContents => false;
 
         public Metapod()
         {
