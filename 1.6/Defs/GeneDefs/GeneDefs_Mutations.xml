@@ -452,7 +452,9 @@
 		<description>Carriers of this gene need to be affected by pollution on a regular basis to survive. After 5 days without pollution, carriers will suffer from pollution deficiency. After 30 days, they will fall into a coma. After 60 days, they will die.</description>
 		<iconPath>UI/Icons/Genes/Gene_PollutionDependency</iconPath>
 		<displayOrderInCategory>15</displayOrderInCategory>
-		<causesNeed>VRE_Pollution</causesNeed>
+		<enablesNeeds>
+			<li>VRE_Pollution</li>
+		</enablesNeeds>
 		
 		<modExtensions>
 			<li Class="VEF.Genes.GeneExtension">

@@ -51,7 +51,7 @@
 		<label>infested ship part</label>
 		<category>Item</category>
 		<drawerType>MapMeshAndRealTime</drawerType>
-		<thingClass>ActiveDropPod</thingClass>
+		<thingClass>ActiveTransporter</thingClass>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<soundOpen>DropPod_Open</soundOpen>

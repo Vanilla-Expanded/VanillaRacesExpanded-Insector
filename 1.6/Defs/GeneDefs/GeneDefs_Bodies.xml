@@ -45,6 +45,44 @@
 		<modExtensions>
 			<li Class="VEF.Genes.GeneExtension">
 				<useSkinColorForFur>true</useSkinColorForFur>
+				<moveSpeedFactorByTerrainTag>
+					<li>
+						<key>Insect</key>
+						<value>
+							<li>
+								<moveSpeedFactor>2</moveSpeedFactor>
+								<tag>VFEI2</tag>
+							</li>
+						</value>
+					</li>
+					<li>
+						<key>VFEI2_Creep</key>
+						<value>
+							<li>
+								<moveSpeedFactor>4.75</moveSpeedFactor>
+								<tag>VFEI2</tag>
+							</li>
+						</value>
+					</li>
+					<li>
+						<key>VFEI2_JellyFloor</key>
+						<value>
+							<li>
+								<moveSpeedFactor>5</moveSpeedFactor>
+								<tag>VFEI2</tag>
+							</li>
+						</value>
+					</li>
+					<li>
+						<key>VFEI2_RoyalJellyFloor</key>
+						<value>
+							<li>
+								<moveSpeedFactor>10</moveSpeedFactor>
+								<tag>VFEI2</tag>
+							</li>
+						</value>
+					</li>
+				</moveSpeedFactorByTerrainTag>
 			</li>
 		</modExtensions>
 	</GeneDef>

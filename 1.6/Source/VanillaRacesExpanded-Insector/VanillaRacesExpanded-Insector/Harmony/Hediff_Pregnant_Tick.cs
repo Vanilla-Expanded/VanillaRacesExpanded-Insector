@@ -11,24 +11,25 @@ using HarmonyLib;
 
 namespace VanillaRacesExpandedInsector
 {
-    [HarmonyPatch(typeof(Hediff_Pregnant), "Tick")]
+    [HarmonyPatch(typeof(Hediff_Pregnant), nameof(Hediff_Pregnant.TickInterval))]
     public static class VanillaRacesExpandedInsector_Hediff_Pregnant_Tick
     {
         [HarmonyPrefix]
-        public static bool Prefix(Hediff_Pregnant __instance)
+        public static bool Prefix(Hediff_Pregnant __instance, int delta)
         {
-            if ((Find.TickManager.TicksAbs % 1200 == 0) && (__instance?.pawn?.HasActiveGene(InternalDefOf.VRE_ChestburstPregnancy) ?? false) && (__instance?.pawn?.HasActiveGene(InternalDefOf.VRE_SpawningSack) == false))
+            if (__instance.pawn != null && __instance.pawn.IsHashIntervalTick(1200, delta) && __instance.pawn.HasActiveGene(InternalDefOf.VRE_ChestburstPregnancy) && __instance.pawn.HasActiveGene(InternalDefOf.VRE_SpawningSack))
             {
                 try
                 {
-                    if(__instance.pawn!=null) {
+                    if(__instance.pawn?.health?.hediffSet != null)
+                    {
                         Hediff hediff = HediffMaker.MakeHediff(InternalDefOf.VREInsector_TempSterile, __instance.pawn);
                         __instance.pawn.health.AddHediff(hediff);
 
                         Hediff hediff2 = HediffMaker.MakeHediff(InternalDefOf.VRE_ChestburstPregnancyHediff, __instance.pawn);
                         __instance.pawn.health.AddHediff(hediff2);
 
-                        Hediff pregnancy = __instance.pawn.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VRE_ChestburstPregnancyHediff);
+                        Hediff pregnancy = __instance.pawn.health.hediffSet.GetFirstHediffOfDef(InternalDefOf.VRE_ChestburstPregnancyHediff);
                         HediffComp_ChestburstPregnancy comp = pregnancy.TryGetComp<HediffComp_ChestburstPregnancy>();
                         comp.genes = __instance.geneSet;
                         comp.mother = __instance.pawn;
@@ -36,15 +37,10 @@ namespace VanillaRacesExpandedInsector
 
                         ChoiceLetter letter = LetterMaker.MakeLetter("VRE_ChestburstPregnancyReady".Translate(__instance.pawn.LabelShort), "VRE_ChestburstPregnancyReadyDesc".Translate(__instance.pawn.LabelShort), LetterDefOf.PositiveEvent);
                         Find.LetterStack.ReceiveLetter(letter);
-                        __instance.pawn.health.RemoveHediff(__instance);
 
-                    }
-                    else
-                    {
                         __instance.pawn.health.RemoveHediff(__instance);
-
                     }
-                    
+
                 }
                 catch (Exception ex)
                 {

@@ -32,7 +32,7 @@ namespace VanillaRacesExpandedInsector
         public float OffSetByNumberOfPawns(Thing thing)
         {
 
-            return GameComponent_SwarmSynapse.Instance.pawnsWithSwarmSynapse * 0.05f;
+            return WorldComponent_SwarmSynapse.Instance.pawnsWithSwarmSynapse * 0.05f;
 
         }
 

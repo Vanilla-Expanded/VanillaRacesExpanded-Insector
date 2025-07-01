@@ -42,7 +42,7 @@ namespace VanillaRacesExpandedInsector
                 {
                     chew.actor.rotationTracker.FaceCell(chew.actor.CurJob.GetTarget(TargetIndex.B).Cell);
                 }
-                chew.actor.GainComfortFromCellIfPossible();
+                chew.actor.GainComfortFromCellIfPossible(1);
             };
             chew.WithProgressBar(TargetIndex.A, () =>
             {

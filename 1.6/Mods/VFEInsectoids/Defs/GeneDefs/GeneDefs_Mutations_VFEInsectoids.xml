@@ -205,7 +205,9 @@
 		<iconPath>UI/Icons/Genes/Gene_EcdysoneOverdrive</iconPath>
 		<unlockable>true</unlockable>
 		<displayOrderInCategory>1005</displayOrderInCategory>
-		<causesNeed>KillThirst</causesNeed>
+		<enablesNeeds>
+			<li>KillThirst</li>
+		</enablesNeeds>
 		<selectionWeight>0</selectionWeight>
 		<exclusionTags>
 			<li>KillThirst</li>
