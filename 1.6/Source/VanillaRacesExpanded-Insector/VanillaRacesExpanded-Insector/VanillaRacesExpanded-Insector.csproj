@@ -300,6 +300,7 @@
     <Compile Include="Alerts\Alert_ChestburstImplantationNeeded.cs" />
     <Compile Include="Comps\CompIngestPherocore.cs" />
     <Compile Include="Filths\Filth_ToxEmitting.cs" />
+    <Compile Include="Harmony\PathGrid_CalculatedCostAt_Patch.cs" />
     <Compile Include="WorldComponents\WorldComponent_UnlockedGenes.cs" />
     <Compile Include="WorldComponents\WorldComponent_SwarmSynapse.cs" />
     <Compile Include="Genelines\GenelineGeneDef.cs" />
