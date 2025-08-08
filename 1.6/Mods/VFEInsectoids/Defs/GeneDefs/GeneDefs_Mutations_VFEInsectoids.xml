@@ -38,6 +38,7 @@
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
 				<hediffToWholeBody>VRE_Microsized</hediffToWholeBody>
+				<disableGeneExtraction>true</disableGeneExtraction>
 			</li>
 		</modExtensions>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>
@@ -81,6 +82,7 @@
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
 				<hediffToWholeBody>VRE_Colossal</hediffToWholeBody>
+				<disableGeneExtraction>true</disableGeneExtraction>
 			</li>
 		</modExtensions>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>
@@ -122,6 +124,7 @@
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
 				<hediffToWholeBody>VRE_ChemfuelSacks</hediffToWholeBody>
+				<disableGeneExtraction>true</disableGeneExtraction>
 			</li>
 		</modExtensions>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>
@@ -161,6 +164,7 @@
 			<li Class="VEF.Genes.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+				<disableGeneExtraction>true</disableGeneExtraction>
 			</li>
 		</modExtensions>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>
@@ -195,6 +199,7 @@
 			<li Class="VEF.Genes.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+				<disableGeneExtraction>true</disableGeneExtraction>
 			</li>
 		</modExtensions>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>
@@ -226,6 +231,7 @@
 			<li Class="VEF.Genes.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+				<disableGeneExtraction>true</disableGeneExtraction>
 			</li>
 		</modExtensions>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>
@@ -245,6 +251,7 @@
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
 				<hediffToWholeBody>VRE_AcidBurstSack</hediffToWholeBody>
+				<disableGeneExtraction>true</disableGeneExtraction>
 			</li>
 		</modExtensions>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>
@@ -291,6 +298,7 @@
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
 				<globalSkillLossMultiplier>2</globalSkillLossMultiplier>
 				<skillDegradation>true</skillDegradation>
+				<disableGeneExtraction>true</disableGeneExtraction>
 			</li>
 		</modExtensions>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>
@@ -322,6 +330,7 @@
 			<li Class="VEF.Genes.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+				<disableGeneExtraction>true</disableGeneExtraction>
 			</li>
 		</modExtensions>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>
@@ -348,6 +357,7 @@
 			<li Class="VEF.Genes.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathEndogenes>
 				<backgroundPathXenogenes>UI/Icons/Genes/VRE_MutationBG</backgroundPathXenogenes>
+				<disableGeneExtraction>true</disableGeneExtraction>
 			</li>
 		</modExtensions>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>
