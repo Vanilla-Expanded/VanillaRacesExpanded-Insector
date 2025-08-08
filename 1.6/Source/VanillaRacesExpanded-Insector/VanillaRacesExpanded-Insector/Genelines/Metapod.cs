@@ -54,6 +54,8 @@ namespace VanillaRacesExpandedInsector
                     }
                     DoProgressBar(metapodHediff.GetProgress());
                     metapodHediff.Tick();
+                    // TickInterval does some extra logic that was previously called when we called normal Tick
+                    metapodHediff.TickInterval(1);
                     if (metapodHediff.growthPercent >= 1f)
                     {
                         Complete(pawn);

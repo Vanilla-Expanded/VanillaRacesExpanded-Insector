@@ -15,10 +15,10 @@ namespace VanillaRacesExpandedInsector
             }
         }
 
-        public override void Tick()
+        public override void PostTickInterval(int delta)
         {
-            base.Tick();
-            if (pawn.IsHashIntervalTick(500))
+            base.PostTickInterval(delta);
+            if (pawn.IsHashIntervalTick(500, delta))
             {
                 if (pawn.needs?.TryGetNeed<Need_Pollution>()?.CurLevel <= 0)
                 {

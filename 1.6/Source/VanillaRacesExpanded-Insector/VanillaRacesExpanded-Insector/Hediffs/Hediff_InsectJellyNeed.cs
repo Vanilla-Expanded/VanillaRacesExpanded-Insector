@@ -15,10 +15,10 @@ namespace VanillaRacesExpandedInsector
             }
         }
 
-        public override void Tick()
+        public override void TickInterval(int delta)
         {
-            base.Tick();
-            if (pawn.IsHashIntervalTick(500))
+            base.TickInterval(delta);
+            if (pawn.IsHashIntervalTick(500, delta))
             {
                 var gene = pawn.genes.GetFirstGeneOfType<Gene_Resource_InsectJelly>();
                 if (gene == null) { return; }

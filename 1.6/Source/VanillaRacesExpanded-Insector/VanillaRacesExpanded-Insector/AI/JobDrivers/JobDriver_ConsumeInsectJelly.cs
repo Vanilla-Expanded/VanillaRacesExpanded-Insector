@@ -31,7 +31,7 @@ namespace VanillaRacesExpandedInsector
                     toEat.Map.physicalInteractionReservationManager.Reserve(actor, actor.CurJob, toEat);
                 }
             };
-            chew.tickAction = () =>
+            chew.tickIntervalAction = delta =>
             {
                 Thing toEat = ToConsume;
                 if (toEat.Spawned)
@@ -42,7 +42,7 @@ namespace VanillaRacesExpandedInsector
                 {
                     chew.actor.rotationTracker.FaceCell(chew.actor.CurJob.GetTarget(TargetIndex.B).Cell);
                 }
-                chew.actor.GainComfortFromCellIfPossible(1);
+                chew.actor.GainComfortFromCellIfPossible(delta);
             };
             chew.WithProgressBar(TargetIndex.A, () =>
             {

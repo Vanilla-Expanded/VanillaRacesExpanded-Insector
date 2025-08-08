@@ -36,23 +36,16 @@ namespace VanillaRacesExpandedInsector
         }
 
 
-        public override void Tick()
+        public override void TickInterval(int delta)
         {
+            base.TickInterval(delta);
+            GeneResourceDrainUtility.TickResourceDrainInterval(this, delta);
 
-            if (CanOffset)
-            {
-                float value = Resource.Value;
-                Resource.Value += ((0f - ResourceLossPerDay) / 60000f);
-
-
-            }
-            if(Resource.Value<=0 && this.pawn?.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VRE_InsectJellyDependencyHediff) == null)
+            if(Resource.Value<=0 && pawn.IsHashIntervalTick(60, delta) && this.pawn.health.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VRE_InsectJellyDependencyHediff) == null)
             {
                 this.pawn.health.AddHediff(InternalDefOf.VRE_InsectJellyDependencyHediff);
             }
-
         }
-
 
         protected override Color BarColor => new Color(0.53f, 0.53f, 0.35f);
 
