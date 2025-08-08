@@ -36,7 +36,7 @@ namespace VanillaRacesExpandedInsector
             toil.FailOnDespawnedOrNull(TargetIndex.A);
             toil.FailOnCannotTouch(TargetIndex.A, PathEndMode.Touch);
             yield return toil;
-            Toil chestburst = new Toil();
+            Toil chestburst = ToilMaker.MakeToil();
             chestburst.initAction = delegate ()
             {
                 
