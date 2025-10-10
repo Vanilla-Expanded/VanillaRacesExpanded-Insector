@@ -4,6 +4,7 @@ using System;
 using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
+using VEF.CacheClearing;
 
 
 namespace VanillaRacesExpandedInsector
@@ -11,6 +12,13 @@ namespace VanillaRacesExpandedInsector
 
     public static class StaticCollectionsClass
     {
+
+        static StaticCollectionsClass()
+        {
+            ClearCaches.clearCacheTypes.Add(typeof(StaticCollectionsClass));
+
+        }
+
 
         // A list of colonists needing chestburst implantation
         public static HashSet<Thing> chestburst_implantation_needed = new HashSet<Thing>();

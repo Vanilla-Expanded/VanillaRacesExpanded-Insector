@@ -6,6 +6,7 @@
 		<label>chestburst implantation fatigue</label>
 		<description>After being ready to do a chestburst implantation, the person with the chestburst pregnancy gene goes through a short period of sterility till they are capable of producing another. This is only a temporary condition and causes no long term effects.</description>
 		<hediffClass>HediffWithComps</hediffClass>
+		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
 		<initialSeverity>1.0</initialSeverity>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">

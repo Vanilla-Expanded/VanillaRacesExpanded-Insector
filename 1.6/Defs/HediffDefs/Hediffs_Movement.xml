@@ -7,6 +7,7 @@
 		<description>Limited flight that allows this colonist to hop and glide small distances over terrain. They will ignore terrain movement costs when moving.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
+		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<comps>

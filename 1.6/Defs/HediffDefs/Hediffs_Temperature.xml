@@ -5,6 +5,7 @@
 		<label>heatshock</label>
 		<description>A generalized disruption to body functioning caused by excessive exposure to heat and sun. The victim can produce heat shock proteins in response to high temperatures, which will prevent them from dying but will make them require more nutrition. Recovery is quick once in a cool area.</description>
 		<defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
 		<canApplyDodChanceForCapacityChanges>true</canApplyDodChanceForCapacityChanges>
 		<stages>
 			<li>
@@ -74,6 +75,7 @@
 		<label>hypothermic hibernation</label>
 		<description>This person will enter a hibernation if their temperatures drop below a certain point for too long. They will rapidly lose their body functions and fall into a deep sleep, which prevents any sort of frostbite damages but also makes them unable to do anything.</description>
 		<defaultLabelColor>(0.8, 0.8, 1)</defaultLabelColor>
+		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
 		<canApplyDodChanceForCapacityChanges>true</canApplyDodChanceForCapacityChanges>
 		<stages>
 			<li>
@@ -147,6 +149,7 @@
 		<description>A generalized disruption to body functioning caused by excessive exposure to heat and sun. Celular damage and denaturation of proteins will cause burn damage and will very quickly cause loss of consciousness.</description>
 		<defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
 		<lethalSeverity>1</lethalSeverity>
+		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
 		<stages>
 			<li>
 				<label>initial</label>
