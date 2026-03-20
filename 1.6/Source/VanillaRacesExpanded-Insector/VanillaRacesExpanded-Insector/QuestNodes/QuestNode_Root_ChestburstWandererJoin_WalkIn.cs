@@ -6,6 +6,7 @@ using RimWorld.Planet;
 
 using RimWorld.QuestGen;
 using RimWorld;
+using System;
 
 
 namespace VanillaRacesExpandedInsector
@@ -41,7 +42,11 @@ namespace VanillaRacesExpandedInsector
             }
             return pawn;
         }
-
+        [Obsolete]
+        public override void SendLetter(Quest quest, Pawn pawn)
+        {
+            SendLetter_NewTemp(quest, pawn, Find.AnyPlayerHomeMap);
+        }
         protected override void AddSpawnPawnQuestParts(Quest quest, Map map, Pawn pawn)
         {
             this.signalAccept = QuestGenUtility.HardcodedSignalWithQuestID("Accept");
@@ -59,7 +64,7 @@ namespace VanillaRacesExpandedInsector
             }, null, QuestPart.SignalListenMode.OngoingOnly);
         }
 
-        public override void SendLetter(Quest quest, Pawn pawn)
+        public override void SendLetter_NewTemp(Quest quest, Pawn pawn, Map map)
         {
             TaggedString label = "LetterLabelWandererJoins".Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
             TaggedString text = "LetterWandererJoins".Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
@@ -69,6 +74,7 @@ namespace VanillaRacesExpandedInsector
             choiceLetter_AcceptJoiner.signalAccept = this.signalAccept;
             choiceLetter_AcceptJoiner.signalReject = this.signalReject;
             choiceLetter_AcceptJoiner.quest = quest;
+            choiceLetter_AcceptJoiner.overrideMap = map;
             choiceLetter_AcceptJoiner.StartTimeout(60000);
             Find.LetterStack.ReceiveLetter(choiceLetter_AcceptJoiner, null);
         }

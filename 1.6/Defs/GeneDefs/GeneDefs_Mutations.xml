@@ -364,7 +364,8 @@
 			<IncomingDamageFactor>1.5</IncomingDamageFactor>
 		</statFactors>
 		<exclusionTags>
-			<li>InsectorArmor</li>
+			<li>InsectorArmor</li>			
+			<li>AG_Regeneration</li>	
 		</exclusionTags>
 		<modExtensions>
 			<li Class="VEF.Genes.GeneExtension">

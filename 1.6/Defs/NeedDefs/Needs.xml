@@ -9,5 +9,6 @@
 		<colonistAndPrisonersOnly>true</colonistAndPrisonersOnly>
 		<fallPerDay>0.033</fallPerDay>
 		<listPriority>80</listPriority>
+		<onlyIfCausedByGene>true</onlyIfCausedByGene>
 	</NeedDef>
 </Defs>

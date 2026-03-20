@@ -18,6 +18,7 @@ namespace VanillaRacesExpandedInsector
                 {
                     defaultLabel = geneline != null ? geneline.name : "VRE_ManageGenelines".Translate(),
                     defaultDesc = "VRE_ManageGenelinesDesc".Translate(),
+                    groupKey = 83474483,
                     icon = ContentFinder<Texture2D>.Get("UI/Abilities/GenelinePanel"),
                     action = () =>
                     {

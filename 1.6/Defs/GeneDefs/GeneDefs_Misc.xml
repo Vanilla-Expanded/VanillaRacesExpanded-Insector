@@ -9,7 +9,9 @@
 		<biostatMet>-1</biostatMet>
 		<displayCategory>Healing</displayCategory>
 		<displayOrderInCategory>5000.3</displayOrderInCategory>
-		
+		<customEffectDescriptions>
+			<li>Consider that this gene doesn't make its carrier immune from insectoid attacks. An insectoid gone manhunter will still be aggressive!</li>
+		</customEffectDescriptions>
 		
 	</GeneDef>
 </Defs>

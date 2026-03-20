@@ -10,9 +10,9 @@
 	<VRE_GenelineNameCannotBeEmpty>Geneline name cannot be empty.</VRE_GenelineNameCannotBeEmpty>
 	<VRE_MessageConflictingGenesPresent>Cannot save geneline with multiple conflicting genes.</VRE_MessageConflictingGenesPresent>
 	<VRE_Evolutions>Evolutions</VRE_Evolutions>
-	<VRE_EvolutionsDesc>Evolutions</VRE_EvolutionsDesc>
+	<VRE_EvolutionsDesc>Improvements to the genetic composition, providing strong positive effects.</VRE_EvolutionsDesc>
 	<VRE_Degrades>Degrades</VRE_Degrades>
-	<VRE_DegradesDesc>text.todo</VRE_DegradesDesc>
+	<VRE_DegradesDesc>Drawbacks in the genetic composition, counterbalancing the strong evolutions.</VRE_DegradesDesc>
 	<VRE_SaveGeneline>Save geneline</VRE_SaveGeneline>
 	<VRE_NeedEqualAmount>Needs equal amount of evolutions and degrades.</VRE_NeedEqualAmount>
 	<VRE_ChangingGenelineExplanation>Changing the genes of a geneline will cause all insectors that are a part of that geneline to enter the metapod stage. The metapod stage will last 24 hours, during which the insectors will be unavailable.</VRE_ChangingGenelineExplanation>
@@ -24,7 +24,7 @@ Insector colonists that will be affected:
 {0}
 </VRE_DeleteGenelineConfirmation>
 	<VRE_Genelines>Genelines</VRE_Genelines>
-	<VRE_GenelinesDesc>text.todo</VRE_GenelinesDesc>
+	<VRE_GenelinesDesc>Genetic blueprints with biologically coded evolutions and degrades.</VRE_GenelinesDesc>
 	<VRE_MetapodTimer>Time until {PAWN_nameDef} emerges: {1}\nInsert insect jelly into the metapod to speed up the process significantly.</VRE_MetapodTimer>
 	<VRE_MetapodSicknessCannotChangeGeneline>Cannot change genelines due to metapod sickness.</VRE_MetapodSicknessCannotChangeGeneline>
 	<VRE_ChestburstPregnancyReady>Chestburst pregnancy</VRE_ChestburstPregnancyReady>
