@@ -100,7 +100,7 @@ namespace VanillaRacesExpandedInsector
             {
                 exo_pherocore_genes = new Dictionary<GeneDef, bool>() { { DefDatabase<GeneDef>.GetNamedSilentFail("VGE_Gene_SealedExoskeleton"), false },
                 { DefDatabase<GeneDef>.GetNamedSilentFail("VGE_Gene_MicrogravityAdapted"), false },
-                    { DefDatabase<GeneDef>.GetNamedSilentFail("VGE_Gene_AstrofuelSacs"), false },
+                    { DefDatabase<GeneDef>.GetNamedSilentFail("VGE_Gene_AstrofuelSacks"), false },
                     { DefDatabase<GeneDef>.GetNamedSilentFail("VGE_Gene_FloatingOrgans"), false }};
 
             }
