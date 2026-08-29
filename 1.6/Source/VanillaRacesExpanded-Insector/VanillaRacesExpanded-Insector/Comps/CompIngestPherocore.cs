@@ -24,7 +24,8 @@ namespace VanillaRacesExpandedInsector
                     (this.parent.def == InternalDefOf.VFEI2_PherocoreChelis && !WorldComponent_UnlockedGenes.Instance.allChelisGenesUnlocked) ||
                     (this.parent.def == InternalDefOf.VFEI2_PherocoreKemian && !WorldComponent_UnlockedGenes.Instance.allKemiaGenesUnlocked) ||
                     (this.parent.def == InternalDefOf.VFEI2_PherocoreXanides && !WorldComponent_UnlockedGenes.Instance.allXanidesGenesUnlocked) ||
-                    (this.parent.def == DefDatabase<ThingDef>.GetNamedSilentFail("VFEI2_PherocoreBlack") && !WorldComponent_UnlockedGenes.Instance.allBlackGenesUnlocked)
+                    (this.parent.def == DefDatabase<ThingDef>.GetNamedSilentFail("VFEI2_PherocoreBlack") && !WorldComponent_UnlockedGenes.Instance.allBlackGenesUnlocked)||
+                    (this.parent.def == DefDatabase<ThingDef>.GetNamedSilentFail("VFEI2_PherocoreExo") && !WorldComponent_UnlockedGenes.Instance.allExoGenesUnlocked)
                     )
                 {
                     yield return new FloatMenuOption("VRE_IngestPherocore".Translate(this.parent.LabelCap), () =>

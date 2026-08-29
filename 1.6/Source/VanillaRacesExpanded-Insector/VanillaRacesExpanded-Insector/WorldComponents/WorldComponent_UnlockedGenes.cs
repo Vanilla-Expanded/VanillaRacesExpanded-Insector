@@ -41,6 +41,11 @@ namespace VanillaRacesExpandedInsector
         List<GeneDef> blackGenesList;
         List<bool> blackGenesList2;
 
+        public Dictionary<GeneDef, bool> exo_pherocore_genes = new Dictionary<GeneDef, bool>();
+        public bool allExoGenesUnlocked = false;
+        List<GeneDef> exoGenesList;
+        List<bool> exoGenesList2;
+
         public WorldComponent_UnlockedGenes(World world) : base(world)
         {
             Instance = this;
@@ -91,6 +96,14 @@ namespace VanillaRacesExpandedInsector
                     { DefDatabase<GeneDef>.GetNamedSilentFail("AA_Gene_PhotosensitiveExoskeleton"), false }};
 
             }
+            if (exo_pherocore_genes.NullOrEmpty() && DefDatabase<GeneDef>.GetNamedSilentFail("VGE_Gene_SealedExoskeleton") != null)
+            {
+                exo_pherocore_genes = new Dictionary<GeneDef, bool>() { { DefDatabase<GeneDef>.GetNamedSilentFail("VGE_Gene_SealedExoskeleton"), false },
+                { DefDatabase<GeneDef>.GetNamedSilentFail("VGE_Gene_MicrogravityAdapted"), false },
+                    { DefDatabase<GeneDef>.GetNamedSilentFail("VGE_Gene_AstrofuelSacs"), false },
+                    { DefDatabase<GeneDef>.GetNamedSilentFail("VGE_Gene_FloatingOrgans"), false }};
+
+            }
         }
 
         public override void ExposeData()
@@ -114,6 +127,9 @@ namespace VanillaRacesExpandedInsector
 
             Scribe_Collections.Look<GeneDef, bool>(ref black_pherocore_genes, "black_pherocore_genes", LookMode.Def, LookMode.Value, ref blackGenesList, ref blackGenesList2);
             Scribe_Values.Look<bool>(ref this.allBlackGenesUnlocked, "allBlackGenesUnlocked", false, true);
+
+            Scribe_Collections.Look<GeneDef, bool>(ref exo_pherocore_genes, "exo_pherocore_genes", LookMode.Def, LookMode.Value, ref exoGenesList, ref exoGenesList2);
+            Scribe_Values.Look<bool>(ref this.allExoGenesUnlocked, "allExoGenesUnlocked", false, true);
 
         }
 
@@ -150,6 +166,12 @@ namespace VanillaRacesExpandedInsector
         public bool BlackGeneUnlocked(GeneDef gene)
         {
             if (!black_pherocore_genes.NullOrEmpty() && black_pherocore_genes.ContainsKey(gene) && black_pherocore_genes[gene]) return true;
+            return false;
+        }
+
+        public bool ExoGeneUnlocked(GeneDef gene)
+        {
+            if (!exo_pherocore_genes.NullOrEmpty() && exo_pherocore_genes.ContainsKey(gene) && exo_pherocore_genes[gene]) return true;
             return false;
         }
 

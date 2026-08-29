@@ -22,7 +22,7 @@ namespace VanillaRacesExpandedInsector
                     WorldComponent_UnlockedGenes comp = WorldComponent_UnlockedGenes.Instance;
 
                     List<GenelineGeneDef> genelinegenes = DefDatabase<GenelineGeneDef>.AllDefs.Where(x => !x.unlockable || 
-                    (x.unlockable && (comp.SorneGeneUnlocked(x)|| comp.ChelisGeneUnlocked(x)|| comp.NuchadusGeneUnlocked(x)||comp.KemiaGeneUnlocked(x) || comp.XanidesGeneUnlocked(x) || comp.BlackGeneUnlocked(x)) ) ).ToList();
+                    (x.unlockable && (comp.SorneGeneUnlocked(x)|| comp.ChelisGeneUnlocked(x)|| comp.NuchadusGeneUnlocked(x)||comp.KemiaGeneUnlocked(x) || comp.XanidesGeneUnlocked(x) || comp.BlackGeneUnlocked(x) || comp.ExoGeneUnlocked(x)) ) ).ToList();
 
 
                     foreach (var allDef in genelinegenes)
