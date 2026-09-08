@@ -461,8 +461,8 @@
 		<iconPath>UI/Icons/Genes/Gene_GrayEyes</iconPath>
 		<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Things/Pawn/Humanlike/HeadAttachments/RedEyes/Male/RedEyes_Male</texPath>
-				<texPathFemale>Things/Pawn/Humanlike/HeadAttachments/RedEyes/Female/RedEyes_Female</texPathFemale>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Male/GrayEyes_Male</texPath>
+				<texPathFemale>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Female/GrayEyes_Female</texPathFemale>
 				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
@@ -476,8 +476,8 @@
 				</drawData>
 			</li>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Things/Pawn/Humanlike/HeadAttachments/RedEyes/Male/RedEyes_Male</texPath>
-				<texPathFemale>Things/Pawn/Humanlike/HeadAttachments/RedEyes/Female/RedEyes_Female</texPathFemale>
+				 <texPath>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Male/GrayEyes_Male</texPath>
+				<texPathFemale>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Female/GrayEyes_Female</texPathFemale>
 				<anchorTag>LeftEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
