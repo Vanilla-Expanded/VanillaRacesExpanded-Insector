@@ -15,7 +15,7 @@ namespace VanillaRacesExpandedInsector
     public static class VanillaRacesExpandedInsector_Recipe_ExtractOvum_CompletableEver
     {
         [HarmonyPostfix]
-        public static void Postfix(Recipe_ImplantEmbryo __instance, Pawn surgeryTarget, ref bool __result)
+        public static void Postfix(Pawn surgeryTarget, ref bool __result)
         {
             if (__result && surgeryTarget.HasActiveGene(InternalDefOf.VRE_ChestburstPregnancy))
             {
