@@ -476,7 +476,7 @@
 				</drawData>
 			</li>
 			<li Class="PawnRenderNodeProperties_Eye">
-				 <texPath>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Male/GrayEyes_Male</texPath>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Male/GrayEyes_Male</texPath>
 				<texPathFemale>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Female/GrayEyes_Female</texPathFemale>
 				<anchorTag>LeftEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
@@ -508,23 +508,23 @@
 		</exclusionTags>
 		<description>Carriers of this gene grow two small horns protruding from the forehead.</description>
 		<iconPath>UI/Icons/Genes/Gene_HeadboneMinihorns</iconPath>
-		 <renderNodeProperties>
-      <li>
-        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
-        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-        <texPath>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns</texPath>
-        <color>(255, 255, 255)</color>
-        <parentTagDef>Head</parentTagDef>
-        <drawData>
-          <defaultData>
-            <layer>80</layer>
-          </defaultData>
-          <dataNorth>
-            <layer>10</layer>
-          </dataNorth>
-        </drawData>
-      </li>
-    </renderNodeProperties>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns</texPath>
+				<color>(255, 255, 255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>
 	<VanillaRacesExpandedInsector.GenelineGeneDef ParentName="VRE_InsectorCosmeticGene">
 		<defName>VRE_Headbone_CenterHorn_Cosmetic</defName>
@@ -534,22 +534,22 @@
 		</exclusionTags>
 		<description>Carriers of this gene grow a single horn protruding from the center of the forehead.</description>
 		<iconPath>UI/Icons/Genes/Gene_HeadboneCenterhorn</iconPath>
-		  <renderNodeProperties>
-      <li>
-        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
-        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-        <texPath>Things/Pawn/Humanlike/HeadAttachments/CenterHorn/CenterHorn</texPath>
-        <color>(255, 255, 255)</color>
-        <parentTagDef>Head</parentTagDef>
-        <drawData>
-          <defaultData>
-            <layer>80</layer>
-          </defaultData>
-          <dataNorth>
-            <layer>10</layer>
-          </dataNorth>
-        </drawData>
-      </li>
-    </renderNodeProperties>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/CenterHorn/CenterHorn</texPath>
+				<color>(255, 255, 255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
 	</VanillaRacesExpandedInsector.GenelineGeneDef>
 </Defs>
